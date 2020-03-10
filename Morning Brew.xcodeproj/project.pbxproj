@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3406755C2417A09C00307F04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755B2417A09C00307F04 /* AppDelegate.swift */; };
+		3406755E2417A09C00307F04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755D2417A09C00307F04 /* SceneDelegate.swift */; };
+		340675602417A09C00307F04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755F2417A09C00307F04 /* ContentView.swift */; };
+		340675622417A0A000307F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675612417A0A000307F04 /* Assets.xcassets */; };
+		340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675642417A0A000307F04 /* Preview Assets.xcassets */; };
+		340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340675662417A0A000307F04 /* LaunchScreen.storyboard */; };
+		340675732417A0A000307F04 /* Morning_BrewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340675722417A0A000307F04 /* Morning_BrewTests.swift */; };
+		3406757E2417A0A000307F04 /* Morning_BrewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406757D2417A0A000307F04 /* Morning_BrewUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3406756F2417A0A000307F04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 340675502417A09C00307F04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340675572417A09C00307F04;
+			remoteInfo = "Morning Brew";
+		};
+		3406757A2417A0A000307F04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 340675502417A09C00307F04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340675572417A09C00307F04;
+			remoteInfo = "Morning Brew";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		340675582417A09C00307F04 /* Morning Brew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Morning Brew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3406755B2417A09C00307F04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3406755D2417A09C00307F04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3406755F2417A09C00307F04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		340675612417A0A000307F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		340675642417A0A000307F04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		340675672417A0A000307F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		340675692417A0A000307F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3406756E2417A0A000307F04 /* Morning BrewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morning BrewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		340675722417A0A000307F04 /* Morning_BrewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morning_BrewTests.swift; sourceTree = "<group>"; };
+		340675742417A0A000307F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		340675792417A0A000307F04 /* Morning BrewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morning BrewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3406757D2417A0A000307F04 /* Morning_BrewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morning_BrewUITests.swift; sourceTree = "<group>"; };
+		3406757F2417A0A000307F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		340675552417A09C00307F04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3406756B2417A0A000307F04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340675762417A0A000307F04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3406754F2417A09C00307F04 = {
+			isa = PBXGroup;
+			children = (
+				3406755A2417A09C00307F04 /* Morning Brew */,
+				340675712417A0A000307F04 /* Morning BrewTests */,
+				3406757C2417A0A000307F04 /* Morning BrewUITests */,
+				340675592417A09C00307F04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		340675592417A09C00307F04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				340675582417A09C00307F04 /* Morning Brew.app */,
+				3406756E2417A0A000307F04 /* Morning BrewTests.xctest */,
+				340675792417A0A000307F04 /* Morning BrewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3406755A2417A09C00307F04 /* Morning Brew */ = {
+			isa = PBXGroup;
+			children = (
+				3406755B2417A09C00307F04 /* AppDelegate.swift */,
+				3406755D2417A09C00307F04 /* SceneDelegate.swift */,
+				3406755F2417A09C00307F04 /* ContentView.swift */,
+				340675612417A0A000307F04 /* Assets.xcassets */,
+				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
+				340675692417A0A000307F04 /* Info.plist */,
+				340675632417A0A000307F04 /* Preview Content */,
+			);
+			path = "Morning Brew";
+			sourceTree = "<group>";
+		};
+		340675632417A0A000307F04 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				340675642417A0A000307F04 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		340675712417A0A000307F04 /* Morning BrewTests */ = {
+			isa = PBXGroup;
+			children = (
+				340675722417A0A000307F04 /* Morning_BrewTests.swift */,
+				340675742417A0A000307F04 /* Info.plist */,
+			);
+			path = "Morning BrewTests";
+			sourceTree = "<group>";
+		};
+		3406757C2417A0A000307F04 /* Morning BrewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3406757D2417A0A000307F04 /* Morning_BrewUITests.swift */,
+				3406757F2417A0A000307F04 /* Info.plist */,
+			);
+			path = "Morning BrewUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		340675572417A09C00307F04 /* Morning Brew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340675822417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning Brew" */;
+			buildPhases = (
+				340675542417A09C00307F04 /* Sources */,
+				340675552417A09C00307F04 /* Frameworks */,
+				340675562417A09C00307F04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Morning Brew";
+			productName = "Morning Brew";
+			productReference = 340675582417A09C00307F04 /* Morning Brew.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3406756D2417A0A000307F04 /* Morning BrewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340675852417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning BrewTests" */;
+			buildPhases = (
+				3406756A2417A0A000307F04 /* Sources */,
+				3406756B2417A0A000307F04 /* Frameworks */,
+				3406756C2417A0A000307F04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				340675702417A0A000307F04 /* PBXTargetDependency */,
+			);
+			name = "Morning BrewTests";
+			productName = "Morning BrewTests";
+			productReference = 3406756E2417A0A000307F04 /* Morning BrewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		340675782417A0A000307F04 /* Morning BrewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340675882417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning BrewUITests" */;
+			buildPhases = (
+				340675752417A0A000307F04 /* Sources */,
+				340675762417A0A000307F04 /* Frameworks */,
+				340675772417A0A000307F04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3406757B2417A0A000307F04 /* PBXTargetDependency */,
+			);
+			name = "Morning BrewUITests";
+			productName = "Morning BrewUITests";
+			productReference = 340675792417A0A000307F04 /* Morning BrewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		340675502417A09C00307F04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Nifty Tree Studios";
+				TargetAttributes = {
+					340675572417A09C00307F04 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3406756D2417A0A000307F04 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 340675572417A09C00307F04;
+					};
+					340675782417A0A000307F04 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 340675572417A09C00307F04;
+					};
+				};
+			};
+			buildConfigurationList = 340675532417A09C00307F04 /* Build configuration list for PBXProject "Morning Brew" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3406754F2417A09C00307F04;
+			productRefGroup = 340675592417A09C00307F04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				340675572417A09C00307F04 /* Morning Brew */,
+				3406756D2417A0A000307F04 /* Morning BrewTests */,
+				340675782417A0A000307F04 /* Morning BrewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		340675562417A09C00307F04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */,
+				340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */,
+				340675622417A0A000307F04 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3406756C2417A0A000307F04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340675772417A0A000307F04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		340675542417A09C00307F04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3406755C2417A09C00307F04 /* AppDelegate.swift in Sources */,
+				3406755E2417A09C00307F04 /* SceneDelegate.swift in Sources */,
+				340675602417A09C00307F04 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3406756A2417A0A000307F04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340675732417A0A000307F04 /* Morning_BrewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340675752417A0A000307F04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3406757E2417A0A000307F04 /* Morning_BrewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		340675702417A0A000307F04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340675572417A09C00307F04 /* Morning Brew */;
+			targetProxy = 3406756F2417A0A000307F04 /* PBXContainerItemProxy */;
+		};
+		3406757B2417A0A000307F04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340675572417A09C00307F04 /* Morning Brew */;
+			targetProxy = 3406757A2417A0A000307F04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		340675662417A0A000307F04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				340675672417A0A000307F04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		340675802417A0A000307F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		340675812417A0A000307F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		340675832417A0A000307F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Morning Brew/Preview Content\"";
+				DEVELOPMENT_TEAM = Y5KC3FXWNQ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Morning Brew/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Morning-Brew";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		340675842417A0A000307F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Morning Brew/Preview Content\"";
+				DEVELOPMENT_TEAM = Y5KC3FXWNQ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Morning Brew/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Morning-Brew";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		340675862417A0A000307F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5KC3FXWNQ;
+				INFOPLIST_FILE = "Morning BrewTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Morning-BrewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Morning Brew.app/Morning Brew";
+			};
+			name = Debug;
+		};
+		340675872417A0A000307F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5KC3FXWNQ;
+				INFOPLIST_FILE = "Morning BrewTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Morning-BrewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Morning Brew.app/Morning Brew";
+			};
+			name = Release;
+		};
+		340675892417A0A000307F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5KC3FXWNQ;
+				INFOPLIST_FILE = "Morning BrewUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Morning-BrewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Morning Brew";
+			};
+			name = Debug;
+		};
+		3406758A2417A0A000307F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5KC3FXWNQ;
+				INFOPLIST_FILE = "Morning BrewUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Morning-BrewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Morning Brew";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		340675532417A09C00307F04 /* Build configuration list for PBXProject "Morning Brew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340675802417A0A000307F04 /* Debug */,
+				340675812417A0A000307F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		340675822417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning Brew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340675832417A0A000307F04 /* Debug */,
+				340675842417A0A000307F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		340675852417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning BrewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340675862417A0A000307F04 /* Debug */,
+				340675872417A0A000307F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		340675882417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning BrewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340675892417A0A000307F04 /* Debug */,
+				3406758A2417A0A000307F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 340675502417A09C00307F04 /* Project object */;
+}

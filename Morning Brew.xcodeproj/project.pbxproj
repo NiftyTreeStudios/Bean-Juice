@@ -15,6 +15,9 @@
 		340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340675662417A0A000307F04 /* LaunchScreen.storyboard */; };
 		340675732417A0A000307F04 /* Morning_BrewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340675722417A0A000307F04 /* Morning_BrewTests.swift */; };
 		3406757E2417A0A000307F04 /* Morning_BrewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406757D2417A0A000307F04 /* Morning_BrewUITests.swift */; };
+		3406758C2418DD8F00307F04 /* Chemex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758B2418DD8F00307F04 /* Chemex.swift */; };
+		3406758E2418E59100307F04 /* CupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758D2418E59100307F04 /* CupData.swift */; };
+		340675902418E5A400307F04 /* MethodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758F2418E5A300307F04 /* MethodData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		340675792417A0A000307F04 /* Morning BrewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morning BrewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3406757D2417A0A000307F04 /* Morning_BrewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morning_BrewUITests.swift; sourceTree = "<group>"; };
 		3406757F2417A0A000307F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3406758B2418DD8F00307F04 /* Chemex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chemex.swift; sourceTree = "<group>"; };
+		3406758D2418E59100307F04 /* CupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CupData.swift; sourceTree = "<group>"; };
+		3406758F2418E5A300307F04 /* MethodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		3406755A2417A09C00307F04 /* Morning Brew */ = {
 			isa = PBXGroup;
 			children = (
+				3406758F2418E5A300307F04 /* MethodData.swift */,
+				3406758D2418E59100307F04 /* CupData.swift */,
 				3406755B2417A09C00307F04 /* AppDelegate.swift */,
 				3406755D2417A09C00307F04 /* SceneDelegate.swift */,
 				3406755F2417A09C00307F04 /* ContentView.swift */,
@@ -106,6 +114,7 @@
 				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
 				340675692417A0A000307F04 /* Info.plist */,
 				340675632417A0A000307F04 /* Preview Content */,
+				3406758B2418DD8F00307F04 /* Chemex.swift */,
 			);
 			path = "Morning Brew";
 			sourceTree = "<group>";
@@ -267,9 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				340675902418E5A400307F04 /* MethodData.swift in Sources */,
 				3406755C2417A09C00307F04 /* AppDelegate.swift in Sources */,
+				3406758C2418DD8F00307F04 /* Chemex.swift in Sources */,
 				3406755E2417A09C00307F04 /* SceneDelegate.swift in Sources */,
 				340675602417A09C00307F04 /* ContentView.swift in Sources */,
+				3406758E2418E59100307F04 /* CupData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,14 +448,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Morning Brew/Preview Content\"";
-				DEVELOPMENT_TEAM = Y5KC3FXWNQ;
+				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Morning Brew/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Morning-Brew";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.morningbrew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -456,14 +468,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Morning Brew/Preview Content\"";
-				DEVELOPMENT_TEAM = Y5KC3FXWNQ;
+				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Morning Brew/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Morning-Brew";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.morningbrew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

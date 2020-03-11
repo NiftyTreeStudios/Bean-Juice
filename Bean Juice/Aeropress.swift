@@ -11,27 +11,17 @@ import SwiftUI
 
 struct AeropressView: View {
     var Aeropress = [Method(name: "Aeropress", cupAmount: 4, grounds: "Medium/Fine", startRatio: 13)]
-    var cupSizes = [
-        CupSize(name: "Small", sizeMl: 118, sizeOz: 4),
-        CupSize(name: "Medium", sizeMl: 177, sizeOz: 6),
-        CupSize(name: "Large", sizeMl: 236, sizeOz: 8),
-        CupSize(name: "X-Large", sizeMl: 355, sizeOz: 12),
-        CupSize(name: "Bucket", sizeMl: 473, sizeOz: 16)
-    ]
-
-    @State var ratio: Double = 13
-    @State var cups: Double = 1
-    @State var cupAmount: Double = 4
-    @State var water: Double = 118
-    @State var coffee: Double = 15
-    @State var groundLevel: String = "Medium/Fine"
-    @State var methodSelected: Bool = true
-    @State var cupSizeSelected: Bool = true
+    
+    @State private var ratio: Double = 13
+    @State private var cups: Double = 1
+    private var cupAmount: Double = 4
+    private var water: Double = 118
+    private var groundLevel: String = "Medium/Fine"
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Text("Bean Juice")
+                Text("Aeropress")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .padding(.leading, 20)
@@ -67,24 +57,16 @@ struct AeropressView: View {
                 Text("Water")
                         .font(.title)
                     Spacer()
-                    if !methodSelected {
-                        Text("Pick method")
-                    } else {
-                        Text("\(Int(water) * Int(cups)) g")
-                            .font(.title)
-                    }
+                    Text("\(Int(water) * Int(cups)) g")
+                        .font(.title)
                 }
                 .padding(.bottom, 10)
                 HStack {
                     Text("Coffee")
                         .font(.title)
                     Spacer()
-                    if !methodSelected {
-                        Text("Pick method")
-                    } else {
-                        Text("\(Double(water) * cups / ratio, specifier: "%.1f") g")
-                            .font(.title)
-                    }
+                    Text("\(Double(water) * cups / ratio, specifier: "%.1f") g")
+                        .font(.title)
                 }
                 .padding(.bottom, 10)
             }

@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		340675582417A09C00307F04 /* Morning Brew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Morning Brew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		340675582417A09C00307F04 /* Bean Juice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean Juice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3406755B2417A09C00307F04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3406755D2417A09C00307F04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3406755F2417A09C00307F04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,10 +46,10 @@
 		340675642417A0A000307F04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		340675672417A0A000307F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		340675692417A0A000307F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3406756E2417A0A000307F04 /* Morning BrewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morning BrewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3406756E2417A0A000307F04 /* Bean JuiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		340675722417A0A000307F04 /* Morning_BrewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morning_BrewTests.swift; sourceTree = "<group>"; };
 		340675742417A0A000307F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		340675792417A0A000307F04 /* Morning BrewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morning BrewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		340675792417A0A000307F04 /* Bean JuiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3406757D2417A0A000307F04 /* Morning_BrewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morning_BrewUITests.swift; sourceTree = "<group>"; };
 		3406757F2417A0A000307F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3406758B2418DD8F00307F04 /* Chemex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chemex.swift; sourceTree = "<group>"; };
@@ -95,9 +95,9 @@
 		340675592417A09C00307F04 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				340675582417A09C00307F04 /* Morning Brew.app */,
-				3406756E2417A0A000307F04 /* Morning BrewTests.xctest */,
-				340675792417A0A000307F04 /* Morning BrewUITests.xctest */,
+				340675582417A09C00307F04 /* Bean Juice.app */,
+				3406756E2417A0A000307F04 /* Bean JuiceTests.xctest */,
+				340675792417A0A000307F04 /* Bean JuiceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,9 +148,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		340675572417A09C00307F04 /* Morning Brew */ = {
+		340675572417A09C00307F04 /* Bean Juice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 340675822417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning Brew" */;
+			buildConfigurationList = 340675822417A0A000307F04 /* Build configuration list for PBXNativeTarget "Bean Juice" */;
 			buildPhases = (
 				340675542417A09C00307F04 /* Sources */,
 				340675552417A09C00307F04 /* Frameworks */,
@@ -160,14 +160,14 @@
 			);
 			dependencies = (
 			);
-			name = "Morning Brew";
+			name = "Bean Juice";
 			productName = "Morning Brew";
-			productReference = 340675582417A09C00307F04 /* Morning Brew.app */;
+			productReference = 340675582417A09C00307F04 /* Bean Juice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3406756D2417A0A000307F04 /* Morning BrewTests */ = {
+		3406756D2417A0A000307F04 /* Bean JuiceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 340675852417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning BrewTests" */;
+			buildConfigurationList = 340675852417A0A000307F04 /* Build configuration list for PBXNativeTarget "Bean JuiceTests" */;
 			buildPhases = (
 				3406756A2417A0A000307F04 /* Sources */,
 				3406756B2417A0A000307F04 /* Frameworks */,
@@ -178,14 +178,14 @@
 			dependencies = (
 				340675702417A0A000307F04 /* PBXTargetDependency */,
 			);
-			name = "Morning BrewTests";
+			name = "Bean JuiceTests";
 			productName = "Morning BrewTests";
-			productReference = 3406756E2417A0A000307F04 /* Morning BrewTests.xctest */;
+			productReference = 3406756E2417A0A000307F04 /* Bean JuiceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		340675782417A0A000307F04 /* Morning BrewUITests */ = {
+		340675782417A0A000307F04 /* Bean JuiceUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 340675882417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning BrewUITests" */;
+			buildConfigurationList = 340675882417A0A000307F04 /* Build configuration list for PBXNativeTarget "Bean JuiceUITests" */;
 			buildPhases = (
 				340675752417A0A000307F04 /* Sources */,
 				340675762417A0A000307F04 /* Frameworks */,
@@ -196,9 +196,9 @@
 			dependencies = (
 				3406757B2417A0A000307F04 /* PBXTargetDependency */,
 			);
-			name = "Morning BrewUITests";
+			name = "Bean JuiceUITests";
 			productName = "Morning BrewUITests";
-			productReference = 340675792417A0A000307F04 /* Morning BrewUITests.xctest */;
+			productReference = 340675792417A0A000307F04 /* Bean JuiceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 340675532417A09C00307F04 /* Build configuration list for PBXProject "Morning Brew" */;
+			buildConfigurationList = 340675532417A09C00307F04 /* Build configuration list for PBXProject "Bean Juice" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -237,9 +237,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				340675572417A09C00307F04 /* Morning Brew */,
-				3406756D2417A0A000307F04 /* Morning BrewTests */,
-				340675782417A0A000307F04 /* Morning BrewUITests */,
+				340675572417A09C00307F04 /* Bean Juice */,
+				3406756D2417A0A000307F04 /* Bean JuiceTests */,
+				340675782417A0A000307F04 /* Bean JuiceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -306,12 +306,12 @@
 /* Begin PBXTargetDependency section */
 		340675702417A0A000307F04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 340675572417A09C00307F04 /* Morning Brew */;
+			target = 340675572417A09C00307F04 /* Bean Juice */;
 			targetProxy = 3406756F2417A0A000307F04 /* PBXContainerItemProxy */;
 		};
 		3406757B2417A0A000307F04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 340675572417A09C00307F04 /* Morning Brew */;
+			target = 340675572417A09C00307F04 /* Bean Juice */;
 			targetProxy = 3406757A2417A0A000307F04 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -455,8 +455,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.morningbrew;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
+				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -475,8 +475,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.morningbrew;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
+				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -500,7 +500,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Morning Brew.app/Morning Brew";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bean Juice.app/Bean Juice";
 			};
 			name = Debug;
 		};
@@ -522,7 +522,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Morning Brew.app/Morning Brew";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bean Juice.app/Bean Juice";
 			};
 			name = Release;
 		};
@@ -569,7 +569,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		340675532417A09C00307F04 /* Build configuration list for PBXProject "Morning Brew" */ = {
+		340675532417A09C00307F04 /* Build configuration list for PBXProject "Bean Juice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				340675802417A0A000307F04 /* Debug */,
@@ -578,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		340675822417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning Brew" */ = {
+		340675822417A0A000307F04 /* Build configuration list for PBXNativeTarget "Bean Juice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				340675832417A0A000307F04 /* Debug */,
@@ -587,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		340675852417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning BrewTests" */ = {
+		340675852417A0A000307F04 /* Build configuration list for PBXNativeTarget "Bean JuiceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				340675862417A0A000307F04 /* Debug */,
@@ -596,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		340675882417A0A000307F04 /* Build configuration list for PBXNativeTarget "Morning BrewUITests" */ = {
+		340675882417A0A000307F04 /* Build configuration list for PBXNativeTarget "Bean JuiceUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				340675892417A0A000307F04 /* Debug */,

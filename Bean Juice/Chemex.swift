@@ -10,11 +10,7 @@ import Foundation
 import SwiftUI
 
 struct ChemexView: View {
-    var methods = [
-        Method(name: "Chemex", cupAmount: 8, grounds: "Medium/Coarse", startRatio: 17),
-        Method(name: "Aeropress", cupAmount: 4, grounds: "Medium/Fine", startRatio: 13),
-        Method(name: "V60", cupAmount: 8, grounds: "Medium", startRatio: 17)
-    ]
+    var chemex = [Method(name: "Chemex", cupAmount: 8, grounds: "Medium/Coarse", startRatio: 17)]
     var cupSizes = [
         CupSize(name: "Small", sizeMl: 118, sizeOz: 4),
         CupSize(name: "Medium", sizeMl: 177, sizeOz: 6),
@@ -26,83 +22,19 @@ struct ChemexView: View {
     @State var ratio: Double = 17
     @State var cups: Double = 1
     @State var cupAmount: Double = 8
-    @State var water: Double = 0
+    @State var water: Double = 177
     @State var coffee: Double = 15
-    @State var groundLevel: String = ""
-    @State var methodSelected: Bool = false
-    @State var cupSizeSelected: Bool = false
+    @State var groundLevel: String = "Medium/Coarse"
+    @State var methodSelected: Bool = true
+    @State var cupSizeSelected: Bool = true
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Text("Brewer")
+                Text("Bean Juice")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .padding(.leading, 20)
-                                
-        // Brew methods selecter
-            ScrollView(.horizontal, showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    Text("Brew methods")
-                    HStack(spacing: 30.0) {
-                        ForEach(methods, id: \.name) { method in
-                            Button(action: {
-                                self.methodSelected = true
-                                self.cupAmount = Double(method.cupAmount)
-                                self.groundLevel = method.grounds
-                                self.ratio = Double(method.startRatio)
-                            }) {
-                                VStack {
-                                    Image(decorative: method.name)
-                                        .frame(width: 60, height: 60)
-                                        .foregroundColor(Color("highlight"))
-                                        .padding(5)
-                                        .clipShape(Circle())
-                                        .overlay(
-                                            Circle().stroke(lineWidth: 4))
-                                                .shadow(color: Color("highlight"), radius: 5)
-                                                .foregroundColor(Color("highlight"))
-                                    Text(method.name)
-                                        .foregroundColor(Color("highlight"))
-                                }
-                            }
-                        }
-                    }
-                    .padding(10)
-                    }
-                    .padding(.leading, 20)
-                }
-            
-        // Cup Size Selector
-            ScrollView(.horizontal, showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    Text("Cup size")
-                    HStack(spacing: 30.0) {
-                        ForEach(cupSizes, id: \.name) { cupSize in
-                            Button(action: {
-                                self.cupSizeSelected = true
-                                self.water = Double(cupSize.sizeMl)
-                            }) {
-                                VStack {
-                                    Image(decorative: cupSize.name)
-                                        .frame(width: 60, height: 60)
-                                        .foregroundColor(Color("highlight"))
-                                        .padding(5)
-                                        .clipShape(Circle())
-                                        .overlay(
-                                            Circle().stroke(lineWidth: 4))
-                                                .shadow(color: Color("highlight"), radius: 5)
-                                                .foregroundColor(Color("highlight"))
-                                    Text(cupSize.name)
-                                        .foregroundColor(Color("highlight"))
-                                }
-                        }
-                        }
-                }
-                .padding(10)
-                }
-            }
-            .padding(.leading, 20)
                                 
             VStack {
                 Text("Ratio")

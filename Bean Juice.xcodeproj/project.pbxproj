@@ -85,9 +85,9 @@
 		3406754F2417A09C00307F04 = {
 			isa = PBXGroup;
 			children = (
-				3406755A2417A09C00307F04 /* Morning Brew */,
-				340675712417A0A000307F04 /* Morning BrewTests */,
-				3406757C2417A0A000307F04 /* Morning BrewUITests */,
+				3406755A2417A09C00307F04 /* Bean Juice */,
+				340675712417A0A000307F04 /* Bean JuiceTests */,
+				3406757C2417A0A000307F04 /* Bean JuiceUITests */,
 				340675592417A09C00307F04 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3406755A2417A09C00307F04 /* Morning Brew */ = {
+		3406755A2417A09C00307F04 /* Bean Juice */ = {
 			isa = PBXGroup;
 			children = (
 				3406758F2418E5A300307F04 /* MethodData.swift */,
@@ -116,7 +116,7 @@
 				340675632417A0A000307F04 /* Preview Content */,
 				3406758B2418DD8F00307F04 /* Chemex.swift */,
 			);
-			path = "Morning Brew";
+			path = "Bean Juice";
 			sourceTree = "<group>";
 		};
 		340675632417A0A000307F04 /* Preview Content */ = {
@@ -127,22 +127,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		340675712417A0A000307F04 /* Morning BrewTests */ = {
+		340675712417A0A000307F04 /* Bean JuiceTests */ = {
 			isa = PBXGroup;
 			children = (
 				340675722417A0A000307F04 /* Morning_BrewTests.swift */,
 				340675742417A0A000307F04 /* Info.plist */,
 			);
-			path = "Morning BrewTests";
+			path = "Bean JuiceTests";
 			sourceTree = "<group>";
 		};
-		3406757C2417A0A000307F04 /* Morning BrewUITests */ = {
+		3406757C2417A0A000307F04 /* Bean JuiceUITests */ = {
 			isa = PBXGroup;
 			children = (
 				3406757D2417A0A000307F04 /* Morning_BrewUITests.swift */,
 				3406757F2417A0A000307F04 /* Info.plist */,
 			);
-			path = "Morning BrewUITests";
+			path = "Bean JuiceUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,10 +447,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Morning Brew/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bean Juice/Preview Content\"";
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Morning Brew/Info.plist";
+				INFOPLIST_FILE = "Bean Juice/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,10 +467,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Morning Brew/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bean Juice/Preview Content\"";
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Morning Brew/Info.plist";
+				INFOPLIST_FILE = "Bean Juice/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

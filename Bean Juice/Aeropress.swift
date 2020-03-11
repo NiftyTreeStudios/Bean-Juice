@@ -10,11 +10,10 @@ import Foundation
 import SwiftUI
 
 struct AeropressView: View {
-    var Aeropress = [Method(name: "Aeropress", cupAmount: 4, grounds: "Medium/Fine", startRatio: 13)]
     
     @State private var ratio: Double = 13
     @State private var cups: Double = 1
-    private var cupAmount: Double = 4
+    private var maxCups: Double = 4
     private var water: Double = 118
     private var groundLevel: String = "Medium/Fine"
 
@@ -36,7 +35,7 @@ struct AeropressView: View {
                     .padding(.bottom, 10)
                 Text("Cups")
                     .font(.title)
-                Slider(value: $cups, in: 0...cupAmount, step: 1)
+                Slider(value: $cups, in: 0...maxCups, step: 1)
                     .accentColor(Color("highlight"))
                 Text("\(Int(cups)) cups")
                     .font(.subheadline)
@@ -57,7 +56,7 @@ struct AeropressView: View {
                 Text("Water")
                         .font(.title)
                     Spacer()
-                    Text("\(Int(water) * Int(cups)) g")
+                    Text("\(calculateWaterAmount(water: water, cups: cups)) g")
                         .font(.title)
                 }
                 .padding(.bottom, 10)
@@ -65,7 +64,7 @@ struct AeropressView: View {
                     Text("Coffee")
                         .font(.title)
                     Spacer()
-                    Text("\(Double(water) * cups / ratio, specifier: "%.1f") g")
+                    Text("\(calculateCoffeeAmount(water: water, cups: cups, ratio: ratio), specifier: "%.1f") g")
                         .font(.title)
                 }
                 .padding(.bottom, 10)

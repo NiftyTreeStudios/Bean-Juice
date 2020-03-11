@@ -21,8 +21,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            Text("Aeropress")
-                .font(.title)
+            AeropressView()
                 .tabItem {
                     VStack {
                         Image("Aeropress")
@@ -30,8 +29,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
-            Text("V60")
-                .font(.title)
+            V60View()
                 .tabItem {
                     VStack {
                         Image("V60")

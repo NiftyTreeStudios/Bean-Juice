@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Morning_Brew
+@testable import Bean_Juice
 
 class Morning_BrewTests: XCTestCase {
 

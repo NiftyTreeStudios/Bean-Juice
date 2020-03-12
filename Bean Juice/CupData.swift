@@ -13,11 +13,3 @@ struct CupSize {
     let sizeMl: Int
     let sizeOz: Double
 }
-
-//var cupSizes = [
-//    CupSize(name: "Small", sizeMl: 118, sizeOz: 4),
-//    CupSize(name: "Medium", sizeMl: 177, sizeOz: 6),
-//    CupSize(name: "Large", sizeMl: 236, sizeOz: 8),
-//    CupSize(name: "X-Large", sizeMl: 355, sizeOz: 12),
-//    CupSize(name: "Bucket", sizeMl: 473, sizeOz: 16)
-//]

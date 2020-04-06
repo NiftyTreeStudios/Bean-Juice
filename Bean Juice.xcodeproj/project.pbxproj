@@ -13,13 +13,11 @@
 		340675622417A0A000307F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675612417A0A000307F04 /* Assets.xcassets */; };
 		340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675642417A0A000307F04 /* Preview Assets.xcassets */; };
 		340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340675662417A0A000307F04 /* LaunchScreen.storyboard */; };
-		3406758C2418DD8F00307F04 /* Chemex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758B2418DD8F00307F04 /* Chemex.swift */; };
 		3406758E2418E59100307F04 /* CupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758D2418E59100307F04 /* CupData.swift */; };
 		340675902418E5A400307F04 /* MethodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758F2418E5A300307F04 /* MethodData.swift */; };
-		340675942419365100307F04 /* Aeropress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340675932419365100307F04 /* Aeropress.swift */; };
-		340675962419370500307F04 /* V60.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340675952419370500307F04 /* V60.swift */; };
 		340675982419685B00307F04 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340675972419685B00307F04 /* Utilities.swift */; };
 		3406759A241971C600307F04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34067599241971C600307F04 /* Settings.swift */; };
+		346360B6243B5D770054FEB1 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346360B5243B5D770054FEB1 /* Method.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +29,11 @@
 		340675642417A0A000307F04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		340675672417A0A000307F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		340675692417A0A000307F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3406758B2418DD8F00307F04 /* Chemex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chemex.swift; sourceTree = "<group>"; };
 		3406758D2418E59100307F04 /* CupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CupData.swift; sourceTree = "<group>"; };
 		3406758F2418E5A300307F04 /* MethodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodData.swift; sourceTree = "<group>"; };
-		340675932419365100307F04 /* Aeropress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aeropress.swift; sourceTree = "<group>"; };
-		340675952419370500307F04 /* V60.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V60.swift; sourceTree = "<group>"; };
 		340675972419685B00307F04 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		34067599241971C600307F04 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		346360B5243B5D770054FEB1 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +75,9 @@
 				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
 				340675692417A0A000307F04 /* Info.plist */,
 				340675632417A0A000307F04 /* Preview Content */,
-				3406758B2418DD8F00307F04 /* Chemex.swift */,
-				340675932419365100307F04 /* Aeropress.swift */,
-				340675952419370500307F04 /* V60.swift */,
 				340675972419685B00307F04 /* Utilities.swift */,
 				34067599241971C600307F04 /* Settings.swift */,
+				346360B5243B5D770054FEB1 /* Method.swift */,
 			);
 			path = "Bean Juice";
 			sourceTree = "<group>";
@@ -167,16 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				340675962419370500307F04 /* V60.swift in Sources */,
 				340675902418E5A400307F04 /* MethodData.swift in Sources */,
 				3406755C2417A09C00307F04 /* AppDelegate.swift in Sources */,
-				340675942419365100307F04 /* Aeropress.swift in Sources */,
 				3406759A241971C600307F04 /* Settings.swift in Sources */,
-				3406758C2418DD8F00307F04 /* Chemex.swift in Sources */,
 				3406755E2417A09C00307F04 /* SceneDelegate.swift in Sources */,
 				340675982419685B00307F04 /* Utilities.swift in Sources */,
 				340675602417A09C00307F04 /* ContentView.swift in Sources */,
 				3406758E2418E59100307F04 /* CupData.swift in Sources */,
+				346360B6243B5D770054FEB1 /* Method.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

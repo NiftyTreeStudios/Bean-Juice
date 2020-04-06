@@ -13,7 +13,7 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            ChemexView()
+            MethodView()
                 .tabItem {
                     VStack {
                         Image("Chemex")
@@ -21,7 +21,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            AeropressView()
+            MethodView()
                 .tabItem {
                     VStack {
                         Image("Aeropress")
@@ -29,7 +29,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
-            V60View()
+            MethodView()
                 .tabItem {
                     VStack {
                         Image("V60")

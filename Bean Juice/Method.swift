@@ -1,26 +1,26 @@
 //
-//  Chemex.swift
+//  Method.swift
 //  Bean Juice
 //
-//  Created by Iiro Alhonen on 11.3.2020.
+//  Created by Iiro Alhonen on 6.4.2020.
 //  Copyright © 2020 Nifty Tree Studios. All rights reserved.
 //
 
 import Foundation
 import SwiftUI
 
-struct ChemexView: View {
+struct MethodView: View {
 
     @State private var ratio: Double = 17
     @State private var cups: Double = 1
     private var maxCups: Double = 8
     private var water: Double = 177
-    private var groundLevel: String = "Medium/Coarse"
+    private var groundLevel: String = "Ground level"
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Text("Chemex")
+                Text("Method")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .padding(.leading, 20)
@@ -77,3 +77,4 @@ struct ChemexView: View {
         }
     }
 }
+

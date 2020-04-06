@@ -36,3 +36,9 @@ struct SettingsView: View {
         }
     }
 }
+
+struct Settings_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsView()
+    }
+}

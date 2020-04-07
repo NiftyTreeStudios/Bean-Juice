@@ -14,10 +14,5 @@ struct Method {
     let cupAmount: Int
     let grounds: String
     let startRatio: Int
+    let tag: Int
 }
-
-let brewMethods: [Method] = [
-    Method(name: "Chemex", cupAmount: 8, grounds: "Medium/Coarse", startRatio: 17),
-    Method(name: "Aeropress", cupAmount: 4, grounds: "Medium/Fine", startRatio: 13),
-    Method(name: "V60", cupAmount: 8, grounds: "Medium", startRatio: 17)
-]

@@ -22,8 +22,11 @@ struct MethodView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
-                Circle()
-                    .frame(width: 300.0, height: 300.0)
+                Image(methodName + "-Big")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 250, height: 250, alignment: .center)
+                    .clipShape(Circle())
                 Text(methodName)
                     .font(.largeTitle)
                     .fontWeight(.semibold)

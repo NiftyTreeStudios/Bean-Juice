@@ -10,26 +10,27 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 0
+    @State private var cupSize: Double = 177
  
     var body: some View {
         TabView(selection: $selection){
-            MethodView()
-                .tabItem {
-                    VStack {
-                        Image("Chemex")
-                        Text("Chemex")
-                    }
-                }
-                .tag(0)
-            MethodView()
+            MethodView(methodName: "Aeropress", maxCups: 4, cupSize: $cupSize, groundLevel: "Medium/Fine")
                 .tabItem {
                     VStack {
                         Image("Aeropress")
                         Text("Aeropress")
                     }
                 }
+                .tag(0)
+            MethodView(methodName: "Chemex", maxCups: 8, cupSize: $cupSize, groundLevel: "Medium/Fine")
+                .tabItem {
+                    VStack {
+                        Image("Chemex")
+                        Text("Chemex")
+                    }
+                }
                 .tag(1)
-            MethodView()
+            MethodView(methodName: "V60", maxCups: 8, cupSize: $cupSize, groundLevel: "Medium")
                 .tabItem {
                     VStack {
                         Image("V60")
@@ -37,7 +38,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(2)
-            SettingsView()
+            SettingsView(cupSize: $cupSize)
                 .tabItem {
                     VStack {
                         Image(systemName: "gear")

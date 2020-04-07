@@ -13,17 +13,21 @@ struct MethodView: View {
 
     @State private var ratio: Double = 17
     @State private var cups: Double = 1
-    private var maxCups: Double = 8
-    private var water: Double = 177
-    private var groundLevel: String = "Ground level"
+    
+    let methodName: String
+    let maxCups: Double
+    @Binding var cupSize: Double
+    let groundLevel: String
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                Text("Method")
+            VStack(alignment: .center) {
+                Circle()
+                    .frame(width: 300.0, height: 300.0)
+                Text(methodName)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
-                    .padding(.leading, 20)
+                    .padding(10)
                                 
             VStack {
                 Text("Ratio")
@@ -56,7 +60,7 @@ struct MethodView: View {
                 Text("Water")
                         .font(.title)
                     Spacer()
-                    Text("\(calculateWaterAmount(water: water, cups: cups)) g")
+                    Text("\(calculateWaterAmount(water: cupSize, cups: cups)) g")
                         .font(.title)
                 }
                 .padding(.bottom, 10)
@@ -64,7 +68,7 @@ struct MethodView: View {
                     Text("Coffee")
                         .font(.title)
                     Spacer()
-                    Text("\(calculateCoffeeAmount(water: water, cups: cups, ratio: ratio), specifier: "%.1f") g")
+                    Text("\(calculateCoffeeAmount(water: cupSize, cups: cups, ratio: ratio), specifier: "%.1f") g")
                         .font(.title)
                 }
                 .padding(.bottom, 10)

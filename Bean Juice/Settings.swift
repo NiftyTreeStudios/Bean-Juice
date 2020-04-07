@@ -19,26 +19,36 @@ struct SettingsView: View {
         CupSize(name: "Bucket", sizeMl: 473, sizeOz: 16)
     ]
     
-    @State private var selectedOption = 1
+    @State private var selectedOption: Int = 1
+    @Binding var cupSize: Double
     
     var body: some View {
-        NavigationView {
+        let selection = Binding<Int>(get: {
+            return self.selectedOption
+        }, set: {
+            self.selectedOption = $0
+            self.cupSize = Double(self.cupSizes[$0].sizeMl)
+        })
+        
+        return NavigationView {
             Form {
-                Text("Pick your cup size")
-                Picker(selection: $selectedOption, label: Text("Select cup size")) {
-                    ForEach(cupSizes, id: \.name) { cupSize in
-                        Text("\(cupSize.name)")
+                Text("Coffee cup size ☕️")
+                Picker("Cup size", selection: selection) {
+                    ForEach(0..<cupSizes.count) {
+                        Text(self.cupSizes[$0].name)
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
+                Text("Picked size: " + "\(self.cupSizes[selectedOption].sizeMl) ml.")
+                Text("Picked size: " + "\(self.cupSizes[selectedOption].sizeOz) oz.")
             .navigationBarTitle("Settings")
             }
         }
     }
 }
 
-struct Settings_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-    }
-}
+//struct Settings_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SettingsView()
+//    }
+//}

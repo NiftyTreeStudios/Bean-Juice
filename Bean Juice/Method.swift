@@ -11,8 +11,8 @@ import SwiftUI
 
 struct MethodView: View {
 
-    @State private var ratio: Double = 17
-    @State private var cups: Double = 1
+    @Binding var ratio: Double
+    @Binding var cups: Double
     
     let methodName: String
     let maxCups: Double

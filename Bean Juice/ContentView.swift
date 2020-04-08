@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var selection = 0
     @State private var cupSize: Double = 177
+    @State private var ratio: Double = 17
+    @State private var cups: Double = 1
     
     let brewMethods: [Method] = [
         Method(name: "Aeropress", cupAmount: 4, grounds: "Medium/Fine", startRatio: 13, tag: 0),
@@ -21,7 +23,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selection){
             ForEach(brewMethods, id: \.name) { brewMethod in
-                MethodView(methodName: brewMethod.name, maxCups: Double(brewMethod.cupAmount), cupSize: self.$cupSize, groundLevel: brewMethod.grounds)
+                MethodView(ratio: self.$ratio, cups: self.$cups, methodName: brewMethod.name, maxCups: Double(brewMethod.cupAmount), cupSize: self.$cupSize, groundLevel: brewMethod.grounds)
                     .tabItem {
                         VStack {
                             Image(brewMethod.name)

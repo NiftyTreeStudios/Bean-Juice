@@ -27,6 +27,7 @@ struct MethodView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 250, height: 250, alignment: .center)
                     .clipShape(Circle())
+                    .shadow(radius: 5)
                 Text(methodName)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
@@ -34,12 +35,13 @@ struct MethodView: View {
                                 
             VStack {
                 Text("Ratio")
-                    .font(.title)
+                    .font(.headline)
+                    .padding(.bottom, 0)
                 Slider(value: $ratio, in: 12...20, step: 1)
                     .accentColor(Color("highlight"))
                 Text("1:\(Int(ratio))")
                     .font(.subheadline)
-                    .padding(.bottom, 10)
+                    .padding(.bottom, 5)
                 Text("Cups")
                     .font(.title)
                 Slider(value: $cups, in: 0...maxCups, step: 1)
@@ -49,7 +51,6 @@ struct MethodView: View {
             }
                 .padding(.leading, 30)
             .padding(.trailing, 30)
-            .padding(.bottom, 10)
             VStack {
                 HStack {
                     Text("Ground level")
@@ -58,7 +59,7 @@ struct MethodView: View {
                     Text(groundLevel)
                         .font(.subheadline)
                 }
-                .padding(.bottom, 10)
+                .padding(.bottom, 5)
             HStack {
                 Text("Water")
                         .font(.title)
@@ -66,7 +67,7 @@ struct MethodView: View {
                     Text("\(calculateWaterAmount(water: cupSize, cups: cups)) g")
                         .font(.title)
                 }
-                .padding(.bottom, 10)
+                .padding(.bottom, 5)
                 HStack {
                     Text("Coffee")
                         .font(.title)
@@ -74,11 +75,11 @@ struct MethodView: View {
                     Text("\(calculateCoffeeAmount(water: cupSize, cups: cups, ratio: ratio), specifier: "%.1f") g")
                         .font(.title)
                 }
-                .padding(.bottom, 10)
+                .padding(.bottom, 5)
             }
             .padding(.leading, 30)
             .padding(.trailing, 30)
-            .padding(.bottom, 10)
+            .padding(.bottom, 5)
         }
             
         }

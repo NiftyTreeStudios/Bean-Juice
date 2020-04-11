@@ -41,20 +41,22 @@ struct MethodView: View {
                     .accentColor(.purple)
                 Text("1:\(Int(ratio))")
                     .font(.subheadline)
-                    .padding(.bottom, 5)
+                    .padding(.bottom, 10)
+                    .padding(.top, 0)
                 Text("Cups")
-                    .font(.title)
+                    .font(.headline)
                 Slider(value: $cups, in: 0...maxCups, step: 1)
                     .accentColor(.purple)
                 Text("\(Int(cups)) cups")
                     .font(.subheadline)
+                    .padding(.bottom, 10)
             }
                 .padding(.leading, 30)
             .padding(.trailing, 30)
             VStack {
                 HStack {
                     Text("Ground level")
-                        .font(.title)
+                        .font(.headline)
                     Spacer()
                     Text(groundLevel)
                         .font(.subheadline)
@@ -85,4 +87,3 @@ struct MethodView: View {
         }
     }
 }
-

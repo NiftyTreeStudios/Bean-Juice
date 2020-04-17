@@ -32,24 +32,31 @@ struct MethodView: View {
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .padding(10)
+                    .accessibility(identifier: "methodNameLabel")
                                 
             VStack {
                 Text("Ratio")
                     .font(.headline)
                     .padding(.bottom, 0)
+                    .accessibility(identifier: "ratioLabel")
                 Slider(value: $ratio, in: 12...20, step: 1)
                     .accentColor(.purple)
+                    .accessibility(identifier: "ratioSlider")
                 Text("1:\(Int(ratio))")
                     .font(.subheadline)
                     .padding(.bottom, 10)
                     .padding(.top, 0)
+                    .accessibility(identifier: "ratioValue")
                 Text("Cups")
                     .font(.headline)
+                    .accessibility(identifier: "cupsLabel")
                 Slider(value: $cups, in: 0...maxCups, step: 1)
                     .accentColor(.purple)
+                    .accessibility(identifier: "cupsSlider")
                 Text("\(Int(cups)) cups")
                     .font(.subheadline)
                     .padding(.bottom, 10)
+                    .accessibility(identifier: "cupsValue")
             }
                 .padding(.leading, 30)
             .padding(.trailing, 30)
@@ -57,25 +64,31 @@ struct MethodView: View {
                 HStack {
                     Text("Ground level")
                         .font(.headline)
+                        .accessibility(identifier: "groundLevelLabel")
                     Spacer()
                     Text(groundLevel)
                         .font(.subheadline)
+                        .accessibility(identifier: "groundLevelValue")
                 }
                 .padding(.bottom, 5)
             HStack {
                 Text("Water")
                         .font(.title)
+                        .accessibility(identifier: "waterLabel")
                     Spacer()
                     Text("\(calculateWaterAmount(water: cupSize, cups: cups)) g")
                         .font(.title)
+                        .accessibility(identifier: "waterValue")
                 }
                 .padding(.bottom, 5)
                 HStack {
                     Text("Coffee")
                         .font(.title)
+                        .accessibility(identifier: "coffeeLabel")
                     Spacer()
                     Text("\(calculateCoffeeAmount(water: cupSize, cups: cups, ratio: ratio), specifier: "%.1f") g")
                         .font(.title)
+                        .accessibility(identifier: "coffeeValue")
                 }
                 .padding(.bottom, 5)
             }

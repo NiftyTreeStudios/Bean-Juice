@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var selection = 0
     @State private var cupSize: Double = 177
-    @State private var ratio: Double = 17
+    @State private var ratio: Double = 13
     @State private var cups: Double = 1
     
     let brewMethods: [Method] = [
@@ -29,6 +29,8 @@ struct ContentView: View {
                             Image(brewMethod.name)
                             Text(brewMethod.name)
                         }
+                    }.onAppear {
+                        self.ratio = Double(brewMethod.startRatio)
                     }
                 .tag(brewMethod.tag)
             }

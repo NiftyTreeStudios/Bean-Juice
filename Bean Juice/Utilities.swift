@@ -8,12 +8,17 @@
 
 import Foundation
 
-func calculateCoffeeAmount(water: Double, cups: Double, ratio: Double) -> Double {
-    let coffeeAmount = Double(water) * cups / ratio
+func calculateCoffeeAmount(cupSize: Double, cupAmount: Double, ratio: Double) -> Double {
+    let coffeeAmount = Double(cupSize) * cupAmount / ratio
     return coffeeAmount
 }
 
-func calculateWaterAmount(water: Double, cups: Double) -> Int {
-    let waterAmount = Int(water) * Int(cups)
-    return waterAmount
+func calculateWaterAmount(cupSize: Double, cupAmount: Double, maxWater: Int) -> Int {
+    let waterAmount = Int(cupSize) * Int(cupAmount)
+    if waterAmount > maxWater {
+        return maxWater
+    } else {
+        return waterAmount
+        
+    }
 }

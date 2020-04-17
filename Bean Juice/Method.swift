@@ -17,6 +17,7 @@ struct MethodView: View {
     let methodName: String
     let maxCups: Double
     @Binding var cupSize: Double
+    let maxWater: Int
     let groundLevel: String
 
     var body: some View {
@@ -76,7 +77,7 @@ struct MethodView: View {
                         .font(.title)
                         .accessibility(identifier: "waterLabel")
                     Spacer()
-                    Text("\(calculateWaterAmount(water: cupSize, cups: cups)) g")
+                Text("\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: maxWater)) g")
                         .font(.title)
                         .accessibility(identifier: "waterValue")
                 }
@@ -86,7 +87,7 @@ struct MethodView: View {
                         .font(.title)
                         .accessibility(identifier: "coffeeLabel")
                     Spacer()
-                    Text("\(calculateCoffeeAmount(water: cupSize, cups: cups, ratio: ratio), specifier: "%.1f") g")
+                    Text("\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio), specifier: "%.1f") g")
                         .font(.title)
                         .accessibility(identifier: "coffeeValue")
                 }

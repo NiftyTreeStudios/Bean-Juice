@@ -20,15 +20,22 @@ struct MethodView: View {
     let maxWater: Int
     let groundLevel: String
 
+    @State private var flipped: Bool = false
+    @State private var animate3d: Bool = false
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
-                Image(methodName + "-Big")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 250, height: 250, alignment: .center)
-                    .clipShape(Circle())
-                    .shadow(radius: 5)
+                ZStack() {
+                    CircleImage(methodName: methodName).opacity(flipped ? 0.0 : 1.0)
+                    Timer().opacity(flipped ? 1.0 : 0.0)
+                }
+                .modifier(FlipEffect(flipped: $flipped, angle: animate3d ? 180 : 0, axis: (x: 0, y: 1)))
+                .onTapGesture {
+                      withAnimation(Animation.linear(duration: 0.8)) {
+                            self.animate3d.toggle()
+                      }
+                }
                 Text(methodName)
                     .font(.largeTitle)
                     .fontWeight(.semibold)

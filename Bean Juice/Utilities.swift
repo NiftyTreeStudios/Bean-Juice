@@ -11,7 +11,6 @@ import Foundation
 func calculateCoffeeAmount(cupSize: Double, cupAmount: Double, ratio: Double, maxWater: Int) -> Double {
     let waterAmount = calculateWaterAmount(cupSize: cupSize, cupAmount: cupAmount, maxWater: maxWater)
     let coffeeAmount = Double(waterAmount) / ratio
-    //    let coffeeAmount = Double(cupSize) * cupAmount / ratio
     return coffeeAmount
 }
 

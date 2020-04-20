@@ -31,6 +31,9 @@ struct ContentView: View {
                         }
                     }.onAppear {
                         self.ratio = Double(brewMethod.startRatio)
+                        if (brewMethod.name == "Aeropress" && self.cups > 4) {
+                            self.cups = 4
+                        }
                     }
                 .tag(brewMethod.tag)
             }

@@ -87,7 +87,7 @@ struct MethodView: View {
                         .font(.title)
                         .accessibility(identifier: "coffeeLabel")
                     Spacer()
-                    Text("\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio), specifier: "%.1f") g")
+                    Text("\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: maxWater), specifier: "%.1f") g")
                         .font(.title)
                         .accessibility(identifier: "coffeeValue")
                 }

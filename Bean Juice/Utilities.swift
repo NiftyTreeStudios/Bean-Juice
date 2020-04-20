@@ -15,16 +15,6 @@ func calculateCoffeeAmount(cupSize: Double, cupAmount: Double, ratio: Double, ma
     return coffeeAmount
 }
 
-//func calculateMaxWaterAmount(waterAmount: Int, maxWaterAmount: Int) -> Int {
-//    // max water calculation here
-//    if waterAmount > maxWaterAmount {
-//        return maxWaterAmount
-//    } else {
-//        return waterAmount
-//
-//    }
-//}
-
 func calculateWaterAmount(cupSize: Double, cupAmount: Double, maxWater: Int) -> Int {
     let waterAmount = Int(cupSize) * Int(cupAmount)
     if waterAmount > maxWater {

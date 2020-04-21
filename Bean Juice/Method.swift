@@ -28,7 +28,7 @@ struct MethodView: View {
             VStack(alignment: .center) {
                 ZStack() {
                     CircleImage(methodName: methodName).opacity(flipped ? 0.0 : 1.0)
-                    Timer().opacity(flipped ? 1.0 : 0.0)
+                    TimerView().opacity(flipped ? 1.0 : 0.0)
                 }
                 .modifier(FlipEffect(flipped: $flipped, angle: animate3d ? 180 : 0, axis: (x: 0, y: 1)))
                 .onTapGesture {

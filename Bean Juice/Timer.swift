@@ -14,15 +14,36 @@ struct TimerView: View {
     @State private var counter: Double = 00.00
     
     var body: some View {
-        ZStack() {
-            Circle()
-                .shadow(radius: 5)
-                .colorInvert()
-            Text("\(counter, specifier: "%.2f")")
-                .onAppear(perform: {let _ = self.updateTimer})
+        ZStack {
+            HStack(alignment: .bottom) {
+                Circle()
+                    .fill(Color.gray)
+                    .overlay(
+                        Text("Reset")
+                ).frame(width: 75, height: 75)
+                    .padding([.trailing, .bottom], -30.0)
+
+                Circle()
+                    .colorInvert()
+                    .overlay(VStack {
+                        Text("Time")
+        //                Clock(time: updateTimer)
+        //                Text("\(counter, specifier: "%.2f")")
+        //                    .onAppear(perform: {let _ = self.updateTimer})
+                        }
+                    )
+                    .frame(width: 250, height: 250, alignment: .center)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.primary, lineWidth: 5))
+                
+                Circle()
+                    .fill(Color.green)
+                    .overlay(
+                        Text("Start")
+                ).frame(width: 75, height: 75)
+                    .padding([.leading, .bottom], -30.0)
+            }
         }
-        .frame(width: 250, height: 250, alignment: .center)
-        .clipShape(Circle())
 
     }
     

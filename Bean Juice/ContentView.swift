@@ -22,22 +22,23 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            ForEach(brewMethods, id: \.name) { brewMethod in
-                MethodView(ratio: self.$ratio, cups: self.$cups, methodName: brewMethod.name, maxCups: Double(brewMethod.cupAmount), cupSize: self.$cupSize, maxWater: brewMethod.waterAmount, groundLevel: brewMethod.grounds)
-                    .tabItem {
-                        VStack {
-                            Image(brewMethod.name)
-                            Text(brewMethod.name)
-                        }
+            MethodSelectionView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "ellipsis.circle")
+                        Text("Methods")
                     }
-                    .tag(brewMethod.name)
-                    .onAppear {
-                        self.ratio = Double(brewMethod.startRatio)
-                        if (brewMethod.name == "Aeropress" && self.cups > 4) {
-                            self.cups = 4
-                        }
+                }
+                .tag("Methods")
+            
+            CustomView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "square.and.pencil")
+                        Text("Custom")
                     }
-            }
+                }
+                .tag("Custom")
             
             SettingsView(cupSize: $cupSize)
                 .tabItem {

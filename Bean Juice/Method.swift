@@ -11,12 +11,12 @@ import SwiftUI
 
 struct MethodView: View {
 
+    @Binding var cupSize: Double
     @Binding var ratio: Double
     @Binding var cups: Double
     
     let methodName: String
     let maxCups: Double
-    @Binding var cupSize: Double
     let maxWater: Int
     let groundLevel: String
 

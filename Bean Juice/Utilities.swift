@@ -24,3 +24,8 @@ func calculateWaterAmount(cupSize: Double, cupAmount: Double, maxWater: Int) -> 
         
     }
 }
+
+func customCoffeeAmount(water: Double, ratio: Double) -> Double {
+    let customCoffeeAmount = water / ratio
+    return customCoffeeAmount
+}

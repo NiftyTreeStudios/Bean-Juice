@@ -20,6 +20,9 @@
 		34371217244DBD9D00030AAD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34371216244DBD9D00030AAD /* CircleImage.swift */; };
 		34371219244DBE8A00030AAD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34371218244DBE8A00030AAD /* Timer.swift */; };
 		3437121B244DC0C100030AAD /* FlipEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3437121A244DC0C100030AAD /* FlipEffect.swift */; };
+		3450A79C2469880E00F3E799 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450A79B2469880E00F3E799 /* CustomView.swift */; };
+		3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450A79D24698D9300F3E799 /* MethodSelectionView.swift */; };
+		3450A7A0246993C200F3E799 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450A79F246993C200F3E799 /* ItemRow.swift */; };
 		346360B6243B5D770054FEB1 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346360B5243B5D770054FEB1 /* Method.swift */; };
 		34B2193F2449A9F50027E614 /* Bean_JuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2193E2449A9F50027E614 /* Bean_JuiceTests.swift */; };
 		34B2194D2449AA030027E614 /* Bean_JuiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2194C2449AA030027E614 /* Bean_JuiceUITests.swift */; };
@@ -58,6 +61,9 @@
 		34371216244DBD9D00030AAD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		34371218244DBE8A00030AAD /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		3437121A244DC0C100030AAD /* FlipEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipEffect.swift; sourceTree = "<group>"; };
+		3450A79B2469880E00F3E799 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		3450A79D24698D9300F3E799 /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
+		3450A79F246993C200F3E799 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		346360B5243B5D770054FEB1 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		34B2193C2449A9F50027E614 /* Bean JuiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B2193E2449A9F50027E614 /* Bean_JuiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceTests.swift; sourceTree = "<group>"; };
@@ -120,14 +126,17 @@
 				3406755B2417A09C00307F04 /* AppDelegate.swift */,
 				3406755D2417A09C00307F04 /* SceneDelegate.swift */,
 				3406755F2417A09C00307F04 /* ContentView.swift */,
+				3450A79B2469880E00F3E799 /* CustomView.swift */,
+				3450A79D24698D9300F3E799 /* MethodSelectionView.swift */,
+				3450A79F246993C200F3E799 /* ItemRow.swift */,
 				340675612417A0A000307F04 /* Assets.xcassets */,
 				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
 				340675692417A0A000307F04 /* Info.plist */,
 				340675632417A0A000307F04 /* Preview Content */,
 				340675972419685B00307F04 /* Utilities.swift */,
 				34067599241971C600307F04 /* Settings.swift */,
-				346360B5243B5D770054FEB1 /* Method.swift */,
 				3437121A244DC0C100030AAD /* FlipEffect.swift */,
+				346360B5243B5D770054FEB1 /* Method.swift */,
 				34371216244DBD9D00030AAD /* CircleImage.swift */,
 				34371218244DBE8A00030AAD /* Timer.swift */,
 			);
@@ -291,15 +300,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3450A7A0246993C200F3E799 /* ItemRow.swift in Sources */,
 				340675902418E5A400307F04 /* MethodData.swift in Sources */,
 				3406755C2417A09C00307F04 /* AppDelegate.swift in Sources */,
 				3406759A241971C600307F04 /* Settings.swift in Sources */,
+				3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */,
 				34371219244DBE8A00030AAD /* Timer.swift in Sources */,
 				3406755E2417A09C00307F04 /* SceneDelegate.swift in Sources */,
 				340675982419685B00307F04 /* Utilities.swift in Sources */,
 				34371217244DBD9D00030AAD /* CircleImage.swift in Sources */,
 				340675602417A09C00307F04 /* ContentView.swift in Sources */,
 				3437121B244DC0C100030AAD /* FlipEffect.swift in Sources */,
+				3450A79C2469880E00F3E799 /* CustomView.swift in Sources */,
 				3406758E2418E59100307F04 /* CupData.swift in Sources */,
 				346360B6243B5D770054FEB1 /* Method.swift in Sources */,
 			);

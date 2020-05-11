@@ -47,7 +47,7 @@ struct MethodView: View {
                     .font(.headline)
                     .padding(.bottom, 0)
                     .accessibility(identifier: "ratioLabel")
-                Slider(value: $ratio, in: 12...20, step: 1)
+                Slider(value: $ratio, in: 8...20, step: 1)
                     .accentColor(.purple)
                     .accessibility(identifier: "ratioSlider")
                 Text("1:\(Int(ratio))")

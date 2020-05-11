@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 0
+    @State private var selection = "Aeropress"
     @State private var cupSize: Double = 177
     @State private var ratio: Double = 13
     @State private var cups: Double = 1
     
     let brewMethods: [Method] = [
-        Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, cupAmount: 4, grounds: "Medium/Fine", startRatio: 13, tag: 0),
-        Method(name: "Chemex", waterAmount: 1180, waterAmountOz: 40, cupAmount: 8, grounds: "Medium/Coarse", startRatio: 17, tag: 1),
-        Method(name: "V60", waterAmount: 1000, waterAmountOz: 33, cupAmount: 8, grounds: "Medium", startRatio: 17, tag: 2)
+        Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, cupAmount: 4, grounds: "Medium/Fine", startRatio: 13),
+        Method(name: "Chemex", waterAmount: 1180, waterAmountOz: 40, cupAmount: 8, grounds: "Medium/Coarse", startRatio: 17),
+        Method(name: "V60", waterAmount: 1000, waterAmountOz: 33, cupAmount: 8, grounds: "Medium", startRatio: 17)
     ]
  
     var body: some View {
@@ -29,13 +29,14 @@ struct ContentView: View {
                             Image(brewMethod.name)
                             Text(brewMethod.name)
                         }
-                    }.onAppear {
+                    }
+                    .tag(brewMethod.name)
+                    .onAppear {
                         self.ratio = Double(brewMethod.startRatio)
                         if (brewMethod.name == "Aeropress" && self.cups > 4) {
                             self.cups = 4
                         }
                     }
-                .tag(brewMethod.tag)
             }
             
             SettingsView(cupSize: $cupSize)
@@ -45,7 +46,7 @@ struct ContentView: View {
                         Text("Settings")
                     }
                 }
-                .tag(3)
+                .tag("settings")
         }
         .accentColor(.purple)
     }

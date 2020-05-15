@@ -25,17 +25,7 @@ struct MethodView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .center) {
-                ZStack() {
-                    CircleImage(methodName: methodName).opacity(flipped ? 0.0 : 1.0)
-                    TimerView().opacity(flipped ? 1.0 : 0.0)
-                }
-                .modifier(FlipEffect(flipped: $flipped, angle: animate3d ? 180 : 0, axis: (x: 0, y: 1)))
-                .onTapGesture {
-                      withAnimation(Animation.linear(duration: 0.8)) {
-                            self.animate3d.toggle()
-                      }
-                }
+                CircleImage(methodName: methodName)
                 Text(methodName)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
@@ -45,7 +35,7 @@ struct MethodView: View {
             VStack {
                 Text("Ratio")
                     .font(.headline)
-                    .padding(.bottom, 0)
+                    .padding(.bottom, -5)
                     .accessibility(identifier: "ratioLabel")
                 Slider(value: $ratio, in: 8...20, step: 1)
                     .accentColor(.purple)
@@ -57,6 +47,7 @@ struct MethodView: View {
                     .accessibility(identifier: "ratioValue")
                 Text("Cups")
                     .font(.headline)
+                    .padding(.bottom, -5)
                     .accessibility(identifier: "cupsLabel")
                 Slider(value: $cups, in: 0...maxCups, step: 1)
                     .accentColor(.purple)
@@ -66,7 +57,7 @@ struct MethodView: View {
                     .padding(.bottom, 10)
                     .accessibility(identifier: "cupsValue")
             }
-                .padding(.leading, 30)
+            .padding(.leading, 30)
             .padding(.trailing, 30)
             VStack {
                 HStack {
@@ -105,6 +96,5 @@ struct MethodView: View {
             .padding(.bottom, 5)
         }
             
-        }
     }
 }

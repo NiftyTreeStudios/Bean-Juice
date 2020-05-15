@@ -121,24 +121,24 @@
 		3406755A2417A09C00307F04 /* Bean Juice */ = {
 			isa = PBXGroup;
 			children = (
-				3406758F2418E5A300307F04 /* MethodData.swift */,
-				3406758D2418E59100307F04 /* CupData.swift */,
 				3406755B2417A09C00307F04 /* AppDelegate.swift */,
 				3406755D2417A09C00307F04 /* SceneDelegate.swift */,
+				34371216244DBD9D00030AAD /* CircleImage.swift */,
 				3406755F2417A09C00307F04 /* ContentView.swift */,
 				3450A79B2469880E00F3E799 /* CustomView.swift */,
+				3406758D2418E59100307F04 /* CupData.swift */,
+				3437121A244DC0C100030AAD /* FlipEffect.swift */,
+				346360B5243B5D770054FEB1 /* Method.swift */,
+				3406758F2418E5A300307F04 /* MethodData.swift */,
 				3450A79D24698D9300F3E799 /* MethodSelectionView.swift */,
 				3450A79F246993C200F3E799 /* ItemRow.swift */,
+				34067599241971C600307F04 /* Settings.swift */,
+				340675972419685B00307F04 /* Utilities.swift */,
+				34371218244DBE8A00030AAD /* Timer.swift */,
 				340675612417A0A000307F04 /* Assets.xcassets */,
 				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
 				340675692417A0A000307F04 /* Info.plist */,
 				340675632417A0A000307F04 /* Preview Content */,
-				340675972419685B00307F04 /* Utilities.swift */,
-				34067599241971C600307F04 /* Settings.swift */,
-				3437121A244DC0C100030AAD /* FlipEffect.swift */,
-				346360B5243B5D770054FEB1 /* Method.swift */,
-				34371216244DBD9D00030AAD /* CircleImage.swift */,
-				34371218244DBE8A00030AAD /* Timer.swift */,
 			);
 			path = "Bean Juice";
 			sourceTree = "<group>";

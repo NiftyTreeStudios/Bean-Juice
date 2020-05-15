@@ -22,23 +22,8 @@ struct MethodSelectionView: View {
                 ForEach(brewMethods, id: \.name) { brewMethod in
                     ItemRowView(item: brewMethod)
                 }
-//                ForEach(brewMethods, id: \.name) { brewMethod in
-//                    MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: brewMethod.name, maxCups: Double(brewMethod.cupAmount), maxWater: brewMethod.waterAmount, groundLevel: brewMethod.grounds)
-//                            .tabItem {
-//                            VStack {
-//                                Image(brewMethod.name)
-//                                Text(brewMethod.name)
-//                            }
-//                    }
-//                    .onAppear {
-//                        self.ratio = Double(brewMethod.startRatio)
-//                        if (brewMethod.name == "Aeropress" && self.cups > 4) {
-//                            self.cups = 4
-//                        }
-//                    }
-//                }
-            }
-        .navigationBarTitle("Brewing methods")
+                }
+            .navigationBarTitle("Brewing methods", displayMode: .inline)
         }
     }
 }

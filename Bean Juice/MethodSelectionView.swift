@@ -10,6 +10,10 @@ import SwiftUI
 
 struct MethodSelectionView: View {
     
+    @Binding var cupSize: Double
+    @Binding var ratio: Double
+    @Binding var cups: Double
+    
     let brewMethods: [Method] = [
         Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, cupAmount: 4, grounds: "Medium/Fine", startRatio: 13),
         Method(name: "Chemex", waterAmount: 1180, waterAmountOz: 40, cupAmount: 8, grounds: "Medium/Coarse", startRatio: 17),
@@ -20,7 +24,7 @@ struct MethodSelectionView: View {
         NavigationView {
             List {
                 ForEach(brewMethods, id: \.name) { brewMethod in
-                    ItemRowView(item: brewMethod)
+                    ItemRowView(item: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups)
                 }
                 }
             .navigationBarTitle("Brewing methods", displayMode: .inline)
@@ -28,8 +32,8 @@ struct MethodSelectionView: View {
     }
 }
 
-struct MethodSelectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        MethodSelectionView()
-    }
-}
+//struct MethodSelectionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MethodSelectionView()
+//    }
+//}

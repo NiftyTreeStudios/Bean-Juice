@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = "Aeropress"
+    @State private var selection = "Methods"
     @State private var cupSize: Double = 177
     @State private var ratio: Double = 13
     @State private var cups: Double = 1
  
     var body: some View {
         TabView(selection: $selection){
-            MethodSelectionView()
+            MethodSelectionView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups)
                 .tabItem {
                     VStack {
                         Image(systemName: "ellipsis.circle")

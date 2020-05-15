@@ -11,10 +11,9 @@ import SwiftUI
 struct ItemRowView: View {
     var item: Method
     
-    @State private var selection = "Aeropress"
-    @State private var cupSize: Double = 177
-    @State private var ratio: Double = 13
-    @State private var cups: Double = 1
+    @Binding var cupSize: Double
+    @Binding var ratio: Double
+    @Binding var cups: Double
     
     let brewMethods: [Method] = [
         Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, cupAmount: 4, grounds: "Medium/Fine", startRatio: 13),
@@ -32,8 +31,8 @@ struct ItemRowView: View {
     }
 }
 
-struct ItemRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemRowView(item: Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, cupAmount: 4, grounds: "Medium/Fine", startRatio: 13))
-    }
-}
+//struct ItemRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ItemRowView(item: Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, cupAmount: 4, grounds: "Medium/Fine", startRatio: 13), cupSize: self.$cupSize, ratio: 13, cups: 2)
+//    }
+//}

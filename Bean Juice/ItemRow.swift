@@ -22,7 +22,7 @@ struct ItemRowView: View {
     ]
     
     var body: some View {
-        NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: item.name, maxCups: Double(item.cupAmount), maxWater: item.waterAmount, groundLevel: item.grounds)) {
+        NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: item.name, maxCups: Double(item.cupAmount), maxWater: item.waterAmount, groundLevel: item.grounds, startRatio: item.startRatio)) {
             HStack {
                 Image(item.name)
                 Text(item.name)

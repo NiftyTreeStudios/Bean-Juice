@@ -19,6 +19,7 @@ struct MethodView: View {
     let maxCups: Double
     let maxWater: Int
     let groundLevel: String
+    let startRatio: Int
 
     @State private var flipped: Bool = false
     @State private var animate3d: Bool = false
@@ -94,6 +95,11 @@ struct MethodView: View {
             .padding(.leading, 30)
             .padding(.trailing, 30)
             .padding(.bottom, 5)
+        }.onAppear {
+            self.ratio = Double(self.startRatio)
+            if (self.methodName == "Aeropress" && self.cups > 4) {
+                self.cups = 4
+            }
         }
             
     }

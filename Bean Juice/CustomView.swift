@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct CustomView: View {
+    
+    @State private var selectedGround = 0
+    
+    let groundLevels = ["Pick one", "Fine", "Fine/Medium", "Medium", "Coarse/Medium", "Coarse"]
 
     @State private var ratio: Double = 13
     @State private var waterAmount: Double = 250
@@ -66,16 +70,16 @@ struct CustomView: View {
                     .padding(.leading, 30)
                 .padding(.trailing, 30)
                 VStack {
-                    HStack {
-                        Text("Ground level")
-                            .font(.headline)
-                            .accessibility(identifier: "groundLevelLabel")
-                        Spacer()
-                        Text(groundLevel)
-                            .font(.subheadline)
-                            .accessibility(identifier: "groundLevelValue")
-                    }
-                    .padding(.bottom, 5)
+//                    HStack {
+//                        Text("Ground level")
+//                            .font(.headline)
+//                            .accessibility(identifier: "groundLevelLabel")
+//                        Spacer()
+//                        Text(groundLevel)
+//                            .font(.subheadline)
+//                            .accessibility(identifier: "groundLevelValue")
+                    // }
+                    //.padding(.bottom, 5)
                 HStack {
                     Text("Water")
                             .font(.title)

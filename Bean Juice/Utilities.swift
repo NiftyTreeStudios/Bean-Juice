@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 func calculateCoffeeAmount(cupSize: Double, cupAmount: Double, ratio: Double, maxWater: Int) -> Double {
     let waterAmount = calculateWaterAmount(cupSize: cupSize, cupAmount: cupAmount, maxWater: maxWater)
@@ -22,4 +23,9 @@ func calculateWaterAmount(cupSize: Double, cupAmount: Double, maxWater: Int) -> 
         return waterAmount
         
     }
+}
+
+func customCoffeeAmount(water: Double, ratio: Double) -> Double {
+    let customCoffeeAmount = water / ratio
+    return customCoffeeAmount
 }

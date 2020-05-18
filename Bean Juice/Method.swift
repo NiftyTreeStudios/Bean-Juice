@@ -11,24 +11,22 @@ import SwiftUI
 
 struct MethodView: View {
 
+    @Binding var cupSize: Double
     @Binding var ratio: Double
     @Binding var cups: Double
     
     let methodName: String
     let maxCups: Double
-    @Binding var cupSize: Double
     let maxWater: Int
     let groundLevel: String
+    let startRatio: Int
 
+    @State private var flipped: Bool = false
+    @State private var animate3d: Bool = false
+    
     var body: some View {
         ScrollView {
-            VStack(alignment: .center) {
-                Image(methodName + "-Big")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 250, height: 250, alignment: .center)
-                    .clipShape(Circle())
-                    .shadow(radius: 5)
+                CircleImage(methodName: methodName)
                 Text(methodName)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
@@ -38,9 +36,9 @@ struct MethodView: View {
             VStack {
                 Text("Ratio")
                     .font(.headline)
-                    .padding(.bottom, 0)
+                    .padding(.bottom, -5)
                     .accessibility(identifier: "ratioLabel")
-                Slider(value: $ratio, in: 12...20, step: 1)
+                Slider(value: $ratio, in: 8...20, step: 1)
                     .accentColor(.purple)
                     .accessibility(identifier: "ratioSlider")
                 Text("1:\(Int(ratio))")
@@ -50,6 +48,7 @@ struct MethodView: View {
                     .accessibility(identifier: "ratioValue")
                 Text("Cups")
                     .font(.headline)
+                    .padding(.bottom, -5)
                     .accessibility(identifier: "cupsLabel")
                 Slider(value: $cups, in: 0...maxCups, step: 1)
                     .accentColor(.purple)
@@ -59,7 +58,7 @@ struct MethodView: View {
                     .padding(.bottom, 10)
                     .accessibility(identifier: "cupsValue")
             }
-                .padding(.leading, 30)
+            .padding(.leading, 30)
             .padding(.trailing, 30)
             VStack {
                 HStack {
@@ -96,8 +95,12 @@ struct MethodView: View {
             .padding(.leading, 30)
             .padding(.trailing, 30)
             .padding(.bottom, 5)
+        }.onAppear {
+            self.ratio = Double(self.startRatio)
+            if (self.methodName == "Aeropress" && self.cups > 4) {
+                self.cups = 4
+            }
         }
             
-        }
     }
 }

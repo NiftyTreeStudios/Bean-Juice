@@ -15,5 +15,4 @@ struct Method {
     let cupAmount: Int
     let grounds: String
     let startRatio: Int
-    let tag: Int
 }

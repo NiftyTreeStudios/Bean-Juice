@@ -13,6 +13,7 @@ struct MethodSelectionView: View {
     @Binding var cupSize: Double
     @Binding var ratio: Double
     @Binding var cups: Double
+    @Binding var customColor: Color
     
     let brewMethods: [Method] = [
         Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, cupAmount: 4, grounds: "Medium/Fine", startRatio: 13),
@@ -24,7 +25,7 @@ struct MethodSelectionView: View {
         NavigationView {
             List {
                 ForEach(brewMethods, id: \.name) { brewMethod in
-                    ItemRowView(item: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups)
+                    ItemRowView(item: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)
                 }
                 }
             .navigationBarTitle("Brewing methods", displayMode: .inline)

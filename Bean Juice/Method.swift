@@ -24,6 +24,8 @@ struct MethodView: View {
     @State private var flipped: Bool = false
     @State private var animate3d: Bool = false
     
+    @Binding var customColor: Color
+    
     var body: some View {
         ScrollView {
                 CircleImage(methodName: methodName)
@@ -39,7 +41,7 @@ struct MethodView: View {
                     .padding(.bottom, -5)
                     .accessibility(identifier: "ratioLabel")
                 Slider(value: $ratio, in: 8...20, step: 1)
-                    .accentColor(.purple)
+                    .accentColor(customColor)
                     .accessibility(identifier: "ratioSlider")
                 Text("1:\(Int(ratio))")
                     .font(.subheadline)
@@ -51,7 +53,7 @@ struct MethodView: View {
                     .padding(.bottom, -5)
                     .accessibility(identifier: "cupsLabel")
                 Slider(value: $cups, in: 0...maxCups, step: 1)
-                    .accentColor(.purple)
+                    .accentColor(customColor)
                     .accessibility(identifier: "cupsSlider")
                 Text("\(Int(cups)) cups")
                     .font(.subheadline)

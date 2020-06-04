@@ -19,29 +19,60 @@ struct SettingsView: View {
         CupSize(name: "Bucket", sizeMl: 473, sizeOz: 16)
     ]
     
-    @State private var selectedOption: Int = 1
+    var colors = [
+        ColorData(name: "Default", color: Color.primary),
+        ColorData(name: "Blue", color: Color.blue),
+        ColorData(name: "Green", color: Color.green),
+        ColorData(name: "Orange", color: Color.orange),
+        ColorData(name: "Pink", color: Color.pink),
+        ColorData(name: "Purple", color: Color.purple),
+        ColorData(name: "Red", color: Color.red),
+        ColorData(name: "Yellow", color: Color.yellow)
+    ]
+    
+    @State private var selectedCup: Int = 1
     @Binding var cupSize: Double
     
+    @State private var selectedColor: Int = 0
+    @Binding var customColor: Color
+    
     var body: some View {
-        let selection = Binding<Int>(get: {
-            return self.selectedOption
+        let cupSelection = Binding<Int>(get: {
+            return self.selectedCup
         }, set: {
-            self.selectedOption = $0
+            self.selectedCup = $0
             self.cupSize = Double(self.cupSizes[$0].sizeMl)
+        })
+        
+        let colorSelection = Binding<Int>(get: {
+            return self.selectedColor
+        }, set: {
+            self.selectedColor = $0
+            self.customColor = self.colors[$0].color
         })
         
         return NavigationView {
             Form {
-                Text("Coffee cup size ☕️")
-                Picker("Cup size", selection: selection) {
-                    ForEach(0..<cupSizes.count) {
-                        Text(self.cupSizes[$0].name)
+                Section(header: Text("Cup size")
+                    .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
+                    Picker("Cup size", selection: cupSelection) {
+                        ForEach(0..<cupSizes.count) {
+                            Text(self.cupSizes[$0].name)
+                        }
                     }
+                    .pickerStyle(SegmentedPickerStyle())
                 }
-                .pickerStyle(SegmentedPickerStyle())
-                Text("Picked size: " + "\(self.cupSizes[selectedOption].sizeMl) ml.")
-                Text("Picked size: " + "\(self.cupSizes[selectedOption].sizeOz) oz.")
-            .navigationBarTitle("Settings")
+                Section(header: Text("Select highlight color")
+                    .font(.subheadline), footer: Text("This will affect what highlight color the app uses.")) {
+                        Picker("", selection: colorSelection) {
+                            ForEach(0 ..< colors.count) {
+                                Text(self.colors[$0].name)
+                                    .tag($0)
+//                                Circle().foregroundColor(self.colors[$0].color)
+                            }
+                        }
+                }
+                .navigationBarTitle("Settings", displayMode: .inline)
             }
         }
     }

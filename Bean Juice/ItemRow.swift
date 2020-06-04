@@ -14,6 +14,7 @@ struct ItemRowView: View {
     @Binding var cupSize: Double
     @Binding var ratio: Double
     @Binding var cups: Double
+    @Binding var customColor: Color
     
     let brewMethods: [Method] = [
         Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, cupAmount: 4, grounds: "Medium/Fine", startRatio: 13),
@@ -22,7 +23,7 @@ struct ItemRowView: View {
     ]
     
     var body: some View {
-        NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: item.name, maxCups: Double(item.cupAmount), maxWater: item.waterAmount, groundLevel: item.grounds, startRatio: item.startRatio)) {
+        NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: item.name, maxCups: Double(item.cupAmount), maxWater: item.waterAmount, groundLevel: item.grounds, startRatio: item.startRatio, customColor: self.$customColor)) {
             HStack {
                 Image(item.name)
                 Text(item.name)

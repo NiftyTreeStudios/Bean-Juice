@@ -24,6 +24,8 @@ struct CustomView: View {
     @State private var flipped: Bool = false
     @State private var animate3d: Bool = false
     
+    @Binding var customColor: Color
+    
     var body: some View {
             ScrollView {
                 VStack(alignment: .center) {
@@ -49,7 +51,7 @@ struct CustomView: View {
                         .padding(.bottom, 0)
                         .accessibility(identifier: "ratioLabel")
                     Slider(value: $ratio, in: 8...20, step: 1)
-                        .accentColor(.purple)
+                        .accentColor(customColor)
                         .accessibility(identifier: "ratioSlider")
                     Text("1:\(Int(ratio))")
                         .font(.subheadline)
@@ -60,7 +62,7 @@ struct CustomView: View {
                         .font(.headline)
                         .accessibility(identifier: "cupsLabel")
                     Slider(value: $waterAmount, in: 0...maxWater, step: 10)
-                        .accentColor(.purple)
+                        .accentColor(customColor)
                         .accessibility(identifier: "cupsSlider")
                     Text("\(Int(waterAmount)) ml")
                         .font(.subheadline)
@@ -110,8 +112,3 @@ struct CustomView: View {
     }
 }
 
-struct CustomView_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomView()
-    }
-}

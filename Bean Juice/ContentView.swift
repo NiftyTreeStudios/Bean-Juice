@@ -14,9 +14,11 @@ struct ContentView: View {
     @State private var ratio: Double = 13
     @State private var cups: Double = 1
  
+    @State private var customColor: Color = Color.primary
+    
     var body: some View {
         TabView(selection: $selection){
-            MethodSelectionView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups)
+            MethodSelectionView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)
                 .tabItem {
                     VStack {
                         Image(systemName: "ellipsis.circle")
@@ -25,7 +27,7 @@ struct ContentView: View {
                 }
                 .tag("Methods")
             
-            CustomView()
+            CustomView(customColor: self.$customColor)
                 .tabItem {
                     VStack {
                         Image(systemName: "square.and.pencil")
@@ -34,7 +36,7 @@ struct ContentView: View {
                 }
                 .tag("Custom")
             
-            SettingsView(cupSize: $cupSize)
+            SettingsView(cupSize: $cupSize, customColor: $customColor)
                 .tabItem {
                     VStack {
                         Image(systemName: "gear")
@@ -43,7 +45,7 @@ struct ContentView: View {
                 }
                 .tag("settings")
         }
-        .accentColor(.purple)
+        .accentColor(customColor)
     }
 }
 

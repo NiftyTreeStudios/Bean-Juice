@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import SafariServices
 
 struct SettingsView: View {
     
@@ -35,6 +36,9 @@ struct SettingsView: View {
     
     @State private var selectedColor: Int = 0
     @Binding var customColor: Color
+    
+    @State var showSafari = false
+    @State var urlString = "https://duckduckgo.com"
     
     var body: some View {
         let cupSelection = Binding<Int>(get: {
@@ -64,7 +68,7 @@ struct SettingsView: View {
                 }
                 Section(header: Text("Select highlight color")
                     .font(.subheadline), footer: Text("This will affect what highlight color the app uses.")) {
-                        Picker("", selection: colorSelection) {
+                        Picker("Color", selection: colorSelection) {
                             ForEach(0 ..< colors.count) {
                                 Text(self.colors[$0].name)
                                     .tag($0)
@@ -72,12 +76,49 @@ struct SettingsView: View {
                             }
                         }
                 }
+                Section(header: Text("Follow us on social media")
+                    .font(.subheadline), footer: Text("@BeanJuiceApp"), content: {
+                    Button(action: {
+                        // Open Instagram
+                        self.urlString = "https://www.instagram.com/BeanJuiceApp"
+                        self.showSafari = true
+                    }) {
+                        Text("Instagram")
+                    }
+                    // summon the Safari sheet
+                    .sheet(isPresented: $showSafari) {
+                        SafariView(url:URL(string: self.urlString)!)
+                    }
+                    Button(action: {
+                        // Open Twitter
+                        self.urlString = "https://www.twitter.com/BeanJuiceApp"
+                        self.showSafari = true
+                    }) {
+                        Text("Twitter")
+                    }
+                    // summon the Safari sheet
+                    .sheet(isPresented: $showSafari) {
+                        SafariView(url:URL(string: self.urlString)!)
+                    }
+                })
                 .navigationBarTitle("Settings", displayMode: .inline)
             }
         }
     }
 }
 
+struct SafariView: UIViewControllerRepresentable {
+
+    let url: URL
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
+        return SFSafariViewController(url: url)
+    }
+
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
+
+    }
+}
 //struct Settings_Previews: PreviewProvider {
 //    static var previews: some View {
 //        SettingsView()

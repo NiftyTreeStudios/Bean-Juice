@@ -18,6 +18,8 @@ struct MethodSelectionView: View {
     let brewMethods: [Method] = [
         Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, cupAmount: 4, grounds: "Medium/Fine", startRatio: 13),
         Method(name: "Chemex", waterAmount: 1180, waterAmountOz: 40, cupAmount: 8, grounds: "Medium/Coarse", startRatio: 17),
+        // Method(name: "Custom", waterAmount: 1180, waterAmountOz: 40, cupAmount: 8, grounds: "Medium", startRatio: 16),
+        // Method(name: "French Press", waterAmount: 1500, waterAmountOz: 50, cupAmount: 8, grounds: "Coarse", startRatio: 18),
         Method(name: "V60", waterAmount: 1000, waterAmountOz: 33, cupAmount: 8, grounds: "Medium", startRatio: 17)
     ]
     
@@ -27,7 +29,19 @@ struct MethodSelectionView: View {
                 ForEach(brewMethods, id: \.name) { brewMethod in
                     ItemRowView(item: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)
                 }
+                NavigationLink(destination: FrenchPressView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)) {
+                    HStack {
+                        Image("French Press")
+                        Text("French Press")
+                    }
                 }
+                NavigationLink(destination: CustomView(customColor: self.$customColor)) {
+                    HStack {
+                        Image(systemName: "gear")
+                        Text("Custom")
+                    }
+                }
+            }
             .navigationBarTitle("Brewing methods", displayMode: .inline)
         }
     }

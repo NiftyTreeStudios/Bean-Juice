@@ -27,15 +27,6 @@ struct ContentView: View {
                 }
                 .tag("Methods")
             
-            CustomView(customColor: self.$customColor)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "square.and.pencil")
-                        Text("Custom")
-                    }
-                }
-                .tag("Custom")
-            
             SettingsView(cupSize: $cupSize, customColor: $customColor)
                 .tabItem {
                     VStack {

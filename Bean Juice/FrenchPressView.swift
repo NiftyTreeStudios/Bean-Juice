@@ -1,31 +1,33 @@
 //
-//  Method.swift
+//  FrenchPressView.swift
 //  Bean Juice
 //
-//  Created by Iiro Alhonen on 6.4.2020.
+//  Created by Iiro Alhonen on 22.6.2020.
 //  Copyright © 2020 Nifty Tree Studios. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
-struct MethodView: View {
-
+struct FrenchPressView: View {
+    
     @Binding var cupSize: Double
     @Binding var ratio: Double
     @Binding var cups: Double
     
-    let methodName: String
-    let maxCups: Double
-    let maxWater: Int
-    let groundLevel: String
-    let startRatio: Int
+    let methodName: String = "French Press"
+    let maxCups: Double = 8
+    let maxWater: Int = 1500
+    let groundLevel: String = "Coarse"
+    let startRatio: Int = 18
+    
+    let sizes = [350, 500, 1000, 1500]
+    @State private var selectedSize: Double = 1
 
     @State private var flipped: Bool = false
     @State private var animate3d: Bool = false
-    
+            
     @Binding var customColor: Color
-    
+            
     var body: some View {
         ScrollView {
                 CircleImage(methodName: methodName)
@@ -48,17 +50,17 @@ struct MethodView: View {
                     .padding(.bottom, 10)
                     .padding(.top, 0)
                     .accessibility(identifier: "ratioValue")
-                Text("Cups")
+                Text("Size")
                     .font(.headline)
                     .padding(.bottom, -5)
-                    .accessibility(identifier: "cupsLabel")
-                Slider(value: $cups, in: 0...maxCups, step: 1)
+                    .accessibility(identifier: "SizeLabel")
+                Slider(value: $selectedSize, in: 0...Double(sizes.count - 1), step: 1)
                     .accentColor(customColor)
-                    .accessibility(identifier: "cupsSlider")
-                Text("\(Int(cups)) cups")
+                    .accessibility(identifier: "SizeSlider")
+                Text("\(sizes[Int(selectedSize)]) ml")
                     .font(.subheadline)
                     .padding(.bottom, 10)
-                    .accessibility(identifier: "cupsValue")
+                    .accessibility(identifier: "SizeValue")
             }
             .padding(.leading, 30)
             .padding(.trailing, 30)
@@ -78,7 +80,7 @@ struct MethodView: View {
                         .font(.title)
                         .accessibility(identifier: "waterLabel")
                     Spacer()
-                Text("\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: maxWater)) g")
+                Text("\(sizes[Int(selectedSize)]) g")
                         .font(.title)
                         .accessibility(identifier: "waterValue")
                 }
@@ -88,7 +90,7 @@ struct MethodView: View {
                         .font(.title)
                         .accessibility(identifier: "coffeeLabel")
                     Spacer()
-                    Text("\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: maxWater), specifier: "%.1f") g")
+                    Text("\(Double(sizes[Int(selectedSize)]) / ratio, specifier: "%.1f") g")
                         .font(.title)
                         .accessibility(identifier: "coffeeValue")
                 }
@@ -99,9 +101,6 @@ struct MethodView: View {
             .padding(.bottom, 5)
         }.onAppear {
             self.ratio = Double(self.startRatio)
-            if (self.methodName == "Aeropress" && self.cups > 4) {
-                self.cups = 4
-            }
         }
             
     }

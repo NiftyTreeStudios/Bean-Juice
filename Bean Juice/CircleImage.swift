@@ -14,7 +14,7 @@ struct CircleImage: View {
     let methodName: String
     
     var body: some View {
-        Image(methodName + "-Big")
+        Image(decorative: methodName + "-Big")
         .resizable()
         .aspectRatio(contentMode: .fill)
         .frame(width: 250, height: 250, alignment: .center)

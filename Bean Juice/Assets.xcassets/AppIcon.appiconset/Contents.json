@@ -31,19 +31,19 @@
       "size" : "40x40"
     },
     {
-      "filename" : "Bean Juice Icon @2x.png",
+      "filename" : "Bean Juice Icon 2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "Bean Juice Icon @3x.png",
+      "filename" : "Bean Juice Icon 3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
-      "filename" : "Bean Juice Icon App Store.png",
+      "filename" : "Bean Juice Icon.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

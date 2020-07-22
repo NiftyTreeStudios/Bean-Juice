@@ -12,7 +12,6 @@ struct Method {
     let name: String
     let waterAmount: Int
     let waterAmountOz: Int
-    let cupAmount: Int
     let grounds: String
     let startRatio: Int
 }

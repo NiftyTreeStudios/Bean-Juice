@@ -9,13 +9,55 @@
 import SwiftUI
 
 struct CustomToggle: View {
+    
+    @Binding var mlSelected: Bool
+    @Binding var customColor: Color
+    @State private var isSelectedColorWhite: Bool = false
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Cups")
+                .foregroundColor(mlSelected ? .gray : customColor)
+            Toggle("Cup Switch", isOn: $mlSelected)
+                .toggleStyle(CustomToggleStyle(customColor: $customColor, isSelectedColorWhite: $isSelectedColorWhite))
+                .onAppear   {
+                    if self.customColor == .white {
+                        self.isSelectedColorWhite = true
+                    } else {
+                        self.isSelectedColorWhite = false
+                    }
+                }
+            Text("ml")
+                .foregroundColor(mlSelected ? customColor : .gray)
+        }
     }
 }
 
-struct CustomToggle_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomToggle()
+struct CustomToggleStyle: ToggleStyle {
+    
+    @Binding var customColor: Color
+    @Binding var isSelectedColorWhite: Bool
+    
+    let width: CGFloat = 50
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+
+        HStack {
+
+            ZStack(alignment: configuration.isOn ? .trailing : .leading) {
+                RoundedRectangle(cornerRadius: 4)
+                    .frame(width: width, height: width / 2)
+                    .foregroundColor(customColor)
+                
+                RoundedRectangle(cornerRadius: 4)
+                    .frame(width: (width / 2) - 4, height: width / 2 - 6)
+                    .padding(4)
+                    .foregroundColor(isSelectedColorWhite ? .black : .white)
+                    .onTapGesture {
+                        configuration.$isOn.wrappedValue.toggle()
+                }
+            }
+        }
     }
 }

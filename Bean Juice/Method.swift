@@ -16,7 +16,14 @@ struct MethodView: View {
     @Binding var cups: Double
     
     let methodName: String
-    var maxCups: Double { Double(maxWater) / cupSize }
+    var maxCups: Double {
+        if cupSize > Double(maxWater) {
+            self.cupSize = Double(maxWater)
+            return 1
+        } else {
+            return Double(maxWater) / cupSize
+        }
+    }
     let maxWater: Int
     let groundLevel: String
     let startRatio: Int
@@ -34,11 +41,7 @@ struct MethodView: View {
                 VStack {
                     HStack {
                         Spacer()
-                        Text("Cups")
-                        Toggle(isOn: $mlSelected) {
-                            Text("Use ML")
-                        }.labelsHidden()
-                        Text("ml")
+                        CustomToggle(mlSelected: $mlSelected, customColor: $customColor)
                     }.padding()
                     Spacer()
                 }
@@ -109,6 +112,9 @@ struct MethodView: View {
             self.ratio = Double(self.startRatio)
             if (self.methodName == "Aeropress" && self.cups > 4) {
                 self.cups = 4
+            }
+            if (self.methodName == "Aeropress" && self.waterAmount > Double(self.maxWater)) {
+                self.waterAmount = Double(self.maxWater)
             }
         }
             

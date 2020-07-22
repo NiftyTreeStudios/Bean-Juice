@@ -60,7 +60,7 @@ struct SettingsView: View {
                 Section(header: Text("Cup size")
                     .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
                     Picker("Cup size", selection: cupSelection) {
-                        ForEach(0..<cupSizes.count) {
+                        ForEach(0 ..< cupSizes.count, id: \.self) {
                             Text(self.cupSizes[$0].name)
                         }
                     }
@@ -69,10 +69,9 @@ struct SettingsView: View {
                 Section(header: Text("Select highlight color")
                     .font(.subheadline), footer: Text("This will affect what highlight color the app uses.")) {
                         Picker("Color", selection: colorSelection) {
-                            ForEach(0 ..< colors.count) {
-                                Text(self.colors[$0].name)
-                                    .tag($0)
-//                                Circle().foregroundColor(self.colors[$0].color)
+                            ForEach(0 ..< colors.count, id: \.self) { color in
+                                Text(self.colors[color].name)
+                                    .tag(color)
                             }
                         }
                 }

@@ -21,44 +21,56 @@ struct MethodView: View {
     let groundLevel: String
     let startRatio: Int
 
-    @State private var flipped: Bool = false
-    @State private var animate3d: Bool = false
+    @State private var mlSelected: Bool = false
+    @State private var waterAmount: Double = 250
     
     @Binding var customColor: Color
     
     var body: some View {
         ScrollView {
+            ZStack {
                 CircleImage(methodName: methodName)
                     .padding(.top, 10)
+                VStack {
+                    HStack {
+                        Spacer()
+                        Text("Cups")
+                        Toggle(isOn: $mlSelected) {
+                            Text("Use ML")
+                        }.labelsHidden()
+                        Text("ml")
+                    }.padding()
+                    Spacer()
+                }
+            }
                 Text(methodName)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .padding(10)
-                    .accessibility(identifier: "methodNameLabel")
             VStack {
                 Text("Ratio")
                     .font(.headline)
                     .padding(.bottom, -5)
-                    .accessibility(identifier: "ratioLabel")
                 Slider(value: $ratio, in: 8...20, step: 1)
                     .accentColor(customColor)
-                    .accessibility(identifier: "ratioSlider")
                 Text("1:\(Int(ratio))")
                     .font(.subheadline)
                     .padding(.bottom, 10)
                     .padding(.top, 0)
-                    .accessibility(identifier: "ratioValue")
-                Text("Cups")
+                
+                Text(mlSelected ? "Water" : "Cups")
                     .font(.headline)
                     .padding(.bottom, -5)
-                    .accessibility(identifier: "cupsLabel")
-                Slider(value: $cups, in: 0...maxCups, step: 1)
-                    .accentColor(customColor)
-                    .accessibility(identifier: "cupsSlider")
-                Text("\(Int(cups)) cups")
+                if mlSelected {
+                    Slider(value: $waterAmount, in: 0...Double(maxWater), step: 10)
+                        .accentColor(customColor)
+                } else {
+                    Slider(value: $cups, in: 0...maxCups, step: 1)
+                        .accentColor(customColor)
+                }
+                Text(mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
                     .font(.subheadline)
                     .padding(.bottom, 10)
-                    .accessibility(identifier: "cupsValue")
             }
             .padding(.leading, 30)
             .padding(.trailing, 30)
@@ -66,31 +78,27 @@ struct MethodView: View {
                 HStack {
                     Text("Ground level")
                         .font(.headline)
-                        .accessibility(identifier: "groundLevelLabel")
                     Spacer()
                     Text(groundLevel)
                         .font(.subheadline)
-                        .accessibility(identifier: "groundLevelValue")
                 }
                 .padding(.bottom, 5)
-            HStack {
-                Text("Water")
+                
+                HStack {
+                    Text("Water")
                         .font(.title)
-                        .accessibility(identifier: "waterLabel")
                     Spacer()
-                Text("\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: maxWater)) g")
+                    Text(mlSelected ? "\(waterAmount, specifier: "%.0f") g" : "\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: maxWater)) g")
                         .font(.title)
-                        .accessibility(identifier: "waterValue")
                 }
                 .padding(.bottom, 5)
+                
                 HStack {
                     Text("Coffee")
                         .font(.title)
-                        .accessibility(identifier: "coffeeLabel")
                     Spacer()
-                    Text("\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: maxWater), specifier: "%.1f") g")
+                    Text(mlSelected ? "\(customCoffeeAmount(water: waterAmount, ratio: ratio), specifier: "%.1f") g" : "\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: maxWater), specifier: "%.1f") g")
                         .font(.title)
-                        .accessibility(identifier: "coffeeValue")
                 }
                 .padding(.bottom, 5)
             }

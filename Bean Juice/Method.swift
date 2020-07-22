@@ -16,7 +16,7 @@ struct MethodView: View {
     @Binding var cups: Double
     
     let methodName: String
-    let maxCups: Double
+    var maxCups: Double { Double(maxWater) / cupSize }
     let maxWater: Int
     let groundLevel: String
     let startRatio: Int

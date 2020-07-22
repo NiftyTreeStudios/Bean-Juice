@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var ratio: Double = 13
     @State private var cups: Double = 1
  
-    @State private var customColor: Color = Color.primary
+    @State private var customColor: Color = Color.blue
     
     var body: some View {
         TabView(selection: $selection){

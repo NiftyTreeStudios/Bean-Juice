@@ -37,7 +37,7 @@ struct MethodView: View {
         ScrollView {
             ZStack {
                 CircleImage(methodName: methodName)
-                    .padding(.top, 10)
+                    .padding(.top, 30)
                 VStack {
                     HStack {
                         Spacer()

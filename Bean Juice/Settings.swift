@@ -21,7 +21,6 @@ struct SettingsView: View {
     ]
     
     var colors = [
-        ColorData(name: "Default", color: Color.primary),
         ColorData(name: "Blue", color: Color.blue),
         ColorData(name: "Green", color: Color.green),
         ColorData(name: "Orange", color: Color.orange),

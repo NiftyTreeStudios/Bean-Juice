@@ -30,6 +30,8 @@ struct SettingsView: View {
         ColorData(name: "Yellow", color: Color.yellow)
     ]
     
+    @Binding var mlSelected: Bool
+    
     // TODO: Make persistent between sessions
     @State private var selectedCup: Int = 1
     @Binding var cupSize: Double
@@ -58,6 +60,11 @@ struct SettingsView: View {
         
         return NavigationView {
             Form {
+                Section(header: Text("Use ml instead of cups")) {
+                    Toggle(isOn: $mlSelected) {
+                        Text("Use ml")
+                    }
+                }
                 Section(header: Text("Cup size")
                     .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
                     Picker("Cup size", selection: cupSelection) {

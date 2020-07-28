@@ -30,7 +30,8 @@ struct MethodView: View {
 
     // TODO: Make persistent between sessions
     // TODO: Move/copy to settings tab
-    @State private var mlSelected: Bool = false
+    // @State private var mlSelected: Bool = false
+    @Binding var mlSelected: Bool
     @State private var waterAmount: Double = 250
     
     @Binding var customColor: Color
@@ -43,7 +44,7 @@ struct MethodView: View {
                 VStack {
                     HStack {
                         Spacer()
-                        CustomToggle(mlSelected: $mlSelected, customColor: $customColor)
+                        // CustomToggle(mlSelected: $mlSelected, customColor: $customColor)
                     }.padding()
                     Spacer()
                 }

@@ -28,6 +28,8 @@ struct MethodView: View {
     let groundLevel: String
     let startRatio: Int
 
+    // TODO: Make persistent between sessions
+    // TODO: Move/copy to settings tab
     @State private var mlSelected: Bool = false
     @State private var waterAmount: Double = 250
     

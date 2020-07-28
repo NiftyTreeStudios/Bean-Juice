@@ -30,9 +30,11 @@ struct SettingsView: View {
         ColorData(name: "Yellow", color: Color.yellow)
     ]
     
+    // TODO: Make persistent between sessions
     @State private var selectedCup: Int = 1
     @Binding var cupSize: Double
     
+    // TODO: Make persistent between sessions
     @State private var selectedColor: Int = 0
     @Binding var customColor: Color
     

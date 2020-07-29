@@ -28,7 +28,7 @@ struct ContentView: View {
                 }
                 .tag("Methods")
             
-            SettingsView(mlSelected: $mlSelected, cupSize: $cupSize, customColor: $customColor)
+            SettingsView(cupSize: $cupSize, customColor: $customColor)
                 .tabItem {
                     VStack {
                         Image(systemName: "gear")

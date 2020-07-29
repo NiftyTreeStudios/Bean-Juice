@@ -30,7 +30,8 @@ struct SettingsView: View {
         ColorData(name: "Yellow", color: Color.yellow)
     ]
     
-    @Binding var mlSelected: Bool
+    // @Binding var mlSelected: Bool
+    @ObservedObject var userDefaultsManager = UserDefaultsManager()
     
     // TODO: Make persistent between sessions
     @State private var selectedCup: Int = 1
@@ -61,7 +62,7 @@ struct SettingsView: View {
         return NavigationView {
             Form {
                 Section(header: Text("Use ml instead of cups")) {
-                    Toggle(isOn: $mlSelected) {
+                    Toggle(isOn: self.$userDefaultsManager.mlSelected) {
                         Text("Use ml")
                     }
                 }
@@ -111,6 +112,12 @@ struct SettingsView: View {
                 .navigationBarTitle("Settings", displayMode: .inline)
             }
         }
+    }
+}
+
+class UserDefaultsManager: ObservableObject {
+    @Published var mlSelected: Bool = UserDefaults.standard.bool(forKey: "mlSelected") {
+        didSet { UserDefaults.standard.set(self.mlSelected, forKey: "mlSelected") }
     }
 }
 

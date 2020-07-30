@@ -30,11 +30,10 @@ struct SettingsView: View {
         ColorData(name: "Yellow", color: Color.yellow)
     ]
     
-    // @Binding var mlSelected: Bool
     @ObservedObject var userDefaultsManager = UserDefaultsManager()
     
     // TODO: Make persistent between sessions
-    @State private var selectedCup: Int = 1
+    // @State private var selectedCup: Int = 1
     @Binding var cupSize: Double
     
     // TODO: Make persistent between sessions
@@ -46,9 +45,9 @@ struct SettingsView: View {
     
     var body: some View {
         let cupSelection = Binding<Int>(get: {
-            return self.selectedCup
+            return self.userDefaultsManager.selectedCup
         }, set: {
-            self.selectedCup = $0
+            self.userDefaultsManager.selectedCup = $0
             self.cupSize = Double(self.cupSizes[$0].sizeMl)
         })
         
@@ -67,7 +66,7 @@ struct SettingsView: View {
                     }
                 }
                 Section(header: Text("Cup size")
-                    .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
+                    .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[userDefaultsManager.selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[userDefaultsManager.selectedCup].sizeOz) oz.")) {
                     Picker("Cup size", selection: cupSelection) {
                         ForEach(0 ..< cupSizes.count, id: \.self) {
                             Text(self.cupSizes[$0].name)
@@ -112,12 +111,6 @@ struct SettingsView: View {
                 .navigationBarTitle("Settings", displayMode: .inline)
             }
         }
-    }
-}
-
-class UserDefaultsManager: ObservableObject {
-    @Published var mlSelected: Bool = UserDefaults.standard.bool(forKey: "mlSelected") {
-        didSet { UserDefaults.standard.set(self.mlSelected, forKey: "mlSelected") }
     }
 }
 

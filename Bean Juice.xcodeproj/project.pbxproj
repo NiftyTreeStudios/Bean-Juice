@@ -24,6 +24,7 @@
 		346360B6243B5D770054FEB1 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346360B5243B5D770054FEB1 /* Method.swift */; };
 		34B2193F2449A9F50027E614 /* Bean_JuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2193E2449A9F50027E614 /* Bean_JuiceTests.swift */; };
 		34B2194D2449AA030027E614 /* Bean_JuiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2194C2449AA030027E614 /* Bean_JuiceUITests.swift */; };
+		546B1B6524D1BB2900E26E8A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B1B6424D1BB2900E26E8A /* UserDefaultsManager.swift */; };
 		547A164124A0A3870094FC55 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A164024A0A3870094FC55 /* CustomView.swift */; };
 		547A164324A0AE390094FC55 /* FrenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A164224A0AE390094FC55 /* FrenchPressView.swift */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
@@ -70,6 +71,7 @@
 		34B2194A2449AA030027E614 /* Bean JuiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B2194C2449AA030027E614 /* Bean_JuiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceUITests.swift; sourceTree = "<group>"; };
 		34B2194E2449AA030027E614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546B1B6424D1BB2900E26E8A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		547A164024A0A3870094FC55 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		547A164224A0AE390094FC55 /* FrenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchPressView.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
 				340675692417A0A000307F04 /* Info.plist */,
 				340675632417A0A000307F04 /* Preview Content */,
+				546B1B6424D1BB2900E26E8A /* UserDefaultsManager.swift */,
 			);
 			path = "Bean Juice";
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				3415A808248917B100699184 /* ColorData.swift in Sources */,
 				3406755C2417A09C00307F04 /* AppDelegate.swift in Sources */,
 				3406759A241971C600307F04 /* Settings.swift in Sources */,
+				546B1B6524D1BB2900E26E8A /* UserDefaultsManager.swift in Sources */,
 				54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */,
 				3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */,
 				3406755E2417A09C00307F04 /* SceneDelegate.swift in Sources */,

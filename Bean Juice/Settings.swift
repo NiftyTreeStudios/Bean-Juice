@@ -74,6 +74,13 @@ struct SettingsView: View {
                             }
                         }
                 }
+                Section(header: Text("Rate us!")) {
+                    Button(action: {
+                        // Review button
+                    }) {
+                        Text("Rate us!")
+                    }
+                }
                 Section(header: Text("Follow us on social media")
                     .font(.subheadline), footer: Text("@BeanJuiceApp"), content: {
                     Button(action: {

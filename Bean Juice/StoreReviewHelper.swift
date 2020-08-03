@@ -10,20 +10,19 @@ import Foundation
 import StoreKit
 
 struct StoreReviewHelper {
-    let Defaults = UserDefaults.standard
     
     static func incrementAppOpenedCount() { // called from appdelegate didfinishLaunchingWithOptions:
-        guard var appOpenCount = Defaults.value(forKey: UserDefaultsKeys.APP_OPENED_COUNT) as? Int else {
-            Defaults.set(1, forKey: UserDefaultsKeys.APP_OPENED_COUNT)
+        guard var appOpenCount = UserDefaults.standard.value(forKey: UserDefaultsKeys.APP_OPENED_COUNT) as? Int else {
+            UserDefaults.standard.set(1, forKey: UserDefaultsKeys.APP_OPENED_COUNT)
             return
         }
         appOpenCount += 1
-        Defaults.set(appOpenCount, forKey: UserDefaultsKeys.APP_OPENED_COUNT)
+        UserDefaults.standard.set(appOpenCount, forKey: UserDefaultsKeys.APP_OPENED_COUNT)
     }
     static func checkAndAskForReview() { // call this whenever appropriate
         // this will not be shown everytime. Apple has some internal logic on how to show this.
-        guard var appOpenCount = Defaults.value(forKey: UserDefaultsKeys.APP_OPENED_COUNT) as? Int else {
-            Defaults.set(1, forKey: UserDefaultsKeys.APP_OPENED_COUNT)
+        guard var appOpenCount = UserDefaults.standard.value(forKey: UserDefaultsKeys.APP_OPENED_COUNT) as? Int else {
+            UserDefaults.standard.set(1, forKey: UserDefaultsKeys.APP_OPENED_COUNT)
             return
         }
         
@@ -49,5 +48,5 @@ struct StoreReviewHelper {
 }
 
 struct UserDefaultsKeys {
-    static let APP_OPENED_COUNT = "APP_OPENED_COUNT”
+    static let APP_OPENED_COUNT = "APP_OPENED_COUNT"
 }

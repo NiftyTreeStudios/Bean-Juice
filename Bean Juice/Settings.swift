@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import SafariServices
+import StoreKit
 
 struct SettingsView: View {
     
@@ -77,8 +78,9 @@ struct SettingsView: View {
                 Section(header: Text("Rate us!")) {
                     Button(action: {
                         // Review button
+                        SKStoreReviewController.requestReview()
                     }) {
-                        Text("Rate us!")
+                        Text("Rate Bean Juice")
                     }
                 }
                 Section(header: Text("Follow us on social media")

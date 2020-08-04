@@ -75,12 +75,12 @@ struct SettingsView: View {
                             }
                         }
                 }
-                Section(header: Text("Rate us!")) {
+                Section(header: Text("Enjoying using Bean Juice?")) {
                     Button(action: {
                         // Review button
                         SKStoreReviewController.requestReview()
                     }) {
-                        Text("Rate Bean Juice")
+                        Text("Give us a rating!")
                     }
                 }
                 Section(header: Text("Follow us on social media")

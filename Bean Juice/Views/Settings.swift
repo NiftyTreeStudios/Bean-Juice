@@ -33,7 +33,7 @@ struct SettingsView: View {
     @ObservedObject var userDefaultsManager = UserDefaultsManager()
     
     // TODO: Make persistent between sessions
-    // @State private var selectedCup: Int = 1
+    @State private var selectedCup: Int = 1
     @Binding var cupSize: Double
     
     // TODO: Make persistent between sessions
@@ -45,9 +45,9 @@ struct SettingsView: View {
     
     var body: some View {
         let cupSelection = Binding<Int>(get: {
-            return self.userDefaultsManager.selectedCup
+            return self.selectedCup
         }, set: {
-            self.userDefaultsManager.selectedCup = $0
+            self.selectedCup = $0
             self.cupSize = Double(self.cupSizes[$0].sizeMl)
         })
         
@@ -66,7 +66,7 @@ struct SettingsView: View {
                     }
                 }
                 Section(header: Text("Cup size")
-                    .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[userDefaultsManager.selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[userDefaultsManager.selectedCup].sizeOz) oz.")) {
+                    .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
                     Picker("Cup size", selection: cupSelection) {
                         ForEach(0 ..< cupSizes.count, id: \.self) {
                             Text(self.cupSizes[$0].name)

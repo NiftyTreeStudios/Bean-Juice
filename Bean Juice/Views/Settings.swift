@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import SafariServices
+import StoreKit
 
 struct SettingsView: View {
     
@@ -82,6 +83,14 @@ struct SettingsView: View {
                                     .tag(color)
                             }
                         }
+                }
+                Section(header: Text("Enjoying using Bean Juice?")) {
+                    Button(action: {
+                        // Review button
+                        SKStoreReviewController.requestReview()
+                    }) {
+                        Text("Give us a rating!")
+                    }
                 }
                 Section(header: Text("Follow us on social media")
                     .font(.subheadline), footer: Text("@BeanJuiceApp"), content: {

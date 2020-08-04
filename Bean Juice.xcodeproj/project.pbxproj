@@ -27,6 +27,7 @@
 		546B1B6524D1BB2900E26E8A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B1B6424D1BB2900E26E8A /* UserDefaultsManager.swift */; };
 		547A164124A0A3870094FC55 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A164024A0A3870094FC55 /* CustomView.swift */; };
 		547A164324A0AE390094FC55 /* FrenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A164224A0AE390094FC55 /* FrenchPressView.swift */; };
+		54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		546B1B6424D1BB2900E26E8A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		547A164024A0A3870094FC55 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		547A164224A0AE390094FC55 /* FrenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchPressView.swift; sourceTree = "<group>"; };
+		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -327,6 +329,7 @@
 				340675902418E5A400307F04 /* MethodData.swift in Sources */,
 				3415A808248917B100699184 /* ColorData.swift in Sources */,
 				3406755C2417A09C00307F04 /* AppDelegate.swift in Sources */,
+				54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */,
 				3406759A241971C600307F04 /* Settings.swift in Sources */,
 				546B1B6524D1BB2900E26E8A /* UserDefaultsManager.swift in Sources */,
 				54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */,

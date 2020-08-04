@@ -119,6 +119,8 @@ struct MethodView: View {
             if (self.methodName == "Aeropress" && self.waterAmount > Double(self.maxWater)) {
                 self.waterAmount = Double(self.maxWater)
             }
+            StoreReviewHelper.checkAndAskForReview()
+            StoreReviewHelper.incrementAppOpenedCount()
         }
             
     }

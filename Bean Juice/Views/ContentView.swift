@@ -13,13 +13,12 @@ struct ContentView: View {
     @State private var cupSize: Double = 177
     @State private var ratio: Double = 13
     @State private var cups: Double = 1
-    @State private var mlSelected: Bool = false
  
     @State private var customColor: Color = Color.blue
     
     var body: some View {
         TabView(selection: $selection){
-            MethodSelectionView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor, mlSelected: self.$mlSelected)
+            MethodSelectionView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)
                 .tabItem {
                     VStack {
                         Image(systemName: "ellipsis.circle")

@@ -75,7 +75,7 @@
 		546B1B6424D1BB2900E26E8A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		547A164024A0A3870094FC55 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		547A164224A0AE390094FC55 /* FrenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchPressView.swift; sourceTree = "<group>"; };
-		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
+		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreReviewHelper.swift; path = ../StoreReviewHelper.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +111,7 @@
 				34B2193D2449A9F50027E614 /* Bean JuiceTests */,
 				34B2194B2449AA030027E614 /* Bean JuiceUITests */,
 				340675592417A09C00307F04 /* Products */,
+				5453A6B824D95CA500D11F0F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,11 +135,12 @@
 				34371216244DBD9D00030AAD /* CircleImage.swift */,
 				54EA8E9C24C834F500600CE8 /* CustomToggle.swift */,
 				340675972419685B00307F04 /* Utilities.swift */,
+				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
+				546B1B6424D1BB2900E26E8A /* UserDefaultsManager.swift */,
 				340675612417A0A000307F04 /* Assets.xcassets */,
 				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
 				340675692417A0A000307F04 /* Info.plist */,
 				340675632417A0A000307F04 /* Preview Content */,
-				546B1B6424D1BB2900E26E8A /* UserDefaultsManager.swift */,
 			);
 			path = "Bean Juice";
 			sourceTree = "<group>";
@@ -167,6 +169,13 @@
 				34B2194E2449AA030027E614 /* Info.plist */,
 			);
 			path = "Bean JuiceUITests";
+			sourceTree = "<group>";
+		};
+		5453A6B824D95CA500D11F0F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		546B1B6024D1B9A000E26E8A /* Data */ = {

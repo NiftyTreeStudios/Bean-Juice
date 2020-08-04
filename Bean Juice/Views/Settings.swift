@@ -31,9 +31,13 @@ struct SettingsView: View {
         ColorData(name: "Yellow", color: Color.yellow)
     ]
     
+    @ObservedObject var userDefaultsManager = UserDefaultsManager()
+    
+    // TODO: Make persistent between sessions
     @State private var selectedCup: Int = 1
     @Binding var cupSize: Double
     
+    // TODO: Make persistent between sessions
     @State private var selectedColor: Int = 0
     @Binding var customColor: Color
     
@@ -57,6 +61,11 @@ struct SettingsView: View {
         
         return NavigationView {
             Form {
+                Section(header: Text("Use ml instead of cups")) {
+                    Toggle(isOn: self.$userDefaultsManager.mlSelected) {
+                        Text("Use ml")
+                    }
+                }
                 Section(header: Text("Cup size")
                     .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
                     Picker("Cup size", selection: cupSelection) {

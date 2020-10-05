@@ -59,6 +59,8 @@ struct SettingsView: View {
             self.customColor = self.colors[$0].color
         })
         
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
+        
         return NavigationView {
             Form {
                 Section(header: Text("Use ml instead of cups")) {
@@ -119,6 +121,7 @@ struct SettingsView: View {
                         SafariView(url:URL(string: self.urlString)!)
                     }
                 })
+                Text("App version: " + appVersion)
                 .navigationBarTitle("Settings", displayMode: .inline)
             }
         }

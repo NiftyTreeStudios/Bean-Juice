@@ -66,6 +66,7 @@ struct SettingsView: View {
                         Text("Use ml")
                     }
                 }
+                //TODO: Make selected cup persistent between sessions.
                 Section(header: Text("Cup size")
                     .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
                     Picker("Cup size", selection: cupSelection) {
@@ -75,6 +76,7 @@ struct SettingsView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
+                //TODO: Make color selection persistent between sessions.
                 Section(header: Text("Select highlight color")
                     .font(.subheadline), footer: Text("This will affect what highlight color the app uses.")) {
                         Picker("Color", selection: colorSelection) {

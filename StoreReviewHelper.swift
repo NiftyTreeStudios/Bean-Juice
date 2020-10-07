@@ -37,13 +37,22 @@ struct StoreReviewHelper {
         }
         
     }
-    fileprivate func requestReview() {
-        if #available(iOS 10.3, *) {
-            SKStoreReviewController.requestReview()
+    func requestReview() {
+        if #available(iOS 14.0, *) {
+            if let scene = UIApplication.shared.currentScene {
+                SKStoreReviewController.requestReview(in: scene)
+            }
         } else {
-            // Fallback on earlier versions
-            // Try any other 3rd party or manual method here.
-        }
+            SKStoreReviewController.requestReview()
+        } 
+    }
+}
+
+
+extension UIApplication {
+    var currentScene: UIWindowScene? {
+        connectedScenes
+            .first { $0.activationState == .foregroundActive } as? UIWindowScene
     }
 }
 

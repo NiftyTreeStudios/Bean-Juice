@@ -89,7 +89,7 @@ struct SettingsView: View {
                 Section(header: Text("Enjoying using Bean Juice?")) {
                     Button(action: {
                         // Review button
-                        SKStoreReviewController.requestReview()
+                        StoreReviewHelper().requestReview()
                     }) {
                         Text("Give us a rating!")
                     }
@@ -137,6 +137,7 @@ struct SafariView: UIViewControllerRepresentable {
 
     }
 }
+
 //struct Settings_Previews: PreviewProvider {
 //    static var previews: some View {
 //        SettingsView()

@@ -519,9 +519,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bean Juice/Preview Content\"";
-				DEVELOPMENT_TEAM = LBHT4Q3RSF;
+				DEVELOPMENT_TEAM = S7297N2DPU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bean Juice/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,9 +542,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bean Juice/Preview Content\"";
-				DEVELOPMENT_TEAM = LBHT4Q3RSF;
+				DEVELOPMENT_TEAM = S7297N2DPU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bean Juice/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

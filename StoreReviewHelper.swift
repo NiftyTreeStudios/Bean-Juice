@@ -43,7 +43,7 @@ struct StoreReviewHelper {
     func requestReview() {
         if #available(iOS 14.0, *) {
             if let scene = UIApplication.shared.currentScene {
-                SKStoreReviewController.requestReview(in: scene)
+                //SKStoreReviewController.requestReview(in: scene)
             }
         } else {
             SKStoreReviewController.requestReview()

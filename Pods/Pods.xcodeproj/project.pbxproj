@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = SwiftLint;
+			productName = SwiftLint;
 		};
 /* End PBXAggregateTarget section */
 
@@ -61,18 +62,18 @@
 		332942500800A2AB32BD345CDF0876A7 /* Pods-Bean JuiceTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Bean JuiceTests.modulemap"; sourceTree = "<group>"; };
 		3C7D0C298DB725D11B3265B6351A974C /* Pods-Bean JuiceTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Bean JuiceTests-dummy.m"; sourceTree = "<group>"; };
 		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
-		41DE21843E2FDA51EBB65D7F73A6F2BB /* Pods_Bean_Juice_Bean_JuiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bean_Juice_Bean_JuiceUITests.framework; path = "Pods-Bean Juice-Bean JuiceUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41DE21843E2FDA51EBB65D7F73A6F2BB /* Pods_Bean_Juice_Bean_JuiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean_Juice_Bean_JuiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA515D565D5F5F4C6CE9112B671E5AF /* Pods-Bean Juice-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Bean Juice-acknowledgements.markdown"; sourceTree = "<group>"; };
 		623E6236E1C668D19E568DF5BF6FEA2E /* Pods-Bean JuiceTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bean JuiceTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		657D0B568B5A3ACAD4738EE39E360046 /* Pods-Bean Juice-Bean JuiceUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bean Juice-Bean JuiceUITests-Info.plist"; sourceTree = "<group>"; };
-		65B802B7AA0F971016443077298C3B39 /* Pods_Bean_JuiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bean_JuiceTests.framework; path = "Pods-Bean JuiceTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B802B7AA0F971016443077298C3B39 /* Pods_Bean_JuiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean_JuiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7C51C8C4F41C81C9A2CF60A9A54A1A3A /* Pods_Bean_Juice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bean_Juice.framework; path = "Pods-Bean Juice.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C51C8C4F41C81C9A2CF60A9A54A1A3A /* Pods_Bean_Juice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean_Juice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		8AE2985CA01E474AA7ED0BC91D522AEA /* Pods-Bean Juice-Bean JuiceUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Bean Juice-Bean JuiceUITests-umbrella.h"; sourceTree = "<group>"; };
 		9092827A9B7DC61A1EBABA1DB9A14580 /* Pods-Bean Juice-Bean JuiceUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Bean Juice-Bean JuiceUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		943FF0A47480186104E4930B7AC4473A /* Pods-Bean Juice-Bean JuiceUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Bean Juice-Bean JuiceUITests-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A4CD90FC515FF1ED280AEC4AF230D301 /* Pods-Bean Juice-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Bean Juice-umbrella.h"; sourceTree = "<group>"; };
 		A639D07C9CEB1810D34275B03AB6CD3E /* Pods-Bean Juice-Bean JuiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bean Juice-Bean JuiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7E19DB4E1B1E60A2BEA3ACB42699262 /* Pods-Bean Juice-Bean JuiceUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Bean Juice-Bean JuiceUITests.modulemap"; sourceTree = "<group>"; };
@@ -234,7 +235,6 @@
 			children = (
 				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -332,7 +332,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -510,7 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,7 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

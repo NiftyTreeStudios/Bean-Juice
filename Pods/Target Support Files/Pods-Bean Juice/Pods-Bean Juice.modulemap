@@ -1,0 +1,6 @@
+framework module Pods_Bean_Juice {
+  umbrella header "Pods-Bean Juice-umbrella.h"
+
+  export *
+  module * { export * }
+}

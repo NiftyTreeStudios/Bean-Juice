@@ -83,13 +83,13 @@ struct SettingsView: View {
                     //if custom is selected a textfield is presented
                     if cupSelection.wrappedValue == 5 {
                         HStack {
-                            TextField("Custom Cup Size", text: $customCup) {
+                            TextField("Custom Cup Size", text: $customCup, onCommit:  {
                                 //converts the values then assigns them to cupSizes array
                                 self.cupSizes[5].sizeMl = Int(self.customCup) ?? 0
                                 self.cupSizes[5].sizeOz = round(Double(self.customCup)!/(29.574)*10)/10
                                 //assigns the value to the cupSize variable
                                 self.cupSize = Double(self.customCup) ?? 0
-                            }
+                            })
                             .keyboardType(.decimalPad)
                         
                             Text("ml")

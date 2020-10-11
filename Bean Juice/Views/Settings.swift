@@ -13,12 +13,14 @@ import StoreKit
 
 struct SettingsView: View {
     
-    var cupSizes = [
+    //custom cup size added to array with default size of 0
+    @State var cupSizes = [
         CupSize(name: "Small", sizeMl: 118, sizeOz: 4),
         CupSize(name: "Medium", sizeMl: 177, sizeOz: 6),
         CupSize(name: "Large", sizeMl: 236, sizeOz: 8),
         CupSize(name: "X-Large", sizeMl: 355, sizeOz: 12),
-        CupSize(name: "Bucket", sizeMl: 473, sizeOz: 16)
+        CupSize(name: "Bucket", sizeMl: 473, sizeOz: 16),
+        CupSize(name: "Custom", sizeMl: 0, sizeOz: 0)
     ]
     
     var colors = [
@@ -36,6 +38,7 @@ struct SettingsView: View {
     // TODO: Make persistent between sessions
     @State private var selectedCup: Int = 1
     @Binding var cupSize: Double
+    @State var customCup = ""
     
     // TODO: Make persistent between sessions
     @State private var selectedColor: Int = 0
@@ -77,6 +80,21 @@ struct SettingsView: View {
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
+                    //if custom is selected a textfield is presented
+                    if cupSelection.wrappedValue == 5 {
+                        HStack {
+                            TextField("Custom Cup Size", text: $customCup) {
+                                //converts the values then assigns them to cupSizes array
+                                self.cupSizes[5].sizeMl = Int(self.customCup) ?? 0
+                                self.cupSizes[5].sizeOz = round(Double(self.customCup)!/(29.574)*10)/10
+                                //assigns the value to the cupSize variable
+                                self.cupSize = Double(self.customCup) ?? 0
+                            }
+                            .keyboardType(.decimalPad)
+                        
+                            Text("ml")
+                        }
+                    }
                 }
                 //TODO: Make color selection persistent between sessions.
                 Section(header: Text("Select highlight color")

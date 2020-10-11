@@ -9,7 +9,7 @@
 import Foundation
 
 struct CupSize {
-    let name: String
-    let sizeMl: Int
-    let sizeOz: Double
+    var name: String
+    var sizeMl: Int
+    var sizeOz: Double
 }

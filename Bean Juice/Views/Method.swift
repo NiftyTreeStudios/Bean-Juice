@@ -31,8 +31,7 @@ struct MethodView: View {
     // TODO: Make persistent between sessions
     // TODO: Move/copy to settings tab
     // @State private var mlSelected: Bool = false
-    // @Binding var mlSelected: Bool
-    @ObservedObject var userDefaultsManager = UserDefaultsManager()
+    @Binding var mlSelected: Bool
     @State private var waterAmount: Double = 250
     
     @Binding var customColor: Color
@@ -65,17 +64,17 @@ struct MethodView: View {
                     .padding(.bottom, 10)
                     .padding(.top, 0)
                 
-                Text(userDefaultsManager.mlSelected ? "Water" : "Cups")
+                Text(mlSelected ? "Water" : "Cups")
                     .font(.headline)
                     .padding(.bottom, -5)
-                if userDefaultsManager.mlSelected {
+                if mlSelected {
                     Slider(value: $waterAmount, in: 0...Double(maxWater), step: 10)
                         .accentColor(customColor)
                 } else {
                     Slider(value: $cups, in: 0...maxCups, step: 1)
                         .accentColor(customColor)
                 }
-                Text(userDefaultsManager.mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
+                Text(mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
                     .font(.subheadline)
                     .padding(.bottom, 10)
             }
@@ -95,7 +94,7 @@ struct MethodView: View {
                     Text("Water")
                         .font(.title)
                     Spacer()
-                    Text(userDefaultsManager.mlSelected ? "\(waterAmount, specifier: "%.0f") g" : "\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: maxWater)) g")
+                    Text(mlSelected ? "\(waterAmount, specifier: "%.0f") g" : "\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: maxWater)) g")
                         .font(.title)
                 }
                 .padding(.bottom, 5)
@@ -104,7 +103,7 @@ struct MethodView: View {
                     Text("Coffee")
                         .font(.title)
                     Spacer()
-                    Text(userDefaultsManager.mlSelected ? "\(customCoffeeAmount(water: waterAmount, ratio: ratio), specifier: "%.1f") g" : "\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: maxWater), specifier: "%.1f") g")
+                    Text(mlSelected ? "\(customCoffeeAmount(water: waterAmount, ratio: ratio), specifier: "%.1f") g" : "\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: maxWater), specifier: "%.1f") g")
                         .font(.title)
                 }
                 .padding(.bottom, 5)
@@ -122,7 +121,6 @@ struct MethodView: View {
             }
             StoreReviewHelper.checkAndAskForReview()
             StoreReviewHelper.incrementAppOpenedCount()
-            print(self.userDefaultsManager.mlSelected)
         }
             
     }

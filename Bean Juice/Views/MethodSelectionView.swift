@@ -14,6 +14,7 @@ struct MethodSelectionView: View {
     @Binding var ratio: Double
     @Binding var cups: Double
     @Binding var customColor: Color
+    @Binding var mlSelected: Bool
     
     let brewMethods: [Method] = [
         Method(name: "Aeropress", waterAmount: 230, waterAmountOz: 8, grounds: "Medium/Fine", startRatio: 13),
@@ -27,18 +28,12 @@ struct MethodSelectionView: View {
         NavigationView {
             List {
                 ForEach(brewMethods, id: \.name) { brewMethod in
-                    ItemRowView(item: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)
+                    ItemRowView(item: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor, mlSelected: $mlSelected)
                 }
                 NavigationLink(destination: FrenchPressView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)) {
                     HStack {
                         Image("French Press")
                         Text("French Press")
-                    }
-                }
-                NavigationLink(destination: CustomView(customColor: self.$customColor)) {
-                    HStack {
-                        Image(systemName: "gear")
-                        Text("Custom")
                     }
                 }
             }

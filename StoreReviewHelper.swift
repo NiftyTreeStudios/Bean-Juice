@@ -23,7 +23,7 @@ struct StoreReviewHelper {
     static func checkAndAskForReview() {
         // Call this whenever appropriate.
         // This will not be shown everytime. Apple has some internal logic on how to show this.
-        guard var appOpenCount = UserDefaults.standard.value(forKey: UserDefaultsKeys.APP_OPENED_COUNT) as? Int else {
+        guard let appOpenCount = UserDefaults.standard.value(forKey: UserDefaultsKeys.APP_OPENED_COUNT) as? Int else {
             UserDefaults.standard.set(1, forKey: UserDefaultsKeys.APP_OPENED_COUNT)
             return
         }

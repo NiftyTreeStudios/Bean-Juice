@@ -15,10 +15,11 @@ struct ItemRowView: View {
     @Binding var ratio: Double
     @Binding var cups: Double
     @Binding var customColor: Color
+    @Binding var mlSelected: Bool
     
     var body: some View {
 
-        NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: item.name, maxWater: item.waterAmount, groundLevel: item.grounds, startRatio: item.startRatio, customColor: self.$customColor)) {
+        NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: item.name, maxWater: item.waterAmount, groundLevel: item.grounds, startRatio: item.startRatio, mlSelected: $mlSelected, customColor: self.$customColor)) {
                 HStack {
                     Image(item.name)
                     Text(item.name)

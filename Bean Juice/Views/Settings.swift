@@ -19,7 +19,6 @@ struct SettingsView: View {
         CupSize(name: "Medium", sizeMl: 177, sizeOz: 6),
         CupSize(name: "Large", sizeMl: 236, sizeOz: 8),
         CupSize(name: "X-Large", sizeMl: 355, sizeOz: 12),
-        CupSize(name: "Bucket", sizeMl: 473, sizeOz: 16),
         CupSize(name: "Custom", sizeMl: 0, sizeOz: 0)
     ]
     
@@ -33,10 +32,9 @@ struct SettingsView: View {
         ColorData(name: "Yellow", color: Color.yellow)
     ]
     
-    @ObservedObject var userDefaultsManager = UserDefaultsManager()
-    
     // TODO: Make persistent between sessions
-    @State private var selectedCup: Int = 1
+    @Binding var mlSelected: Bool
+    @AppStorage(wrappedValue: 1, "selectedCup") var selectedCup: Int
     @Binding var cupSize: Double
     @State var customCup = ""
     
@@ -48,13 +46,6 @@ struct SettingsView: View {
     @State var urlString = "https://duckduckgo.com"
     
     var body: some View {
-        let cupSelection = Binding<Int>(get: {
-            return self.selectedCup
-        }, set: {
-            self.selectedCup = $0
-            self.cupSize = Double(self.cupSizes[$0].sizeMl)
-        })
-        
         let colorSelection = Binding<Int>(get: {
             return self.selectedColor
         }, set: {
@@ -67,21 +58,23 @@ struct SettingsView: View {
         return NavigationView {
             Form {
                 Section(header: Text("Use ml instead of cups")) {
-                    Toggle(isOn: self.$userDefaultsManager.mlSelected) {
+                    Toggle(isOn: $mlSelected) {
                         Text("Use ml")
                     }
                 }
                 //TODO: Make selected cup persistent between sessions.
                 Section(header: Text("Cup size")
                     .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
-                    Picker("Cup size", selection: cupSelection) {
+                    Picker("Cup size", selection: Binding(get: {selectedCup}, set: { newValue in
+                                                            selectedCup = newValue
+                                                            cupSize = Double(cupSizes[newValue].sizeMl)})) {
                         ForEach(0 ..< cupSizes.count, id: \.self) {
                             Text(self.cupSizes[$0].name)
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     //if custom is selected a textfield is presented
-                    if cupSelection.wrappedValue == 5 {
+                    if $selectedCup.wrappedValue == 5 {
                         HStack {
                             TextField("Custom Cup Size", text: $customCup, onCommit:  {
                                 //converts the values then assigns them to cupSizes array
@@ -140,7 +133,8 @@ struct SettingsView: View {
                     }
                 })
                 Text("App version: " + appVersion)
-                .navigationBarTitle("Settings", displayMode: .inline)
+                    .font(.footnote)
+                    .navigationBarTitle("Settings", displayMode: .inline)
             }
         }
     }

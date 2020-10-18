@@ -32,13 +32,13 @@ struct SettingsView: View {
         ColorData(name: "Yellow", color: Color.yellow)
     ]
     
-    // TODO: Make persistent between sessions
     @Binding var mlSelected: Bool
     @AppStorage(wrappedValue: 1, "selectedCup") var selectedCup: Int
     @Binding var cupSize: Double
+    // TODO: Make persistent between sessions
     @State var customCup = ""
     
-    // TODO: Make persistent between sessions
+    // TODO: Persistent color between sessions
     @State private var selectedColor: Int = 0
     @Binding var customColor: Color
     
@@ -62,7 +62,7 @@ struct SettingsView: View {
                         Text("Use ml")
                     }
                 }
-                //TODO: Make selected cup persistent between sessions.
+                
                 Section(header: Text("Cup size")
                     .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
                     Picker("Cup size", selection: Binding(get: {selectedCup}, set: { newValue in
@@ -74,12 +74,12 @@ struct SettingsView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     //if custom is selected a textfield is presented
-                    if $selectedCup.wrappedValue == 5 {
+                    if $selectedCup.wrappedValue == 4 {
                         HStack {
                             TextField("Custom Cup Size", text: $customCup, onCommit:  {
                                 //converts the values then assigns them to cupSizes array
-                                self.cupSizes[5].sizeMl = Int(self.customCup) ?? 0
-                                self.cupSizes[5].sizeOz = round(Double(self.customCup)!/(29.574)*10)/10
+                                self.cupSizes[4].sizeMl = Int(self.customCup) ?? 0
+                                self.cupSizes[4].sizeOz = round(Double(self.customCup)!/(29.574)*10)/10
                                 //assigns the value to the cupSize variable
                                 self.cupSize = Double(self.customCup) ?? 0
                             })

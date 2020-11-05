@@ -1,0 +1,4 @@
+
+disabled_rules:
+    - line_length
+    - multiple_closures_with_trailing_closure

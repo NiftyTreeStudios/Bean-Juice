@@ -12,7 +12,7 @@ import SafariServices
 import StoreKit
 
 struct SettingsView: View {
-    
+
     //custom cup size added to array with default size of 0
     @State var cupSizes = [
         CupSize(name: "Small", sizeMl: 118, sizeOz: 4),
@@ -21,7 +21,7 @@ struct SettingsView: View {
         CupSize(name: "X-Large", sizeMl: 355, sizeOz: 12),
         CupSize(name: "Custom", sizeMl: 0, sizeOz: 0)
     ]
-    
+
     var colors = [
         ColorData(name: "Blue", color: Color.blue),
         ColorData(name: "Green", color: Color.green),
@@ -31,20 +31,17 @@ struct SettingsView: View {
         ColorData(name: "Red", color: Color.red),
         ColorData(name: "Yellow", color: Color.yellow)
     ]
-    
+
     @Binding var mlSelected: Bool
     @AppStorage(wrappedValue: 1, "selectedCup") var selectedCup: Int
     @Binding var cupSize: Double
-    // TODO: Make persistent between sessions
     @State var customCup = ""
-    
-    // TODO: Persistent color between sessions
     @State private var selectedColor: Int = 0
     @Binding var customColor: Color
-    
+
     @State var showSafari = false
     @State var urlString = "https://duckduckgo.com"
-    
+
     var body: some View {
         let colorSelection = Binding<Int>(get: {
             return self.selectedColor
@@ -52,9 +49,9 @@ struct SettingsView: View {
             self.selectedColor = $0
             self.customColor = self.colors[$0].color
         })
-        
+
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
-        
+
         return NavigationView {
             Form {
                 Section(header: Text("Use ml instead of cups")) {
@@ -62,7 +59,7 @@ struct SettingsView: View {
                         Text("Use ml")
                     }
                 }
-                
+
                 Section(header: Text("Cup size")
                     .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
                     Picker("Cup size", selection: Binding(get: {selectedCup}, set: { newValue in
@@ -76,7 +73,7 @@ struct SettingsView: View {
                     //if custom is selected a textfield is presented
                     if $selectedCup.wrappedValue == 4 {
                         HStack {
-                            TextField("Custom Cup Size", text: $customCup, onCommit:  {
+                            TextField("Custom Cup Size", text: $customCup, onCommit: {
                                 //converts the values then assigns them to cupSizes array
                                 self.cupSizes[4].sizeMl = Int(self.customCup) ?? 0
                                 self.cupSizes[4].sizeOz = round(Double(self.customCup)!/(29.574)*10)/10
@@ -84,12 +81,12 @@ struct SettingsView: View {
                                 self.cupSize = Double(self.customCup) ?? 0
                             })
                             .keyboardType(.decimalPad)
-                        
+
                             Text("ml")
                         }
                     }
                 }
-                //TODO: Make color selection persistent between sessions.
+
                 Section(header: Text("Select highlight color")
                     .font(.subheadline), footer: Text("This will affect what highlight color the app uses.")) {
                         Picker("Color", selection: colorSelection) {
@@ -118,7 +115,7 @@ struct SettingsView: View {
                     }
                     // summon the Safari sheet
                     .sheet(isPresented: $showSafari) {
-                        SafariView(url:URL(string: self.urlString)!)
+                        SafariView(url: URL(string: self.urlString)!)
                     }
                     Button(action: {
                         // Open Twitter
@@ -129,7 +126,7 @@ struct SettingsView: View {
                     }
                     // summon the Safari sheet
                     .sheet(isPresented: $showSafari) {
-                        SafariView(url:URL(string: self.urlString)!)
+                        SafariView(url: URL(string: self.urlString)!)
                     }
                 })
                 Text("App version: " + appVersion)

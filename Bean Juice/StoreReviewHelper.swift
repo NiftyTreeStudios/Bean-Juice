@@ -10,7 +10,7 @@ import Foundation
 import StoreKit
 
 struct StoreReviewHelper {
-    
+
     static func incrementAppOpenedCount() { // called from appdelegate didfinishLaunchingWithOptions:
         guard var appOpenCount = UserDefaults.standard.value(forKey: UserDefaultsKeys.APP_OPENED_COUNT) as? Int else {
             UserDefaults.standard.set(1, forKey: UserDefaultsKeys.APP_OPENED_COUNT)
@@ -25,17 +25,16 @@ struct StoreReviewHelper {
             UserDefaults.standard.set(1, forKey: UserDefaultsKeys.APP_OPENED_COUNT)
             return
         }
-        
+
         switch appOpenCount {
-        case 10,50:
+        case 10, 50:
             StoreReviewHelper().requestReview()
         case _ where appOpenCount%100 == 0 :
             StoreReviewHelper().requestReview()
         default:
             print("App run count is : \(appOpenCount)")
-            break;
         }
-        
+
     }
     fileprivate func requestReview() {
         if #available(iOS 10.3, *) {
@@ -48,5 +47,5 @@ struct StoreReviewHelper {
 }
 
 struct UserDefaultsKeys {
-    static let APP_OPENED_COUNT = "APP_OPENED_COUNT"
+    static let APPOPENEDCOUNT = "APP_OPENED_COUNT"
 }

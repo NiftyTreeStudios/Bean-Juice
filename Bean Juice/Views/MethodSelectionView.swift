@@ -21,7 +21,8 @@ struct MethodSelectionView: View {
         Method(name: "Chemex", waterAmount: 1180, waterAmountOz: 40, grounds: "Medium/Coarse", startRatio: 17),
         // Method(name: "Custom", waterAmount: 1180, waterAmountOz: 40, grounds: "Medium", startRatio: 16),
         // Method(name: "French Press", waterAmount: 1500, waterAmountOz: 50, grounds: "Coarse", startRatio: 18),
-        Method(name: "V60", waterAmount: 1000, waterAmountOz: 33, grounds: "Medium", startRatio: 17)
+        Method(name: "V60", waterAmount: 1000, waterAmountOz: 33, grounds: "Medium", startRatio: 17),
+        // Method(name: "Moccamaster", waterAmount: 1000, waterAmountOz: 33, grounds: "Medium", startRatio: 16)
     ]
 
     var body: some View {

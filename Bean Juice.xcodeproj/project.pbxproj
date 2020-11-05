@@ -25,6 +25,7 @@
 		547A164324A0AE390094FC55 /* FrenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A164224A0AE390094FC55 /* FrenchPressView.swift */; };
 		54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
+		54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54F7347825544A820040C2B0 /* .swiftlint.yml */; };
 		7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		547A164224A0AE390094FC55 /* FrenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchPressView.swift; sourceTree = "<group>"; };
 		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreReviewHelper.swift; path = ../StoreReviewHelper.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
+		54F7347825544A820040C2B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		67027D81097890AF6B4A0480 /* Pods-Bean JuiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.debug.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CF29C58DBF83EAF0DF13058 /* Pods-Bean JuiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.release.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean_Juice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 		3406754F2417A09C00307F04 = {
 			isa = PBXGroup;
 			children = (
+				54F7347825544A820040C2B0 /* .swiftlint.yml */,
 				3406755A2417A09C00307F04 /* Bean Juice */,
 				340675592417A09C00307F04 /* Products */,
 				5453A6B824D95CA500D11F0F /* Recovered References */,
@@ -182,6 +185,7 @@
 				340675542417A09C00307F04 /* Sources */,
 				340675552417A09C00307F04 /* Frameworks */,
 				340675562417A09C00307F04 /* Resources */,
+				54E5FE8C25488EEC005EC728 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -230,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */,
 				340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */,
 				340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */,
 				340675622417A0A000307F04 /* Assets.xcassets in Resources */,
@@ -239,6 +244,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		54E5FE8C25488EEC005EC728 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+
 		7EC2FB23A2015ECD8B4A4704 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

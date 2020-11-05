@@ -14,11 +14,11 @@ struct ContentView: View {
     @AppStorage(wrappedValue: false, "mlSelected") var mlSelected: Bool
     @State private var ratio: Double = 13
     @State private var cups: Double = 1
- 
+
     @State private var customColor: Color = Color.blue
-    
+
     var body: some View {
-        TabView(selection: $selection){
+        TabView(selection: $selection) {
             MethodSelectionView(cupSize: $cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor, mlSelected: $mlSelected)
                 .tabItem {
                     VStack {
@@ -27,7 +27,7 @@ struct ContentView: View {
                     }
                 }
                 .tag("Methods")
-            
+
             SettingsView(mlSelected: $mlSelected, cupSize: $cupSize, customColor: $customColor)
                 .tabItem {
                     VStack {

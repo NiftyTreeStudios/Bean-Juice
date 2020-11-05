@@ -32,7 +32,6 @@ func calculateWaterAmount(cupSize: Double, cupAmount: Double, maxWater: Int) -> 
         return maxWater
     } else {
         return waterAmount
-        
     }
 }
 

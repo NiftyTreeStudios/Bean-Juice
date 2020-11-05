@@ -9,11 +9,10 @@
 import SwiftUI
 
 struct CustomToggle: View {
-    
+
     @Binding var mlSelected: Bool
     @Binding var customColor: Color
 
-    
     var body: some View {
         HStack {
             Text("Cups")
@@ -27,11 +26,11 @@ struct CustomToggle: View {
 }
 
 struct CustomToggleStyle: ToggleStyle {
-    
+
     @Binding var customColor: Color
-    
+
     let width: CGFloat = 50
-    
+
     func makeBody(configuration: Self.Configuration) -> some View {
 
         HStack {
@@ -41,7 +40,7 @@ struct CustomToggleStyle: ToggleStyle {
                     Capsule()
                         .frame(width: width, height: width / 1.9)
                     .foregroundColor(customColor)
-                
+
                 //RoundedRectangle(cornerRadius: 4)
                     Capsule()
                         .frame(width: (width / 2) - 4, height: width / 1.9 - 6)

@@ -10,9 +10,7 @@ import Foundation
 import SwiftUI
 
 struct CircleImage: View {
-    
     let methodName: String
-    
     var body: some View {
         Image(decorative: methodName + "-Big")
         .resizable()

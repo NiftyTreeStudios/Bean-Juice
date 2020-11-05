@@ -14,7 +14,7 @@ struct MethodView: View {
     @Binding var cupSize: Double
     @Binding var ratio: Double
     @Binding var cups: Double
-    
+
     let methodName: String
     var maxCups: Double {
         if cupSize > Double(maxWater) {
@@ -28,14 +28,11 @@ struct MethodView: View {
     let groundLevel: String
     let startRatio: Int
 
-    // TODO: Make persistent between sessions
-    // TODO: Move/copy to settings tab
-    // @State private var mlSelected: Bool = false
     @Binding var mlSelected: Bool
     @State private var waterAmount: Double = 250
-    
+
     @Binding var customColor: Color
-    
+
     var body: some View {
         ScrollView {
             ZStack {
@@ -63,7 +60,7 @@ struct MethodView: View {
                     .font(.subheadline)
                     .padding(.bottom, 10)
                     .padding(.top, 0)
-                
+
                 Text(mlSelected ? "Water" : "Cups")
                     .font(.headline)
                     .padding(.bottom, -5)
@@ -89,21 +86,25 @@ struct MethodView: View {
                         .font(.subheadline)
                 }
                 .padding(.bottom, 5)
-                
+
                 HStack {
                     Text("Water")
                         .font(.title)
                     Spacer()
-                    Text(mlSelected ? "\(waterAmount, specifier: "%.0f") g" : "\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: maxWater)) g")
+                    Text(mlSelected
+                            ? "\(waterAmount, specifier: "%.0f") g"
+                            : "\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: maxWater)) g")
                         .font(.title)
                 }
                 .padding(.bottom, 5)
-                
+
                 HStack {
                     Text("Coffee")
                         .font(.title)
                     Spacer()
-                    Text(mlSelected ? "\(customCoffeeAmount(water: waterAmount, ratio: ratio), specifier: "%.1f") g" : "\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: maxWater), specifier: "%.1f") g")
+                    Text(mlSelected
+                            ? "\(customCoffeeAmount(water: waterAmount, ratio: ratio), specifier: "%.1f") g"
+                            : "\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: maxWater), specifier: "%.1f") g")
                         .font(.title)
                 }
                 .padding(.bottom, 5)
@@ -113,15 +114,14 @@ struct MethodView: View {
             .padding(.bottom, 5)
         }.onAppear {
             self.ratio = Double(self.startRatio)
-            if (self.methodName == "Aeropress" && self.cups > 4) {
+            if self.methodName == "Aeropress" && self.cups > 4 {
                 self.cups = 4
             }
-            if (self.methodName == "Aeropress" && self.waterAmount > Double(self.maxWater)) {
+            if self.methodName == "Aeropress" && self.waterAmount > Double(self.maxWater) {
                 self.waterAmount = Double(self.maxWater)
             }
             StoreReviewHelper.checkAndAskForReview()
             StoreReviewHelper.incrementAppOpenedCount()
         }
-            
     }
 }

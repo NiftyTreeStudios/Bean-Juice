@@ -9,25 +9,25 @@
 import SwiftUI
 
 struct FrenchPressView: View {
-    
+
     @Binding var cupSize: Double
     @Binding var ratio: Double
     @Binding var cups: Double
-    
+
     let methodName: String = "French Press"
     let maxCups: Double = 8
     let maxWater: Int = 1500
     let groundLevel: String = "Coarse"
     let startRatio: Int = 18
-    
+
     let sizes = [350, 500, 1000, 1500]
     @State private var selectedSize: Double = 1
 
     @State private var flipped: Bool = false
     @State private var animate3d: Bool = false
-            
+
     @Binding var customColor: Color
-            
+
     var body: some View {
         ScrollView {
                 CircleImage(methodName: methodName)
@@ -102,6 +102,5 @@ struct FrenchPressView: View {
         }.onAppear {
             self.ratio = Double(self.startRatio)
         }
-            
     }
 }

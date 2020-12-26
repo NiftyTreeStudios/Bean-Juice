@@ -1,6 +1,0 @@
-framework module Pods_Bean_JuiceTests {
-  umbrella header "Pods-Bean JuiceTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

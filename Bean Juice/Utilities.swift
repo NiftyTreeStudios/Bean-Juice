@@ -44,3 +44,37 @@ func customCoffeeAmount(water: Double, ratio: Double) -> Double {
     let customCoffeeAmount = water / ratio
     return customCoffeeAmount
 }
+
+/// Returns a tuple of hours, minutes, seconds from seconds.
+/// - Parameters:
+///     - time: Int representing seconds
+/// - Returns: Tuple (hours, minutes, seconds)
+///
+func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
+    return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+}
+
+/// Formats an given int into HH:MM:SS format.
+/// - Parameters:
+///     - time: Int representing seconds
+///
+func formattedTime(time: (Int, Int, Int)) -> String {
+    let (hours, minutes, seconds) = time
+    var minutesString = "00"
+    if minutes < 10 {
+        minutesString = "0\(minutes)"
+    } else {
+        minutesString = String(minutes)
+    }
+    var secondsString = "00"
+    if seconds < 10 {
+        secondsString = "0\(seconds)"
+    } else {
+        secondsString = String(seconds)
+    }
+    if hours > 1 {
+        return "\(hours):\(minutesString):\(secondsString)"
+    } else {
+        return "\(minutesString):\(secondsString)"
+    }
+}

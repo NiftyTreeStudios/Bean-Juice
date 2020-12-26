@@ -35,21 +35,11 @@ struct MethodView: View {
 
     var body: some View {
         ScrollView {
-            ZStack {
-                CircleImage(methodName: methodName)
-                    .padding(.top, 30)
-                VStack {
-                    HStack {
-                        Spacer()
-                        // CustomToggle(mlSelected: $mlSelected, customColor: $customColor)
-                    }.padding()
-                    Spacer()
-                }
-            }
-                Text(methodName)
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                    .padding(10)
+            CircleImage(methodName: methodName)
+            Text(methodName)
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .padding(10)
             VStack {
                 Text("Ratio")
                     .font(.headline)

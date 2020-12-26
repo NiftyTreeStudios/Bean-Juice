@@ -10,13 +10,59 @@ import Foundation
 import SwiftUI
 
 struct CircleImage: View {
+
+    @Namespace var namespace
+    @State var imageTapped = false
+    @State var seconds = 0
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     let methodName: String
     var body: some View {
-        Image(decorative: methodName + "-Big")
-        .resizable()
-        .aspectRatio(contentMode: .fill)
-        .frame(width: 250, height: 250, alignment: .center)
-        .clipShape(Circle())
-        .shadow(radius: 5)
+        ZStack {
+            if imageTapped {
+                Image(decorative: methodName + "-Big")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 250, height: 250, alignment: .center)
+                    .clipShape(Circle())
+                    .shadow(radius: 5)
+                    .blur(radius: 5)
+                    .matchedGeometryEffect(id: "CircleImage", in: namespace)
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 30)
+                                .frame(width: 170.0, height: 100.0)
+                                .foregroundColor(Color("BlurredBackground"))
+                                .blur(radius: 60)
+                            Text("\(formattedTime(time: secondsToHoursMinutesSeconds(seconds: seconds)))")
+                                .font(.largeTitle)
+                                .onReceive(timer) { _ in
+                                    seconds += 1
+                                    if seconds > 3600 {
+                                        seconds = 0
+                                    }
+                                }
+                        }
+                        Spacer()
+                    }
+                    Spacer()
+                }
+            } else {
+                Image(decorative: methodName + "-Big")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 250, height: 250, alignment: .center)
+                    .clipShape(Circle())
+                    .shadow(radius: 5)
+                    .matchedGeometryEffect(id: "CircleImage", in: namespace)
+            }
+        }.padding(.top, 30)
+        .onTapGesture(perform: {
+            seconds = 0
+            withAnimation(.easeInOut(duration: 1)) {imageTapped.toggle()}
+        })
     }
 }

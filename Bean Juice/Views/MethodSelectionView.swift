@@ -43,8 +43,8 @@ struct MethodSelectionView: View {
     }
 }
 
-//struct MethodSelectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MethodSelectionView()
-//    }
-//}
+// struct MethodSelectionView_Previews: PreviewProvider {
+//     static var previews: some View {
+//         MethodSelectionView()
+//     }
+// }

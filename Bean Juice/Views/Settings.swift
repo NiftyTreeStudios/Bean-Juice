@@ -13,13 +13,12 @@ import StoreKit
 
 struct SettingsView: View {
 
-    //custom cup size added to array with default size of 0
     @State var cupSizes = [
-        CupSize(name: "Small", sizeMl: 118, sizeOz: 4),
-        CupSize(name: "Medium", sizeMl: 177, sizeOz: 6),
-        CupSize(name: "Large", sizeMl: 236, sizeOz: 8),
-        CupSize(name: "X-Large", sizeMl: 355, sizeOz: 12),
-        CupSize(name: "Custom", sizeMl: 0, sizeOz: 0)
+        CupSize(name: "Small", sizeMl: 118),
+        CupSize(name: "Medium", sizeMl: 177),
+        CupSize(name: "Large", sizeMl: 236),
+        CupSize(name: "X-Large", sizeMl: 355),
+        CupSize(name: "Custom", sizeMl: 100)
     ]
 
     var colors = [
@@ -35,7 +34,7 @@ struct SettingsView: View {
     @Binding var mlSelected: Bool
     @AppStorage(wrappedValue: 1, "selectedCup") var selectedCup: Int
     @Binding var cupSize: Double
-    @State var customCup = ""
+    @State var customCup = 0
     @State private var selectedColor: Int = 0
     @Binding var customColor: Color
 
@@ -59,32 +58,33 @@ struct SettingsView: View {
                         Text("Use ml")
                     }
                 }
-
-                Section(header: Text("Cup size")
-                    .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(self.cupSizes[selectedCup].sizeOz) oz.")) {
-                    Picker("Cup size", selection: Binding(get: {selectedCup}, set: { newValue in
-                                                            selectedCup = newValue
-                                                            cupSize = Double(cupSizes[newValue].sizeMl)})) {
-                        ForEach(0 ..< cupSizes.count, id: \.self) {
-                            Text(self.cupSizes[$0].name)
+                if !mlSelected {
+                    Section(header: Text("Cup size")
+                                        .font(.subheadline),
+                            footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(round((Double(self.cupSizes[selectedCup].sizeMl) )/(29.574)*10)/10) oz.")) {
+                        Picker("Cup size", selection: Binding(get: {selectedCup}, set: { newValue in
+                                                                selectedCup = newValue
+                                                                cupSize = Double(cupSizes[newValue].sizeMl)})) {
+                            ForEach(0 ..< cupSizes.count, id: \.self) {
+                                Text(self.cupSizes[$0].name)
+                            }
                         }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    //if custom is selected a textfield is presented
-                    if $selectedCup.wrappedValue == 4 {
-                        HStack {
-                            TextField("Custom Cup Size", text: $customCup, onCommit: {
-                                //converts the values then assigns them to cupSizes array
-                                self.cupSizes[4].sizeMl = Int(self.customCup) ?? 0
-                                self.cupSizes[4].sizeOz = round(Double(self.customCup)!/(29.574)*10)/10
-                                //assigns the value to the cupSize variable
-                                self.cupSize = Double(self.customCup) ?? 0
-                            })
-                            .keyboardType(.decimalPad)
+                        .pickerStyle(SegmentedPickerStyle())
 
-                            Text("ml")
+                        // if custom is selected a textfield is presented
+                        if $selectedCup.wrappedValue == 4 {
+                            Picker("Custom cup size", selection: $customCup) {
+                                ForEach(0 ..< 1001) { number in
+                                    if number >= 100 && (number % 5) == 0 {
+                                        Text("\(number)")
+                                    }
+                                }
+                            }.pickerStyle(InlinePickerStyle())
                         }
-                    }
+                    }.onChange(of: customCup, perform: { value in
+                        cupSizes[4].sizeMl = Int(value)
+                        cupSize = Double(value)
+                    })
                 }
 
                 Section(header: Text("Select highlight color")
@@ -150,8 +150,8 @@ struct SafariView: UIViewControllerRepresentable {
     }
 }
 
-//struct Settings_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SettingsView()
-//    }
-//}
+// struct Settings_Previews: PreviewProvider {
+//     static var previews: some View {
+//         SettingsView()
+//     }
+// }

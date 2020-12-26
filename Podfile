@@ -6,6 +6,6 @@ target 'Bean Juice' do
   use_frameworks!
 
   # Pods for Bean Juice
-  pod 'SwiftLint'
+  pod 'SwiftLint', '0.42.0'
 
 end

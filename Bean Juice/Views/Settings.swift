@@ -58,32 +58,34 @@ struct SettingsView: View {
                         Text("Use ml")
                     }
                 }
-
-                Section(header: Text("Cup size")
-                            .font(.subheadline), footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(round((Double(self.cupSizes[selectedCup].sizeMl) )/(29.574)*10)/10) oz.")) {
-                    Picker("Cup size", selection: Binding(get: {selectedCup}, set: { newValue in
-                                                            selectedCup = newValue
-                                                            cupSize = Double(cupSizes[newValue].sizeMl)})) {
-                        ForEach(0 ..< cupSizes.count, id: \.self) {
-                            Text(self.cupSizes[$0].name)
-                        }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-
-                    // if custom is selected a textfield is presented
-                    if $selectedCup.wrappedValue == 4 {
-                        Picker("Custom cup size", selection: $customCup) {
-                            ForEach(0 ..< 1001) { number in
-                                if number >= 100 && (number % 5) == 0 {
-                                    Text("\(number)")
-                                }
+                if !mlSelected {
+                    Section(header: Text("Cup size")
+                                        .font(.subheadline),
+                            footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(round((Double(self.cupSizes[selectedCup].sizeMl) )/(29.574)*10)/10) oz.")) {
+                        Picker("Cup size", selection: Binding(get: {selectedCup}, set: { newValue in
+                                                                selectedCup = newValue
+                                                                cupSize = Double(cupSizes[newValue].sizeMl)})) {
+                            ForEach(0 ..< cupSizes.count, id: \.self) {
+                                Text(self.cupSizes[$0].name)
                             }
-                        }.pickerStyle(InlinePickerStyle())
-                    }
-                }.onChange(of: customCup, perform: { value in
-                    cupSizes[4].sizeMl = Int(value)
-                    cupSize = Double(value)
-                })
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+
+                        // if custom is selected a textfield is presented
+                        if $selectedCup.wrappedValue == 4 {
+                            Picker("Custom cup size", selection: $customCup) {
+                                ForEach(0 ..< 1001) { number in
+                                    if number >= 100 && (number % 5) == 0 {
+                                        Text("\(number)")
+                                    }
+                                }
+                            }.pickerStyle(InlinePickerStyle())
+                        }
+                    }.onChange(of: customCup, perform: { value in
+                        cupSizes[4].sizeMl = Int(value)
+                        cupSize = Double(value)
+                    })
+                }
 
                 Section(header: Text("Select highlight color")
                     .font(.subheadline), footer: Text("This will affect what highlight color the app uses.")) {

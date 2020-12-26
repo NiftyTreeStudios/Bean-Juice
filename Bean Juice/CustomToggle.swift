@@ -36,12 +36,12 @@ struct CustomToggleStyle: ToggleStyle {
         HStack {
 
             ZStack(alignment: configuration.isOn ? .trailing : .leading) {
-                //RoundedRectangle(cornerRadius: 4)
+                // RoundedRectangle(cornerRadius: 4)
                     Capsule()
                         .frame(width: width, height: width / 1.9)
                     .foregroundColor(customColor)
 
-                //RoundedRectangle(cornerRadius: 4)
+                // RoundedRectangle(cornerRadius: 4)
                     Capsule()
                         .frame(width: (width / 2) - 4, height: width / 1.9 - 6)
                     .padding(4)

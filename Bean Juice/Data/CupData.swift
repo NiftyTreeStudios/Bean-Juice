@@ -11,5 +11,4 @@ import Foundation
 struct CupSize {
     let name: String
     var sizeMl: Int
-    var sizeOz: Double
 }

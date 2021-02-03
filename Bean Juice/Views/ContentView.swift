@@ -22,12 +22,18 @@ struct ContentView: View {
             MethodSelectionView(cupSize: $cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor, mlSelected: $mlSelected)
                 .tabItem {
                     VStack {
-                        Image(systemName: "ellipsis.circle")
+                        Image(systemName: "homepod")
                         Text("Methods")
                     }
                 }
                 .tag("Methods")
-
+            RecipeSelectionView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "tray")
+                        Text("Recipes")
+                    }
+                }
             SettingsView(mlSelected: $mlSelected, cupSize: $cupSize, customColor: $customColor)
                 .tabItem {
                     VStack {

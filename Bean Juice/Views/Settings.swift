@@ -131,8 +131,7 @@ struct SettingsView: View {
                 })
                 Text("App version: " + appVersion)
                     .font(.footnote)
-                    .navigationBarTitle("Settings", displayMode: .inline)
-            }
+            }.navigationBarTitle("Settings", displayMode: .inline)
         }
     }
 }

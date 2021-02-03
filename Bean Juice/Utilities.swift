@@ -56,7 +56,7 @@ func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
 
 /// Formats an given int into HH:MM:SS format.
 /// - Parameters:
-///     - time: Int representing seconds
+///     - time: Tuple of hours, minutes and seconds. Each represented by and Int.
 ///
 func formattedTime(time: (Int, Int, Int)) -> String {
     let (hours, minutes, seconds) = time

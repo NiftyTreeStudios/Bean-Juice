@@ -1,5 +1,5 @@
 //
-//  ColorData.swift
+//  Color.swift
 //  Bean Juice
 //
 //  Created by Iiro Alhonen on 4.6.2020.
@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct ColorData {
+struct Color {
     let name: String
     let color: Color
 }

@@ -9,6 +9,27 @@
 import Foundation
 import SwiftUI
 
+func addNewRecipe(recipe: Recipe, in recipes: [Recipe]) -> [Recipe] {
+    var recipes = recipes
+    if recipe.name.isEmpty || recipe.coffeeAmount.isEmpty || recipe.waterAmount < 1 {
+        print("Couldn't save a new recipe")
+        return recipes
+    } else {
+        recipes.append(
+            Recipe(
+                name: recipe.name,
+                brewMethod: recipe.brewMethod,
+                groundSize: recipe.groundSize,
+                coffeeAmount: recipe.coffeeAmount,
+                waterAmount: recipe.waterAmount,
+                brewTime: recipe.brewTime,
+                additionalInformation: recipe.additionalInformation
+            )
+        )
+        return recipes
+    }
+}
+
 /// Calculates coffee amount using calculateWaterAmount and ratio
 /// - Parameters:
 ///     - cupSize: The cup size user has selected in the settings page. Used by calculateWaterAmount().

@@ -10,4 +10,10 @@ import Foundation
 
 struct Recipe {
     let name: String
+    let brewMethod: MethodName
+    let groundSize: String
+    let coffeeAmount: String
+    let waterAmount: Int
+    let brewTime: Int
+    let additionalInformation: String?
 }

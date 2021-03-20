@@ -1,5 +1,5 @@
 //
-//  Method.swift
+//  MethodView.swift
 //  Bean Juice
 //
 //  Created by Iiro Alhonen on 6.4.2020.

@@ -9,7 +9,7 @@
 import Foundation
 
 struct Method {
-    let name: String
+    let name: MethodName
     let waterAmount: Int
     let waterAmountOz: Int
     let grounds: String

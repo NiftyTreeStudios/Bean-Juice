@@ -64,5 +64,6 @@ struct CircleImage: View {
             seconds = 0
             withAnimation(.easeInOut(duration: 1)) {imageTapped.toggle()}
         })
+        .padding(.top, -20)
     }
 }

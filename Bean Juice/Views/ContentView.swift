@@ -28,6 +28,14 @@ struct ContentView: View {
                 }
                 .tag("Methods")
 
+            RecipeSelectionView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "pencil")
+                        Text("Recipes")
+                    }
+                }
+
             SettingsView(mlSelected: $mlSelected, cupSize: $cupSize, customColor: $customColor)
                 .tabItem {
                     VStack {

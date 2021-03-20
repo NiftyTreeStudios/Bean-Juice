@@ -22,13 +22,13 @@ struct SettingsView: View {
     ]
 
     var colors = [
-        ColorData(name: "Blue", color: Color.blue),
-        ColorData(name: "Green", color: Color.green),
-        ColorData(name: "Orange", color: Color.orange),
-        ColorData(name: "Pink", color: Color.pink),
-        ColorData(name: "Purple", color: Color.purple),
-        ColorData(name: "Red", color: Color.red),
-        ColorData(name: "Yellow", color: Color.yellow)
+        CustomColor(name: "Blue", color: Color.blue),
+        CustomColor(name: "Green", color: Color.green),
+        CustomColor(name: "Orange", color: Color.orange),
+        CustomColor(name: "Pink", color: Color.pink),
+        CustomColor(name: "Purple", color: Color.purple),
+        CustomColor(name: "Red", color: Color.red),
+        CustomColor(name: "Yellow", color: Color.yellow)
     ]
 
     @Binding var mlSelected: Bool

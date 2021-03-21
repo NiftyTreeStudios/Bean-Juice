@@ -9,6 +9,8 @@
 import Foundation
 import SwiftUI
 
+// MARK: Coffee and water
+
 /// Calculates coffee amount using calculateWaterAmount and ratio
 /// - Parameters:
 ///     - cupSize: The cup size user has selected in the settings page. Used by calculateWaterAmount().
@@ -45,6 +47,24 @@ func customCoffeeAmount(water: Double, ratio: Double) -> Double {
     return customCoffeeAmount
 }
 
+// MARK: Time functions
+
+/**
+ Converts hours, minutes and seconds into seconds
+ 
+ - Parameters:
+    - hours: Int representing hours
+    - minutes: Inte representing minutes
+    - seconds: Int representing seconds
+ 
+ - Returns: Int of seconds
+ */
+func convertToSeconds(hours: Int = 0, minutes: Int = 0, seconds: Int = 0) -> Int {
+    let hoursAsSeconds = hours * 3600
+    let minutesAsSeconds = minutes * 60
+    return hoursAsSeconds + minutesAsSeconds + seconds
+}
+
 /// Returns a tuple of hours, minutes, seconds from seconds.
 /// - Parameters:
 ///     - time: Int representing seconds
@@ -77,4 +97,53 @@ func formattedTime(time: (Int, Int, Int)) -> String {
     } else {
         return "\(minutesString):\(secondsString)"
     }
+}
+
+// MARK: Recipes
+
+/**
+ Adds a new recipe to the recipes array.
+ 
+ - Parameters:
+    - recipe: recipe to be added.
+    - recipes: the array of recipes
+ 
+ - Returns: a new array of recipes with the added recipe.
+ */
+func addNewRecipe(recipe: Recipe, in recipes: [Recipe]) -> [Recipe] {
+    var recipes = recipes
+    if recipe.name.isEmpty || recipe.coffeeAmount.isEmpty || recipe.waterAmount < 1 {
+        print("Couldn't save a new recipe")
+        return recipes
+    } else {
+        recipes.append(
+            Recipe(
+                name: recipe.name,
+                brewMethod: recipe.brewMethod,
+                groundSize: recipe.groundSize,
+                coffeeAmount: recipe.coffeeAmount,
+                waterAmount: recipe.waterAmount,
+                brewTime: recipe.brewTime,
+                additionalInformation: recipe.additionalInformation
+            )
+        )
+        return recipes
+    }
+}
+
+/// Saves projects into user defaults.
+/// - Parameters:
+///   - recipes: The Recipes that are being saved.
+func saveRecipes(_ recipes: [Recipe]) {
+    let data = recipes.map { try? JSONEncoder().encode($0) }
+    UserDefaults.standard.set(data, forKey: "Recipes")
+}
+
+/// Loads projects from user defaults.
+/// - Returns: A array of recipes.
+func loadRecipes() -> [Recipe] {
+    guard let encodedData = UserDefaults.standard.array(forKey: "Recipes") as? [Data] else {
+        return []
+    }
+    return encodedData.map { try! JSONDecoder().decode(Recipe.self, from: $0) }
 }

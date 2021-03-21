@@ -19,10 +19,10 @@ struct ItemRowView: View {
 
     var body: some View {
 
-        NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: item.name, maxWater: item.waterAmount, groundLevel: item.grounds, startRatio: item.startRatio, mlSelected: $mlSelected, customColor: self.$customColor)) {
+        NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: getMethodName(method: item.name), maxWater: item.waterAmount, groundLevel: item.grounds, startRatio: item.startRatio, mlSelected: $mlSelected, customColor: self.$customColor)) {
                 HStack {
-                    Image(item.name)
-                    Text(item.name)
+                    Image(getMethodName(method: item.name))
+                    Text(getMethodName(method: item.name))
                 }
         }
     }

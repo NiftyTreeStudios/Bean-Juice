@@ -1,5 +1,5 @@
 //
-//  Method.swift
+//  MethodView.swift
 //  Bean Juice
 //
 //  Created by Iiro Alhonen on 6.4.2020.
@@ -35,7 +35,7 @@ struct MethodView: View {
 
     var body: some View {
         ScrollView {
-            CircleImage(methodName: methodName)
+            CircleImage(methodName: methodName, isRecipeView: false)
             Text(methodName)
                 .font(.largeTitle)
                 .fontWeight(.semibold)

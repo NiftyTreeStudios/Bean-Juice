@@ -17,6 +17,9 @@ struct CircleImage: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     let methodName: String
+    let isRecipeView: Bool
+    @State var brewTime: Int = 0
+
     var body: some View {
         ZStack {
             if imageTapped {
@@ -37,14 +40,25 @@ struct CircleImage: View {
                                 .frame(width: 170.0, height: 100.0)
                                 .foregroundColor(Color("BlurredBackground"))
                                 .blur(radius: 60)
-                            Text("\(formattedTime(time: secondsToHoursMinutesSeconds(seconds: seconds)))")
-                                .font(.largeTitle)
-                                .onReceive(timer) { _ in
-                                    seconds += 1
-                                    if seconds > 3600 {
-                                        seconds = 0
+                            if isRecipeView {
+                                Text("\(formattedTime(time: secondsToHoursMinutesSeconds(seconds: brewTime)))")
+                                    .font(.largeTitle)
+                                    .onReceive(timer) { _ in
+                                        brewTime -= 1
+                                        if brewTime <= 0 {
+                                            brewTime = 0
+                                        }
                                     }
-                                }
+                            } else {
+                                Text("\(formattedTime(time: secondsToHoursMinutesSeconds(seconds: seconds)))")
+                                    .font(.largeTitle)
+                                    .onReceive(timer) { _ in
+                                        seconds += 1
+                                        if seconds > 3600 {
+                                            seconds = 0
+                                        }
+                                    }
+                            }
                         }
                         Spacer()
                     }
@@ -64,5 +78,6 @@ struct CircleImage: View {
             seconds = 0
             withAnimation(.easeInOut(duration: 1)) {imageTapped.toggle()}
         })
+        .padding(.top, -20)
     }
 }

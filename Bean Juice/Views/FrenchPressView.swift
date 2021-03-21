@@ -30,7 +30,7 @@ struct FrenchPressView: View {
 
     var body: some View {
         ScrollView {
-                CircleImage(methodName: methodName)
+            CircleImage(methodName: methodName, isRecipeView: false)
                     .padding(.top, 10)
                 Text(methodName)
                     .font(.largeTitle)

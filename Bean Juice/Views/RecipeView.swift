@@ -14,7 +14,7 @@ struct RecipeView: View {
 
     var body: some View {
         VStack {
-            CircleImage(methodName: getMethodName(method: recipe.brewMethod))
+            CircleImage(methodName: getMethodName(method: recipe.brewMethod), isRecipeView: true, brewTime: recipe.brewTime)
             Text(recipe.name)
                 .font(.largeTitle)
                 .fontWeight(.semibold)
@@ -55,6 +55,7 @@ struct RecipeView: View {
                 Text(recipe.additionalInformation ?? "")
                     .frame(alignment: .leading)
             }
+            Spacer()
         }
         .padding(.leading, 30)
         .padding(.trailing, 30)

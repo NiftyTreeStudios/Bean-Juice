@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Recipe {
+struct Recipe: Codable {
     let name: String
     let brewMethod: MethodName
     let groundSize: String

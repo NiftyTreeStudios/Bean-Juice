@@ -35,7 +35,7 @@ struct MethodView: View {
 
     var body: some View {
         ScrollView {
-            CircleImage(methodName: methodName)
+            CircleImage(methodName: methodName, isRecipeView: false)
             Text(methodName)
                 .font(.largeTitle)
                 .fontWeight(.semibold)

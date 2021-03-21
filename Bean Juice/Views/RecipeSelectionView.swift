@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RecipeSelectionView: View {
 
-    @State var recipes: [Recipe] = [Recipe(name: "Test Aeropress recipe", brewMethod: MethodName.aeropress, groundSize: "Lrg", coffeeAmount: "12.3", waterAmount: 1234, brewTime: 150, additionalInformation: "This is additional information. This is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional information"), Recipe(name: "Test Chemex recipe", brewMethod: MethodName.chemex, groundSize: "Lrg", coffeeAmount: "12.3", waterAmount: 1234, brewTime: 150, additionalInformation: "This is additional information. This is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional information"), Recipe(name: "Test V60 recipe", brewMethod: MethodName.v60, groundSize: "Lrg", coffeeAmount: "12.3", waterAmount: 1234, brewTime: 150, additionalInformation: "This is additional information. This is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional informationThis is additional information")]
+    @State var recipes: [Recipe] = []
 
     @State private var addButtonClicked: Bool = false
 
@@ -56,6 +56,9 @@ struct RecipeSelectionView: View {
         }
         .sheet(isPresented: $addButtonClicked) {
             NewRecipeView(recipes: $recipes, addButtonClicked: $addButtonClicked)
+        }
+        .onAppear {
+            recipes = loadRecipes()
         }
     }
 }

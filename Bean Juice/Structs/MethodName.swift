@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MethodName {
+enum MethodName: String, Codable, CaseIterable {
     case aeropress, chemex, custom, frenchPress, v60, moccamaster
 }
 
@@ -27,4 +27,8 @@ func getMethodName(method: MethodName) -> String {
     case .moccamaster:
         return "Moccamaster"
     }
+}
+
+extension MethodName: Identifiable {
+    var id: MethodName { self }
 }

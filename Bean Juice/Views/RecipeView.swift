@@ -13,12 +13,13 @@ struct RecipeView: View {
     let recipe: Recipe
 
     var body: some View {
-        VStack {
+        ScrollView {
             CircleImage(methodName: getMethodName(method: recipe.brewMethod), isRecipeView: true, brewTime: recipe.brewTime)
             Text(recipe.name)
                 .font(.largeTitle)
                 .fontWeight(.semibold)
                 .padding(10)
+                .multilineTextAlignment(.center)
             HStack {
                 Text("Ground level")
                     .font(.headline)
@@ -60,6 +61,5 @@ struct RecipeView: View {
         .padding(.leading, 30)
         .padding(.trailing, 30)
         .padding(.bottom, 5)
-        .padding(.top, -20)
     }
 }

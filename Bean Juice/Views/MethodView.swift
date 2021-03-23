@@ -40,6 +40,7 @@ struct MethodView: View {
                 .font(.largeTitle)
                 .fontWeight(.semibold)
                 .padding(10)
+                .multilineTextAlignment(.center)
             VStack {
                 Text("Ratio")
                     .font(.headline)

@@ -20,46 +20,48 @@ struct RecipeView: View {
                 .fontWeight(.semibold)
                 .padding(10)
                 .multilineTextAlignment(.center)
-            HStack {
-                Text("Ground level")
-                    .font(.headline)
-                Spacer()
-                Text(recipe.groundSize)
-                    .font(.subheadline)
-            }
-            .padding(.bottom, 5)
-
-            HStack {
-                Text("Water")
-                    .font(.title)
-                Spacer()
-                Text("\(recipe.waterAmount) g")
-                    .font(.title)
-            }
-            .padding(.bottom, 5)
-
-            HStack {
-                Text("Coffee")
-                    .font(.title)
-                Spacer()
-                Text(recipe.coffeeAmount + " g")
-                    .font(.title)
-            }
-            .padding(.bottom, 5)
-
-            if recipe.additionalInformation != nil {
+            VStack {
                 HStack {
-                    Text("Additional information")
+                    Text("Ground level")
                         .font(.headline)
                     Spacer()
+                    Text(recipe.groundSize)
+                        .font(.subheadline)
                 }
-                Text(recipe.additionalInformation ?? "")
-                    .frame(alignment: .leading)
+                .padding(.bottom, 5)
+
+                HStack {
+                    Text("Water")
+                        .font(.title)
+                    Spacer()
+                    Text("\(recipe.waterAmount) g")
+                        .font(.title)
+                }
+                .padding(.bottom, 5)
+
+                HStack {
+                    Text("Coffee")
+                        .font(.title)
+                    Spacer()
+                    Text(recipe.coffeeAmount + " g")
+                        .font(.title)
+                }
+                .padding(.bottom, 5)
+
+                if recipe.additionalInformation != nil {
+                    HStack {
+                        Text("Additional information")
+                            .font(.headline)
+                        Spacer()
+                    }
+                    Text(recipe.additionalInformation ?? "")
+                        .frame(alignment: .leading)
+                }
+                Spacer()
             }
-            Spacer()
+            .padding(.leading, 30)
+            .padding(.trailing, 30)
+            .padding(.bottom, 5)
         }
-        .padding(.leading, 30)
-        .padding(.trailing, 30)
-        .padding(.bottom, 5)
     }
 }

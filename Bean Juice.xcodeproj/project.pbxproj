@@ -28,11 +28,22 @@
 		54170E72260665F30040E4DA /* RecipeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54170E71260665F30040E4DA /* RecipeSelectionView.swift */; };
 		54170E7526066F130040E4DA /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54170E7426066F130040E4DA /* NewRecipeView.swift */; };
 		547A164324A0AE390094FC55 /* FrenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A164224A0AE390094FC55 /* FrenchPressView.swift */; };
+		54C412B8265D0D6D0055D285 /* Bean_JuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */; };
 		54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
 		54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54F7347825544A820040C2B0 /* .swiftlint.yml */; };
 		7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54C412BA265D0D6D0055D285 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 340675502417A09C00307F04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340675572417A09C00307F04;
+			remoteInfo = "Bean Juice";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		044008288CBFEBCFB8A88DA4 /* Pods-Bean Juice-Bean JuiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean Juice-Bean JuiceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bean Juice-Bean JuiceUITests/Pods-Bean Juice-Bean JuiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +72,9 @@
 		54170E71260665F30040E4DA /* RecipeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSelectionView.swift; sourceTree = "<group>"; };
 		54170E7426066F130040E4DA /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
 		547A164224A0AE390094FC55 /* FrenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchPressView.swift; sourceTree = "<group>"; };
+		54C412B5265D0D6D0055D285 /* Bean JuiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceTests.swift; sourceTree = "<group>"; };
+		54C412B9265D0D6D0055D285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreReviewHelper.swift; path = ../StoreReviewHelper.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		54F7347825544A820040C2B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -78,6 +92,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54C412B2265D0D6D0055D285 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +123,7 @@
 			children = (
 				54F7347825544A820040C2B0 /* .swiftlint.yml */,
 				3406755A2417A09C00307F04 /* Bean Juice */,
+				54C412B6265D0D6D0055D285 /* Bean JuiceTests */,
 				340675592417A09C00307F04 /* Products */,
 				5453A6B824D95CA500D11F0F /* Recovered References */,
 				0FFDE4C814B391574D055A76 /* Pods */,
@@ -113,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				340675582417A09C00307F04 /* Bean Juice.app */,
+				54C412B5265D0D6D0055D285 /* Bean JuiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +202,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		54C412B6265D0D6D0055D285 /* Bean JuiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */,
+				54C412B9265D0D6D0055D285 /* Info.plist */,
+			);
+			path = "Bean JuiceTests";
+			sourceTree = "<group>";
+		};
 		B31069748A162BEF0F069C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,18 +243,40 @@
 			productReference = 340675582417A09C00307F04 /* Bean Juice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		54C412B4265D0D6D0055D285 /* Bean JuiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54C412BE265D0D6D0055D285 /* Build configuration list for PBXNativeTarget "Bean JuiceTests" */;
+			buildPhases = (
+				54C412B1265D0D6D0055D285 /* Sources */,
+				54C412B2265D0D6D0055D285 /* Frameworks */,
+				54C412B3265D0D6D0055D285 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54C412BB265D0D6D0055D285 /* PBXTargetDependency */,
+			);
+			name = "Bean JuiceTests";
+			productName = "Bean JuiceTests";
+			productReference = 54C412B5265D0D6D0055D285 /* Bean JuiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		340675502417A09C00307F04 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Nifty Tree Studios";
 				TargetAttributes = {
 					340675572417A09C00307F04 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					54C412B4265D0D6D0055D285 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 340675572417A09C00307F04;
 					};
 				};
 			};
@@ -240,6 +294,7 @@
 			projectRoot = "";
 			targets = (
 				340675572417A09C00307F04 /* Bean Juice */,
+				54C412B4265D0D6D0055D285 /* Bean JuiceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +308,13 @@
 				340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */,
 				340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */,
 				340675622417A0A000307F04 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54C412B3265D0D6D0055D285 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +390,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		54C412B1265D0D6D0055D285 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54C412B8265D0D6D0055D285 /* Bean_JuiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54C412BB265D0D6D0055D285 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340675572417A09C00307F04 /* Bean Juice */;
+			targetProxy = 54C412BA265D0D6D0055D285 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		340675662417A0A000307F04 /* LaunchScreen.storyboard */ = {
@@ -506,6 +584,48 @@
 			};
 			name = Release;
 		};
+		54C412BC265D0D6D0055D285 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LBHT4Q3RSF;
+				INFOPLIST_FILE = "Bean JuiceTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Bean-JuiceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bean Juice.app/Bean Juice";
+			};
+			name = Debug;
+		};
+		54C412BD265D0D6D0055D285 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LBHT4Q3RSF;
+				INFOPLIST_FILE = "Bean JuiceTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Bean-JuiceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bean Juice.app/Bean Juice";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -523,6 +643,15 @@
 			buildConfigurations = (
 				340675832417A0A000307F04 /* Debug */,
 				340675842417A0A000307F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54C412BE265D0D6D0055D285 /* Build configuration list for PBXNativeTarget "Bean JuiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54C412BC265D0D6D0055D285 /* Debug */,
+				54C412BD265D0D6D0055D285 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

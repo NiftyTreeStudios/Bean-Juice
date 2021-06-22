@@ -17,12 +17,11 @@ struct MethodSelectionView: View {
     @Binding var mlSelected: Bool
 
     let brewMethods: [Method] = [
-        Method(name: .aeropress, waterAmount: 230, waterAmountOz: 8, grounds: "Medium/Fine", startRatio: 13),
-        Method(name: .chemex, waterAmount: 1180, waterAmountOz: 40, grounds: "Medium/Coarse", startRatio: 17),
-        // Method(name: "Custom", waterAmount: 1180, waterAmountOz: 40, grounds: "Medium", startRatio: 16),
-        // Method(name: "French Press", waterAmount: 1500, waterAmountOz: 50, grounds: "Coarse", startRatio: 18),
-        Method(name: .v60, waterAmount: 1000, waterAmountOz: 33, grounds: "Medium", startRatio: 17)
-        // Method(name: "Moccamaster", waterAmount: 1000, waterAmountOz: 33, grounds: "Medium", startRatio: 16)
+        Method(name: .aeropress, waterAmount: 230, grounds: "Medium/Fine", startRatio: 13),
+        Method(name: .chemex, waterAmount: 1180, grounds: "Medium/Coarse", startRatio: 17),
+        Method(name: .coldBrew, waterAmount: 1000, grounds: "Coarse", startRatio: 15),
+        Method(name: .dripMachine, waterAmount: 1000, grounds: "Medium", startRatio: 16),
+        Method(name: .v60, waterAmount: 1000, grounds: "Medium", startRatio: 17)
     ]
 
     var body: some View {
@@ -33,7 +32,11 @@ struct MethodSelectionView: View {
                 }
                 NavigationLink(destination: FrenchPressView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)) {
                     HStack {
-                        Image("French Press")
+                        Image("French Press-Big")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 60, height: 60, alignment: .center)
+                            .clipShape(Circle())
                         Text("French Press")
                     }
                 }

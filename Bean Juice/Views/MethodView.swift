@@ -36,11 +36,6 @@ struct MethodView: View {
     var body: some View {
         ScrollView {
             CircleImage(methodName: methodName, isRecipeView: false)
-            Text(methodName)
-                .font(.largeTitle)
-                .fontWeight(.semibold)
-                .padding(10)
-                .multilineTextAlignment(.center)
             VStack {
                 Text("Ratio")
                     .font(.headline)
@@ -103,6 +98,7 @@ struct MethodView: View {
             .padding(.leading, 30)
             .padding(.trailing, 30)
             .padding(.bottom, 5)
+            .navigationTitle(methodName)
         }.onAppear {
             self.ratio = Double(self.startRatio)
             if self.methodName == "Aeropress" && self.cups > 4 {

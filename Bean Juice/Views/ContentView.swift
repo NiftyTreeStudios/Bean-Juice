@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// The main content view. Contains the ``TabView``.
 struct ContentView: View {
     @State private var selection = "Methods"
     @AppStorage(wrappedValue: 150, "cupSize") var cupSize: Double

@@ -21,7 +21,11 @@ struct ItemRowView: View {
 
         NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: getMethodName(method: item.name), maxWater: item.waterAmount, groundLevel: item.grounds, startRatio: item.startRatio, mlSelected: $mlSelected, customColor: self.$customColor)) {
                 HStack {
-                    Image(getMethodName(method: item.name))
+                    Image(getMethodName(method: item.name) + "-Big")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60, alignment: .center)
+                        .clipShape(Circle())
                     Text(getMethodName(method: item.name))
                 }
         }

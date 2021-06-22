@@ -11,7 +11,6 @@ import Foundation
 struct Method {
     let name: MethodName
     let waterAmount: Int
-    let waterAmountOz: Int
     let grounds: String
     let startRatio: Int
 }

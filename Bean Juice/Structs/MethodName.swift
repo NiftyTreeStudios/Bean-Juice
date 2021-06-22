@@ -9,7 +9,7 @@
 import Foundation
 
 enum MethodName: String, Codable, CaseIterable {
-    case aeropress, chemex, custom, frenchPress, v60, moccamaster
+    case aeropress, chemex, coldBrew, custom, dripMachine, frenchPress, v60
 }
 
 func getMethodName(method: MethodName) -> String {
@@ -18,14 +18,16 @@ func getMethodName(method: MethodName) -> String {
         return "Aeropress"
     case .chemex:
         return "Chemex"
+    case .coldBrew:
+        return "Cold Brew"
     case .custom:
         return "Custom"
+    case .dripMachine:
+        return "Drip Machine"
     case .frenchPress:
         return "French Press"
     case .v60:
         return "V60"
-    case .moccamaster:
-        return "Moccamaster"
     }
 }
 

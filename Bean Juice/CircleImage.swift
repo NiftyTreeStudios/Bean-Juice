@@ -73,7 +73,9 @@ struct CircleImage: View {
                     .shadow(radius: 5)
                     .matchedGeometryEffect(id: "CircleImage", in: namespace)
             }
-        }.padding(.top, 30)
+        }
+        .padding(.top, 30)
+        .padding(.bottom, 10)
         .onTapGesture(perform: {
             seconds = 0
             withAnimation(.easeInOut(duration: 1)) {imageTapped.toggle()}

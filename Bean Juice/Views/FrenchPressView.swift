@@ -31,12 +31,6 @@ struct FrenchPressView: View {
     var body: some View {
         ScrollView {
             CircleImage(methodName: methodName, isRecipeView: false)
-                    .padding(.top, 10)
-                Text(methodName)
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                    .padding(10)
-                    .accessibility(identifier: "methodNameLabel")
             VStack {
                 Text("Ratio")
                     .font(.headline)
@@ -99,6 +93,7 @@ struct FrenchPressView: View {
             .padding(.leading, 30)
             .padding(.trailing, 30)
             .padding(.bottom, 5)
+            .navigationTitle(methodName)
         }.onAppear {
             self.ratio = Double(self.startRatio)
         }

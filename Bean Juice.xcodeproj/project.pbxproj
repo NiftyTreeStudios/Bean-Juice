@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3406755C2417A09C00307F04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755B2417A09C00307F04 /* AppDelegate.swift */; };
-		3406755E2417A09C00307F04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755D2417A09C00307F04 /* SceneDelegate.swift */; };
+		3406755C2417A09C00307F04 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755B2417A09C00307F04 /* Main.swift */; };
 		340675602417A09C00307F04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755F2417A09C00307F04 /* ContentView.swift */; };
 		340675622417A0A000307F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675612417A0A000307F04 /* Assets.xcassets */; };
 		340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675642417A0A000307F04 /* Preview Assets.xcassets */; };
@@ -50,8 +49,7 @@
 		1DA689175DEB7BA5D5E1A422 /* Pods_Bean_JuiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean_JuiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E24F840C27611496CCCCD4E /* Pods-Bean Juice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean Juice.release.xcconfig"; path = "Target Support Files/Pods-Bean Juice/Pods-Bean Juice.release.xcconfig"; sourceTree = "<group>"; };
 		340675582417A09C00307F04 /* Bean Juice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean Juice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3406755B2417A09C00307F04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3406755D2417A09C00307F04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3406755B2417A09C00307F04 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		3406755F2417A09C00307F04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		340675612417A0A000307F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		340675642417A0A000307F04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -143,8 +141,7 @@
 		3406755A2417A09C00307F04 /* Bean Juice */ = {
 			isa = PBXGroup;
 			children = (
-				3406755B2417A09C00307F04 /* AppDelegate.swift */,
-				3406755D2417A09C00307F04 /* SceneDelegate.swift */,
+				3406755B2417A09C00307F04 /* Main.swift */,
 				546B1B6024D1B9A000E26E8A /* Structs */,
 				546B1B6124D1B9D900E26E8A /* Views */,
 				34371216244DBD9D00030AAD /* CircleImage.swift */,
@@ -371,12 +368,11 @@
 				340675902418E5A400307F04 /* Method.swift in Sources */,
 				54170E72260665F30040E4DA /* RecipeSelectionView.swift in Sources */,
 				3415A808248917B100699184 /* CustomColor.swift in Sources */,
-				3406755C2417A09C00307F04 /* AppDelegate.swift in Sources */,
+				3406755C2417A09C00307F04 /* Main.swift in Sources */,
 				54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */,
 				3406759A241971C600307F04 /* Settings.swift in Sources */,
 				54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */,
 				3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */,
-				3406755E2417A09C00307F04 /* SceneDelegate.swift in Sources */,
 				340675982419685B00307F04 /* Utilities.swift in Sources */,
 				54170E7526066F130040E4DA /* NewRecipeView.swift in Sources */,
 				34371217244DBD9D00030AAD /* CircleImage.swift in Sources */,
@@ -475,6 +471,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				RUN_DOCUMENTATION_COMPILER = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -529,6 +526,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				RUN_DOCUMENTATION_COMPILER = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

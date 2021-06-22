@@ -10,6 +10,8 @@ import SwiftUI
 
 struct RecipeSelectionView: View {
 
+    @StateObject var storeManager: StoreManager
+
     @State var recipes: [Recipe] = []
 
     @State private var addButtonClicked: Bool = false

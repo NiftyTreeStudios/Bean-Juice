@@ -12,6 +12,8 @@ import SafariServices
 import StoreKit
 
 struct SettingsView: View {
+    
+    @StateObject var storeManager: StoreManager
 
     @State var cupSizes = [
         CupSize(name: "Small", sizeMl: 118),

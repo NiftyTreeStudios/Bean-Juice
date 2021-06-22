@@ -10,6 +10,9 @@ import SwiftUI
 
 /// The main content view. Contains the ``TabView``.
 struct ContentView: View {
+    
+    @StateObject var storeManager: StoreManager
+
     @State private var selection = "Methods"
     @AppStorage(wrappedValue: 150, "cupSize") var cupSize: Double
     @AppStorage(wrappedValue: false, "mlSelected") var mlSelected: Bool
@@ -29,7 +32,7 @@ struct ContentView: View {
                 }
                 .tag("Methods")
 
-            RecipeSelectionView()
+            RecipeSelectionView(storeManager: storeManager)
                 .tabItem {
                     VStack {
                         Image(systemName: "pencil")
@@ -37,7 +40,7 @@ struct ContentView: View {
                     }
                 }
 
-            SettingsView(mlSelected: $mlSelected, cupSize: $cupSize, customColor: $customColor)
+            SettingsView(storeManager: storeManager, mlSelected: $mlSelected, cupSize: $cupSize, customColor: $customColor)
                 .tabItem {
                     VStack {
                         Image(systemName: "gear")

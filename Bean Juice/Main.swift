@@ -8,9 +8,12 @@ import SwiftUI
 
 @main
 struct BeanJuice: App {
+
+    @StateObject var storeManager = StoreManager()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(storeManager: storeManager)
         }
     }
 }

@@ -17,18 +17,18 @@ struct MethodSelectionView: View {
     @Binding var mlSelected: Bool
 
     let brewMethods: [Method] = [
-        Method(name: .aeropress, waterAmount: 230, grounds: "Medium/Fine", startRatio: 13),
-        Method(name: .chemex, waterAmount: 1180, grounds: "Medium/Coarse", startRatio: 17),
-        Method(name: .coldBrew, waterAmount: 1000, grounds: "Coarse", startRatio: 15),
-        Method(name: .dripMachine, waterAmount: 1000, grounds: "Medium", startRatio: 16),
-        Method(name: .v60, waterAmount: 1000, grounds: "Medium", startRatio: 17)
+        Method(name: .aeropress, maxWaterAmount: 230, mlPickerStep: 5, grounds: "Medium/Fine", startRatio: 13),
+        Method(name: .chemex, maxWaterAmount: 1180, mlPickerStep: 10, grounds: "Medium/Coarse", startRatio: 17),
+        Method(name: .coldBrew, maxWaterAmount: 1000, mlPickerStep: 100, grounds: "Coarse", startRatio: 15),
+        Method(name: .dripMachine, maxWaterAmount: 1500, mlPickerStep: 100, grounds: "Medium", startRatio: 16),
+        Method(name: .v60, maxWaterAmount: 1000, mlPickerStep: 5, grounds: "Medium", startRatio: 17)
     ]
 
     var body: some View {
         NavigationView {
             List {
                 ForEach(brewMethods, id: \.name) { brewMethod in
-                    ItemRowView(item: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor, mlSelected: $mlSelected)
+                    ItemRowView(method: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor, mlSelected: $mlSelected)
                 }
                 NavigationLink(destination: FrenchPressView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)) {
                     HStack {
@@ -38,6 +38,7 @@ struct MethodSelectionView: View {
                             .frame(width: 60, height: 60, alignment: .center)
                             .clipShape(Circle())
                         Text("French Press")
+                            .font(.title2)
                     }
                 }
             }

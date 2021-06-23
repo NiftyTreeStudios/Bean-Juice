@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ItemRowView: View {
-    var item: Method
+    let method: Method
 
     @Binding var cupSize: Double
     @Binding var ratio: Double
@@ -19,14 +19,24 @@ struct ItemRowView: View {
 
     var body: some View {
 
-        NavigationLink(destination: MethodView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, methodName: getMethodName(method: item.name), maxWater: item.waterAmount, groundLevel: item.grounds, startRatio: item.startRatio, mlSelected: $mlSelected, customColor: self.$customColor)) {
+        NavigationLink(
+            destination: MethodView(
+                cupSize: self.$cupSize,
+                ratio: self.$ratio,
+                cups: self.$cups,
+                method: method,
+                mlSelected: $mlSelected,
+                customColor: self.$customColor
+            )
+        ) {
                 HStack {
-                    Image(getMethodName(method: item.name) + "-Big")
+                    Image(getMethodName(method: method.name) + "-Big")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 60, height: 60, alignment: .center)
                         .clipShape(Circle())
-                    Text(getMethodName(method: item.name))
+                    Text(getMethodName(method: method.name))
+                        .font(.title2)
                 }
         }
     }

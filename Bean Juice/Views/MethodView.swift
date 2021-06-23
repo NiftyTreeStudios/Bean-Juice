@@ -15,27 +15,25 @@ struct MethodView: View {
     @Binding var ratio: Double
     @Binding var cups: Double
 
-    let methodName: String
+    let method: Method
+
     var maxCups: Double {
-        if cupSize > Double(maxWater) {
-            self.cupSize = Double(maxWater)
+        if cupSize > Double(method.maxWaterAmount) {
+            self.cupSize = Double(method.maxWaterAmount)
             return 1
         } else {
-            return Double(maxWater) / cupSize
+            return Double(method.maxWaterAmount) / cupSize
         }
     }
-    let maxWater: Int
-    let groundLevel: String
-    let startRatio: Int
 
     @Binding var mlSelected: Bool
-    @State private var waterAmount: Double = 250
+    @State private var waterAmount: Double = 200
 
     @Binding var customColor: Color
 
     var body: some View {
         ScrollView {
-            CircleImage(methodName: methodName, isRecipeView: false)
+            CircleImage(methodName: getMethodName(method: method.name), isRecipeView: false)
             VStack {
                 Text("Ratio")
                     .font(.headline)
@@ -51,7 +49,7 @@ struct MethodView: View {
                     .font(.headline)
                     .padding(.bottom, -5)
                 if mlSelected {
-                    Slider(value: $waterAmount, in: 0...Double(maxWater), step: 10)
+                    Slider(value: $waterAmount, in: 0...Double(method.maxWaterAmount), step: method.mlPickerStep)
                         .accentColor(customColor)
                 } else {
                     Slider(value: $cups, in: 0...maxCups, step: 1)
@@ -68,7 +66,7 @@ struct MethodView: View {
                     Text("Ground level")
                         .font(.headline)
                     Spacer()
-                    Text(groundLevel)
+                    Text(method.grounds)
                         .font(.subheadline)
                 }
                 .padding(.bottom, 5)
@@ -79,7 +77,7 @@ struct MethodView: View {
                     Spacer()
                     Text(mlSelected
                             ? "\(waterAmount, specifier: "%.0f") g"
-                            : "\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: maxWater)) g")
+                            : "\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: method.maxWaterAmount)) g")
                         .font(.title)
                 }
                 .padding(.bottom, 5)
@@ -90,7 +88,7 @@ struct MethodView: View {
                     Spacer()
                     Text(mlSelected
                             ? "\(customCoffeeAmount(water: waterAmount, ratio: ratio), specifier: "%.1f") g"
-                            : "\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: maxWater), specifier: "%.1f") g")
+                            : "\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g")
                         .font(.title)
                 }
                 .padding(.bottom, 5)
@@ -98,14 +96,14 @@ struct MethodView: View {
             .padding(.leading, 30)
             .padding(.trailing, 30)
             .padding(.bottom, 5)
-            .navigationTitle(methodName)
+            .navigationTitle(getMethodName(method: method.name))
         }.onAppear {
-            self.ratio = Double(self.startRatio)
-            if self.methodName == "Aeropress" && self.cups > 4 {
+            self.ratio = Double(method.startRatio)
+            if getMethodName(method: method.name) == "Aeropress" && self.cups > 4 {
                 self.cups = 4
             }
-            if self.methodName == "Aeropress" && self.waterAmount > Double(self.maxWater) {
-                self.waterAmount = Double(self.maxWater)
+            if getMethodName(method: method.name) == "Aeropress" && self.waterAmount > Double(method.maxWaterAmount) {
+                self.waterAmount = Double(method.maxWaterAmount)
             }
             StoreReviewHelper.checkAndAskForReview()
             StoreReviewHelper.incrementAppOpenedCount()

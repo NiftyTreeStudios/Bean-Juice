@@ -29,6 +29,9 @@
 		547A164324A0AE390094FC55 /* FrenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A164224A0AE390094FC55 /* FrenchPressView.swift */; };
 		54C412B8265D0D6D0055D285 /* Bean_JuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */; };
 		54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */; };
+		54CEC5682699C7F20016B40A /* InformationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CEC5672699C7F20016B40A /* InformationScreen.swift */; };
+		54CEC56A2699CF0E0016B40A /* WaterAmountSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */; };
+		54CEC56C2699D0CC0016B40A /* CoffeeRatioSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CEC56B2699D0CC0016B40A /* CoffeeRatioSlider.swift */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
 		54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54F7347825544A820040C2B0 /* .swiftlint.yml */; };
 		7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */; };
@@ -74,6 +77,9 @@
 		54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceTests.swift; sourceTree = "<group>"; };
 		54C412B9265D0D6D0055D285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreReviewHelper.swift; path = ../StoreReviewHelper.swift; sourceTree = "<group>"; };
+		54CEC5672699C7F20016B40A /* InformationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreen.swift; sourceTree = "<group>"; };
+		54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAmountSlider.swift; sourceTree = "<group>"; };
+		54CEC56B2699D0CC0016B40A /* CoffeeRatioSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRatioSlider.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		54F7347825544A820040C2B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		67027D81097890AF6B4A0480 /* Pods-Bean JuiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.debug.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,8 +150,6 @@
 				3406755B2417A09C00307F04 /* Main.swift */,
 				546B1B6024D1B9A000E26E8A /* Structs */,
 				546B1B6124D1B9D900E26E8A /* Views */,
-				34371216244DBD9D00030AAD /* CircleImage.swift */,
-				54EA8E9C24C834F500600CE8 /* CustomToggle.swift */,
 				340675972419685B00307F04 /* Utilities.swift */,
 				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
 				340675612417A0A000307F04 /* Assets.xcassets */,
@@ -175,10 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				3406758D2418E59100307F04 /* Cup.swift */,
-				3406758F2418E5A300307F04 /* Method.swift */,
 				3415A807248917B100699184 /* CustomColor.swift */,
-				54170E5F26065B010040E4DA /* Recipe.swift */,
+				3406758F2418E5A300307F04 /* Method.swift */,
 				54170E6E26065EBE0040E4DA /* MethodName.swift */,
+				54170E5F26065B010040E4DA /* Recipe.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -186,15 +190,16 @@
 		546B1B6124D1B9D900E26E8A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				54CEC5662699C7D30016B40A /* Components */,
 				3406755F2417A09C00307F04 /* ContentView.swift */,
+				547A164224A0AE390094FC55 /* FrenchPressView.swift */,
+				54CEC5672699C7F20016B40A /* InformationScreen.swift */,
 				346360B5243B5D770054FEB1 /* MethodView.swift */,
 				3450A79D24698D9300F3E799 /* MethodSelectionView.swift */,
-				3450A79F246993C200F3E799 /* ItemRow.swift */,
-				547A164224A0AE390094FC55 /* FrenchPressView.swift */,
-				34067599241971C600307F04 /* Settings.swift */,
+				54170E7426066F130040E4DA /* NewRecipeView.swift */,
 				54170E6626065CA80040E4DA /* RecipeView.swift */,
 				54170E71260665F30040E4DA /* RecipeSelectionView.swift */,
-				54170E7426066F130040E4DA /* NewRecipeView.swift */,
+				34067599241971C600307F04 /* Settings.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +211,18 @@
 				54C412B9265D0D6D0055D285 /* Info.plist */,
 			);
 			path = "Bean JuiceTests";
+			sourceTree = "<group>";
+		};
+		54CEC5662699C7D30016B40A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				34371216244DBD9D00030AAD /* CircleImage.swift */,
+				54CEC56B2699D0CC0016B40A /* CoffeeRatioSlider.swift */,
+				54EA8E9C24C834F500600CE8 /* CustomToggle.swift */,
+				3450A79F246993C200F3E799 /* ItemRow.swift */,
+				54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B31069748A162BEF0F069C45 /* Frameworks */ = {
@@ -372,6 +389,9 @@
 				54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */,
 				3406759A241971C600307F04 /* Settings.swift in Sources */,
 				54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */,
+				54CEC5682699C7F20016B40A /* InformationScreen.swift in Sources */,
+				54CEC56A2699CF0E0016B40A /* WaterAmountSlider.swift in Sources */,
+				54CEC56C2699D0CC0016B40A /* CoffeeRatioSlider.swift in Sources */,
 				3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */,
 				340675982419685B00307F04 /* Utilities.swift in Sources */,
 				54170E7526066F130040E4DA /* NewRecipeView.swift in Sources */,

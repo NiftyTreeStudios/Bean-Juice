@@ -10,6 +10,7 @@ import Foundation
 
 struct Method {
     let name: MethodName
+    var startWaterAmount: Int
     var maxWaterAmount: Int
     var mlPickerStep: Double
     let grounds: String

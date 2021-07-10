@@ -17,15 +17,6 @@ struct MethodView: View {
 
     let method: Method
 
-    var maxCups: Double {
-        if cupSize > Double(method.maxWaterAmount) {
-            self.cupSize = Double(method.maxWaterAmount)
-            return 1
-        } else {
-            return Double(method.maxWaterAmount) / cupSize
-        }
-    }
-
     @Binding var mlSelected: Bool
     @State private var waterAmount: Double = 200
 
@@ -35,29 +26,14 @@ struct MethodView: View {
         ScrollView {
             CircleImage(methodName: getMethodName(method: method.name), isRecipeView: false)
             VStack {
-                Text("Ratio")
-                    .font(.headline)
-                    .padding(.bottom, -5)
-                Slider(value: $ratio, in: 8...20, step: 1)
-                    .accentColor(customColor)
-                Text("1:\(Int(ratio))")
-                    .font(.subheadline)
-                    .padding(.bottom, 10)
-                    .padding(.top, 0)
-
-                Text(mlSelected ? "Water" : "Cups")
-                    .font(.headline)
-                    .padding(.bottom, -5)
-                if mlSelected {
-                    Slider(value: $waterAmount, in: 0...Double(method.maxWaterAmount), step: method.mlPickerStep)
-                        .accentColor(customColor)
-                } else {
-                    Slider(value: $cups, in: 0...maxCups, step: 1)
-                        .accentColor(customColor)
-                }
-                Text(mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
-                    .font(.subheadline)
-                    .padding(.bottom, 10)
+                CoffeeRatioSlider(ratio: $ratio, customColor: $customColor)
+                WaterAmountSlider(
+                    method: method,
+                    cups: $cups,
+                    cupSize: $cupSize,
+                    mlSelected: $mlSelected,
+                    customColor: $customColor
+                )
             }
             .padding(.leading, 30)
             .padding(.trailing, 30)
@@ -97,6 +73,16 @@ struct MethodView: View {
             .padding(.trailing, 30)
             .padding(.bottom, 5)
             .navigationTitle(getMethodName(method: method.name))
+            .navigationBarItems(
+                /**
+                 Note: this works once. If you hit the back button and try again, nothing happens.
+                 Short googling revealed that this seems to be a SwiftUI bug.
+                 */
+                trailing: NavigationLink(
+                    destination: InformationScreen(methodName: method.name)) {
+                Image(systemName: "info.circle")
+            }
+            )
         }.onAppear {
             self.ratio = Double(method.startRatio)
             if getMethodName(method: method.name) == "Aeropress" && self.cups > 4 {

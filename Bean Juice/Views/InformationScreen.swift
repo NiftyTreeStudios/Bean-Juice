@@ -7,20 +7,31 @@
 //
 
 import SwiftUI
+import NiftyMarkdownFormatter
 
 struct InformationScreen: View {
     // The method this information screen is shown for.
     let methodName: MethodName
 
     var body: some View {
-        VStack {
-            Text(getMethodName(method: methodName))
-        }.navigationTitle(Text(getMethodName(method: methodName)))
+
+        let method = getMethodName(method: methodName)
+        let stringInformation = markdownString(method: method)
+        let formattedMarkdown = NiftyMarkdownFormatter.formattedMarkdownArray(markdown: stringInformation)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 10) {
+                ForEach(0..<formattedMarkdown.count, id: \.self) { item in
+                    formattedMarkdown[item]
+                }
+            }
+        }.navigationTitle(Text(method))
     }
 }
 
-struct InformationScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        InformationScreen(methodName: .coldBrew)
+func markdownString(method: String) -> String {
+    guard let filepath = Bundle.main.url(forResource: method, withExtension: "md") else {
+        return "Filepath not found"
     }
+    let info = (try? String(contentsOf: filepath)) ?? "Nothing found"
+    return info
 }

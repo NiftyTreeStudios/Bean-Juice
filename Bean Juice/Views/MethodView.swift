@@ -35,8 +35,6 @@ struct MethodView: View {
                     customColor: $customColor
                 )
             }
-            .padding(.leading, 30)
-            .padding(.trailing, 30)
             VStack {
                 HStack {
                     Text("Ground level")
@@ -69,12 +67,9 @@ struct MethodView: View {
                 }
                 .padding(.bottom, 5)
             }
-            .padding(.leading, 30)
-            .padding(.trailing, 30)
-            .padding(.bottom, 5)
             .navigationTitle(getMethodName(method: method.name))
             .navigationBarItems(
-                /**
+                /*
                  Note: this works once. If you hit the back button and try again, nothing happens.
                  Short googling revealed that this seems to be a SwiftUI bug.
                  */
@@ -83,7 +78,11 @@ struct MethodView: View {
                 Image(systemName: "info.circle")
             }
             )
-        }.onAppear {
+        }
+        .padding(.leading, 30)
+        .padding(.trailing, 30)
+        .padding(.bottom, 5)
+        .onAppear {
             self.ratio = Double(method.startRatio)
             if getMethodName(method: method.name) == "Aeropress" && self.cups > 4 {
                 self.cups = 4

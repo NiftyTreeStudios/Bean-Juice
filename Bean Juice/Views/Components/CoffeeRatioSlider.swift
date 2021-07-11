@@ -12,7 +12,7 @@ struct CoffeeRatioSlider: View {
 
     @Binding var ratio: Double
     @Binding var customColor: Color
-    
+
     var body: some View {
         Text("Ratio")
             .font(.headline)

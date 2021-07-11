@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct WaterAmountSlider: View {
-    
+
     let method: Method
-    
+
     @State var waterAmount: Double = 200
     @Binding var cups: Double
     @Binding var cupSize: Double
     @Binding var mlSelected: Bool
     @Binding var customColor: Color
-    
+
     var maxCups: Double {
         if cupSize > Double(method.maxWaterAmount) {
             self.cupSize = Double(method.maxWaterAmount)
@@ -26,7 +26,7 @@ struct WaterAmountSlider: View {
             return Double(method.maxWaterAmount) / cupSize
         }
     }
-    
+
     var body: some View {
         Text(mlSelected ? "Water" : "Cups")
             .font(.headline)

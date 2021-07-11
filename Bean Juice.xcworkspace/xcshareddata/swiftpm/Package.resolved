@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Nifty-Markdown-Formatter",
+        "repositoryURL": "https://github.com/NiftyTreeStudios/Nifty-Markdown-Formatter",
+        "state": {
+          "branch": null,
+          "revision": "5f252320b37d3a94938829842be7b0db2f7d46b6",
+          "version": "0.2.5"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

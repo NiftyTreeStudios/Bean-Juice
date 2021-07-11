@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,9 +26,18 @@
 		54170E6F26065EBE0040E4DA /* MethodName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54170E6E26065EBE0040E4DA /* MethodName.swift */; };
 		54170E72260665F30040E4DA /* RecipeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54170E71260665F30040E4DA /* RecipeSelectionView.swift */; };
 		54170E7526066F130040E4DA /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54170E7426066F130040E4DA /* NewRecipeView.swift */; };
-		547A164324A0AE390094FC55 /* FrenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A164224A0AE390094FC55 /* FrenchPressView.swift */; };
 		54C412B8265D0D6D0055D285 /* Bean_JuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */; };
 		54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */; };
+		54CEC5682699C7F20016B40A /* InformationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CEC5672699C7F20016B40A /* InformationScreen.swift */; };
+		54CEC56A2699CF0E0016B40A /* WaterAmountSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */; };
+		54CEC56C2699D0CC0016B40A /* CoffeeRatioSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CEC56B2699D0CC0016B40A /* CoffeeRatioSlider.swift */; };
+		54CEC56F2699DE9E0016B40A /* AeroPress.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC56E2699D4650016B40A /* AeroPress.md */; };
+		54CEC578269A1E4B0016B40A /* Nifty Markdown Formatter in Frameworks */ = {isa = PBXBuildFile; productRef = 54CEC577269A1E4B0016B40A /* Nifty Markdown Formatter */; };
+		54CEC57A269AEAF70016B40A /* V60.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC579269AE8480016B40A /* V60.md */; };
+		54CEC57C269AEC1B0016B40A /* Chemex.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC57B269AEC1B0016B40A /* Chemex.md */; };
+		54CEC57E269B5C590016B40A /* French Press.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC57D269B5C590016B40A /* French Press.md */; };
+		54CEC580269B65F40016B40A /* Cold Brew.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC57F269B65F40016B40A /* Cold Brew.md */; };
+		54CEC582269B6D520016B40A /* Drip Machine.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC581269B6D520016B40A /* Drip Machine.md */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
 		54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54F7347825544A820040C2B0 /* .swiftlint.yml */; };
 		7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */; };
@@ -69,11 +78,19 @@
 		54170E6E26065EBE0040E4DA /* MethodName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodName.swift; sourceTree = "<group>"; };
 		54170E71260665F30040E4DA /* RecipeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSelectionView.swift; sourceTree = "<group>"; };
 		54170E7426066F130040E4DA /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
-		547A164224A0AE390094FC55 /* FrenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchPressView.swift; sourceTree = "<group>"; };
 		54C412B5265D0D6D0055D285 /* Bean JuiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceTests.swift; sourceTree = "<group>"; };
 		54C412B9265D0D6D0055D285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreReviewHelper.swift; path = ../StoreReviewHelper.swift; sourceTree = "<group>"; };
+		54CEC5672699C7F20016B40A /* InformationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreen.swift; sourceTree = "<group>"; };
+		54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAmountSlider.swift; sourceTree = "<group>"; };
+		54CEC56B2699D0CC0016B40A /* CoffeeRatioSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRatioSlider.swift; sourceTree = "<group>"; };
+		54CEC56E2699D4650016B40A /* AeroPress.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AeroPress.md; sourceTree = "<group>"; };
+		54CEC579269AE8480016B40A /* V60.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = V60.md; sourceTree = "<group>"; };
+		54CEC57B269AEC1B0016B40A /* Chemex.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chemex.md; sourceTree = "<group>"; };
+		54CEC57D269B5C590016B40A /* French Press.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "French Press.md"; sourceTree = "<group>"; };
+		54CEC57F269B65F40016B40A /* Cold Brew.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Cold Brew.md"; sourceTree = "<group>"; };
+		54CEC581269B6D520016B40A /* Drip Machine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Drip Machine.md"; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		54F7347825544A820040C2B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		67027D81097890AF6B4A0480 /* Pods-Bean JuiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.debug.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */,
+				54CEC578269A1E4B0016B40A /* Nifty Markdown Formatter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,12 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				3406755B2417A09C00307F04 /* Main.swift */,
+				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
+				340675972419685B00307F04 /* Utilities.swift */,
+				54CEC56D2699D4480016B40A /* Method Information */,
 				546B1B6024D1B9A000E26E8A /* Structs */,
 				546B1B6124D1B9D900E26E8A /* Views */,
-				34371216244DBD9D00030AAD /* CircleImage.swift */,
-				54EA8E9C24C834F500600CE8 /* CustomToggle.swift */,
-				340675972419685B00307F04 /* Utilities.swift */,
-				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
 				340675612417A0A000307F04 /* Assets.xcassets */,
 				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
 				340675692417A0A000307F04 /* Info.plist */,
@@ -175,10 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				3406758D2418E59100307F04 /* Cup.swift */,
-				3406758F2418E5A300307F04 /* Method.swift */,
 				3415A807248917B100699184 /* CustomColor.swift */,
-				54170E5F26065B010040E4DA /* Recipe.swift */,
+				3406758F2418E5A300307F04 /* Method.swift */,
 				54170E6E26065EBE0040E4DA /* MethodName.swift */,
+				54170E5F26065B010040E4DA /* Recipe.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -186,15 +203,15 @@
 		546B1B6124D1B9D900E26E8A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				54CEC5662699C7D30016B40A /* Components */,
 				3406755F2417A09C00307F04 /* ContentView.swift */,
+				54CEC5672699C7F20016B40A /* InformationScreen.swift */,
 				346360B5243B5D770054FEB1 /* MethodView.swift */,
 				3450A79D24698D9300F3E799 /* MethodSelectionView.swift */,
-				3450A79F246993C200F3E799 /* ItemRow.swift */,
-				547A164224A0AE390094FC55 /* FrenchPressView.swift */,
-				34067599241971C600307F04 /* Settings.swift */,
+				54170E7426066F130040E4DA /* NewRecipeView.swift */,
 				54170E6626065CA80040E4DA /* RecipeView.swift */,
 				54170E71260665F30040E4DA /* RecipeSelectionView.swift */,
-				54170E7426066F130040E4DA /* NewRecipeView.swift */,
+				34067599241971C600307F04 /* Settings.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +223,31 @@
 				54C412B9265D0D6D0055D285 /* Info.plist */,
 			);
 			path = "Bean JuiceTests";
+			sourceTree = "<group>";
+		};
+		54CEC5662699C7D30016B40A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				34371216244DBD9D00030AAD /* CircleImage.swift */,
+				54CEC56B2699D0CC0016B40A /* CoffeeRatioSlider.swift */,
+				54EA8E9C24C834F500600CE8 /* CustomToggle.swift */,
+				3450A79F246993C200F3E799 /* ItemRow.swift */,
+				54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		54CEC56D2699D4480016B40A /* Method Information */ = {
+			isa = PBXGroup;
+			children = (
+				54CEC56E2699D4650016B40A /* AeroPress.md */,
+				54CEC579269AE8480016B40A /* V60.md */,
+				54CEC57B269AEC1B0016B40A /* Chemex.md */,
+				54CEC57D269B5C590016B40A /* French Press.md */,
+				54CEC57F269B65F40016B40A /* Cold Brew.md */,
+				54CEC581269B6D520016B40A /* Drip Machine.md */,
+			);
+			path = "Method Information";
 			sourceTree = "<group>";
 		};
 		B31069748A162BEF0F069C45 /* Frameworks */ = {
@@ -236,6 +278,9 @@
 			dependencies = (
 			);
 			name = "Bean Juice";
+			packageProductDependencies = (
+				54CEC577269A1E4B0016B40A /* Nifty Markdown Formatter */,
+			);
 			productName = "Morning Brew";
 			productReference = 340675582417A09C00307F04 /* Bean Juice.app */;
 			productType = "com.apple.product-type.application";
@@ -286,6 +331,9 @@
 				Base,
 			);
 			mainGroup = 3406754F2417A09C00307F04;
+			packageReferences = (
+				54CEC576269A1E4B0016B40A /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */,
+			);
 			productRefGroup = 340675592417A09C00307F04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,10 +349,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CEC56F2699DE9E0016B40A /* AeroPress.md in Resources */,
+				54CEC57E269B5C590016B40A /* French Press.md in Resources */,
+				54CEC57A269AEAF70016B40A /* V60.md in Resources */,
 				54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */,
+				54CEC582269B6D520016B40A /* Drip Machine.md in Resources */,
+				54CEC580269B65F40016B40A /* Cold Brew.md in Resources */,
 				340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */,
 				340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */,
 				340675622417A0A000307F04 /* Assets.xcassets in Resources */,
+				54CEC57C269AEC1B0016B40A /* Chemex.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +426,9 @@
 				54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */,
 				3406759A241971C600307F04 /* Settings.swift in Sources */,
 				54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */,
+				54CEC5682699C7F20016B40A /* InformationScreen.swift in Sources */,
+				54CEC56A2699CF0E0016B40A /* WaterAmountSlider.swift in Sources */,
+				54CEC56C2699D0CC0016B40A /* CoffeeRatioSlider.swift in Sources */,
 				3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */,
 				340675982419685B00307F04 /* Utilities.swift in Sources */,
 				54170E7526066F130040E4DA /* NewRecipeView.swift in Sources */,
@@ -379,7 +436,6 @@
 				340675602417A09C00307F04 /* ContentView.swift in Sources */,
 				54170E6726065CA80040E4DA /* RecipeView.swift in Sources */,
 				3406758E2418E59100307F04 /* Cup.swift in Sources */,
-				547A164324A0AE390094FC55 /* FrenchPressView.swift in Sources */,
 				54170E6F26065EBE0040E4DA /* MethodName.swift in Sources */,
 				346360B6243B5D770054FEB1 /* MethodView.swift in Sources */,
 				54170E6026065B010040E4DA /* Recipe.swift in Sources */,
@@ -545,12 +601,12 @@
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bean Juice/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
 				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;
@@ -569,12 +625,12 @@
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bean Juice/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
 				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;
@@ -655,6 +711,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		54CEC576269A1E4B0016B40A /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NiftyTreeStudios/Nifty-Markdown-Formatter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		54CEC577269A1E4B0016B40A /* Nifty Markdown Formatter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54CEC576269A1E4B0016B40A /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */;
+			productName = "Nifty Markdown Formatter";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 340675502417A09C00307F04 /* Project object */;
 }

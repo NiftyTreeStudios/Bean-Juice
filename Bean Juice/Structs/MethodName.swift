@@ -15,7 +15,7 @@ enum MethodName: String, Codable, CaseIterable {
 func getMethodName(method: MethodName) -> String {
     switch method {
     case .aeropress:
-        return "Aeropress"
+        return "AeroPress"
     case .chemex:
         return "Chemex"
     case .coldBrew:

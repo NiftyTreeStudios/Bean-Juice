@@ -1,0 +1,9 @@
+Cold brewing, also called cold water extraction or cold pressing, is the process of steeping coffee grounds in water at cool temperatures for an extended period. Coarse-ground beans are soaked in water for about 12 to 24 hours.
+
+The water is normally kept at room temperature, but chilled water can also be used. After the grounds have been steeped, they are filtered out of the water using a paper coffee filter, a fine metal sieve, a French press, or felt. The result is a coffee concentrate that is diluted with water or milk, and is even sometimes served hot, but often served chilled, over ice, or blended with ice and other ingredients such as chocolate.
+
+Cold brew coffee originated in Japan, where it has been a traditional method of coffee brewing for centuries. Slow-drip cold brew, also known as Kyoto-style, or as Dutch coffee in East Asia (after the name of coffee essences brought to Asia by the Dutch), refers to a process in which water is dripped through coffee grounds at room temperature over the course of many hours. Cold brew can be infused with nitrogen to make nitro cold brew coffee.
+
+Because the ground coffee beans in cold-brewed coffee never come into contact with heated water, the process of leaching flavor from the beans produces a chemical profile different to conventional brewing methods. Coffee beans contain a number of parts that are more soluble at higher temperatures, such as caffeine, oils and fatty acids. However brewing at a lower temperature for 24 hours results in higher caffeine content when brewed in equal volume compared to 6 minutes at 98 °C. The pH of cold and hot brew coffee is similar but cold brew coffee has a lower titratable acid concentration. Both pH and titratable acidity influence taste.
+
+_Source: [Wikipedia](https://en.wikipedia.org/wiki/List_of_coffee_drinks#Cold_brew)_

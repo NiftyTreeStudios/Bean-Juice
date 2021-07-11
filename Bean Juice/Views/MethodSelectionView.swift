@@ -21,6 +21,7 @@ struct MethodSelectionView: View {
         Method(name: .chemex, maxWaterAmount: 1180, mlPickerStep: 10, grounds: "Medium/Coarse", startRatio: 17),
         Method(name: .coldBrew, maxWaterAmount: 1000, mlPickerStep: 100, grounds: "Coarse", startRatio: 15),
         Method(name: .dripMachine, maxWaterAmount: 1500, mlPickerStep: 100, grounds: "Medium", startRatio: 16),
+        Method(name: .frenchPress, maxWaterAmount: 1500, mlPickerStep: 10, grounds: "Coarse", startRatio: 18),
         Method(name: .v60, maxWaterAmount: 1000, mlPickerStep: 5, grounds: "Medium", startRatio: 17)
     ]
 
@@ -29,17 +30,6 @@ struct MethodSelectionView: View {
             List {
                 ForEach(brewMethods, id: \.name) { brewMethod in
                     ItemRowView(method: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor, mlSelected: $mlSelected)
-                }
-                NavigationLink(destination: FrenchPressView(cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor)) {
-                    HStack {
-                        Image("French Press-Big")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 60, height: 60, alignment: .center)
-                            .clipShape(Circle())
-                        Text("French Press")
-                            .font(.title2)
-                    }
                 }
             }
             .navigationBarTitle("Brewing methods")

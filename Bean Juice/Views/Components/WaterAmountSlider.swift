@@ -18,6 +18,10 @@ struct WaterAmountSlider: View {
     @Binding var mlSelected: Bool
     @Binding var customColor: Color
 
+    // French press view
+    let sizes = [350, 500, 1000, 1500]
+    @State private var selectedSize: Double = 1
+
     var maxCups: Double {
         if cupSize > Double(method.maxWaterAmount) {
             self.cupSize = Double(method.maxWaterAmount)
@@ -28,15 +32,29 @@ struct WaterAmountSlider: View {
     }
 
     var body: some View {
-        Text(mlSelected ? "Water" : "Cups")
-            .font(.headline)
-            .padding(.bottom, -5)
-        if mlSelected {
-            Slider(value: $waterAmount, in: 0...Double(method.maxWaterAmount), step: method.mlPickerStep)
+        if method.name == .frenchPress {
+            Text("Size")
+                .font(.headline)
+                .padding(.bottom, -5)
+                .accessibility(identifier: "SizeLabel")
+            Slider(value: $selectedSize, in: 0...Double(sizes.count - 1), step: 1)
                 .accentColor(customColor)
+                .accessibility(identifier: "SizeSlider")
+            Text("\(sizes[Int(selectedSize)]) ml")
+                .font(.subheadline)
+                .padding(.bottom, -5)
+                .accessibility(identifier: "SizeValue")
         } else {
-            Slider(value: $cups, in: 0...maxCups, step: 1)
-                .accentColor(customColor)
+            Text(mlSelected ? "Water" : "Cups")
+                .font(.headline)
+                .padding(.bottom, -5)
+            if mlSelected {
+                Slider(value: $waterAmount, in: 0...Double(method.maxWaterAmount), step: method.mlPickerStep)
+                    .accentColor(customColor)
+            } else {
+                Slider(value: $cups, in: 0...maxCups, step: 1)
+                    .accentColor(customColor)
+            }
         }
         Text(mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
             .font(.subheadline)

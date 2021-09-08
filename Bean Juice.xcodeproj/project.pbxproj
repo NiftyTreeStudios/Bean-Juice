@@ -84,7 +84,7 @@
 		54C412B5265D0D6D0055D285 /* Bean JuiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceTests.swift; sourceTree = "<group>"; };
 		54C412B9265D0D6D0055D285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreReviewHelper.swift; path = ../StoreReviewHelper.swift; sourceTree = "<group>"; };
+		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		54CEC5672699C7F20016B40A /* InformationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreen.swift; sourceTree = "<group>"; };
 		54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAmountSlider.swift; sourceTree = "<group>"; };
 		54CEC56B2699D0CC0016B40A /* CoffeeRatioSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRatioSlider.swift; sourceTree = "<group>"; };
@@ -166,8 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				3406755B2417A09C00307F04 /* Main.swift */,
-				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
-				340675972419685B00307F04 /* Utilities.swift */,
+				5459D43926E9186F00326DF8 /* Helpers */,
 				54CEC56D2699D4480016B40A /* Method Information */,
 				546B1B6024D1B9A000E26E8A /* Models */,
 				546B1B6124D1B9D900E26E8A /* Views */,
@@ -195,6 +194,29 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		5459D43826E9183900326DF8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				54CEC5672699C7F20016B40A /* InformationScreen.swift */,
+				346360B5243B5D770054FEB1 /* MethodView.swift */,
+				3450A79D24698D9300F3E799 /* MethodSelectionView.swift */,
+				54170E7426066F130040E4DA /* NewRecipeView.swift */,
+				54170E6626065CA80040E4DA /* RecipeView.swift */,
+				54170E71260665F30040E4DA /* RecipeSelectionView.swift */,
+				34067599241971C600307F04 /* Settings.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5459D43926E9186F00326DF8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
+				340675972419685B00307F04 /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		546B1B6024D1B9A000E26E8A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,16 +232,9 @@
 		546B1B6124D1B9D900E26E8A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				54CEC5662699C7D30016B40A /* Components */,
 				3406755F2417A09C00307F04 /* BJTabView.swift */,
-				54CEC5672699C7F20016B40A /* InformationScreen.swift */,
-				346360B5243B5D770054FEB1 /* MethodView.swift */,
-				3450A79D24698D9300F3E799 /* MethodSelectionView.swift */,
-				54170E7426066F130040E4DA /* NewRecipeView.swift */,
-				54170E6626065CA80040E4DA /* RecipeView.swift */,
-				54170E71260665F30040E4DA /* RecipeSelectionView.swift */,
-				34067599241971C600307F04 /* Settings.swift */,
-				54FB8F1726E8F2FE00F3244F /* Settings Components */,
+				54CEC5662699C7D30016B40A /* Components */,
+				5459D43826E9183900326DF8 /* Screens */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +256,7 @@
 				54EA8E9C24C834F500600CE8 /* CustomToggle.swift */,
 				3450A79F246993C200F3E799 /* ItemRow.swift */,
 				54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */,
+				54FB8F1726E8F2FE00F3244F /* Settings Components */,
 			);
 			path = Components;
 			sourceTree = "<group>";

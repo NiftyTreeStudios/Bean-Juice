@@ -218,8 +218,8 @@
 				54170E7426066F130040E4DA /* NewRecipeView.swift */,
 				54170E6626065CA80040E4DA /* RecipeView.swift */,
 				54170E71260665F30040E4DA /* RecipeSelectionView.swift */,
-				54FB8F1726E8F2FE00F3244F /* Settings Components */,
 				34067599241971C600307F04 /* Settings.swift */,
+				54FB8F1726E8F2FE00F3244F /* Settings Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";

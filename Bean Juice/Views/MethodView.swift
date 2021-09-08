@@ -35,37 +35,30 @@ struct MethodView: View {
                     customColor: $customColor
                 )
             }
-            VStack {
+            VStack(spacing: 8) {
                 HStack {
-                    Text("Ground level")
-                        .font(.headline)
+                    Text("Ground level").font(.headline)
                     Spacer()
-                    Text(method.grounds)
-                        .font(.subheadline)
+                    Text(method.grounds).font(.subheadline)
                 }
-                .padding(.bottom, 5)
 
                 HStack {
-                    Text("Water")
-                        .font(.title)
+                    Text("Water").font(.title)
                     Spacer()
                     Text(mlSelected
                             ? "\(waterAmount, specifier: "%.0f") g"
                             : "\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: method.maxWaterAmount)) g")
                         .font(.title)
                 }
-                .padding(.bottom, 5)
 
                 HStack {
-                    Text("Coffee")
-                        .font(.title)
+                    Text("Coffee").font(.title)
                     Spacer()
                     Text(mlSelected
                             ? "\(customCoffeeAmount(water: waterAmount, ratio: ratio), specifier: "%.1f") g"
                             : "\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g")
                         .font(.title)
                 }
-                .padding(.bottom, 5)
             }
             .navigationTitle(getMethodName(method: method.name))
             .navigationBarItems(
@@ -75,8 +68,8 @@ struct MethodView: View {
                  */
                 trailing: NavigationLink(
                     destination: InformationScreen(methodName: method.name)) {
-                Image(systemName: "info.circle")
-            }
+                        Image(systemName: "info.circle")
+                    }
             )
         }
         .padding(.leading, 30)

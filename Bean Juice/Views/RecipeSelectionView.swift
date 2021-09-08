@@ -17,29 +17,11 @@ struct RecipeSelectionView: View {
     var body: some View {
         NavigationView {
             if recipes.isEmpty {
-                Text("There are no recipes! \n Add one from the top right corner")
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.center)
-                    .navigationBarTitle("Recipes")
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(action: {
-                                print("Button tapped")
-                                addButtonClicked.toggle()
-                            }, label: {
-                                Image(systemName: "plus")
-                            })
-                        }
-                    }
+                NoRecipesPlaceholder(addButtonClicked: $addButtonClicked)
             } else {
                 List {
                     ForEach(recipes, id: \.name) { recipe in
-                        NavigationLink(destination: RecipeView(recipe: recipe)) {
-                            HStack {
-                                Image(getMethodName(method: recipe.brewMethod))
-                                Text(recipe.name)
-                            }
-                        }
+                        RecipeCell(recipe: recipe)
                     }
                 }
                 .listStyle(PlainListStyle())
@@ -61,6 +43,42 @@ struct RecipeSelectionView: View {
         }
         .onAppear {
             recipes = loadRecipes()
+        }
+    }
+}
+
+struct NoRecipesPlaceholder: View {
+
+    @Binding var addButtonClicked: Bool
+
+    var body: some View {
+        Text("There are no recipes! \n Add one from the top right corner")
+            .foregroundColor(.gray)
+            .multilineTextAlignment(.center)
+            .navigationBarTitle("Recipes")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        print("Button tapped")
+                        addButtonClicked.toggle()
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
+            }
+    }
+}
+
+struct RecipeCell: View {
+
+    let recipe: Recipe
+
+    var body: some View {
+        NavigationLink(destination: RecipeView(recipe: recipe)) {
+            HStack {
+                Image(getMethodName(method: recipe.brewMethod))
+                Text(recipe.name)
+            }
         }
     }
 }

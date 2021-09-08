@@ -41,7 +41,9 @@ struct RecipeSelectionView: View {
                             }
                         }
                     }
-                }.navigationBarTitle("Recipes")
+                }
+                .listStyle(PlainListStyle())
+                .navigationTitle("Recipes")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {

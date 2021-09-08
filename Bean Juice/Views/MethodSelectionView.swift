@@ -11,8 +11,6 @@ import SwiftUI
 struct MethodSelectionView: View {
 
     @Binding var cupSize: Double
-    @Binding var ratio: Double
-    @Binding var cups: Double
     @Binding var customColor: Color
     @Binding var mlSelected: Bool
 
@@ -29,10 +27,11 @@ struct MethodSelectionView: View {
         NavigationView {
             List {
                 ForEach(brewMethods, id: \.name) { brewMethod in
-                    ItemRowView(method: brewMethod, cupSize: self.$cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor, mlSelected: $mlSelected)
+                    ItemRowView(method: brewMethod, cupSize: self.$cupSize, customColor: self.$customColor, mlSelected: $mlSelected)
                 }
             }
-            .navigationBarTitle("Brewing methods")
+            .listStyle(PlainListStyle())
+            .navigationTitle("Brewing methods")
         }
     }
 }

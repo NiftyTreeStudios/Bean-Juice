@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3406755C2417A09C00307F04 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755B2417A09C00307F04 /* Main.swift */; };
-		340675602417A09C00307F04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755F2417A09C00307F04 /* ContentView.swift */; };
+		340675602417A09C00307F04 /* BJTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755F2417A09C00307F04 /* BJTabView.swift */; };
 		340675622417A0A000307F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675612417A0A000307F04 /* Assets.xcassets */; };
 		340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675642417A0A000307F04 /* Preview Assets.xcassets */; };
 		340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340675662417A0A000307F04 /* LaunchScreen.storyboard */; };
@@ -40,6 +40,9 @@
 		54CEC582269B6D520016B40A /* Drip Machine.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC581269B6D520016B40A /* Drip Machine.md */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
 		54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54F7347825544A820040C2B0 /* .swiftlint.yml */; };
+		54FB8F1926E8F34300F3244F /* CupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1826E8F34300F3244F /* CupSelection.swift */; };
+		54FB8F1B26E8F93600F3244F /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1A26E8F93600F3244F /* SocialMedia.swift */; };
+		54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */; };
 		7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +62,7 @@
 		2E24F840C27611496CCCCD4E /* Pods-Bean Juice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean Juice.release.xcconfig"; path = "Target Support Files/Pods-Bean Juice/Pods-Bean Juice.release.xcconfig"; sourceTree = "<group>"; };
 		340675582417A09C00307F04 /* Bean Juice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean Juice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3406755B2417A09C00307F04 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
-		3406755F2417A09C00307F04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3406755F2417A09C00307F04 /* BJTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJTabView.swift; sourceTree = "<group>"; };
 		340675612417A0A000307F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		340675642417A0A000307F04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		340675672417A0A000307F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,6 +96,9 @@
 		54CEC581269B6D520016B40A /* Drip Machine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Drip Machine.md"; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		54F7347825544A820040C2B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		54FB8F1826E8F34300F3244F /* CupSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupSelection.swift; sourceTree = "<group>"; };
+		54FB8F1A26E8F93600F3244F /* SocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
+		54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorSelection.swift; sourceTree = "<group>"; };
 		67027D81097890AF6B4A0480 /* Pods-Bean JuiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.debug.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CF29C58DBF83EAF0DF13058 /* Pods-Bean JuiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.release.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean_Juice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,8 +169,9 @@
 				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
 				340675972419685B00307F04 /* Utilities.swift */,
 				54CEC56D2699D4480016B40A /* Method Information */,
-				546B1B6024D1B9A000E26E8A /* Structs */,
+				546B1B6024D1B9A000E26E8A /* Models */,
 				546B1B6124D1B9D900E26E8A /* Views */,
+				54FB8F1626E8E88B00F3244F /* ViewModels */,
 				340675612417A0A000307F04 /* Assets.xcassets */,
 				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
 				340675692417A0A000307F04 /* Info.plist */,
@@ -188,7 +195,7 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		546B1B6024D1B9A000E26E8A /* Structs */ = {
+		546B1B6024D1B9A000E26E8A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				3406758D2418E59100307F04 /* Cup.swift */,
@@ -197,20 +204,21 @@
 				54170E6E26065EBE0040E4DA /* MethodName.swift */,
 				54170E5F26065B010040E4DA /* Recipe.swift */,
 			);
-			path = Structs;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		546B1B6124D1B9D900E26E8A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				54CEC5662699C7D30016B40A /* Components */,
-				3406755F2417A09C00307F04 /* ContentView.swift */,
+				3406755F2417A09C00307F04 /* BJTabView.swift */,
 				54CEC5672699C7F20016B40A /* InformationScreen.swift */,
 				346360B5243B5D770054FEB1 /* MethodView.swift */,
 				3450A79D24698D9300F3E799 /* MethodSelectionView.swift */,
 				54170E7426066F130040E4DA /* NewRecipeView.swift */,
 				54170E6626065CA80040E4DA /* RecipeView.swift */,
 				54170E71260665F30040E4DA /* RecipeSelectionView.swift */,
+				54FB8F1726E8F2FE00F3244F /* Settings Components */,
 				34067599241971C600307F04 /* Settings.swift */,
 			);
 			path = Views;
@@ -248,6 +256,23 @@
 				54CEC581269B6D520016B40A /* Drip Machine.md */,
 			);
 			path = "Method Information";
+			sourceTree = "<group>";
+		};
+		54FB8F1626E8E88B00F3244F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		54FB8F1726E8F2FE00F3244F /* Settings Components */ = {
+			isa = PBXGroup;
+			children = (
+				54FB8F1826E8F34300F3244F /* CupSelection.swift */,
+				54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */,
+				54FB8F1A26E8F93600F3244F /* SocialMedia.swift */,
+			);
+			path = "Settings Components";
 			sourceTree = "<group>";
 		};
 		B31069748A162BEF0F069C45 /* Frameworks */ = {
@@ -421,7 +446,9 @@
 				3450A7A0246993C200F3E799 /* ItemRow.swift in Sources */,
 				340675902418E5A400307F04 /* Method.swift in Sources */,
 				54170E72260665F30040E4DA /* RecipeSelectionView.swift in Sources */,
+				54FB8F1B26E8F93600F3244F /* SocialMedia.swift in Sources */,
 				3415A808248917B100699184 /* CustomColor.swift in Sources */,
+				54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */,
 				3406755C2417A09C00307F04 /* Main.swift in Sources */,
 				54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */,
 				3406759A241971C600307F04 /* Settings.swift in Sources */,
@@ -433,10 +460,11 @@
 				340675982419685B00307F04 /* Utilities.swift in Sources */,
 				54170E7526066F130040E4DA /* NewRecipeView.swift in Sources */,
 				34371217244DBD9D00030AAD /* CircleImage.swift in Sources */,
-				340675602417A09C00307F04 /* ContentView.swift in Sources */,
+				340675602417A09C00307F04 /* BJTabView.swift in Sources */,
 				54170E6726065CA80040E4DA /* RecipeView.swift in Sources */,
 				3406758E2418E59100307F04 /* Cup.swift in Sources */,
 				54170E6F26065EBE0040E4DA /* MethodName.swift in Sources */,
+				54FB8F1926E8F34300F3244F /* CupSelection.swift in Sources */,
 				346360B6243B5D770054FEB1 /* MethodView.swift in Sources */,
 				54170E6026065B010040E4DA /* Recipe.swift in Sources */,
 			);

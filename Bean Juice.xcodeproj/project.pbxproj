@@ -718,7 +718,7 @@
 			repositoryURL = "https://github.com/NiftyTreeStudios/Nifty-Markdown-Formatter";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.5;
+				minimumVersion = 0.2.91;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

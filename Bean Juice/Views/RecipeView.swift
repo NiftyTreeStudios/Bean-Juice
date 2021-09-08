@@ -20,7 +20,7 @@ struct RecipeView: View {
                 .fontWeight(.semibold)
                 .padding(10)
                 .multilineTextAlignment(.center)
-            VStack {
+            VStack(spacing: 8) {
                 HStack {
                     Text("Ground level")
                         .font(.headline)
@@ -28,7 +28,6 @@ struct RecipeView: View {
                     Text(recipe.groundSize)
                         .font(.subheadline)
                 }
-                .padding(.bottom, 5)
 
                 HStack {
                     Text("Water")
@@ -37,7 +36,6 @@ struct RecipeView: View {
                     Text("\(recipe.waterAmount) g")
                         .font(.title)
                 }
-                .padding(.bottom, 5)
 
                 HStack {
                     Text("Coffee")
@@ -46,7 +44,6 @@ struct RecipeView: View {
                     Text(recipe.coffeeAmount + " g")
                         .font(.title)
                 }
-                .padding(.bottom, 5)
 
                 if recipe.additionalInformation != nil {
                     HStack {
@@ -59,8 +56,7 @@ struct RecipeView: View {
                 }
                 Spacer()
             }
-            .padding(.leading, 30)
-            .padding(.trailing, 30)
+            .padding(.horizontal, 30)
             .padding(.bottom, 5)
         }
     }

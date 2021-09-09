@@ -10,9 +10,6 @@ import SwiftUI
 
 final class MethodSelectionViewModel: ObservableObject {
 
-    @Published var cupSize: Double = 69
-    @Published var mlSelected: Bool = false
-
     let brewMethods: [Method] = [
         Method(name: .aeropress, maxWaterAmount: 230, mlPickerStep: 5, grounds: "Medium/Fine", startRatio: 13),
         Method(name: .chemex, maxWaterAmount: 1180, mlPickerStep: 10, grounds: "Medium/Coarse", startRatio: 17),

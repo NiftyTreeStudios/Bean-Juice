@@ -11,28 +11,22 @@ import SwiftUI
 
 struct MethodView: View {
 
-    @Binding var cupSize: Double
     @State private var ratio: Double = 13
     @State private var cups: Double = 1
 
     let method: Method
 
-    @Binding var mlSelected: Bool
+    @EnvironmentObject var settings: SettingsViewModel
     @State private var waterAmount: Double = 200
-
-    @Binding var customColor: Color
 
     var body: some View {
         ScrollView {
             CircleImage(methodName: getMethodName(method: method.name), isRecipeView: false)
             VStack {
-                CoffeeRatioSlider(ratio: $ratio, customColor: $customColor)
+                CoffeeRatioSlider(ratio: $ratio)
                 WaterAmountSlider(
                     method: method,
-                    cups: $cups,
-                    cupSize: $cupSize,
-                    mlSelected: $mlSelected,
-                    customColor: $customColor
+                    cups: $cups
                 )
             }
             VStack(spacing: 8) {
@@ -45,18 +39,18 @@ struct MethodView: View {
                 HStack {
                     Text("Water").font(.title)
                     Spacer()
-                    Text(mlSelected
+                    Text(settings.mlSelected
                             ? "\(waterAmount, specifier: "%.0f") g"
-                            : "\(calculateWaterAmount(cupSize: cupSize, cupAmount: cups, maxWater: method.maxWaterAmount)) g")
+                         : "\(calculateWaterAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: cups, maxWater: method.maxWaterAmount)) g")
                         .font(.title)
                 }
 
                 HStack {
                     Text("Coffee").font(.title)
                     Spacer()
-                    Text(mlSelected
+                    Text(settings.mlSelected
                             ? "\(customCoffeeAmount(water: waterAmount, ratio: ratio), specifier: "%.1f") g"
-                            : "\(calculateCoffeeAmount(cupSize: cupSize, cupAmount: cups, ratio: ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g")
+                         : "\(calculateCoffeeAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: cups, ratio: ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g")
                         .font(.title)
                 }
             }

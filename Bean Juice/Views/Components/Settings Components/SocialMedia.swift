@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SafariServices
 
 struct SocialMedia: View {
 
@@ -35,6 +36,19 @@ struct SocialMedia: View {
                 SafariView(url: URL(string: urlString)!)
             }
         })
+    }
+}
+
+struct SafariView: UIViewControllerRepresentable {
+
+    let url: URL
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
+        return SFSafariViewController(url: url)
+    }
+
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
+
     }
 }
 

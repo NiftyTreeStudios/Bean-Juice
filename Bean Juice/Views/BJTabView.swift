@@ -10,15 +10,14 @@ import SwiftUI
 
 /// Contains the ``TabView``.
 struct BJTabView: View {
-    @State private var selection = "Methods"
-    @AppStorage(wrappedValue: false, "mlSelected") var mlSelected: Bool
-    @AppStorage(wrappedValue: 150, "cupSize") var cupSize: Double
 
-    @State private var customColor: Color = Color.blue
+    @State private var selection = "Methods"
+
+    @StateObject private var settings = SettingsViewModel.shared
 
     var body: some View {
         TabView(selection: $selection) {
-            MethodSelectionView(cupSize: $cupSize, customColor: self.$customColor, mlSelected: $mlSelected)
+            MethodSelectionView()
                 .tabItem {
                     VStack {
                         Image(systemName: "ellipsis.circle")
@@ -35,7 +34,7 @@ struct BJTabView: View {
                     }
                 }
 
-            SettingsView(mlSelected: $mlSelected, customColor: $customColor)
+            SettingsView()
                 .tabItem {
                     VStack {
                         Image(systemName: "gear")
@@ -44,6 +43,7 @@ struct BJTabView: View {
                 }
                 .tag("settings")
         }
-        .accentColor(customColor)
+        .environmentObject(settings)
+        .accentColor(settings.getAccentColor())
     }
 }

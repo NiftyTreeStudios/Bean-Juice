@@ -14,20 +14,19 @@ struct WaterAmountSlider: View {
 
     @State var waterAmount: Double = 200
     @Binding var cups: Double
-    @Binding var cupSize: Double
-    @Binding var mlSelected: Bool
-    @Binding var customColor: Color
+
+    @EnvironmentObject var settings: SettingsViewModel
 
     // French press view
     let sizes = [350, 500, 1000, 1500]
     @State private var selectedSize: Double = 1
 
     var maxCups: Double {
-        if cupSize > Double(method.maxWaterAmount) {
-            self.cupSize = Double(method.maxWaterAmount)
+        if settings.selectedCupMlSize > method.maxWaterAmount {
+            settings.cupSize = Double(method.maxWaterAmount)
             return 1
         } else {
-            return Double(method.maxWaterAmount) / cupSize
+            return Double(method.maxWaterAmount / settings.selectedCupMlSize)
         }
     }
 
@@ -38,25 +37,25 @@ struct WaterAmountSlider: View {
                 .padding(.bottom, -5)
                 .accessibility(identifier: "SizeLabel")
             Slider(value: $selectedSize, in: 0...Double(sizes.count - 1), step: 1)
-                .accentColor(customColor)
+                .accentColor(settings.getAccentColor())
                 .accessibility(identifier: "SizeSlider")
             Text("\(sizes[Int(selectedSize)]) ml")
                 .font(.subheadline)
                 .padding(.bottom, -5)
                 .accessibility(identifier: "SizeValue")
         } else {
-            Text(mlSelected ? "Water" : "Cups")
+            Text(settings.mlSelected ? "Water" : "Cups")
                 .font(.headline)
                 .padding(.bottom, -5)
-            if mlSelected {
+            if settings.mlSelected {
                 Slider(value: $waterAmount, in: 0...Double(method.maxWaterAmount), step: method.mlPickerStep)
-                    .accentColor(customColor)
+                    .accentColor(settings.getAccentColor())
             } else {
                 Slider(value: $cups, in: 0...maxCups, step: 1)
-                    .accentColor(customColor)
+                    .accentColor(settings.getAccentColor())
             }
         }
-        Text(mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
+        Text(settings.mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
             .font(.subheadline)
             .padding(.bottom, 10)
     }

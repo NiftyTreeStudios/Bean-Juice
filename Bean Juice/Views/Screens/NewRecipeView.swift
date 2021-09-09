@@ -94,7 +94,6 @@ struct SaveButton: View {
     @Binding var recipes: [Recipe]
     @Binding var addButtonClicked: Bool
 
-    
     var body: some View {
         Button {
             recipes = addNewRecipe(recipe: recipe, in: recipes)

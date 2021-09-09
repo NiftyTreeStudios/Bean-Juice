@@ -1,18 +1,17 @@
 //
-//  MethodSelectionView.swift
-//  Bean Juice
+//  MethodSelectionViewModel.swift
+//  MethodSelectionViewModel
 //
-//  Created by Iiro Alhonen on 11.5.2020.
-//  Copyright © 2020 Nifty Tree Studios. All rights reserved.
+//  Created by Iiro Alhonen on 09.09.21.
+//  Copyright © 2021 Nifty Tree Studios. All rights reserved.
 //
 
 import SwiftUI
 
-struct MethodSelectionView: View {
+final class MethodSelectionViewModel: ObservableObject {
 
-    @Binding var cupSize: Double
-    @Binding var customColor: Color
-    @Binding var mlSelected: Bool
+    @Published var cupSize: Double = 69
+    @Published var mlSelected: Bool = false
 
     let brewMethods: [Method] = [
         Method(name: .aeropress, maxWaterAmount: 230, mlPickerStep: 5, grounds: "Medium/Fine", startRatio: 13),
@@ -23,15 +22,4 @@ struct MethodSelectionView: View {
         Method(name: .v60, maxWaterAmount: 1000, mlPickerStep: 5, grounds: "Medium", startRatio: 17)
     ]
 
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(brewMethods, id: \.name) { brewMethod in
-                    ItemRowView(method: brewMethod, cupSize: self.$cupSize, customColor: self.$customColor, mlSelected: $mlSelected)
-                }
-            }
-            .listStyle(PlainListStyle())
-            .navigationTitle("Brewing methods")
-        }
-    }
 }

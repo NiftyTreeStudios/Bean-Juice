@@ -8,13 +8,10 @@
 
 import Foundation
 import SwiftUI
-import SafariServices
-import StoreKit
 
 struct SettingsView: View {
 
-    @Binding var mlSelected: Bool
-    @Binding var customColor: Color
+    @EnvironmentObject var settings: SettingsViewModel
 
     var body: some View {
 
@@ -23,15 +20,15 @@ struct SettingsView: View {
         NavigationView {
             List {
                 Section(header: Text("Use ml instead of cups")) {
-                    Toggle(isOn: $mlSelected) {
+                    Toggle(isOn: $settings.mlSelected) {
                         Text("Use ml")
                     }
                 }
-                if !mlSelected {
+                if !settings.mlSelected {
                     CupSelection()
                 }
 
-                HighlightColorSelection(customColor: $customColor)
+                HighlightColorSelection()
 
                 Section(header: Text("Enjoying using Bean Juice?")) {
                     Button(action: {
@@ -49,18 +46,5 @@ struct SettingsView: View {
                     .navigationTitle("Settings")
             }.listStyle(GroupedListStyle())
         }
-    }
-}
-
-struct SafariView: UIViewControllerRepresentable {
-
-    let url: URL
-
-    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
-    }
-
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
-
     }
 }

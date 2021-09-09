@@ -11,19 +11,10 @@ import SwiftUI
 struct ItemRowView: View {
     let method: Method
 
-    @Binding var cupSize: Double
-    @Binding var customColor: Color
-    @Binding var mlSelected: Bool
-
     var body: some View {
 
         NavigationLink(
-            destination: MethodView(
-                cupSize: self.$cupSize,
-                method: method,
-                mlSelected: $mlSelected,
-                customColor: self.$customColor
-            )
+            destination: MethodView(method: method)
         ) {
                 HStack {
                     Image(getMethodName(method: method.name) + "-Big")

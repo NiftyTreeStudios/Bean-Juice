@@ -11,14 +11,14 @@ import SwiftUI
 struct CoffeeRatioSlider: View {
 
     @Binding var ratio: Double
-    @Binding var customColor: Color
+    @EnvironmentObject var settings: SettingsViewModel
 
     var body: some View {
         Text("Ratio")
             .font(.headline)
             .padding(.bottom, -5)
         Slider(value: $ratio, in: 8...20, step: 1)
-            .accentColor(customColor)
+            .accentColor(settings.getAccentColor())
         Text("1:\(Int(ratio))")
             .font(.subheadline)
             .padding(.bottom, 10)

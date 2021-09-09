@@ -24,7 +24,7 @@ struct CupSelection: View {
     var body: some View {
         Section(header: Text("Cup size")
                     .font(.subheadline),
-                footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(round((Double(self.cupSizes[selectedCup].sizeMl) )/(29.574)*10)/10) oz.")) {
+                footer: Text("Picked size: "  + "\(self.cupSizes[selectedCup].sizeMl) ml. or "  + "\(Double(self.cupSizes[selectedCup].sizeMl).convertMlToOz) oz.")) {
             Picker("Cup size", selection: Binding(get: {selectedCup}, set: { newValue in
                 selectedCup = newValue
                 cupSize = Double(cupSizes[newValue].sizeMl)})) {

@@ -38,6 +38,7 @@
 		54CEC57E269B5C590016B40A /* French Press.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC57D269B5C590016B40A /* French Press.md */; };
 		54CEC580269B65F40016B40A /* Cold Brew.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC57F269B65F40016B40A /* Cold Brew.md */; };
 		54CEC582269B6D520016B40A /* Drip Machine.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC581269B6D520016B40A /* Drip Machine.md */; };
+		54E98E0926E9F76300CD6F7C /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E0826E9F76300CD6F7C /* DoubleExtension.swift */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
 		54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54F7347825544A820040C2B0 /* .swiftlint.yml */; };
 		54FB8F1926E8F34300F3244F /* CupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1826E8F34300F3244F /* CupSelection.swift */; };
@@ -94,6 +95,7 @@
 		54CEC57D269B5C590016B40A /* French Press.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "French Press.md"; sourceTree = "<group>"; };
 		54CEC57F269B65F40016B40A /* Cold Brew.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Cold Brew.md"; sourceTree = "<group>"; };
 		54CEC581269B6D520016B40A /* Drip Machine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Drip Machine.md"; sourceTree = "<group>"; };
+		54E98E0826E9F76300CD6F7C /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		54F7347825544A820040C2B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		54FB8F1826E8F34300F3244F /* CupSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupSelection.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		5459D43926E9186F00326DF8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				54E98E0826E9F76300CD6F7C /* DoubleExtension.swift */,
 				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
 				340675972419685B00307F04 /* Utilities.swift */,
 			);
@@ -464,6 +467,7 @@
 				54170E72260665F30040E4DA /* RecipeSelectionView.swift in Sources */,
 				54FB8F1B26E8F93600F3244F /* SocialMedia.swift in Sources */,
 				3415A808248917B100699184 /* CustomColor.swift in Sources */,
+				54E98E0926E9F76300CD6F7C /* DoubleExtension.swift in Sources */,
 				54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */,
 				3406755C2417A09C00307F04 /* Main.swift in Sources */,
 				54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */,

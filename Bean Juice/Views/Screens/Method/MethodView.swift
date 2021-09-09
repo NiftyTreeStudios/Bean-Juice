@@ -11,22 +11,19 @@ import SwiftUI
 
 struct MethodView: View {
 
-    @State private var ratio: Double = 13
-    @State private var cups: Double = 1
-
     let method: Method
 
     @EnvironmentObject var settings: SettingsViewModel
-    @State private var waterAmount: Double = 200
+    @StateObject private var viewModel = MethodViewModel()
 
     var body: some View {
         ScrollView {
             CircleImage(methodName: getMethodName(method: method.name), isRecipeView: false)
             VStack {
-                CoffeeRatioSlider(ratio: $ratio)
+                CoffeeRatioSlider(ratio: $viewModel.ratio)
                 WaterAmountSlider(
                     method: method,
-                    cups: $cups
+                    cups: $viewModel.cups
                 )
             }
             VStack(spacing: 8) {
@@ -40,8 +37,8 @@ struct MethodView: View {
                     Text("Water").font(.title)
                     Spacer()
                     Text(settings.mlSelected
-                            ? "\(waterAmount, specifier: "%.0f") g"
-                         : "\(calculateWaterAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: cups, maxWater: method.maxWaterAmount)) g")
+                         ? "\(viewModel.waterAmount, specifier: "%.0f") g"
+                         : "\(calculateWaterAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, maxWater: method.maxWaterAmount)) g")
                         .font(.title)
                 }
 
@@ -49,8 +46,8 @@ struct MethodView: View {
                     Text("Coffee").font(.title)
                     Spacer()
                     Text(settings.mlSelected
-                            ? "\(customCoffeeAmount(water: waterAmount, ratio: ratio), specifier: "%.1f") g"
-                         : "\(calculateCoffeeAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: cups, ratio: ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g")
+                         ? "\(customCoffeeAmount(water: viewModel.waterAmount, ratio: viewModel.ratio), specifier: "%.1f") g"
+                         : "\(calculateCoffeeAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, ratio: viewModel.ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g")
                         .font(.title)
                 }
             }
@@ -70,13 +67,7 @@ struct MethodView: View {
         .padding(.trailing, 30)
         .padding(.bottom, 5)
         .onAppear {
-            self.ratio = Double(method.startRatio)
-            if getMethodName(method: method.name) == "Aeropress" && self.cups > 4 {
-                self.cups = 4
-            }
-            if getMethodName(method: method.name) == "Aeropress" && self.waterAmount > Double(method.maxWaterAmount) {
-                self.waterAmount = Double(method.maxWaterAmount)
-            }
+            viewModel.setUp(for: method)
             StoreReviewHelper.checkAndAskForReview()
             StoreReviewHelper.incrementAppOpenedCount()
         }

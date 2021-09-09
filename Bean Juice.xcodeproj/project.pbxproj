@@ -41,6 +41,7 @@
 		54E98E0926E9F76300CD6F7C /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E0826E9F76300CD6F7C /* DoubleExtension.swift */; };
 		54E98E0C26EA31C300CD6F7C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E0B26EA31C300CD6F7C /* SettingsViewModel.swift */; };
 		54E98E0F26EA320C00CD6F7C /* MethodSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E0E26EA320C00CD6F7C /* MethodSelectionViewModel.swift */; };
+		54E98E1626EA574D00CD6F7C /* MethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E1526EA574D00CD6F7C /* MethodViewModel.swift */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
 		54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54F7347825544A820040C2B0 /* .swiftlint.yml */; };
 		54FB8F1926E8F34300F3244F /* CupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1826E8F34300F3244F /* CupSelection.swift */; };
@@ -100,6 +101,7 @@
 		54E98E0826E9F76300CD6F7C /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		54E98E0B26EA31C300CD6F7C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		54E98E0E26EA320C00CD6F7C /* MethodSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionViewModel.swift; sourceTree = "<group>"; };
+		54E98E1526EA574D00CD6F7C /* MethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodViewModel.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		54F7347825544A820040C2B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		54FB8F1826E8F34300F3244F /* CupSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupSelection.swift; sourceTree = "<group>"; };
@@ -202,10 +204,10 @@
 		5459D43826E9183900326DF8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				54E98E1426EA573900CD6F7C /* Method */,
 				54E98E0D26EA31F500CD6F7C /* MethodSelection */,
 				54E98E0A26EA31A800CD6F7C /* Settings */,
 				54CEC5672699C7F20016B40A /* InformationScreen.swift */,
-				346360B5243B5D770054FEB1 /* MethodView.swift */,
 				54170E7426066F130040E4DA /* NewRecipeView.swift */,
 				54170E6626065CA80040E4DA /* RecipeView.swift */,
 				54170E71260665F30040E4DA /* RecipeSelectionView.swift */,
@@ -296,6 +298,15 @@
 				54E98E0E26EA320C00CD6F7C /* MethodSelectionViewModel.swift */,
 			);
 			path = MethodSelection;
+			sourceTree = "<group>";
+		};
+		54E98E1426EA573900CD6F7C /* Method */ = {
+			isa = PBXGroup;
+			children = (
+				346360B5243B5D770054FEB1 /* MethodView.swift */,
+				54E98E1526EA574D00CD6F7C /* MethodViewModel.swift */,
+			);
+			path = Method;
 			sourceTree = "<group>";
 		};
 		54FB8F1726E8F2FE00F3244F /* Settings Components */ = {
@@ -501,6 +512,7 @@
 				54E98E0C26EA31C300CD6F7C /* SettingsViewModel.swift in Sources */,
 				54170E6F26065EBE0040E4DA /* MethodName.swift in Sources */,
 				54FB8F1926E8F34300F3244F /* CupSelection.swift in Sources */,
+				54E98E1626EA574D00CD6F7C /* MethodViewModel.swift in Sources */,
 				346360B6243B5D770054FEB1 /* MethodView.swift in Sources */,
 				54170E6026065B010040E4DA /* Recipe.swift in Sources */,
 			);

@@ -131,17 +131,17 @@ func addNewRecipe(recipe: Recipe, in recipes: [Recipe]) -> [Recipe] {
     }
 }
 
-/// Saves projects into user defaults.
+/// Saves recipes into user defaults.
 /// - Parameters:
-///   - recipes: The Recipes that are being saved.
-func saveRecipes(_ recipes: [Recipe]) {
+///   - recipes: The recipes that are being saved.
+func saveRecipesToUserDefaults(_ recipes: [Recipe]) {
     let data = recipes.map { try? JSONEncoder().encode($0) }
     UserDefaults.standard.set(data, forKey: "Recipes")
 }
 
-/// Loads projects from user defaults.
+/// Loads recipes from user defaults.
 /// - Returns: A array of recipes.
-func loadRecipes() -> [Recipe] {
+func loadRecipesFromUserDefaults() -> [Recipe] {
     guard let encodedData = UserDefaults.standard.array(forKey: "Recipes") as? [Data] else {
         return []
     }

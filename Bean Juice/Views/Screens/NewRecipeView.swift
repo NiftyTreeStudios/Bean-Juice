@@ -97,7 +97,7 @@ struct SaveButton: View {
     var body: some View {
         Button {
             recipes = addNewRecipe(recipe: recipe, in: recipes)
-            saveRecipes(recipes)
+            saveRecipesToUserDefaults(recipes)
             addButtonClicked.toggle()
         } label: {
             Text("Save recipe")

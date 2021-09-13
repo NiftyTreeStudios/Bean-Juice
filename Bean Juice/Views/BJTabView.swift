@@ -1,6 +1,6 @@
 //
-//  ContentView.swift
-//  Morning Brew
+//  BJTabView.swift
+//  Bean Juice
 //
 //  Created by Iiro Alhonen on 10.3.2020.
 //  Copyright © 2020 Nifty Tree Studios. All rights reserved.
@@ -8,19 +8,16 @@
 
 import SwiftUI
 
-/// The main content view. Contains the ``TabView``.
-struct ContentView: View {
-    @State private var selection = "Methods"
-    @AppStorage(wrappedValue: 150, "cupSize") var cupSize: Double
-    @AppStorage(wrappedValue: false, "mlSelected") var mlSelected: Bool
-    @State private var ratio: Double = 13
-    @State private var cups: Double = 1
+/// Contains the ``TabView``.
+struct BJTabView: View {
 
-    @State private var customColor: Color = Color.blue
+    @State private var selection = "Methods"
+
+    @StateObject private var settings = SettingsViewModel.shared
 
     var body: some View {
         TabView(selection: $selection) {
-            MethodSelectionView(cupSize: $cupSize, ratio: self.$ratio, cups: self.$cups, customColor: self.$customColor, mlSelected: $mlSelected)
+            MethodSelectionView()
                 .tabItem {
                     VStack {
                         Image(systemName: "ellipsis.circle")
@@ -37,7 +34,7 @@ struct ContentView: View {
                     }
                 }
 
-            SettingsView(mlSelected: $mlSelected, cupSize: $cupSize, customColor: $customColor)
+            SettingsView()
                 .tabItem {
                     VStack {
                         Image(systemName: "gear")
@@ -46,6 +43,7 @@ struct ContentView: View {
                 }
                 .tag("settings")
         }
-        .accentColor(customColor)
+        .environmentObject(settings)
+        .accentColor(settings.getAccentColor())
     }
 }

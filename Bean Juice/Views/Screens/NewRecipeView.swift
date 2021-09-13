@@ -68,29 +68,39 @@ struct NewRecipeView: View {
                     }
                 }
 
-                Button {
-                    print("Saved recipe: \(name)")
-                    print("Minutes: \(minuteSelection) and seconds: \(secondSelection)")
-                    recipes = addNewRecipe(
-                        recipe: Recipe(
-                            name: name,
-                            brewMethod: brewMethod,
-                            groundSize: groundSize,
-                            coffeeAmount: coffeeAmount,
-                            waterAmount: Int(waterAmount) ?? 0,
-                            brewTime: convertToSeconds(minutes: minuteSelection, seconds: secondSelection),
-                            additionalInformation: additionalInformation
-                        ),
-                        in: recipes
-                    )
-                    saveRecipes(recipes)
-                    addButtonClicked.toggle()
-                } label: {
-                    Text("Save recipe")
-                }
+                SaveButton(
+                    recipe: Recipe(
+                        name: name,
+                        brewMethod: brewMethod,
+                        groundSize: groundSize,
+                        coffeeAmount: coffeeAmount,
+                        waterAmount: Int(waterAmount) ?? 0,
+                        brewTime: convertToSeconds(minutes: minuteSelection, seconds: secondSelection),
+                        additionalInformation: additionalInformation
+                    ),
+                    recipes: $recipes,
+                    addButtonClicked: $addButtonClicked
+                )
 
             }
         }
         .navigationBarTitle("Add new recipe")
+    }
+}
+
+struct SaveButton: View {
+
+    let recipe: Recipe
+    @Binding var recipes: [Recipe]
+    @Binding var addButtonClicked: Bool
+
+    var body: some View {
+        Button {
+            recipes = addNewRecipe(recipe: recipe, in: recipes)
+            saveRecipesToUserDefaults(recipes)
+            addButtonClicked.toggle()
+        } label: {
+            Text("Save recipe")
+        }
     }
 }

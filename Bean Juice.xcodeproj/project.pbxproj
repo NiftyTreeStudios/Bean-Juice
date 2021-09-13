@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3406755C2417A09C00307F04 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755B2417A09C00307F04 /* Main.swift */; };
-		340675602417A09C00307F04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755F2417A09C00307F04 /* ContentView.swift */; };
+		340675602417A09C00307F04 /* BJTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406755F2417A09C00307F04 /* BJTabView.swift */; };
 		340675622417A0A000307F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675612417A0A000307F04 /* Assets.xcassets */; };
 		340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675642417A0A000307F04 /* Preview Assets.xcassets */; };
 		340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340675662417A0A000307F04 /* LaunchScreen.storyboard */; };
 		3406758E2418E59100307F04 /* Cup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758D2418E59100307F04 /* Cup.swift */; };
 		340675902418E5A400307F04 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758F2418E5A300307F04 /* Method.swift */; };
 		340675982419685B00307F04 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340675972419685B00307F04 /* Utilities.swift */; };
-		3406759A241971C600307F04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34067599241971C600307F04 /* Settings.swift */; };
+		3406759A241971C600307F04 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34067599241971C600307F04 /* SettingsView.swift */; };
 		3415A808248917B100699184 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415A807248917B100699184 /* CustomColor.swift */; };
 		34371217244DBD9D00030AAD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34371216244DBD9D00030AAD /* CircleImage.swift */; };
 		3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450A79D24698D9300F3E799 /* MethodSelectionView.swift */; };
@@ -38,8 +38,15 @@
 		54CEC57E269B5C590016B40A /* French Press.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC57D269B5C590016B40A /* French Press.md */; };
 		54CEC580269B65F40016B40A /* Cold Brew.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC57F269B65F40016B40A /* Cold Brew.md */; };
 		54CEC582269B6D520016B40A /* Drip Machine.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC581269B6D520016B40A /* Drip Machine.md */; };
+		54E98E0926E9F76300CD6F7C /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E0826E9F76300CD6F7C /* DoubleExtension.swift */; };
+		54E98E0C26EA31C300CD6F7C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E0B26EA31C300CD6F7C /* SettingsViewModel.swift */; };
+		54E98E0F26EA320C00CD6F7C /* MethodSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E0E26EA320C00CD6F7C /* MethodSelectionViewModel.swift */; };
+		54E98E1626EA574D00CD6F7C /* MethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E1526EA574D00CD6F7C /* MethodViewModel.swift */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
 		54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54F7347825544A820040C2B0 /* .swiftlint.yml */; };
+		54FB8F1926E8F34300F3244F /* CupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1826E8F34300F3244F /* CupSelection.swift */; };
+		54FB8F1B26E8F93600F3244F /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1A26E8F93600F3244F /* SocialMedia.swift */; };
+		54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */; };
 		7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +66,7 @@
 		2E24F840C27611496CCCCD4E /* Pods-Bean Juice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean Juice.release.xcconfig"; path = "Target Support Files/Pods-Bean Juice/Pods-Bean Juice.release.xcconfig"; sourceTree = "<group>"; };
 		340675582417A09C00307F04 /* Bean Juice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean Juice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3406755B2417A09C00307F04 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
-		3406755F2417A09C00307F04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3406755F2417A09C00307F04 /* BJTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJTabView.swift; sourceTree = "<group>"; };
 		340675612417A0A000307F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		340675642417A0A000307F04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		340675672417A0A000307F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,7 +74,7 @@
 		3406758D2418E59100307F04 /* Cup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cup.swift; sourceTree = "<group>"; };
 		3406758F2418E5A300307F04 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		340675972419685B00307F04 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		34067599241971C600307F04 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		34067599241971C600307F04 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3415A807248917B100699184 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		34371216244DBD9D00030AAD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3450A79D24698D9300F3E799 /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
@@ -81,7 +88,7 @@
 		54C412B5265D0D6D0055D285 /* Bean JuiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceTests.swift; sourceTree = "<group>"; };
 		54C412B9265D0D6D0055D285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreReviewHelper.swift; path = ../StoreReviewHelper.swift; sourceTree = "<group>"; };
+		54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		54CEC5672699C7F20016B40A /* InformationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreen.swift; sourceTree = "<group>"; };
 		54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAmountSlider.swift; sourceTree = "<group>"; };
 		54CEC56B2699D0CC0016B40A /* CoffeeRatioSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRatioSlider.swift; sourceTree = "<group>"; };
@@ -91,8 +98,15 @@
 		54CEC57D269B5C590016B40A /* French Press.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "French Press.md"; sourceTree = "<group>"; };
 		54CEC57F269B65F40016B40A /* Cold Brew.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Cold Brew.md"; sourceTree = "<group>"; };
 		54CEC581269B6D520016B40A /* Drip Machine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Drip Machine.md"; sourceTree = "<group>"; };
+		54E98E0826E9F76300CD6F7C /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		54E98E0B26EA31C300CD6F7C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		54E98E0E26EA320C00CD6F7C /* MethodSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionViewModel.swift; sourceTree = "<group>"; };
+		54E98E1526EA574D00CD6F7C /* MethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodViewModel.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		54F7347825544A820040C2B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		54FB8F1826E8F34300F3244F /* CupSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupSelection.swift; sourceTree = "<group>"; };
+		54FB8F1A26E8F93600F3244F /* SocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
+		54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorSelection.swift; sourceTree = "<group>"; };
 		67027D81097890AF6B4A0480 /* Pods-Bean JuiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.debug.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CF29C58DBF83EAF0DF13058 /* Pods-Bean JuiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.release.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean_Juice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,10 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				3406755B2417A09C00307F04 /* Main.swift */,
-				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
-				340675972419685B00307F04 /* Utilities.swift */,
+				5459D43926E9186F00326DF8 /* Helpers */,
 				54CEC56D2699D4480016B40A /* Method Information */,
-				546B1B6024D1B9A000E26E8A /* Structs */,
+				546B1B6024D1B9A000E26E8A /* Models */,
 				546B1B6124D1B9D900E26E8A /* Views */,
 				340675612417A0A000307F04 /* Assets.xcassets */,
 				340675662417A0A000307F04 /* LaunchScreen.storyboard */,
@@ -188,7 +201,31 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		546B1B6024D1B9A000E26E8A /* Structs */ = {
+		5459D43826E9183900326DF8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5481912A26EF745200E7EAA9 /* RecipeSelection */,
+				54E98E1426EA573900CD6F7C /* Method */,
+				54E98E0D26EA31F500CD6F7C /* MethodSelection */,
+				54E98E0A26EA31A800CD6F7C /* Settings */,
+				54CEC5672699C7F20016B40A /* InformationScreen.swift */,
+				54170E7426066F130040E4DA /* NewRecipeView.swift */,
+				54170E6626065CA80040E4DA /* RecipeView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5459D43926E9186F00326DF8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				54E98E0826E9F76300CD6F7C /* DoubleExtension.swift */,
+				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
+				340675972419685B00307F04 /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		546B1B6024D1B9A000E26E8A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				3406758D2418E59100307F04 /* Cup.swift */,
@@ -197,23 +234,25 @@
 				54170E6E26065EBE0040E4DA /* MethodName.swift */,
 				54170E5F26065B010040E4DA /* Recipe.swift */,
 			);
-			path = Structs;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		546B1B6124D1B9D900E26E8A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3406755F2417A09C00307F04 /* BJTabView.swift */,
 				54CEC5662699C7D30016B40A /* Components */,
-				3406755F2417A09C00307F04 /* ContentView.swift */,
-				54CEC5672699C7F20016B40A /* InformationScreen.swift */,
-				346360B5243B5D770054FEB1 /* MethodView.swift */,
-				3450A79D24698D9300F3E799 /* MethodSelectionView.swift */,
-				54170E7426066F130040E4DA /* NewRecipeView.swift */,
-				54170E6626065CA80040E4DA /* RecipeView.swift */,
-				54170E71260665F30040E4DA /* RecipeSelectionView.swift */,
-				34067599241971C600307F04 /* Settings.swift */,
+				5459D43826E9183900326DF8 /* Screens */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5481912A26EF745200E7EAA9 /* RecipeSelection */ = {
+			isa = PBXGroup;
+			children = (
+				54170E71260665F30040E4DA /* RecipeSelectionView.swift */,
+			);
+			path = RecipeSelection;
 			sourceTree = "<group>";
 		};
 		54C412B6265D0D6D0055D285 /* Bean JuiceTests */ = {
@@ -233,6 +272,7 @@
 				54EA8E9C24C834F500600CE8 /* CustomToggle.swift */,
 				3450A79F246993C200F3E799 /* ItemRow.swift */,
 				54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */,
+				54FB8F1726E8F2FE00F3244F /* Settings Components */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -248,6 +288,43 @@
 				54CEC581269B6D520016B40A /* Drip Machine.md */,
 			);
 			path = "Method Information";
+			sourceTree = "<group>";
+		};
+		54E98E0A26EA31A800CD6F7C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				34067599241971C600307F04 /* SettingsView.swift */,
+				54E98E0B26EA31C300CD6F7C /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		54E98E0D26EA31F500CD6F7C /* MethodSelection */ = {
+			isa = PBXGroup;
+			children = (
+				3450A79D24698D9300F3E799 /* MethodSelectionView.swift */,
+				54E98E0E26EA320C00CD6F7C /* MethodSelectionViewModel.swift */,
+			);
+			path = MethodSelection;
+			sourceTree = "<group>";
+		};
+		54E98E1426EA573900CD6F7C /* Method */ = {
+			isa = PBXGroup;
+			children = (
+				346360B5243B5D770054FEB1 /* MethodView.swift */,
+				54E98E1526EA574D00CD6F7C /* MethodViewModel.swift */,
+			);
+			path = Method;
+			sourceTree = "<group>";
+		};
+		54FB8F1726E8F2FE00F3244F /* Settings Components */ = {
+			isa = PBXGroup;
+			children = (
+				54FB8F1826E8F34300F3244F /* CupSelection.swift */,
+				54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */,
+				54FB8F1A26E8F93600F3244F /* SocialMedia.swift */,
+			);
+			path = "Settings Components";
 			sourceTree = "<group>";
 		};
 		B31069748A162BEF0F069C45 /* Frameworks */ = {
@@ -421,22 +498,29 @@
 				3450A7A0246993C200F3E799 /* ItemRow.swift in Sources */,
 				340675902418E5A400307F04 /* Method.swift in Sources */,
 				54170E72260665F30040E4DA /* RecipeSelectionView.swift in Sources */,
+				54FB8F1B26E8F93600F3244F /* SocialMedia.swift in Sources */,
 				3415A808248917B100699184 /* CustomColor.swift in Sources */,
+				54E98E0926E9F76300CD6F7C /* DoubleExtension.swift in Sources */,
+				54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */,
 				3406755C2417A09C00307F04 /* Main.swift in Sources */,
 				54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */,
-				3406759A241971C600307F04 /* Settings.swift in Sources */,
+				3406759A241971C600307F04 /* SettingsView.swift in Sources */,
 				54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */,
 				54CEC5682699C7F20016B40A /* InformationScreen.swift in Sources */,
 				54CEC56A2699CF0E0016B40A /* WaterAmountSlider.swift in Sources */,
 				54CEC56C2699D0CC0016B40A /* CoffeeRatioSlider.swift in Sources */,
 				3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */,
+				54E98E0F26EA320C00CD6F7C /* MethodSelectionViewModel.swift in Sources */,
 				340675982419685B00307F04 /* Utilities.swift in Sources */,
 				54170E7526066F130040E4DA /* NewRecipeView.swift in Sources */,
 				34371217244DBD9D00030AAD /* CircleImage.swift in Sources */,
-				340675602417A09C00307F04 /* ContentView.swift in Sources */,
+				340675602417A09C00307F04 /* BJTabView.swift in Sources */,
 				54170E6726065CA80040E4DA /* RecipeView.swift in Sources */,
 				3406758E2418E59100307F04 /* Cup.swift in Sources */,
+				54E98E0C26EA31C300CD6F7C /* SettingsViewModel.swift in Sources */,
 				54170E6F26065EBE0040E4DA /* MethodName.swift in Sources */,
+				54FB8F1926E8F34300F3244F /* CupSelection.swift in Sources */,
+				54E98E1626EA574D00CD6F7C /* MethodViewModel.swift in Sources */,
 				346360B6243B5D770054FEB1 /* MethodView.swift in Sources */,
 				54170E6026065B010040E4DA /* Recipe.swift in Sources */,
 			);
@@ -523,7 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -579,7 +663,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				RUN_DOCUMENTATION_COMPILER = YES;
@@ -606,7 +690,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
 				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;
@@ -630,7 +714,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
 				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;
@@ -645,7 +729,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				INFOPLIST_FILE = "Bean JuiceTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -666,7 +750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				INFOPLIST_FILE = "Bean JuiceTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

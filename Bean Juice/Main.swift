@@ -10,7 +10,7 @@ import SwiftUI
 struct BeanJuice: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BJTabView()
         }
     }
 }

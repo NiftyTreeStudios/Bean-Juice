@@ -10,16 +10,17 @@ import SwiftUI
 
 struct RecipeSelectionView: View {
 
+    @State var recipes: [Recipe] = []
+
     @State private var addButtonClicked: Bool = false
-    @StateObject private var viewModel = RecipeSelectionViewModel()
 
     var body: some View {
         NavigationView {
-            if viewModel.recipes.isEmpty {
+            if recipes.isEmpty {
                 NoRecipesPlaceholder(addButtonClicked: $addButtonClicked)
             } else {
                 List {
-                    ForEach(viewModel.recipes, id: \.name) { recipe in
+                    ForEach(recipes, id: \.name) { recipe in
                         RecipeCell(recipe: recipe)
                     }
                 }
@@ -38,10 +39,10 @@ struct RecipeSelectionView: View {
             }
         }
         .sheet(isPresented: $addButtonClicked) {
-            NewRecipeView(recipes: $viewModel.recipes, addButtonClicked: $addButtonClicked)
+            NewRecipeView(recipes: $recipes, addButtonClicked: $addButtonClicked)
         }
         .onAppear {
-            viewModel.loadRecipes()
+            recipes = loadRecipesFromUserDefaults()
         }
     }
 }

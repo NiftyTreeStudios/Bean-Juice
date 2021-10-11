@@ -18,54 +18,55 @@ struct MethodView: View {
 
     var body: some View {
         ScrollView {
-            CircleImage(methodName: getMethodName(method: method.name), isRecipeView: false)
             VStack {
-                CoffeeRatioSlider(ratio: $viewModel.ratio)
-                WaterAmountSlider(
-                    method: method,
-                    cups: $viewModel.cups
+                CircleImage(methodName: getMethodName(method: method.name), isRecipeView: false)
+                VStack {
+                    CoffeeRatioSlider(ratio: $viewModel.ratio)
+                    WaterAmountSlider(
+                        method: method,
+                        cups: $viewModel.cups
+                    )
+                }
+                VStack(spacing: 8) {
+                    HStack {
+                        Text("Ground level").font(.headline)
+                        Spacer()
+                        Text(method.grounds).font(.subheadline)
+                    }
+
+                    HStack {
+                        Text("Water").font(.title)
+                        Spacer()
+                        Text(settings.mlSelected
+                             ? "\(viewModel.waterAmount, specifier: "%.0f") g"
+                             : "\(calculateWaterAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, maxWater: method.maxWaterAmount)) g")
+                            .font(.title)
+                    }
+
+                    HStack {
+                        Text("Coffee").font(.title)
+                        Spacer()
+                        Text(settings.mlSelected
+                             ? "\(customCoffeeAmount(water: viewModel.waterAmount, ratio: viewModel.ratio), specifier: "%.1f") g"
+                             : "\(calculateCoffeeAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, ratio: viewModel.ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g")
+                            .font(.title)
+                    }
+                }
+                .navigationTitle(getMethodName(method: method.name))
+                .navigationBarItems(
+                    /*
+                     Note: this works once. If you hit the back button and try again, nothing happens.
+                     Short googling revealed that this seems to be a SwiftUI bug.
+                     */
+                    trailing: NavigationLink(
+                        destination: InformationScreen(methodName: method.name)) {
+                            Image(systemName: "info.circle")
+                        }
                 )
             }
-            VStack(spacing: 8) {
-                HStack {
-                    Text("Ground level").font(.headline)
-                    Spacer()
-                    Text(method.grounds).font(.subheadline)
-                }
-
-                HStack {
-                    Text("Water").font(.title)
-                    Spacer()
-                    Text(settings.mlSelected
-                         ? "\(viewModel.waterAmount, specifier: "%.0f") g"
-                         : "\(calculateWaterAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, maxWater: method.maxWaterAmount)) g")
-                        .font(.title)
-                }
-
-                HStack {
-                    Text("Coffee").font(.title)
-                    Spacer()
-                    Text(settings.mlSelected
-                         ? "\(customCoffeeAmount(water: viewModel.waterAmount, ratio: viewModel.ratio), specifier: "%.1f") g"
-                         : "\(calculateCoffeeAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, ratio: viewModel.ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g")
-                        .font(.title)
-                }
-            }
-            .navigationTitle(getMethodName(method: method.name))
-            .navigationBarItems(
-                /*
-                 Note: this works once. If you hit the back button and try again, nothing happens.
-                 Short googling revealed that this seems to be a SwiftUI bug.
-                 */
-                trailing: NavigationLink(
-                    destination: InformationScreen(methodName: method.name)) {
-                        Image(systemName: "info.circle")
-                    }
-            )
+            .padding(.horizontal, 30)
+            .padding(.bottom, 5)
         }
-        .padding(.leading, 30)
-        .padding(.trailing, 30)
-        .padding(.bottom, 5)
         .onAppear {
             viewModel.setUp(for: method)
             StoreReviewHelper.checkAndAskForReview()

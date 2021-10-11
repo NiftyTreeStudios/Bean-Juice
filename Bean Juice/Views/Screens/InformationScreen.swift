@@ -23,6 +23,7 @@ struct InformationScreen: View {
                 ForEach(0..<formattedMarkdown.count, id: \.self) { item in
                     formattedMarkdown[item]
                 }
+                .padding()
             }
         }.navigationTitle(Text(method))
     }

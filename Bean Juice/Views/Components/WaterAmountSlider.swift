@@ -12,7 +12,7 @@ struct WaterAmountSlider: View {
 
     let method: Method
 
-    @State var waterAmount: Double = 200
+    @Binding var waterAmount: Double
     @Binding var cups: Double
 
     @EnvironmentObject var settings: SettingsViewModel

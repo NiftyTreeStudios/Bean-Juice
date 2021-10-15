@@ -24,6 +24,7 @@ struct MethodView: View {
                     CoffeeRatioSlider(ratio: $viewModel.ratio)
                     WaterAmountSlider(
                         method: method,
+                        waterAmount: $viewModel.waterAmount,
                         cups: $viewModel.cups
                     )
                 }

@@ -108,6 +108,7 @@
 		54FB8F1A26E8F93600F3244F /* SocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
 		54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorSelection.swift; sourceTree = "<group>"; };
 		67027D81097890AF6B4A0480 /* Pods-Bean JuiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.debug.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78B8CE71274FD2D500262F2B /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = ci_post_clone.sh; path = ci_scripts/ci_post_clone.sh; sourceTree = "<group>"; };
 		7CF29C58DBF83EAF0DF13058 /* Pods-Bean JuiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.release.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean_Juice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FEA8111B93F611B06475F6 /* Pods-Bean Juice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean Juice.debug.xcconfig"; path = "Target Support Files/Pods-Bean Juice/Pods-Bean Juice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,13 +152,14 @@
 		3406754F2417A09C00307F04 = {
 			isa = PBXGroup;
 			children = (
+				78B8CE71274FD2D500262F2B /* ci_post_clone.sh */,
 				54F7347825544A820040C2B0 /* .swiftlint.yml */,
 				3406755A2417A09C00307F04 /* Bean Juice */,
 				54C412B6265D0D6D0055D285 /* Bean JuiceTests */,
+				B31069748A162BEF0F069C45 /* Frameworks */,
+				0FFDE4C814B391574D055A76 /* Pods */,
 				340675592417A09C00307F04 /* Products */,
 				5453A6B824D95CA500D11F0F /* Recovered References */,
-				0FFDE4C814B391574D055A76 /* Pods */,
-				B31069748A162BEF0F069C45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

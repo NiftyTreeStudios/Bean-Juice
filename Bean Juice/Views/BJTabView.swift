@@ -34,6 +34,14 @@ struct BJTabView: View {
                     }
                 }
 
+            MapView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "map")
+                        Text("Map")
+                    }
+                }
+
             SettingsView()
                 .tabItem {
                     VStack {

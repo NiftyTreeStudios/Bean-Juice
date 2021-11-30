@@ -47,7 +47,9 @@
 		54FB8F1926E8F34300F3244F /* CupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1826E8F34300F3244F /* CupSelection.swift */; };
 		54FB8F1B26E8F93600F3244F /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1A26E8F93600F3244F /* SocialMedia.swift */; };
 		54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */; };
+		78AC46CE2756307E009ADA65 /* CafeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC46CD2756307E009ADA65 /* CafeDetailsView.swift */; };
 		78D5E8652754E18800250B40 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D5E8642754E18800250B40 /* MapView.swift */; };
+		78D5E867275528E100250B40 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D5E866275528E100250B40 /* Cafe.swift */; };
 		7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,8 +111,10 @@
 		54FB8F1A26E8F93600F3244F /* SocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
 		54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorSelection.swift; sourceTree = "<group>"; };
 		67027D81097890AF6B4A0480 /* Pods-Bean JuiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.debug.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78AC46CD2756307E009ADA65 /* CafeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsView.swift; sourceTree = "<group>"; };
 		78B8CE71274FD2D500262F2B /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = ci_post_clone.sh; path = ci_scripts/ci_post_clone.sh; sourceTree = "<group>"; };
 		78D5E8642754E18800250B40 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		78D5E866275528E100250B40 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		7CF29C58DBF83EAF0DF13058 /* Pods-Bean JuiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.release.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bean_Juice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FEA8111B93F611B06475F6 /* Pods-Bean Juice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean Juice.debug.xcconfig"; path = "Target Support Files/Pods-Bean Juice/Pods-Bean Juice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 				54170E7426066F130040E4DA /* NewRecipeView.swift */,
 				54170E6626065CA80040E4DA /* RecipeView.swift */,
 				78D5E8642754E18800250B40 /* MapView.swift */,
+				78AC46CD2756307E009ADA65 /* CafeDetailsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				3406758F2418E5A300307F04 /* Method.swift */,
 				54170E6E26065EBE0040E4DA /* MethodName.swift */,
 				54170E5F26065B010040E4DA /* Recipe.swift */,
+				78D5E866275528E100250B40 /* Cafe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -508,10 +514,12 @@
 				54E98E0926E9F76300CD6F7C /* DoubleExtension.swift in Sources */,
 				54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */,
 				3406755C2417A09C00307F04 /* Main.swift in Sources */,
+				78D5E867275528E100250B40 /* Cafe.swift in Sources */,
 				54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */,
 				3406759A241971C600307F04 /* SettingsView.swift in Sources */,
 				54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */,
 				54CEC5682699C7F20016B40A /* InformationScreen.swift in Sources */,
+				78AC46CE2756307E009ADA65 /* CafeDetailsView.swift in Sources */,
 				54CEC56A2699CF0E0016B40A /* WaterAmountSlider.swift in Sources */,
 				54CEC56C2699D0CC0016B40A /* CoffeeRatioSlider.swift in Sources */,
 				78D5E8652754E18800250B40 /* MapView.swift in Sources */,

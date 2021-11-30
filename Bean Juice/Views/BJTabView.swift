@@ -33,6 +33,7 @@ struct BJTabView: View {
                         Text("Recipes")
                     }
                 }
+                .tag("Recipes")
 
             MapView()
                 .tabItem {
@@ -41,6 +42,7 @@ struct BJTabView: View {
                         Text("Map")
                     }
                 }
+                .tag("Map")
 
             SettingsView()
                 .tabItem {

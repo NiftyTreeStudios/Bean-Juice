@@ -15,19 +15,30 @@ struct CafeDetailsView: View {
 
     var body: some View {
         ScrollView {
+
+            // Basic info
             Text(cafe.name).font(.title)
+
+            if let websiteURL = URL(string: cafe.websiteURL) {
+                Link(cafe.websiteURL, destination: websiteURL)
+            }
+
+            // Description
+            Divider()
+            Text(cafe.description)
+
+            // Address
+            Divider()
+            Text(cafe.streetAddress)
+            Text("\(cafe.postalCode) \(cafe.city)")
+            Text("\(cafe.state) \(cafe.country)")
+
         }.padding()
     }
 }
 
 struct CafeDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        CafeDetailsView(cafe: Cafe(
-            name: "Test",
-            coordinates: CLLocationCoordinate2D(
-                latitude: 37.336,
-                longitude: -122.010
-            )
-        ))
+        CafeDetailsView(cafe: Cafe(record: MockData.cafe))
     }
 }

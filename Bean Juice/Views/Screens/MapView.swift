@@ -11,24 +11,10 @@ import MapKit
 
 struct MapView: View {
 
-    @State private var showDetails: Bool = false
     @State private var selectedCafe: Cafe?
 
     private var cafes: [Cafe] = [
-        Cafe(
-            name: "Tester",
-            coordinates: CLLocationCoordinate2D(
-                latitude: 37.336,
-                longitude: -122.010
-            )
-        ),
-        Cafe(
-            name: "Tester 2",
-            coordinates: CLLocationCoordinate2D(
-                latitude: 37.333,
-                longitude: -122.009
-            )
-        )
+        Cafe(record: MockData.cafe)
     ]
 
     @State private var region = MKCoordinateRegion(
@@ -46,7 +32,12 @@ struct MapView: View {
             showsUserLocation: true,
             annotationItems: cafes
         ) { cafe in
-            MapAnnotation(coordinate: cafe.coordinates) {
+            MapAnnotation(
+                coordinate: CLLocationCoordinate2D(
+                    latitude: cafe.coordinates.coordinate.latitude,
+                    longitude: cafe.coordinates.coordinate.longitude
+                )
+            ) {
                 Button {
                     selectedCafe = cafe
                 } label: {
@@ -58,7 +49,16 @@ struct MapView: View {
         }.sheet(item: $selectedCafe) { cafe in
             CafeDetailsView(cafe: cafe)
         }
-
+        .onAppear {
+            CloudKitHelper.getCafes { result in
+                switch result {
+                case .success(let cafes):
+                    print(cafes)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
 }
 

@@ -28,7 +28,7 @@ final class EmailHelper {
         #if targetEnvironment(simulator)
             return
         #else
-            UIApplication.shared.open(contents)
+            UIApplication.shared.open(emailTemplate)
         #endif
     }
 }

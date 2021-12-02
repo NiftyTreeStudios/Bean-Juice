@@ -1,13 +1,15 @@
 //
-//  Constants.swift
+//  CKRecordExtension.swift
 //  Bean Juice
 //
 //  Created by Iiro Alhonen on 01.12.21.
 //  Copyright © 2021 Nifty Tree Studios. All rights reserved.
 //
 
-import Foundation
+import CloudKit
 
-enum RecordType {
-    static let cafe = "BJCafe"
+extension CKRecord {
+
+    func convertToCafe() -> Cafe { Cafe(record: self) }
+
 }

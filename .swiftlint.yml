@@ -6,3 +6,4 @@ disabled_rules:
     - inclusive_language
     - force_try
     - identifier_name
+    - switch_case_alignment

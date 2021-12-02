@@ -9,27 +9,23 @@
 import CloudKit
 
 struct CloudKitHelper {
-    
+
+    static let kCKIdentifier = "iCloud.com.niftytreestudios.BeanJuice"
+
     static func getCafes(completed: @escaping (Result<[Cafe], Error>) -> Void) {
         let query = CKQuery(
             recordType: RecordType.cafe,
             predicate: NSPredicate(value: true)
         )
-        CKContainer.default().publicCloudDatabase.perform(query, inZoneWith: nil) { records, error in
+        // Default would be CKContainer.default().public...
+        CKContainer(identifier: kCKIdentifier).publicCloudDatabase.perform(query, inZoneWith: nil) { records, error in
             guard error == nil else {
                 completed(.failure(error!))
                 return
             }
-
             guard let records = records else { return }
 
-            var cafes: [Cafe] = []
-
-            for record in records {
-                let cafe = Cafe(record: record)
-                cafes.append(cafe)
-            }
-            
+            let cafes = records.map { $0.convertToCafe() }
             completed(.success(cafes))
         }
     }

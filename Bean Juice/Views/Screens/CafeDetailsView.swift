@@ -15,25 +15,28 @@ struct CafeDetailsView: View {
 
     var body: some View {
         ScrollView {
+            Image(uiImage: cafe.bigAsset.convertToUIImage())
+                .resizable()
+                .scaledToFill()
+            VStack {
+                // Basic info
+                Text(cafe.name).font(.title)
 
-            // Basic info
-            Text(cafe.name).font(.title)
+                if let websiteURL = URL(string: cafe.websiteURL) {
+                    Link(cafe.websiteURL, destination: websiteURL)
+                }
 
-            if let websiteURL = URL(string: cafe.websiteURL) {
-                Link(cafe.websiteURL, destination: websiteURL)
-            }
+                // Description
+                Divider()
+                Text(cafe.description)
 
-            // Description
-            Divider()
-            Text(cafe.description)
-
-            // Address
-            Divider()
-            Text(cafe.streetAddress)
-            Text("\(cafe.postalCode) \(cafe.city)")
-            Text("\(cafe.state) \(cafe.country)")
-
-        }.padding()
+                // Address
+                Divider()
+                Text(cafe.streetAddress)
+                Text("\(cafe.postalCode) \(cafe.city)")
+                Text("\(cafe.state) \(cafe.country)")
+            }.padding()
+        }
     }
 }
 

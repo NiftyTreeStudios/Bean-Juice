@@ -84,4 +84,22 @@ class Bean_JuiceTests: XCTestCase {
         }
     }
 
+    // MARK: isValidURL()
+    func testIsValidURL() throws {
+        XCTAssertTrue("www.niftytreestudios.com".isValidURL)
+        XCTAssertTrue("http://niftytreestudios.com".isValidURL)
+        XCTAssertTrue("https://niftytreestudios.com".isValidURL)
+        XCTAssertTrue("http://www.niftytreestudios.com".isValidURL)
+        XCTAssertTrue("https://www.niftytreestudios.com".isValidURL)
+        XCTAssertTrue("niftytreestudios.com".isValidURL)
+        XCTAssertTrue("http://niftytreestudios.com/checkity/check/".isValidURL)
+        XCTAssertTrue("http://niftytreestudios.com/random%20things%0A".isValidURL)
+        XCTAssertTrue("mailto:contact@niftytreestudios.com".isValidURL)
+
+        XCTAssertFalse("www.ffff".isValidURL)
+        XCTAssertFalse(".......".isValidURL)
+        XCTAssertFalse("   ".isValidURL)
+        XCTAssertFalse("".isValidURL)
+    }
+
 }

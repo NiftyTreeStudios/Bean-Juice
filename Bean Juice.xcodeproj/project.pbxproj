@@ -52,6 +52,8 @@
 		783BB01C2758C17900732656 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BB01B2758C17900732656 /* MapViewModel.swift */; };
 		783BB01E2758C85F00732656 /* CKAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BB01D2758C85F00732656 /* CKAssetExtension.swift */; };
 		783BB0202758DBCF00732656 /* CafePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BB01F2758DBCF00732656 /* CafePin.swift */; };
+		783BB0222758E48E00732656 /* EmailCafeRecommendationsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BB0212758E48E00732656 /* EmailCafeRecommendationsComponent.swift */; };
+		7866A3A22758EE6A00A1F3FE /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7866A3A12758EE6A00A1F3FE /* EmailHelper.swift */; };
 		78AC46CE2756307E009ADA65 /* CafeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC46CD2756307E009ADA65 /* CafeDetailsView.swift */; };
 		78AC46D1275631ED009ADA65 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC46D0275631ED009ADA65 /* CloudKit.framework */; };
 		78AC46D3275644E4009ADA65 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC46D2275644E4009ADA65 /* MockData.swift */; };
@@ -126,6 +128,8 @@
 		783BB01B2758C17900732656 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		783BB01D2758C85F00732656 /* CKAssetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKAssetExtension.swift; sourceTree = "<group>"; };
 		783BB01F2758DBCF00732656 /* CafePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafePin.swift; sourceTree = "<group>"; };
+		783BB0212758E48E00732656 /* EmailCafeRecommendationsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCafeRecommendationsComponent.swift; sourceTree = "<group>"; };
+		7866A3A12758EE6A00A1F3FE /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
 		78AC46CD2756307E009ADA65 /* CafeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsView.swift; sourceTree = "<group>"; };
 		78AC46CF275631E4009ADA65 /* Bean Juice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bean Juice.entitlements"; sourceTree = "<group>"; };
 		78AC46D0275631ED009ADA65 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -254,6 +258,7 @@
 				54C4E87024D854FD00D0FE57 /* StoreReviewHelper.swift */,
 				782E85EB275781C600E48355 /* CloudKitHelper.swift */,
 				78F98AF32758BDF400D26ED8 /* LocationManager.swift */,
+				7866A3A12758EE6A00A1F3FE /* EmailHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				54FB8F1826E8F34300F3244F /* CupSelection.swift */,
 				54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */,
 				54FB8F1A26E8F93600F3244F /* SocialMedia.swift */,
+				783BB0212758E48E00732656 /* EmailCafeRecommendationsComponent.swift */,
 			);
 			path = "Settings Components";
 			sourceTree = "<group>";
@@ -569,6 +575,7 @@
 				54170E72260665F30040E4DA /* RecipeSelectionView.swift in Sources */,
 				54FB8F1B26E8F93600F3244F /* SocialMedia.swift in Sources */,
 				3415A808248917B100699184 /* CustomColor.swift in Sources */,
+				783BB0222758E48E00732656 /* EmailCafeRecommendationsComponent.swift in Sources */,
 				54E98E0926E9F76300CD6F7C /* DoubleExtension.swift in Sources */,
 				54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */,
 				3406755C2417A09C00307F04 /* Main.swift in Sources */,
@@ -600,6 +607,7 @@
 				54E98E1626EA574D00CD6F7C /* MethodViewModel.swift in Sources */,
 				346360B6243B5D770054FEB1 /* MethodView.swift in Sources */,
 				54170E6026065B010040E4DA /* Recipe.swift in Sources */,
+				7866A3A22758EE6A00A1F3FE /* EmailHelper.swift in Sources */,
 				782E85EC275781C600E48355 /* CloudKitHelper.swift in Sources */,
 				783BB0202758DBCF00732656 /* CafePin.swift in Sources */,
 				78F98AF42758BDF400D26ED8 /* LocationManager.swift in Sources */,

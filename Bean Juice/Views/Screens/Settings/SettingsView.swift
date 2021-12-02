@@ -30,6 +30,10 @@ struct SettingsView: View {
 
                 HighlightColorSelection()
 
+                Section(header: Text("Have a great cafe in mind to add to the map?")) {
+                    EmailCafeRecommendationsComponent()
+                }
+
                 Section(header: Text("Enjoying using Bean Juice?")) {
                     Button(action: {
                         // Review button

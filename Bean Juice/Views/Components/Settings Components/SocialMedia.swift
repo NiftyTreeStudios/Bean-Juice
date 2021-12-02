@@ -16,8 +16,7 @@ struct SocialMedia: View {
     var body: some View {
         var urlString = "https://duckduckgo.com"
 
-        Section(header: Text("Follow us on social media")
-                    .font(.subheadline), footer: Text("@BeanJuiceApp"), content: {
+        Section(header: Text("Follow us on social media"), footer: Text("@BeanJuiceApp"), content: {
             Button(action: {
                 // Open Instagram
                 urlString = "https://www.instagram.com/BeanJuiceApp"

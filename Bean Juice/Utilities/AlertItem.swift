@@ -51,4 +51,11 @@ struct AlertContext {
         dismissButton: .default(Text("Ok"))
     )
 
+    // MARK: Email generation
+    static let emailGenerationFailed = AlertItem(
+        title: Text("Email generation failed"),
+        message: Text("Generating the email template failed. You can email us directly at cafe@niftytreestudios.com"),
+        dismissButton: .default(Text("Ok."))
+    )
+
 }

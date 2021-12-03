@@ -33,6 +33,16 @@ struct BJTabView: View {
                         Text("Recipes")
                     }
                 }
+                .tag("Recipes")
+
+            MapView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "map")
+                        Text("Map")
+                    }
+                }
+                .tag("Map")
 
             SettingsView()
                 .tabItem {

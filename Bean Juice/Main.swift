@@ -9,8 +9,11 @@ import SwiftUI
 @main
 struct BeanJuice: App {
     var body: some Scene {
+
+        let locationManager = LocationManager()
+
         WindowGroup {
-            BJTabView()
+            BJTabView().environmentObject(locationManager)
         }
     }
 }

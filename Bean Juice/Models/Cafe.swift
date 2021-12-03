@@ -8,6 +8,7 @@
 
 import Foundation
 import CloudKit
+import MapKit
 
 struct Cafe: Identifiable {
 
@@ -59,6 +60,18 @@ extension Cafe {
         city          = record[Cafe.kCity] as? String ?? "N/A"
         state         = record[Cafe.kState] as? String ?? "N/A"
         country       = record[Cafe.kCountry] as? String ?? "N/A"
+    }
+
+}
+
+extension Cafe {
+    /// Opens the maps app in navigation mode to the selected cafe.
+    func getDirectionsToTheCafe() {
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinates.coordinate))
+        mapItem.name = name
+        mapItem.openInMaps(launchOptions: [
+            MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeWalking
+        ])
     }
 
 }

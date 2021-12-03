@@ -24,11 +24,11 @@ final class EmailHelper {
             emailTemplate = justEmail
         }
 
-        guard emailTemplate != nil else { return }
+        guard let emailTemplate = emailTemplate else { return }
         #if targetEnvironment(simulator)
             return
         #else
-            UIApplication.shared.open(emailTemplate!)
+            UIApplication.shared.open(emailTemplate)
         #endif
     }
 }

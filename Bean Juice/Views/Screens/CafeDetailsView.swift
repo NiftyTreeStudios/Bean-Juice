@@ -11,6 +11,8 @@ import MapKit
 
 struct CafeDetailsView: View {
 
+    @Environment(\.openURL) var openURL
+
     let cafe: Cafe
 
     var body: some View {
@@ -22,8 +24,20 @@ struct CafeDetailsView: View {
                 // Basic info
                 Text(cafe.name).font(.title)
 
-                if let websiteURL = URL(string: cafe.websiteURL) {
-                    Link(cafe.websiteURL, destination: websiteURL)
+                HStack(spacing: 25) {
+                    Button {
+                        cafe.getDirectionsToTheCafe()
+                    } label: {
+                        Text("Directions")
+                    }.buttonStyle(BJButton())
+
+                    if let websiteURL = URL(string: cafe.websiteURL) {
+                        Button {
+                            openURL(websiteURL)
+                        } label: {
+                            Text("Website")
+                        }.buttonStyle(BJButton())
+                    }
                 }
 
                 // Description

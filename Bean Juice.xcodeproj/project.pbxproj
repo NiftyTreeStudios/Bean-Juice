@@ -54,6 +54,7 @@
 		783BB0202758DBCF00732656 /* CafePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BB01F2758DBCF00732656 /* CafePin.swift */; };
 		783BB0222758E48E00732656 /* EmailCafeRecommendationsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BB0212758E48E00732656 /* EmailCafeRecommendationsComponent.swift */; };
 		7866A3A22758EE6A00A1F3FE /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7866A3A12758EE6A00A1F3FE /* EmailHelper.swift */; };
+		78860804275A8BE200B3481E /* BJButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78860803275A8BE200B3481E /* BJButton.swift */; };
 		78AC46CE2756307E009ADA65 /* CafeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC46CD2756307E009ADA65 /* CafeDetailsView.swift */; };
 		78AC46D1275631ED009ADA65 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AC46D0275631ED009ADA65 /* CloudKit.framework */; };
 		78AC46D3275644E4009ADA65 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC46D2275644E4009ADA65 /* MockData.swift */; };
@@ -130,6 +131,7 @@
 		783BB01F2758DBCF00732656 /* CafePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafePin.swift; sourceTree = "<group>"; };
 		783BB0212758E48E00732656 /* EmailCafeRecommendationsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCafeRecommendationsComponent.swift; sourceTree = "<group>"; };
 		7866A3A12758EE6A00A1F3FE /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+		78860803275A8BE200B3481E /* BJButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJButton.swift; sourceTree = "<group>"; };
 		78AC46CD2756307E009ADA65 /* CafeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsView.swift; sourceTree = "<group>"; };
 		78AC46CF275631E4009ADA65 /* Bean Juice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bean Juice.entitlements"; sourceTree = "<group>"; };
 		78AC46D0275631ED009ADA65 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -314,6 +316,7 @@
 				54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */,
 				54FB8F1726E8F2FE00F3244F /* Settings Components */,
 				783BB01F2758DBCF00732656 /* CafePin.swift */,
+				78860803275A8BE200B3481E /* BJButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				340675982419685B00307F04 /* Utilities.swift in Sources */,
 				54170E7526066F130040E4DA /* NewRecipeView.swift in Sources */,
 				34371217244DBD9D00030AAD /* CircleImage.swift in Sources */,
+				78860804275A8BE200B3481E /* BJButton.swift in Sources */,
 				78F98AF12758B7E900D26ED8 /* AlertItem.swift in Sources */,
 				340675602417A09C00307F04 /* BJTabView.swift in Sources */,
 				54170E6726065CA80040E4DA /* RecipeView.swift in Sources */,
@@ -779,7 +783,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.3;
+				MARKETING_VERSION = 3.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
 				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;
@@ -804,7 +808,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.3;
+				MARKETING_VERSION = 3.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
 				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;

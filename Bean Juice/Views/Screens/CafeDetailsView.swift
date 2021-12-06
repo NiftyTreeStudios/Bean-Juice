@@ -22,7 +22,9 @@ struct CafeDetailsView: View {
                 .scaledToFill()
             VStack {
                 // Basic info
-                Text(cafe.name).font(.title)
+                Text(cafe.name)
+                    .font(.title)
+                    .multilineTextAlignment(.center)
 
                 HStack(spacing: 25) {
                     Button {

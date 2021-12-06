@@ -20,7 +20,9 @@ struct CafeDetailsView: View {
                 .scaledToFill()
             VStack {
                 // Basic info
-                Text(cafe.name).font(.title)
+                Text(cafe.name)
+                    .font(.title)
+                    .multilineTextAlignment(.center)
 
                 if let websiteURL = URL(string: cafe.websiteURL) {
                     Link(cafe.websiteURL, destination: websiteURL)

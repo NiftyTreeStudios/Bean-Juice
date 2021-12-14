@@ -19,6 +19,8 @@ struct SettingsView: View {
 
         NavigationView {
             List {
+                InAppPurchasesView()
+
                 Section(header: Text("Use ml instead of cups")) {
                     Toggle(isOn: $settings.mlSelected) {
                         Text("Use ml")

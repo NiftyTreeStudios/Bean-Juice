@@ -61,6 +61,8 @@
 		78CC4C4C27578A4C00F2DCC6 /* CKRecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC4C4B27578A4C00F2DCC6 /* CKRecordExtension.swift */; };
 		78D5E8652754E18800250B40 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D5E8642754E18800250B40 /* MapView.swift */; };
 		78D5E867275528E100250B40 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D5E866275528E100250B40 /* Cafe.swift */; };
+		78DB22992768B1CE00357183 /* InAppPurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB22982768B1CE00357183 /* InAppPurchasesView.swift */; };
+		78DB229C2768B8FC00357183 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB229B2768B8FC00357183 /* StoreKit.framework */; };
 		78F98AF12758B7E900D26ED8 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F98AF02758B7E900D26ED8 /* AlertItem.swift */; };
 		78F98AF42758BDF400D26ED8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F98AF32758BDF400D26ED8 /* LocationManager.swift */; };
 		7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */; };
@@ -140,6 +142,9 @@
 		78CC4C4B27578A4C00F2DCC6 /* CKRecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordExtension.swift; sourceTree = "<group>"; };
 		78D5E8642754E18800250B40 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		78D5E866275528E100250B40 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		78DB22982768B1CE00357183 /* InAppPurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchasesView.swift; sourceTree = "<group>"; };
+		78DB229A2768B7D800357183 /* StoreKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitConfiguration.storekit; sourceTree = "<group>"; };
+		78DB229B2768B8FC00357183 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		78F98AF02758B7E900D26ED8 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		78F98AF32758BDF400D26ED8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7CF29C58DBF83EAF0DF13058 /* Pods-Bean JuiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.release.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 				78AC46D1275631ED009ADA65 /* CloudKit.framework in Frameworks */,
 				7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */,
 				54CEC578269A1E4B0016B40A /* Nifty Markdown Formatter in Frameworks */,
+				78DB229C2768B8FC00357183 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +225,7 @@
 				340675632417A0A000307F04 /* Preview Content */,
 				78F98AF22758BD9800D26ED8 /* Utilities */,
 				546B1B6124D1B9D900E26E8A /* Views */,
+				78DB229A2768B7D800357183 /* StoreKitConfiguration.storekit */,
 			);
 			path = "Bean Juice";
 			sourceTree = "<group>";
@@ -368,6 +375,7 @@
 				54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */,
 				54FB8F1A26E8F93600F3244F /* SocialMedia.swift */,
 				783BB0212758E48E00732656 /* EmailCafeRecommendationsComponent.swift */,
+				78DB22982768B1CE00357183 /* InAppPurchasesView.swift */,
 			);
 			path = "Settings Components";
 			sourceTree = "<group>";
@@ -406,6 +414,7 @@
 		B31069748A162BEF0F069C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78DB229B2768B8FC00357183 /* StoreKit.framework */,
 				78AC46D0275631ED009ADA65 /* CloudKit.framework */,
 				9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */,
 				FAE45C314464F2A926D5C8B7 /* Pods_Bean_Juice_Bean_JuiceUITests.framework */,
@@ -615,6 +624,7 @@
 				782E85EC275781C600E48355 /* CloudKitHelper.swift in Sources */,
 				783BB0202758DBCF00732656 /* CafePin.swift in Sources */,
 				78F98AF42758BDF400D26ED8 /* LocationManager.swift in Sources */,
+				78DB22992768B1CE00357183 /* InAppPurchasesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,7 +793,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.3.1;
+				MARKETING_VERSION = 3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
 				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;
@@ -808,7 +818,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.3.1;
+				MARKETING_VERSION = 3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.beanjuice;
 				PRODUCT_NAME = "Bean Juice";
 				SWIFT_VERSION = 5.0;

@@ -32,7 +32,6 @@
 		54CEC56A2699CF0E0016B40A /* WaterAmountSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CEC5692699CF0E0016B40A /* WaterAmountSlider.swift */; };
 		54CEC56C2699D0CC0016B40A /* CoffeeRatioSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CEC56B2699D0CC0016B40A /* CoffeeRatioSlider.swift */; };
 		54CEC56F2699DE9E0016B40A /* AeroPress.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC56E2699D4650016B40A /* AeroPress.md */; };
-		54CEC578269A1E4B0016B40A /* Nifty Markdown Formatter in Frameworks */ = {isa = PBXBuildFile; productRef = 54CEC577269A1E4B0016B40A /* Nifty Markdown Formatter */; };
 		54CEC57A269AEAF70016B40A /* V60.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC579269AE8480016B40A /* V60.md */; };
 		54CEC57C269AEC1B0016B40A /* Chemex.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC57B269AEC1B0016B40A /* Chemex.md */; };
 		54CEC57E269B5C590016B40A /* French Press.md in Resources */ = {isa = PBXBuildFile; fileRef = 54CEC57D269B5C590016B40A /* French Press.md */; };
@@ -63,6 +62,10 @@
 		78D5E867275528E100250B40 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D5E866275528E100250B40 /* Cafe.swift */; };
 		78DB22992768B1CE00357183 /* InAppPurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB22982768B1CE00357183 /* InAppPurchasesView.swift */; };
 		78DB229C2768B8FC00357183 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB229B2768B8FC00357183 /* StoreKit.framework */; };
+		78DB229E2768BA6100357183 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB229D2768BA6100357183 /* IAPHelper.swift */; };
+		78DB22A12768C3DF00357183 /* IAP_ProductIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78DB22A02768C3DF00357183 /* IAP_ProductIDs.plist */; };
+		78DB22A22768C3E600357183 /* StoreKitConfiguration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 78DB229A2768B7D800357183 /* StoreKitConfiguration.storekit */; };
+		78E7130A276A117200576DDB /* Nifty Markdown Formatter in Frameworks */ = {isa = PBXBuildFile; productRef = 78E71309276A117200576DDB /* Nifty Markdown Formatter */; };
 		78F98AF12758B7E900D26ED8 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F98AF02758B7E900D26ED8 /* AlertItem.swift */; };
 		78F98AF42758BDF400D26ED8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F98AF32758BDF400D26ED8 /* LocationManager.swift */; };
 		7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E62A69160CEDFE29A18A01F /* Pods_Bean_Juice.framework */; };
@@ -145,6 +148,8 @@
 		78DB22982768B1CE00357183 /* InAppPurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchasesView.swift; sourceTree = "<group>"; };
 		78DB229A2768B7D800357183 /* StoreKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitConfiguration.storekit; sourceTree = "<group>"; };
 		78DB229B2768B8FC00357183 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		78DB229D2768BA6100357183 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		78DB22A02768C3DF00357183 /* IAP_ProductIDs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = IAP_ProductIDs.plist; sourceTree = "<group>"; };
 		78F98AF02758B7E900D26ED8 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		78F98AF32758BDF400D26ED8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7CF29C58DBF83EAF0DF13058 /* Pods-Bean JuiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bean JuiceTests.release.xcconfig"; path = "Target Support Files/Pods-Bean JuiceTests/Pods-Bean JuiceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,8 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				78AC46D1275631ED009ADA65 /* CloudKit.framework in Frameworks */,
+				78E7130A276A117200576DDB /* Nifty Markdown Formatter in Frameworks */,
 				7BCC1D935860A3C83E8C0D06 /* Pods_Bean_Juice.framework in Frameworks */,
-				54CEC578269A1E4B0016B40A /* Nifty Markdown Formatter in Frameworks */,
 				78DB229C2768B8FC00357183 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +220,7 @@
 		3406755A2417A09C00307F04 /* Bean Juice */ = {
 			isa = PBXGroup;
 			children = (
+				78DB229F2768C3A100357183 /* IAP */,
 				340675612417A0A000307F04 /* Assets.xcassets */,
 				78AC46CF275631E4009ADA65 /* Bean Juice.entitlements */,
 				340675692417A0A000307F04 /* Info.plist */,
@@ -225,7 +231,6 @@
 				340675632417A0A000307F04 /* Preview Content */,
 				78F98AF22758BD9800D26ED8 /* Utilities */,
 				546B1B6124D1B9D900E26E8A /* Views */,
-				78DB229A2768B7D800357183 /* StoreKitConfiguration.storekit */,
 			);
 			path = "Bean Juice";
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 		54C412B6265D0D6D0055D285 /* Bean JuiceTests */ = {
 			isa = PBXGroup;
 			children = (
+				78DB229A2768B7D800357183 /* StoreKitConfiguration.storekit */,
 				54C412B7265D0D6D0055D285 /* Bean_JuiceTests.swift */,
 				54C412B9265D0D6D0055D285 /* Info.plist */,
 			);
@@ -399,6 +405,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		78DB229F2768C3A100357183 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				78DB229D2768BA6100357183 /* IAPHelper.swift */,
+				78DB22A02768C3DF00357183 /* IAP_ProductIDs.plist */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
 		78F98AF22758BD9800D26ED8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,7 +457,7 @@
 			);
 			name = "Bean Juice";
 			packageProductDependencies = (
-				54CEC577269A1E4B0016B40A /* Nifty Markdown Formatter */,
+				78E71309276A117200576DDB /* Nifty Markdown Formatter */,
 			);
 			productName = "Morning Brew";
 			productReference = 340675582417A09C00307F04 /* Bean Juice.app */;
@@ -495,7 +510,7 @@
 			);
 			mainGroup = 3406754F2417A09C00307F04;
 			packageReferences = (
-				54CEC576269A1E4B0016B40A /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */,
+				78E71308276A117200576DDB /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */,
 			);
 			productRefGroup = 340675592417A09C00307F04 /* Products */;
 			projectDirPath = "";
@@ -520,6 +535,7 @@
 				54CEC580269B65F40016B40A /* Cold Brew.md in Resources */,
 				340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */,
 				340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */,
+				78DB22A12768C3DF00357183 /* IAP_ProductIDs.plist in Resources */,
 				340675622417A0A000307F04 /* Assets.xcassets in Resources */,
 				54CEC57C269AEC1B0016B40A /* Chemex.md in Resources */,
 			);
@@ -529,6 +545,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DB22A22768C3E600357183 /* StoreKitConfiguration.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +611,7 @@
 				78D5E867275528E100250B40 /* Cafe.swift in Sources */,
 				54C4E87124D854FD00D0FE57 /* StoreReviewHelper.swift in Sources */,
 				783BB01C2758C17900732656 /* MapViewModel.swift in Sources */,
+				78DB229E2768BA6100357183 /* IAPHelper.swift in Sources */,
 				3406759A241971C600307F04 /* SettingsView.swift in Sources */,
 				54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */,
 				54CEC5682699C7F20016B40A /* InformationScreen.swift in Sources */,
@@ -901,7 +919,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		54CEC576269A1E4B0016B40A /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */ = {
+		78E71308276A117200576DDB /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/NiftyTreeStudios/Nifty-Markdown-Formatter";
 			requirement = {
@@ -912,9 +930,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		54CEC577269A1E4B0016B40A /* Nifty Markdown Formatter */ = {
+		78E71309276A117200576DDB /* Nifty Markdown Formatter */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 54CEC576269A1E4B0016B40A /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */;
+			package = 78E71308276A117200576DDB /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */;
 			productName = "Nifty Markdown Formatter";
 		};
 /* End XCSwiftPackageProductDependency section */

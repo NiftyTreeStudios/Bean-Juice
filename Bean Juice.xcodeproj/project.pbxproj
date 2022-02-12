@@ -12,10 +12,10 @@
 		340675622417A0A000307F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675612417A0A000307F04 /* Assets.xcassets */; };
 		340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340675642417A0A000307F04 /* Preview Assets.xcassets */; };
 		340675682417A0A000307F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340675662417A0A000307F04 /* LaunchScreen.storyboard */; };
-		3406758E2418E59100307F04 /* Cup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758D2418E59100307F04 /* Cup.swift */; };
 		340675902418E5A400307F04 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406758F2418E5A300307F04 /* Method.swift */; };
 		340675982419685B00307F04 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340675972419685B00307F04 /* Utilities.swift */; };
 		3406759A241971C600307F04 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34067599241971C600307F04 /* SettingsView.swift */; };
+		34110E3527B7A0BC00948887 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 34110E3427B7A0BC00948887 /* Models */; };
 		3415A808248917B100699184 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415A807248917B100699184 /* CustomColor.swift */; };
 		34371217244DBD9D00030AAD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34371216244DBD9D00030AAD /* CircleImage.swift */; };
 		3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450A79D24698D9300F3E799 /* MethodSelectionView.swift */; };
@@ -83,7 +83,6 @@
 		340675642417A0A000307F04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		340675672417A0A000307F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		340675692417A0A000307F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3406758D2418E59100307F04 /* Cup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cup.swift; sourceTree = "<group>"; };
 		3406758F2418E5A300307F04 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		340675972419685B00307F04 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		34067599241971C600307F04 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34110E3527B7A0BC00948887 /* Models in Frameworks */,
 				78AC46D1275631ED009ADA65 /* CloudKit.framework in Frameworks */,
 				54CEC578269A1E4B0016B40A /* Nifty Markdown Formatter in Frameworks */,
 			);
@@ -245,7 +245,6 @@
 		546B1B6024D1B9A000E26E8A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3406758D2418E59100307F04 /* Cup.swift */,
 				3415A807248917B100699184 /* CustomColor.swift */,
 				3406758F2418E5A300307F04 /* Method.swift */,
 				54170E6E26065EBE0040E4DA /* MethodName.swift */,
@@ -406,6 +405,7 @@
 			name = "Bean Juice";
 			packageProductDependencies = (
 				54CEC577269A1E4B0016B40A /* Nifty Markdown Formatter */,
+				34110E3427B7A0BC00948887 /* Models */,
 			);
 			productName = "Morning Brew";
 			productReference = 340675582417A09C00307F04 /* Bean Juice.app */;
@@ -533,7 +533,6 @@
 				78F98AF12758B7E900D26ED8 /* AlertItem.swift in Sources */,
 				340675602417A09C00307F04 /* BJTabView.swift in Sources */,
 				54170E6726065CA80040E4DA /* RecipeView.swift in Sources */,
-				3406758E2418E59100307F04 /* Cup.swift in Sources */,
 				54E98E0C26EA31C300CD6F7C /* SettingsViewModel.swift in Sources */,
 				54170E6F26065EBE0040E4DA /* MethodName.swift in Sources */,
 				783BB01E2758C85F00732656 /* CKAssetExtension.swift in Sources */,
@@ -830,6 +829,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		34110E3427B7A0BC00948887 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
 		54CEC577269A1E4B0016B40A /* Nifty Markdown Formatter */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 54CEC576269A1E4B0016B40A /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */;

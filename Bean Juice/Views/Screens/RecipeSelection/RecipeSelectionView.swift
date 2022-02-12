@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Models
 
 struct RecipeSelectionView: View {
 

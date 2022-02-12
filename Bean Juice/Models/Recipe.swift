@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Models
 
 struct Recipe: Codable {
     let name: String

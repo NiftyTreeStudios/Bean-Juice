@@ -7,10 +7,11 @@
 //
 
 import SwiftUI
+import Models
 
 struct WaterAmountSlider: View {
 
-    let method: Method
+    let method: BrewMethod
 
     @Binding var waterAmount: Double
     @Binding var cups: Double

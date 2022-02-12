@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Models
 
 final class MethodViewModel: ObservableObject {
 
@@ -14,7 +15,7 @@ final class MethodViewModel: ObservableObject {
     @Published var cups: Double = 1
     @Published var waterAmount: Double = 200
 
-    func setUp(for method: Method) {
+    func setUp(for method: BrewMethod) {
         ratio = Double(method.startRatio)
         if method.name == .aeropress && cups > 4 {
             cups = 4

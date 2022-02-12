@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Models
 import NiftyMarkdownFormatter
 
 struct InformationScreen: View {

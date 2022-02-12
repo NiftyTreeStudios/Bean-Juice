@@ -16,7 +16,6 @@
 		340675982419685B00307F04 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340675972419685B00307F04 /* Utilities.swift */; };
 		3406759A241971C600307F04 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34067599241971C600307F04 /* SettingsView.swift */; };
 		34110E3527B7A0BC00948887 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 34110E3427B7A0BC00948887 /* Models */; };
-		3415A808248917B100699184 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415A807248917B100699184 /* CustomColor.swift */; };
 		34371217244DBD9D00030AAD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34371216244DBD9D00030AAD /* CircleImage.swift */; };
 		3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450A79D24698D9300F3E799 /* MethodSelectionView.swift */; };
 		3450A7A0246993C200F3E799 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450A79F246993C200F3E799 /* ItemRow.swift */; };
@@ -87,7 +86,6 @@
 		340675972419685B00307F04 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		34067599241971C600307F04 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		34110E3327B79EA800948887 /* Bean-Juice */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Bean-Juice"; sourceTree = "<group>"; };
-		3415A807248917B100699184 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		34371216244DBD9D00030AAD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3450A79D24698D9300F3E799 /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
 		3450A79F246993C200F3E799 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 		546B1B6024D1B9A000E26E8A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3415A807248917B100699184 /* CustomColor.swift */,
 				3406758F2418E5A300307F04 /* Method.swift */,
 				54170E6E26065EBE0040E4DA /* MethodName.swift */,
 				54170E5F26065B010040E4DA /* Recipe.swift */,
@@ -507,7 +504,6 @@
 				340675902418E5A400307F04 /* Method.swift in Sources */,
 				54170E72260665F30040E4DA /* RecipeSelectionView.swift in Sources */,
 				54FB8F1B26E8F93600F3244F /* SocialMedia.swift in Sources */,
-				3415A808248917B100699184 /* CustomColor.swift in Sources */,
 				783BB0222758E48E00732656 /* EmailCafeRecommendationsComponent.swift in Sources */,
 				54E98E0926E9F76300CD6F7C /* DoubleExtension.swift in Sources */,
 				54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */,

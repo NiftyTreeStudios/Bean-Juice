@@ -20,4 +20,4 @@ It was this knowledge that led him to invent the double bonded CHEMEX® paper fi
 
 5. After the grounds bloom, slowly pour the brewing water over the grounds while keeping the water level well below the top of the CHEMEX® (quarter inch or more). Slowly pour the remaining water over the grounds, using a circular or back-and-forth motion as you pour to ensure an even soaking of the grounds.
 
-_Sources: [Chemex homepace](https://www.chemexcoffeemaker.com/gallery/album/history)._
+_Sources: [Chemex homepage](https://www.chemexcoffeemaker.com/gallery/album/history)._

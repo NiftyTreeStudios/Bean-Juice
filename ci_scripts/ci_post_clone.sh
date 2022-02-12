@@ -7,7 +7,7 @@
 #  Copyright © 2021 Nifty Tree Studios. All rights reserved.
 
 # Install CocoaPods using Homebrew.
-brew install cocoapods
+# brew install cocoapods
 		
 # Install dependencies you manage with CocoaPods.
-pod install
+# pod install

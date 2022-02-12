@@ -83,6 +83,7 @@
 		340675972419685B00307F04 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		34067599241971C600307F04 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		34110E3327B79EA800948887 /* Bean-Juice */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Bean-Juice"; sourceTree = "<group>"; };
+		34110E3727B7A97A00948887 /* Bean Juice */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Bean Juice"; sourceTree = "<group>"; };
 		34371216244DBD9D00030AAD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3450A79D24698D9300F3E799 /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
 		3450A79F246993C200F3E799 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 		3406754F2417A09C00307F04 = {
 			isa = PBXGroup;
 			children = (
+				34110E3627B7A97A00948887 /* Packages */,
 				34110E3327B79EA800948887 /* Bean-Juice */,
 				78B8CE71274FD2D500262F2B /* ci_post_clone.sh */,
 				54F7347825544A820040C2B0 /* .swiftlint.yml */,
@@ -200,6 +202,14 @@
 				340675642417A0A000307F04 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		34110E3627B7A97A00948887 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				34110E3727B7A97A00948887 /* Bean Juice */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		5453A6B824D95CA500D11F0F /* Recovered References */ = {

@@ -77,3 +77,31 @@ public func getMethodName(method: MethodName) -> String {
 extension MethodName: Identifiable {
     public var id: MethodName { self }
 }
+
+public struct Recipe: Codable {
+    public let name: String
+    public let brewMethod: MethodName
+    public let groundSize: String
+    public let coffeeAmount: String
+    public let waterAmount: Int
+    public let brewTime: Int
+    public let additionalInformation: String?
+    
+    public init(
+        name: String,
+        brewMethod: MethodName,
+        groundSize: String,
+        coffeeAmount: String,
+        waterAmount: Int,
+        brewTime: Int,
+        additionalInformation: String? = nil
+    ) {
+        self.name = name
+        self.brewMethod = brewMethod
+        self.groundSize = groundSize
+        self.coffeeAmount = coffeeAmount
+        self.waterAmount = waterAmount
+        self.brewTime = brewTime
+        self.additionalInformation = additionalInformation
+    }
+}

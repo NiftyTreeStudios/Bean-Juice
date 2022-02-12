@@ -92,6 +92,7 @@
 		3450A79D24698D9300F3E799 /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
 		3450A79F246993C200F3E799 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		346360B5243B5D770054FEB1 /* MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodView.swift; sourceTree = "<group>"; };
+		347BADA527B79ADD003466FB /* Bean-Juice */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Bean-Juice"; sourceTree = "<group>"; };
 		54170E5F26065B010040E4DA /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		54170E6626065CA80040E4DA /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		54170E6E26065EBE0040E4DA /* MethodName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodName.swift; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 		3406754F2417A09C00307F04 = {
 			isa = PBXGroup;
 			children = (
+				347BADA527B79ADD003466FB /* Bean-Juice */,
 				78B8CE71274FD2D500262F2B /* ci_post_clone.sh */,
 				54F7347825544A820040C2B0 /* .swiftlint.yml */,
 				3406755A2417A09C00307F04 /* Bean Juice */,

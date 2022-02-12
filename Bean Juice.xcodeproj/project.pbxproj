@@ -159,13 +159,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FFDE4C814B391574D055A76 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		3406754F2417A09C00307F04 = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +167,6 @@
 				3406755A2417A09C00307F04 /* Bean Juice */,
 				54C412B6265D0D6D0055D285 /* Bean JuiceTests */,
 				B31069748A162BEF0F069C45 /* Frameworks */,
-				0FFDE4C814B391574D055A76 /* Pods */,
 				340675592417A09C00307F04 /* Products */,
 				5453A6B824D95CA500D11F0F /* Recovered References */,
 			);
@@ -404,7 +396,6 @@
 				340675542417A09C00307F04 /* Sources */,
 				340675552417A09C00307F04 /* Frameworks */,
 				340675562417A09C00307F04 /* Resources */,
-				54E5FE8C25488EEC005EC728 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -503,26 +494,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		54E5FE8C25488EEC005EC728 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		340675542417A09C00307F04 /* Sources */ = {

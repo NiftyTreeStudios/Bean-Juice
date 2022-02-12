@@ -7,10 +7,11 @@
 //
 
 import SwiftUI
+import Models
 
 struct WaterAmountSlider: View {
 
-    let method: Method
+    let method: BrewMethod
 
     @Binding var waterAmount: Double
     @Binding var cups: Double
@@ -43,9 +44,9 @@ struct WaterAmountSlider: View {
             } else {
                 Slider(value: $cups, in: 0...maxCups, step: 1).accentColor(settings.getAccentColor())
             }
+            Text(settings.mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
+                .font(.subheadline)
+                .padding(.bottom, 10)
         }
-        Text(settings.mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
-            .font(.subheadline)
-            .padding(.bottom, 10)
     }
 }

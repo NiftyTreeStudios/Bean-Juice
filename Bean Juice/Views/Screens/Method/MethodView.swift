@@ -8,10 +8,11 @@
 
 import Foundation
 import SwiftUI
+import Models
 
 struct MethodView: View {
 
-    let method: Method
+    let method: BrewMethod
 
     @EnvironmentObject var settings: SettingsViewModel
     @StateObject private var viewModel = MethodViewModel()

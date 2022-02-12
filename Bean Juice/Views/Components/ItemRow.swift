@@ -7,9 +7,10 @@
 //
 
 import SwiftUI
+import Models
 
 struct ItemRowView: View {
-    let method: Method
+    let method: BrewMethod
 
     var body: some View {
 

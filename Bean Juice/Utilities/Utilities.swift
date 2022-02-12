@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import Models
 
 // MARK: Coffee and water
 

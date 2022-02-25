@@ -1,0 +1,14 @@
+name: PR comment
+
+on: issue_comment
+
+jobs:
+  pr_comment:
+    name: PR comment
+    if: ${{ github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo comment on PR $NUMBER
+        env:
+          NUMBER: ${{ github.event.issue.number }}

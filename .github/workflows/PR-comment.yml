@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo comment on PR $NUMBER
+          echo comment on PR $NUMBER
         env:
           NUMBER: ${{ github.event.issue.number }}

@@ -12,4 +12,5 @@ A simple app for coffee brewing recipes
 
 ![screenshot](bean-juice-ss.jpg "Screeshot")
   
-Bean Juice is a simple coffee recipe app for iOS. It is written using SwiftUI (Some of the code needs to be refactored into SwiftUI 2.0).
+Bean Juice is a simple coffee recipe app for iOS.
+Bean Juice is completely written in SwiftUI. It leverages CloudKit and is in the middle of a refactor to more modular architecture using SPM and removing CocoaPods.

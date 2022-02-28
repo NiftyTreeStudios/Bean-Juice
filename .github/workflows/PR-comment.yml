@@ -1,15 +1,17 @@
-name: PR comment
+name: PR opened
 
-on: issue_comment
+on:
+  pull_request:
+    [opened, reopened]
 
 jobs:
   pr_comment:
-    name: PR comment
+    name: PR opened
     if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo comment on PR $NUMBER
+          echo PR $NUMBER opened
         env:
           NUMBER: ${{ github.event.issue.number }}
       - uses: actions/github-script@v6

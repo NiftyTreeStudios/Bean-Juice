@@ -2,7 +2,7 @@ name: PR opened
 
 on:
   pull_request:
-    [opened, reopened]
+    types: [opened, reopened]
 
 jobs:
   pr_comment:

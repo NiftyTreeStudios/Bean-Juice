@@ -5,10 +5,8 @@ We have considered the whole experience, from brewing to tasting. Asking ourselv
 
 ## Variants
 
-![April Brewer variants](https://cdn.shopify.com/s/files/1/1510/0358/t/36/assets/dsc07945-1646303368221.jpg?v=1646303369)
-
 **Plastic**: Made with AS Resin, we find that it is the more temperature stable and durable version of the april Brewers Collection.
 
 **Glass**: Handmade flatbed dripper designed to brew clean and sweet coffee, developed with a separate acrylic base.
 
-_Sources: [April](https://www.aprilcoffeeroasters.com/pages/equipment)
+_Sources: [April](https://www.aprilcoffeeroasters.com/pages/equipment)_

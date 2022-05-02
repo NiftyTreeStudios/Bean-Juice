@@ -43,7 +43,6 @@
 		54E98E0F26EA320C00CD6F7C /* MethodSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E0E26EA320C00CD6F7C /* MethodSelectionViewModel.swift */; };
 		54E98E1626EA574D00CD6F7C /* MethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E98E1526EA574D00CD6F7C /* MethodViewModel.swift */; };
 		54EA8E9D24C834F500600CE8 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA8E9C24C834F500600CE8 /* CustomToggle.swift */; };
-		54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54F7347825544A820040C2B0 /* .swiftlint.yml */; };
 		54FB8F1926E8F34300F3244F /* CupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1826E8F34300F3244F /* CupSelection.swift */; };
 		54FB8F1B26E8F93600F3244F /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1A26E8F93600F3244F /* SocialMedia.swift */; };
 		54FB8F1D26E8F9CE00F3244F /* HighlightColorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */; };
@@ -115,7 +114,6 @@
 		54E98E0E26EA320C00CD6F7C /* MethodSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionViewModel.swift; sourceTree = "<group>"; };
 		54E98E1526EA574D00CD6F7C /* MethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodViewModel.swift; sourceTree = "<group>"; };
 		54EA8E9C24C834F500600CE8 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
-		54F7347825544A820040C2B0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		54FB8F1826E8F34300F3244F /* CupSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupSelection.swift; sourceTree = "<group>"; };
 		54FB8F1A26E8F93600F3244F /* SocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
 		54FB8F1C26E8F9CE00F3244F /* HighlightColorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorSelection.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 		78AC46CF275631E4009ADA65 /* Bean Juice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bean Juice.entitlements"; sourceTree = "<group>"; };
 		78AC46D0275631ED009ADA65 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		78AC46D2275644E4009ADA65 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		78B8CE71274FD2D500262F2B /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = ci_post_clone.sh; path = ci_scripts/ci_post_clone.sh; sourceTree = "<group>"; };
 		78CC4C4B27578A4C00F2DCC6 /* CKRecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordExtension.swift; sourceTree = "<group>"; };
 		78D5E8642754E18800250B40 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		78D5E866275528E100250B40 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
@@ -162,8 +159,6 @@
 		3406754F2417A09C00307F04 = {
 			isa = PBXGroup;
 			children = (
-				78B8CE71274FD2D500262F2B /* ci_post_clone.sh */,
-				54F7347825544A820040C2B0 /* .swiftlint.yml */,
 				3406755A2417A09C00307F04 /* Bean Juice */,
 				54C412B6265D0D6D0055D285 /* Bean JuiceTests */,
 				B31069748A162BEF0F069C45 /* Frameworks */,
@@ -477,7 +472,6 @@
 				342797CC281FC94B00DA2858 /* April.md in Resources */,
 				54CEC57E269B5C590016B40A /* French Press.md in Resources */,
 				54CEC57A269AEAF70016B40A /* V60.md in Resources */,
-				54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */,
 				54CEC582269B6D520016B40A /* Drip Machine.md in Resources */,
 				54CEC580269B65F40016B40A /* Cold Brew.md in Resources */,
 				340675652417A0A000307F04 /* Preview Assets.xcassets in Resources */,

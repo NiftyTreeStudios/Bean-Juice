@@ -12,6 +12,7 @@ final class MethodSelectionViewModel: ObservableObject {
 
     let brewMethods: [Method] = [
         Method(name: .aeropress, maxWaterAmount: 230, mlPickerStep: 5, grounds: "Medium/Fine", startRatio: 13),
+        Method(name: .april, maxWaterAmount: 1000, mlPickerStep: 5, grounds: "Medium", startRatio: 17),
         Method(name: .chemex, maxWaterAmount: 1180, mlPickerStep: 10, grounds: "Medium/Coarse", startRatio: 17),
         Method(name: .coldBrew, maxWaterAmount: 1000, mlPickerStep: 100, grounds: "Coarse", startRatio: 15),
         Method(name: .dripMachine, maxWaterAmount: 1500, mlPickerStep: 100, grounds: "Medium", startRatio: 16),

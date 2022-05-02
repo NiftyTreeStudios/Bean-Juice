@@ -16,6 +16,7 @@
 		340675982419685B00307F04 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340675972419685B00307F04 /* Utilities.swift */; };
 		3406759A241971C600307F04 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34067599241971C600307F04 /* SettingsView.swift */; };
 		3415A808248917B100699184 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415A807248917B100699184 /* CustomColor.swift */; };
+		342797CC281FC94B00DA2858 /* April.md in Resources */ = {isa = PBXBuildFile; fileRef = 342797CB281FC94B00DA2858 /* April.md */; };
 		34371217244DBD9D00030AAD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34371216244DBD9D00030AAD /* CircleImage.swift */; };
 		3450A79E24698D9300F3E799 /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450A79D24698D9300F3E799 /* MethodSelectionView.swift */; };
 		3450A7A0246993C200F3E799 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450A79F246993C200F3E799 /* ItemRow.swift */; };
@@ -86,6 +87,7 @@
 		340675972419685B00307F04 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		34067599241971C600307F04 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3415A807248917B100699184 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		342797CB281FC94B00DA2858 /* April.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = April.md; sourceTree = "<group>"; };
 		34371216244DBD9D00030AAD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3450A79D24698D9300F3E799 /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
 		3450A79F246993C200F3E799 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				54CEC57D269B5C590016B40A /* French Press.md */,
 				54CEC57F269B65F40016B40A /* Cold Brew.md */,
 				54CEC581269B6D520016B40A /* Drip Machine.md */,
+				342797CB281FC94B00DA2858 /* April.md */,
 			);
 			path = "Method Information";
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54CEC56F2699DE9E0016B40A /* AeroPress.md in Resources */,
+				342797CC281FC94B00DA2858 /* April.md in Resources */,
 				54CEC57E269B5C590016B40A /* French Press.md in Resources */,
 				54CEC57A269AEAF70016B40A /* V60.md in Resources */,
 				54F7347925544A820040C2B0 /* .swiftlint.yml in Resources */,

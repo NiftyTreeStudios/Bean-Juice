@@ -68,7 +68,7 @@ final class MapViewModel: NSObject, ObservableObject {
                     case .success(let cafesArray):
                         locationManager.cafes = cafesArray
                     case .failure(_):
-                        alertItem = AlertContext.unableToGetCafes
+                    self.alertItem = AlertContext.unableToGetCafes
                 }
             }
         }

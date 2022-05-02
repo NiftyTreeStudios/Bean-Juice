@@ -63,7 +63,7 @@ final class MapViewModel: NSObject, ObservableObject {
      */
     func getCafes(for locationManager: LocationManager) {
         CloudKitHelper.getCafes { [self] result in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 switch result {
                     case .success(let cafesArray):
                         locationManager.cafes = cafesArray

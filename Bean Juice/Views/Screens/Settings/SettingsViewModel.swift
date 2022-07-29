@@ -8,6 +8,41 @@
 
 import SwiftUI
 
+//This extensions allows the color to be stored in AppStorage
+extension Color: RawRepresentable {
+
+    public init?(rawValue: String) {
+        
+        guard let data = Data(base64Encoded: rawValue) else{
+            self = .black
+            return
+        }
+        
+        do{
+            let color = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? UIColor ?? .black
+            self = Color(color)
+        }catch{
+            self = .black
+        }
+        
+    }
+
+    public var rawValue: String {
+        
+        do{
+            let data = try NSKeyedArchiver.archivedData(withRootObject: UIColor(self), requiringSecureCoding: false) as Data
+            return data.base64EncodedString()
+            
+        }catch{
+            
+            return ""
+            
+        }
+        
+    }
+
+}
+
 final class SettingsViewModel: ObservableObject {
 
     static let shared = SettingsViewModel()
@@ -56,24 +91,10 @@ final class SettingsViewModel: ObservableObject {
     }
 
     // MARK: Custom Color
-    @AppStorage("customAccentColorIndex") var colorIndex = 0 {
-        didSet {
-            objectWillChange.send()
-        }
-    }
-
-    var colors = [
-        CustomColor(name: "Blue", color: Color.blue),
-        CustomColor(name: "Green", color: Color.green),
-        CustomColor(name: "Orange", color: Color.orange),
-        CustomColor(name: "Pink", color: Color.pink),
-        CustomColor(name: "Purple", color: Color.purple),
-        CustomColor(name: "Red", color: Color.red),
-        CustomColor(name: "Yellow", color: Color.yellow)
-    ]
+    @AppStorage("accentColor") var accentColor: Color = .blue
 
     func getAccentColor() -> Color {
-        return colors[colorIndex].color
+        return accentColor
     }
 
     // MARK: ML selection

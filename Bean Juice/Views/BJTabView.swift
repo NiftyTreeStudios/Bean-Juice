@@ -51,7 +51,7 @@ struct BJTabView: View {
                         Text("Settings")
                     }
                 }
-                .tag("settings")
+                .tag("Settings")
         }
         .environmentObject(settings)
         .accentColor(settings.getAccentColor())

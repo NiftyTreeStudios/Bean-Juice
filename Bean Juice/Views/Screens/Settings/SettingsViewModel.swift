@@ -12,35 +12,27 @@ import SwiftUI
 extension Color: RawRepresentable {
 
     public init?(rawValue: String) {
-        
-        guard let data = Data(base64Encoded: rawValue) else{
+        guard let data = Data(base64Encoded: rawValue) else {
             self = .black
             return
         }
         
-        do{
+        do {
             let color = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? UIColor ?? .black
             self = Color(color)
-        }catch{
+        } catch {
             self = .black
         }
-        
     }
 
     public var rawValue: String {
-        
-        do{
+        do {
             let data = try NSKeyedArchiver.archivedData(withRootObject: UIColor(self), requiringSecureCoding: false) as Data
             return data.base64EncodedString()
-            
-        }catch{
-            
+        } catch {
             return ""
-            
         }
-        
     }
-
 }
 
 final class SettingsViewModel: ObservableObject {

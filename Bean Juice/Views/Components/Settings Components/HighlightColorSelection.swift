@@ -19,11 +19,8 @@ struct HighlightColorSelection: View {
                     .font(.subheadline),
             footer: Text("This will affect what highlight color the app uses.")
         ) {
-            Picker("Color", selection: $settings.colorIndex) {
-                ForEach(0 ..< settings.colors.count, id: \.self) { color in
-                    Text(settings.colors[color].name)
-                        .tag(color)
-                }
+            HStack {
+                ColorPicker("Color", selection: $settings.accentColor)
             }
         }
     }

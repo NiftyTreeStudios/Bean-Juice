@@ -1,0 +1,22 @@
+name: Assign PR
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  assign-pr:
+    name: Assign PR to opener
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+
+    steps:
+      - name: "Assign PR to ${{ github.event.sender.login }}"
+        run: |
+          # https://docs.github.com/en/rest/issues/assignees#add-assignees-to-an-issue
+          curl --silent --fail \
+            -X POST \
+            -H 'Accept: application/vnd.github.v3+json' \
+            -H 'Authorization: token ${{ github.token }}' \
+            'https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.number }}/assignees' \
+            -d '{"assignees":["${{ github.event.sender.login }}"]}'

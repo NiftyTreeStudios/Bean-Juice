@@ -48,7 +48,9 @@ struct SettingsView: View {
                 Text("App version: " + appVersion)
                     .font(.footnote)
                     .navigationTitle("Settings")
-            }.listStyle(GroupedListStyle())
+            }
+            .listStyle(GroupedListStyle())
+            .navigationTitle("Settings")
         }
     }
 }

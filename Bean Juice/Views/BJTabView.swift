@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-/// Contains the ``TabView``.
+/// Contains the `TabView` and the tabs for the project.
 struct BJTabView: View {
 
     @State private var selection = "Methods"
@@ -51,7 +51,7 @@ struct BJTabView: View {
                         Text("Settings")
                     }
                 }
-                .tag("settings")
+                .tag("Settings")
         }
         .environmentObject(settings)
         .accentColor(settings.getAccentColor())

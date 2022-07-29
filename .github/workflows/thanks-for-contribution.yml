@@ -1,0 +1,25 @@
+name: PR opened
+
+ on:
+   pull_request:
+     types: [opened, reopened]
+
+ jobs:
+   pr_comment:
+     name: PR opened
+     runs-on: ubuntu-latest
+     steps:
+       - run: |
+           echo PR $NUMBER opened
+         env:
+           NUMBER: ${{ github.event.issue.number }}
+       - uses: actions/github-script@v6
+         with:
+           github-token: ${{secrets.GITHUB_TOKEN}}
+           script: |
+             github.rest.issues.createComment({
+               issue_number: context.issue.number,
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               body: '👋 Thanks for the contribution!'
+             })

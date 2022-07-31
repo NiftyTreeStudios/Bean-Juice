@@ -1,0 +1,2 @@
+A coffeemaker or coffee machine is a cooking appliance used to brew coffee. While there are many different types of coffeemakers using several different brewing principles, in the most common devices, coffee grounds are placed into a paper or metal filter inside a funnel, which is set over a glass or ceramic coffee pot, a cooking pot in the kettle family. Cold water is poured into a separate chamber, which is then boiled and directed into the funnel. This is also called automatic drip-brew.
+Popular brands include Moccamaster, Braun, Electrolux, and Philips to name a few.

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342202642896D3B500A1DEED /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342202632896D3B500A1DEED /* CloudKit.framework */; };
 		345A0D952896CA48004702DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345A0D942896CA48004702DD /* Assets.xcassets */; };
 		345A0D982896CA48004702DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345A0D972896CA48004702DD /* Preview Assets.xcassets */; };
 		345A0DA22896CA48004702DD /* Bean_JuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DA12896CA48004702DD /* Bean_JuiceTests.swift */; };
@@ -83,6 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		342202612896D31000A1DEED /* Bean Juice.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "Bean Juice.entitlements"; sourceTree = "<group>"; };
+		342202632896D3B500A1DEED /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		345A0D8D2896CA47004702DD /* Bean Juice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean Juice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		345A0D942896CA48004702DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		345A0D972896CA48004702DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				345A0E142896CB46004702DD /* Nifty Markdown Formatter in Frameworks */,
+				342202642896D3B500A1DEED /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +173,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		342202622896D3B500A1DEED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				342202632896D3B500A1DEED /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		345A0D842896CA47004702DD = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +188,7 @@
 				345A0DA02896CA48004702DD /* Bean JuiceTests */,
 				345A0DAA2896CA48004702DD /* Bean JuiceUITests */,
 				345A0D8E2896CA47004702DD /* Products */,
+				342202622896D3B500A1DEED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +205,7 @@
 		345A0D8F2896CA47004702DD /* Bean Juice */ = {
 			isa = PBXGroup;
 			children = (
+				342202612896D31000A1DEED /* Bean Juice.entitlements */,
 				345A0D942896CA48004702DD /* Assets.xcassets */,
 				345A0DBA2896CA6F004702DD /* Main.swift */,
 				345A0E232896CC5D004702DD /* Method Information */,
@@ -719,12 +733,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bean Juice/Bean Juice.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Bean Juice/Preview Content\"";
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Bean Juice uses your location to show the nearest cafes on a map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -749,12 +765,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bean Juice/Bean Juice.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Bean Juice/Preview Content\"";
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Bean Juice uses your location to show the nearest cafes on a map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -8,12 +8,25 @@ import SwiftUI
 
 @main
 struct BeanJuice: App {
+
+    @State private var showSplashScreen: Bool = true
+    
     var body: some Scene {
 
         let locationManager = LocationManager()
 
         WindowGroup {
-            BJTabView().environmentObject(locationManager)
+            ZStack {
+                BJTabView()
+                    .environmentObject(locationManager)
+                if showSplashScreen {
+                    SplashScreen()
+                }
+            }.onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    showSplashScreen = false
+                }
+            }
         }
     }
 }

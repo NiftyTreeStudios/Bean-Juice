@@ -38,7 +38,7 @@ struct CircleImage: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 30)
                                 .frame(width: 170.0, height: 100.0)
-                                .foregroundColor(Color("BlurredBackground"))
+                                .foregroundColor(.background)
                                 .blur(radius: 60)
                             if isRecipeView {
                                 Text("\(formattedTime(time: secondsToHoursMinutesSeconds(seconds: brewTime)))")

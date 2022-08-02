@@ -15,7 +15,7 @@ struct HighlightColorSelection: View {
     var body: some View {
 
         Section(
-            header: Text("Select highlight color")
+            header: Text("Highlight color")
                     .font(.subheadline),
             footer: Text("This will affect what highlight color the app uses.")
         ) {

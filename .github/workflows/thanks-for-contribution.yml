@@ -11,7 +11,7 @@ jobs:
     steps:
     - run: |
        echo PR $NUMBER opened
-       env:
+      env:
          NUMBER: ${{ github.event.issue.number }}
     - uses: actions/github-script@v6
       with:

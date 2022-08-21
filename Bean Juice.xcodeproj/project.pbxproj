@@ -46,7 +46,6 @@
 		345A0DF62896CB05004702DD /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DF22896CB05004702DD /* EmailHelper.swift */; };
 		345A0DF72896CB05004702DD /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DF32896CB05004702DD /* StoreReviewHelper.swift */; };
 		345A0DF82896CB05004702DD /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DF42896CB05004702DD /* CloudKitHelper.swift */; };
-		345A0DFD2896CB16004702DD /* CKRecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DFA2896CB16004702DD /* CKRecordExtension.swift */; };
 		345A0DFE2896CB16004702DD /* CKAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DFB2896CB16004702DD /* CKAssetExtension.swift */; };
 		345A0DFF2896CB16004702DD /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DFC2896CB16004702DD /* DoubleExtension.swift */; };
 		345A0E022896CB1C004702DD /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0E002896CB1C004702DD /* AlertItem.swift */; };
@@ -129,7 +128,6 @@
 		345A0DF22896CB05004702DD /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
 		345A0DF32896CB05004702DD /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		345A0DF42896CB05004702DD /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
-		345A0DFA2896CB16004702DD /* CKRecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordExtension.swift; sourceTree = "<group>"; };
 		345A0DFB2896CB16004702DD /* CKAssetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKAssetExtension.swift; sourceTree = "<group>"; };
 		345A0DFC2896CB16004702DD /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		345A0E002896CB1C004702DD /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
@@ -290,7 +288,6 @@
 			isa = PBXGroup;
 			children = (
 				345A0DFB2896CB16004702DD /* CKAssetExtension.swift */,
-				345A0DFA2896CB16004702DD /* CKRecordExtension.swift */,
 				345A0DFC2896CB16004702DD /* DoubleExtension.swift */,
 				342202672897C5FD00A1DEED /* ColorExtension.swift */,
 			);
@@ -559,7 +556,6 @@
 				345A0DDB2896CABC004702DD /* InformationScreen.swift in Sources */,
 				345A0DE22896CAC9004702DD /* MethodViewModel.swift in Sources */,
 				345A0DE32896CAC9004702DD /* MethodView.swift in Sources */,
-				345A0DFD2896CB16004702DD /* CKRecordExtension.swift in Sources */,
 				345A0E022896CB1C004702DD /* AlertItem.swift in Sources */,
 				345A0E032896CB1C004702DD /* Constants.swift in Sources */,
 				345A0DFE2896CB16004702DD /* CKAssetExtension.swift in Sources */,

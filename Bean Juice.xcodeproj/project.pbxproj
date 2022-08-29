@@ -65,6 +65,7 @@
 		345A0E202896CC3F004702DD /* Chemex.md in Resources */ = {isa = PBXBuildFile; fileRef = 345A0E192896CC3F004702DD /* Chemex.md */; };
 		345A0E212896CC3F004702DD /* Drip Machine.md in Resources */ = {isa = PBXBuildFile; fileRef = 345A0E1A2896CC3F004702DD /* Drip Machine.md */; };
 		345A0E222896CC3F004702DD /* AeroPress.md in Resources */ = {isa = PBXBuildFile; fileRef = 345A0E1B2896CC3F004702DD /* AeroPress.md */; };
+		9791BFBB28BD851300D01D5E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9791BFBA28BD851300D01D5E /* UINavigationControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		345A0E192896CC3F004702DD /* Chemex.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chemex.md; sourceTree = "<group>"; };
 		345A0E1A2896CC3F004702DD /* Drip Machine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Drip Machine.md"; sourceTree = "<group>"; };
 		345A0E1B2896CC3F004702DD /* AeroPress.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AeroPress.md; sourceTree = "<group>"; };
+		9791BFBA28BD851300D01D5E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 				345A0DFB2896CB16004702DD /* CKAssetExtension.swift */,
 				345A0DFC2896CB16004702DD /* DoubleExtension.swift */,
 				342202672897C5FD00A1DEED /* ColorExtension.swift */,
+				9791BFBA28BD851300D01D5E /* UINavigationControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				345A0DE32896CAC9004702DD /* MethodView.swift in Sources */,
 				345A0E022896CB1C004702DD /* AlertItem.swift in Sources */,
 				345A0E032896CB1C004702DD /* Constants.swift in Sources */,
+				9791BFBB28BD851300D01D5E /* UINavigationControllerExtension.swift in Sources */,
 				345A0DFE2896CB16004702DD /* CKAssetExtension.swift in Sources */,
 				345A0DFF2896CB16004702DD /* DoubleExtension.swift in Sources */,
 				345A0DD32896CAAE004702DD /* HighlightColorSelection.swift in Sources */,

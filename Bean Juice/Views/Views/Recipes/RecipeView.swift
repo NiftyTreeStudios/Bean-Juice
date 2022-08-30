@@ -59,5 +59,6 @@ struct RecipeView: View {
             .padding(.horizontal, 30)
             .padding(.bottom, 5)
         }
+        .navigationTitle(recipe.name)
     }
 }

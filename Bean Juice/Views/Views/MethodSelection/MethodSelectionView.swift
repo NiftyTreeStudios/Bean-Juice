@@ -20,6 +20,15 @@ struct MethodSelectionView: View {
             }
             .listStyle(PlainListStyle())
             .navigationTitle("Methods")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        LeftoverView()
+                    } label: {
+                        Image(systemName: "sleep")
+                    }
+                }
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ struct CircleImage: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     let methodName: String
-    let isRecipeView: Bool
+    var isRecipeView: Bool = false
     @State var brewTime: Int = 0
 
     var body: some View {

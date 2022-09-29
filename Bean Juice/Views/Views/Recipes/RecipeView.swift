@@ -41,7 +41,7 @@ struct RecipeView: View {
                     Text("Coffee")
                         .font(.title)
                     Spacer()
-                    Text(recipe.coffeeAmount + " g")
+                    Text("\(recipe.coffeeAmount, specifier: "%.1f") g")
                         .font(.title)
                 }
 
@@ -51,13 +51,17 @@ struct RecipeView: View {
                             .font(.headline)
                         Spacer()
                     }
-                    Text(recipe.additionalInformation ?? "")
-                        .frame(alignment: .leading)
+                    HStack {
+                        Text(recipe.additionalInformation ?? "")
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }
                 }
                 Spacer()
             }
             .padding(.horizontal, 30)
             .padding(.bottom, 5)
         }
+        .navigationTitle(recipe.name)
     }
 }

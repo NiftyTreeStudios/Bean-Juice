@@ -112,7 +112,7 @@ func formattedTime(time: (Int, Int, Int)) -> String {
  */
 func addNewRecipe(recipe: Recipe, in recipes: [Recipe]) -> [Recipe] {
     var recipes = recipes
-    if recipe.name.isEmpty || recipe.coffeeAmount.isEmpty || recipe.waterAmount < 1 {
+    if recipe.name.isEmpty {
         print("Couldn't save a new recipe")
         return recipes
     } else {

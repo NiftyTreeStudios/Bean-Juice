@@ -73,7 +73,7 @@ struct NewRecipeView: View {
                         name: name,
                         brewMethod: brewMethod,
                         groundSize: groundSize,
-                        coffeeAmount: coffeeAmount,
+                        coffeeAmount: Double(coffeeAmount) ?? 0,
                         waterAmount: Int(waterAmount) ?? 0,
                         brewTime: convertToSeconds(minutes: minuteSelection, seconds: secondSelection),
                         additionalInformation: additionalInformation

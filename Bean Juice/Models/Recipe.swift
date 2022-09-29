@@ -12,7 +12,7 @@ struct Recipe: Codable {
     let name: String
     let brewMethod: MethodName
     let groundSize: String
-    let coffeeAmount: String
+    let coffeeAmount: Double
     let waterAmount: Int
     let brewTime: Int
     let additionalInformation: String?

@@ -19,7 +19,7 @@ struct MethodView: View {
     var body: some View {
         ScrollView {
             VStack {
-                CircleImage(methodName: getMethodName(method: method.name), isRecipeView: false)
+                CircleImage(methodName: getMethodName(method: method.name))
                 VStack {
                     CoffeeRatioSlider(ratio: $viewModel.ratio)
                     WaterAmountSlider(
@@ -55,10 +55,6 @@ struct MethodView: View {
                 }
                 .navigationTitle(getMethodName(method: method.name))
                 .navigationBarItems(
-                    /*
-                     Note: this works once. If you hit the back button and try again, nothing happens.
-                     Short googling revealed that this seems to be a SwiftUI bug.
-                     */
                     trailing: NavigationLink(
                         destination: InformationScreen(methodName: method.name)) {
                             Image(systemName: "info.circle")

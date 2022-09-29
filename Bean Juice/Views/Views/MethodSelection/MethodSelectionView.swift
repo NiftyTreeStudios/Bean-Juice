@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct MethodSelectionView: View {
-
     @StateObject private var viewModel = MethodSelectionViewModel()
 
     var body: some View {
@@ -20,7 +19,7 @@ struct MethodSelectionView: View {
                 }
             }
             .listStyle(PlainListStyle())
-            .navigationTitle("Brewing methods")
+            .navigationTitle("Methods")
         }
     }
 }

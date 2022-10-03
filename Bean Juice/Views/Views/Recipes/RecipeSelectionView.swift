@@ -22,6 +22,27 @@ struct RecipeSelectionView: View {
                 List {
                     ForEach(recipes, id: \.name) { recipe in
                         RecipeCell(recipe: recipe)
+                        // TODO: Add recipe editing.
+//                            .swipeActions(edge: .leading) {
+//                                Button {
+//                                    if let index = recipes.firstIndex(of: recipe) {
+//
+//                                    }
+//                                } label: {
+//                                    Label("Edit", systemImage: "pencil")
+//                                }
+//                                .tint(.mint)
+//                            }
+                            .swipeActions {
+                                Button(role: .destructive) {
+                                    if let index = recipes.firstIndex(of: recipe) {
+                                        recipes.remove(at: index)
+                                    }
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
+
+                            }
                     }
                 }
                 .listStyle(PlainListStyle())
@@ -35,6 +56,9 @@ struct RecipeSelectionView: View {
                             Image(systemName: "plus")
                         })
                     }
+                }
+                .onChange(of: recipes) { newRecipes in
+                    saveRecipesToUserDefaults(newRecipes)
                 }
             }
         }

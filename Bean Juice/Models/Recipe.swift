@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Recipe: Codable {
+struct Recipe: Codable, Equatable {
     let name: String
     let brewMethod: MethodName
     let groundSize: String?
@@ -46,7 +46,7 @@ struct Recipe: Codable {
     }
 }
 
-struct OldRecipe: Codable {
+struct OldRecipe: Codable, Equatable {
     let name: String
     let brewMethod: MethodName
     let groundSize: String

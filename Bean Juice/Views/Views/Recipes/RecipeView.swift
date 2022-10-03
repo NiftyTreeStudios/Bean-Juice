@@ -12,9 +12,17 @@ struct RecipeView: View {
 
     let recipe: Recipe
 
+    init(recipe: Recipe) {
+        self.recipe = recipe
+    }
+
+    init(oldRecipe: OldRecipe) {
+        self.recipe = Recipe(from: oldRecipe)
+    }
+
     var body: some View {
         ScrollView {
-            CircleImage(methodName: getMethodName(method: recipe.brewMethod), isRecipeView: true, brewTime: recipe.brewTime)
+            CircleImage(methodName: getMethodName(method: recipe.brewMethod), isRecipeView: true, brewTime: recipe.brewTime ?? 0)
             Text(recipe.name)
                 .font(.largeTitle)
                 .fontWeight(.semibold)
@@ -25,7 +33,7 @@ struct RecipeView: View {
                     Text("Ground level")
                         .font(.headline)
                     Spacer()
-                    Text(recipe.groundSize)
+                    Text(recipe.groundSize ?? "No ground size provided")
                         .font(.subheadline)
                 }
 

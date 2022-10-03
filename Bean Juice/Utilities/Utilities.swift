@@ -111,12 +111,12 @@ func formattedTime(time: (Int, Int, Int)) -> String {
  - Returns: a new array of recipes with the added recipe.
  */
 func addNewRecipe(recipe: Recipe, in recipes: [Recipe]) -> [Recipe] {
-    var recipes = recipes
+    var newRecipes = recipes
     if recipe.name.isEmpty {
         print("Couldn't save a new recipe")
         return recipes
     } else {
-        recipes.append(
+        newRecipes.append(
             Recipe(
                 name: recipe.name,
                 brewMethod: recipe.brewMethod,
@@ -127,7 +127,7 @@ func addNewRecipe(recipe: Recipe, in recipes: [Recipe]) -> [Recipe] {
                 additionalInformation: recipe.additionalInformation
             )
         )
-        return recipes
+        return newRecipes
     }
 }
 
@@ -136,14 +136,28 @@ func addNewRecipe(recipe: Recipe, in recipes: [Recipe]) -> [Recipe] {
 ///   - recipes: The recipes that are being saved.
 func saveRecipesToUserDefaults(_ recipes: [Recipe]) {
     let data = recipes.map { try? JSONEncoder().encode($0) }
+    print("☕️ Saving recipes: \n \(data)")
     UserDefaults.standard.set(data, forKey: "Recipes")
 }
 
 /// Loads recipes from user defaults.
 /// - Returns: A array of recipes.
 func loadRecipesFromUserDefaults() -> [Recipe] {
+    print("☕️ Loading recipes...")
     guard let encodedData = UserDefaults.standard.array(forKey: "Recipes") as? [Data] else {
         return []
     }
-    return encodedData.map { try! JSONDecoder().decode(Recipe.self, from: $0) }
+    let recipes = encodedData.map {
+        if let recipe = try? JSONDecoder().decode(Recipe.self, from: $0) {
+            return recipe
+        } else {
+            if let oldRecipe = try? JSONDecoder().decode(OldRecipe.self, from: $0) {
+                return Recipe(from: oldRecipe)
+            } else {
+                print("Failed to load recipe.")
+                return Recipe(name: "test", brewMethod: .custom, groundSize: "test", coffeeAmount: 1.23, waterAmount: 69, brewTime: 111, additionalInformation: "Nooope")
+            }
+        }
+    }
+    return recipes
 }

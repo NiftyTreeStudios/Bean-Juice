@@ -13,6 +13,8 @@ struct RecipeSelectionView: View {
     @State var recipes: [Recipe] = []
 
     @State private var addButtonClicked: Bool = false
+    @State private var recipeBeingEdited: Recipe = Recipe(name: "", brewMethod: .custom, groundSize: "", coffeeAmount: 0, waterAmount: 0, brewTime: 0, additionalInformation: "")
+    @State private var addingRecipe: Bool = false
 
     var body: some View {
         NavigationView {
@@ -22,17 +24,16 @@ struct RecipeSelectionView: View {
                 List {
                     ForEach(recipes, id: \.name) { recipe in
                         RecipeCell(recipe: recipe)
-                        // TODO: Add recipe editing.
-//                            .swipeActions(edge: .leading) {
-//                                Button {
-//                                    if let index = recipes.firstIndex(of: recipe) {
-//
-//                                    }
-//                                } label: {
-//                                    Label("Edit", systemImage: "pencil")
-//                                }
-//                                .tint(.mint)
-//                            }
+                            .swipeActions(edge: .leading) {
+                                Button {
+                                    print("Recipe given! \(recipe)")
+                                    recipeBeingEdited = recipe
+                                    addingRecipe = true
+                                } label: {
+                                    Label("Edit", systemImage: "pencil")
+                                }
+                                .tint(.mint)
+                            }
                             .swipeActions {
                                 Button(role: .destructive) {
                                     if let index = recipes.firstIndex(of: recipe) {
@@ -50,8 +51,10 @@ struct RecipeSelectionView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            print("Button tapped")
-                            addButtonClicked.toggle()
+                            recipeBeingEdited = Recipe(
+                                name: "", brewMethod: .custom, groundSize: "", coffeeAmount: 0, waterAmount: 0, brewTime: 0, additionalInformation: ""
+                            )
+                            addingRecipe = true
                         }, label: {
                             Image(systemName: "plus")
                         })
@@ -62,9 +65,9 @@ struct RecipeSelectionView: View {
                 }
             }
         }
-        .sheet(isPresented: $addButtonClicked) {
-            NewRecipeView(recipes: $recipes, addButtonClicked: $addButtonClicked)
-        }
+        .sheet(isPresented: $addingRecipe, content: {
+            NewRecipeView(recipe: $recipeBeingEdited, recipes: $recipes, addingRecipe: $addingRecipe)
+        })
         .onAppear {
             recipes = loadRecipesFromUserDefaults()
         }

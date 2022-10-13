@@ -35,10 +35,9 @@ struct SettingsView: View {
                 }
 
                 Section(header: Text("Enjoying using Bean Juice?")) {
-                    Button(action: {
-                        // Review button
+                    Button {
                         StoreReviewHelper().requestReview()
-                    }) {
+                    } label: {
                         Text("Give us a rating!")
                     }
                 }

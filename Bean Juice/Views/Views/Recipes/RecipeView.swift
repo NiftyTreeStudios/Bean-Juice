@@ -22,7 +22,11 @@ struct RecipeView: View {
 
     var body: some View {
         ScrollView {
-            CircleImage(methodName: getMethodName(method: recipe.brewMethod), isRecipeView: true, brewTime: recipe.brewTime)
+            CircleImage(
+                methodName: getMethodName(method: recipe.brewMethod),
+                isRecipeView: true,
+                brewTime: recipe.brewTime
+            )
             Text(recipe.name)
                 .font(.largeTitle)
                 .fontWeight(.semibold)

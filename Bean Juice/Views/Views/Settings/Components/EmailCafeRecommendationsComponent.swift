@@ -28,7 +28,8 @@ struct EmailCafeRecommendationsComponent: View {
         City:%20%0A\
         State:%20%0A\
         Country:%20%0A\
-        I%20will%20check%20the%20information%20and%20add%20it%20to%20the%20list%20if%20it%20looks%20like%20a%20good%20speciality%20cafe.%0A\
+        I%20will%20check%20the%20information%20and%20add%20it%20to%20\
+        the%20list%20if%20it%20looks%20like%20a%20good%20speciality%20cafe.%0A\
         %20Thanks%20for%20making%20Bean%20Juice%20better.%0A
         """
 

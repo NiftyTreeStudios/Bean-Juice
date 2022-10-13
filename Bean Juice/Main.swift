@@ -10,7 +10,7 @@ import SwiftUI
 struct BeanJuice: App {
 
     @State private var showSplashScreen: Bool = true
-    
+
     var body: some Scene {
 
         let locationManager = LocationManager()

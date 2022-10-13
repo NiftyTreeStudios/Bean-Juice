@@ -70,7 +70,7 @@ extension Cafe {
         let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinates.coordinate))
         mapItem.name = name
         mapItem.openInMaps(launchOptions: [
-            MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeWalking
+            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking
         ])
     }
 

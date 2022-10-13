@@ -37,16 +37,16 @@ final class MapViewModel: NSObject, ObservableObject {
     private func checkLocationAuthorization() {
         guard let deviceLocationManager = deviceLocationManager else { return }
         switch deviceLocationManager.authorizationStatus {
-            case .notDetermined:
-                deviceLocationManager.requestWhenInUseAuthorization()
-            case .restricted:
-                alertItem = AlertContext.locationRestricted
-            case .denied:
-                alertItem = AlertContext.locationDenied
-            case .authorizedAlways, .authorizedWhenInUse:
-                break
-            @unknown default:
-                break
+        case .notDetermined:
+            deviceLocationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            alertItem = AlertContext.locationRestricted
+        case .denied:
+            alertItem = AlertContext.locationDenied
+        case .authorizedAlways, .authorizedWhenInUse:
+            break
+        @unknown default:
+            break
         }
     }
 
@@ -65,10 +65,10 @@ final class MapViewModel: NSObject, ObservableObject {
         CloudKitHelper.getCafes { [self] result in
             DispatchQueue.main.async { [self] in
                 switch result {
-                    case .success(let cafesArray):
-                        locationManager.cafes = cafesArray
-                    case .failure(_):
-                        alertItem = AlertContext.unableToGetCafes
+                case .success(let cafesArray):
+                    locationManager.cafes = cafesArray
+                case .failure:
+                    alertItem = AlertContext.unableToGetCafes
                 }
             }
         }

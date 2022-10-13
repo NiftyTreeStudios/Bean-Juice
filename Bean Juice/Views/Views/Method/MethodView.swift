@@ -40,7 +40,7 @@ struct MethodView: View {
                         Spacer()
                         Text(settings.mlSelected
                              ? "\(viewModel.waterAmount, specifier: "%.0f") g"
-                             : "\(calculateWaterAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, maxWater: method.maxWaterAmount)) g")
+                             : "\(calculateWaterAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, maxWater: method.maxWaterAmount)) g") // swiftlint:disable:this line_length
                             .font(.title)
                     }
 
@@ -48,8 +48,8 @@ struct MethodView: View {
                         Text("Coffee").font(.title)
                         Spacer()
                         Text(settings.mlSelected
-                             ? "\(customCoffeeAmount(water: viewModel.waterAmount, ratio: viewModel.ratio), specifier: "%.1f") g"
-                             : "\(calculateCoffeeAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, ratio: viewModel.ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g")
+                             ? "\(customCoffeeAmount(water: viewModel.waterAmount, ratio: viewModel.ratio), specifier: "%.1f") g" // swiftlint:disable:this line_length
+                             : "\(calculateCoffeeAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, ratio: viewModel.ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g") // swiftlint:disable:this line_length
                             .font(.title)
                     }
                 }

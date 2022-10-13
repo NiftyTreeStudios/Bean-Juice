@@ -41,13 +41,19 @@ struct AlertContext {
 
     static let locationDenied = AlertItem(
         title: Text("Location denied"),
-        message: Text("Bean Juice does not have permission to access your location. To change that, go to your phone's Settings -> Bean Juice -> Location"),
+        message: Text("""
+                      Bean Juice does not have permission to access your location. \
+                      To change that, go to your phone's Settings -> Bean Juice -> Location
+                      """),
         dismissButton: .default(Text("Ok"))
     )
 
     static let locationDisabled = AlertItem(
         title: Text("Location disabled"),
-        message: Text("Your phone's location services are disabled. To change that, go to your phone's Settings -> Privacy -> Location Services"),
+        message: Text("""
+                      Your phone's location services are disabled. To change that, \
+                      go to your phone's Settings -> Privacy -> Location Services
+                      """),
         dismissButton: .default(Text("Ok"))
     )
 

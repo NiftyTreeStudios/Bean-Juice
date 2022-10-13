@@ -16,7 +16,13 @@ struct CafePin: View {
         ZStack(alignment: .center) {
             Circle()
                 .frame(width: 30, height: 30)
-                .foregroundStyle(.linearGradient(colors: [.teal, .pink], startPoint: .bottomLeading, endPoint: .topTrailing))
+                .foregroundStyle(
+                    .linearGradient(
+                        colors: [.teal, .pink],
+                        startPoint: .bottomLeading,
+                        endPoint: .topTrailing
+                    )
+                )
             Image(uiImage: cafe.smallAsset.convertToUIImage())
                 .resizable()
                 .scaledToFill()

@@ -14,7 +14,7 @@ struct NewRecipeView: View {
     @Binding var recipes: [Recipe]
     @Binding var addingRecipe: Bool
 
-    @State private var waterAmount: String = "0"
+    @State private var waterAmount: String = ""
     @State private var minuteSelection: Int = 0
     @State private var secondSelection: Int = 0
     
@@ -59,22 +59,40 @@ struct NewRecipeView: View {
                 }
                 SaveButton(
                     recipe: $recipe,
+                    waterAmount: waterAmount,
+                    brewTime: convertToSeconds(minutes: minuteSelection, seconds: secondSelection),
                     recipes: $recipes,
                     addingRecipe: $addingRecipe
+                ).disabled(
+                    recipe.name.isEmpty
+                    || recipe.groundSize.isEmpty
+                    || recipe.coffeeAmount.isEmpty
+                    || waterAmount.isEmpty
                 )
             }
         }
         .navigationBarTitle("Add new recipe")
+        .onAppear {
+            if recipe.waterAmount > 0 {
+                self.waterAmount = recipe.waterAmount.formatted()
+            }
+            self.minuteSelection = recipe.brewTime / 60
+            self.secondSelection = recipe.brewTime % 60
+        }
     }
 }
 
 struct SaveButton: View {
     @Binding var recipe: Recipe
+    let waterAmount: String
+    let brewTime: Int
     @Binding var recipes: [Recipe]
     @Binding var addingRecipe: Bool
 
     var body: some View {
         Button {
+            recipe.waterAmount = Int(waterAmount) ?? 0
+            recipe.brewTime = brewTime
             var newRecipes: [Recipe] = []
             newRecipes = recipes
             if let index = recipes.firstIndex(where: { recipe.id == $0.id }) {

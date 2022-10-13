@@ -13,7 +13,15 @@ struct RecipeSelectionView: View {
     @State var recipes: [Recipe] = []
 
     @State private var addButtonClicked: Bool = false
-    @State private var recipeBeingEdited: Recipe = Recipe(name: "", brewMethod: .custom, groundSize: "", coffeeAmount: 0, waterAmount: 0, brewTime: 0, additionalInformation: "")
+    @State private var recipeBeingEdited: Recipe = Recipe(
+        name: "",
+        brewMethod: .custom,
+        groundSize: "",
+        coffeeAmount: 0,
+        waterAmount: 0,
+        brewTime: 0,
+        additionalInformation: ""
+    )
     @State private var addingRecipe: Bool = false
 
     var body: some View {
@@ -52,7 +60,13 @@ struct RecipeSelectionView: View {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
                             recipeBeingEdited = Recipe(
-                                name: "", brewMethod: .custom, groundSize: "", coffeeAmount: 0, waterAmount: 0, brewTime: 0, additionalInformation: ""
+                                name: "",
+                                brewMethod: .custom,
+                                groundSize: "",
+                                coffeeAmount: 0,
+                                waterAmount: 0,
+                                brewTime: 0,
+                                additionalInformation: ""
                             )
                             addingRecipe = true
                         }, label: {

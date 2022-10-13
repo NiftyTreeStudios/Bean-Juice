@@ -113,7 +113,7 @@ func formattedTime(time: (Int, Int, Int)) -> String {
 func addNewRecipe(recipe: Recipe, in recipes: [Recipe]) -> [Recipe] {
     var newRecipes = recipes
     if recipe.name.isEmpty {
-        print("Couldn't save a new recipe")
+        print("❌ Couldn't save a new recipe: \(recipe)")
         return recipes
     } else {
         newRecipes.append(
@@ -121,7 +121,7 @@ func addNewRecipe(recipe: Recipe, in recipes: [Recipe]) -> [Recipe] {
                 name: recipe.name,
                 brewMethod: recipe.brewMethod,
                 groundSize: recipe.groundSize,
-                coffeeAmount: recipe.coffeeAmount,
+                coffeeAmount: Double(recipe.coffeeAmount) ?? 0,
                 waterAmount: recipe.waterAmount,
                 brewTime: recipe.brewTime,
                 additionalInformation: recipe.additionalInformation
@@ -154,8 +154,12 @@ func loadRecipesFromUserDefaults() -> [Recipe] {
             if let oldRecipe = try? JSONDecoder().decode(OldRecipe.self, from: $0) {
                 return Recipe(from: oldRecipe)
             } else {
-                print("Failed to load recipe.")
-                return Recipe(name: "test", brewMethod: .custom, groundSize: "test", coffeeAmount: 1.23, waterAmount: 69, brewTime: 111, additionalInformation: "Nooope")
+                if let recipeWithoutID = try? JSONDecoder().decode(RecipeWithoutID.self, from: $0) {
+                    return Recipe(from: recipeWithoutID)
+                } else {
+                    print("Failed to load recipe.")
+                    return Recipe(name: "failed load", brewMethod: .custom, groundSize: "failed", coffeeAmount: 0.00, waterAmount: 000, brewTime: 000, additionalInformation: "Failed to load the recipe correctly.")
+                }
             }
         }
     }

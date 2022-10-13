@@ -17,7 +17,7 @@ struct NewRecipeView: View {
     @State private var waterAmount: String = ""
     @State private var minuteSelection: Int = 0
     @State private var secondSelection: Int = 0
-    
+
     var body: some View {
         NavigationView {
             VStack {

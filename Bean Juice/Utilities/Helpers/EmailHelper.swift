@@ -35,7 +35,7 @@ final class EmailHelper {
 
 extension String {
     var isValidURL: Bool {
-        //swiftlint:disable:next force_try
+        // swiftlint:disable:next force_try
         let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
         if let match = detector.firstMatch(
             in: self,

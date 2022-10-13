@@ -17,18 +17,16 @@ struct SocialMedia: View {
         var urlString = "https://duckduckgo.com"
 
         Section(header: Text("Follow us on social media"), footer: Text("@BeanJuiceApp"), content: {
-            Button(action: {
-                // Open Instagram
+            Button {
                 urlString = "https://www.instagram.com/BeanJuiceApp"
                 self.showSafari = true
-            }) {
+            } label: {
                 Text("Instagram")
             }
-            Button(action: {
-                // Open Twitter
+            Button {
                 urlString = "https://www.twitter.com/BeanJuiceApp"
                 self.showSafari = true
-            }) {
+            } label: {
                 Text("Twitter")
             }
             .sheet(isPresented: $showSafari) {
@@ -46,9 +44,10 @@ struct SafariView: UIViewControllerRepresentable {
         return SFSafariViewController(url: url)
     }
 
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
-
-    }
+    func updateUIViewController(
+        _ uiViewController: SFSafariViewController,
+        context: UIViewControllerRepresentableContext<SafariView>
+    ) { }
 }
 
 struct SocialMedia_Previews: PreviewProvider {

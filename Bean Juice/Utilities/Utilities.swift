@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftUI
-//swiftlint:disable large_tuple
+// swiftlint:disable large_tuple
 
 // MARK: Coffee and water
 

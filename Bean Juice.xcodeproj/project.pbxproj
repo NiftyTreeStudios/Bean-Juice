@@ -14,8 +14,6 @@
 		345A0D952896CA48004702DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345A0D942896CA48004702DD /* Assets.xcassets */; };
 		345A0D982896CA48004702DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345A0D972896CA48004702DD /* Preview Assets.xcassets */; };
 		345A0DA22896CA48004702DD /* Bean_JuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DA12896CA48004702DD /* Bean_JuiceTests.swift */; };
-		345A0DAC2896CA48004702DD /* Bean_JuiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DAB2896CA48004702DD /* Bean_JuiceUITests.swift */; };
-		345A0DAE2896CA48004702DD /* Bean_JuiceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DAD2896CA48004702DD /* Bean_JuiceUITestsLaunchTests.swift */; };
 		345A0DBB2896CA6F004702DD /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DBA2896CA6F004702DD /* Main.swift */; };
 		345A0DBD2896CA84004702DD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DBC2896CA84004702DD /* LocationManager.swift */; };
 		345A0DBF2896CA93004702DD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DBE2896CA93004702DD /* Utilities.swift */; };
@@ -76,13 +74,6 @@
 			remoteGlobalIDString = 345A0D8C2896CA47004702DD;
 			remoteInfo = "Bean Juice";
 		};
-		345A0DA82896CA48004702DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 345A0D852896CA47004702DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 345A0D8C2896CA47004702DD;
-			remoteInfo = "Bean Juice";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -96,9 +87,6 @@
 		345A0D972896CA48004702DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		345A0D9D2896CA48004702DD /* Bean JuiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		345A0DA12896CA48004702DD /* Bean_JuiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceTests.swift; sourceTree = "<group>"; };
-		345A0DA72896CA48004702DD /* Bean JuiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		345A0DAB2896CA48004702DD /* Bean_JuiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceUITests.swift; sourceTree = "<group>"; };
-		345A0DAD2896CA48004702DD /* Bean_JuiceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		345A0DBA2896CA6F004702DD /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		345A0DBC2896CA84004702DD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		345A0DBE2896CA93004702DD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -167,13 +155,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		345A0DA42896CA48004702DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -190,7 +171,6 @@
 			children = (
 				345A0D8F2896CA47004702DD /* Bean Juice */,
 				345A0DA02896CA48004702DD /* Bean JuiceTests */,
-				345A0DAA2896CA48004702DD /* Bean JuiceUITests */,
 				345A0D8E2896CA47004702DD /* Products */,
 				342202622896D3B500A1DEED /* Frameworks */,
 			);
@@ -201,7 +181,6 @@
 			children = (
 				345A0D8D2896CA47004702DD /* Bean Juice.app */,
 				345A0D9D2896CA48004702DD /* Bean JuiceTests.xctest */,
-				345A0DA72896CA48004702DD /* Bean JuiceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,15 +214,6 @@
 				345A0DA12896CA48004702DD /* Bean_JuiceTests.swift */,
 			);
 			path = "Bean JuiceTests";
-			sourceTree = "<group>";
-		};
-		345A0DAA2896CA48004702DD /* Bean JuiceUITests */ = {
-			isa = PBXGroup;
-			children = (
-				345A0DAB2896CA48004702DD /* Bean_JuiceUITests.swift */,
-				345A0DAD2896CA48004702DD /* Bean_JuiceUITestsLaunchTests.swift */,
-			);
-			path = "Bean JuiceUITests";
 			sourceTree = "<group>";
 		};
 		345A0E232896CC5D004702DD /* Method Information */ = {
@@ -408,6 +378,7 @@
 				345A0D892896CA47004702DD /* Sources */,
 				345A0D8A2896CA47004702DD /* Frameworks */,
 				345A0D8B2896CA47004702DD /* Resources */,
+				34DFA4E328F8022000CB2D31 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -439,24 +410,6 @@
 			productReference = 345A0D9D2896CA48004702DD /* Bean JuiceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		345A0DA62896CA48004702DD /* Bean JuiceUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 345A0DB72896CA48004702DD /* Build configuration list for PBXNativeTarget "Bean JuiceUITests" */;
-			buildPhases = (
-				345A0DA32896CA48004702DD /* Sources */,
-				345A0DA42896CA48004702DD /* Frameworks */,
-				345A0DA52896CA48004702DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				345A0DA92896CA48004702DD /* PBXTargetDependency */,
-			);
-			name = "Bean JuiceUITests";
-			productName = "Bean JuiceUITests";
-			productReference = 345A0DA72896CA48004702DD /* Bean JuiceUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -471,10 +424,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					345A0D9C2896CA48004702DD = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 345A0D8C2896CA47004702DD;
-					};
-					345A0DA62896CA48004702DD = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 345A0D8C2896CA47004702DD;
 					};
@@ -498,7 +447,6 @@
 			targets = (
 				345A0D8C2896CA47004702DD /* Bean Juice */,
 				345A0D9C2896CA48004702DD /* Bean JuiceTests */,
-				345A0DA62896CA48004702DD /* Bean JuiceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -527,14 +475,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		345A0DA52896CA48004702DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34DFA4E328F8022000CB2D31 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This workflow is shared between all targets.\nexport PATH=\"$PATH:$HOME/.mint/bin\"\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed. Follow the instructions located in docs/styleGuide.md.\"\nfi\n";
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		345A0D892896CA47004702DD /* Sources */ = {
@@ -597,15 +560,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		345A0DA32896CA48004702DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				345A0DAC2896CA48004702DD /* Bean_JuiceUITests.swift in Sources */,
-				345A0DAE2896CA48004702DD /* Bean_JuiceUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -613,11 +567,6 @@
 			isa = PBXTargetDependency;
 			target = 345A0D8C2896CA47004702DD /* Bean Juice */;
 			targetProxy = 345A0D9E2896CA48004702DD /* PBXContainerItemProxy */;
-		};
-		345A0DA92896CA48004702DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 345A0D8C2896CA47004702DD /* Bean Juice */;
-			targetProxy = 345A0DA82896CA48004702DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -852,42 +801,6 @@
 			};
 			name = Release;
 		};
-		345A0DB82896CA48004702DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LBHT4Q3RSF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Bean-JuiceUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bean Juice";
-			};
-			name = Debug;
-		};
-		345A0DB92896CA48004702DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LBHT4Q3RSF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Bean-JuiceUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bean Juice";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -914,15 +827,6 @@
 			buildConfigurations = (
 				345A0DB52896CA48004702DD /* Debug */,
 				345A0DB62896CA48004702DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		345A0DB72896CA48004702DD /* Build configuration list for PBXNativeTarget "Bean JuiceUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				345A0DB82896CA48004702DD /* Debug */,
-				345A0DB92896CA48004702DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

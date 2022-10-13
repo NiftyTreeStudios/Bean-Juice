@@ -15,7 +15,7 @@ struct SplashScreen: View {
     @State private var fillValue: Double = 0
     @State private var waveOffset = Angle(degrees: 0)
     @State private var waveOffset2 = Angle(degrees: 180)
-    
+
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -105,7 +105,7 @@ struct SplashScreen: View {
     }
 }
 
-fileprivate struct Wave: Shape {
+private struct Wave: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         let waveHeight = 0.017 * rect.height

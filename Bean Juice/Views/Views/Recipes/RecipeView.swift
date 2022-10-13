@@ -22,7 +22,7 @@ struct RecipeView: View {
 
     var body: some View {
         ScrollView {
-            CircleImage(methodName: getMethodName(method: recipe.brewMethod), isRecipeView: true, brewTime: recipe.brewTime ?? 0)
+            CircleImage(methodName: getMethodName(method: recipe.brewMethod), isRecipeView: true, brewTime: recipe.brewTime)
             Text(recipe.name)
                 .font(.largeTitle)
                 .fontWeight(.semibold)
@@ -33,7 +33,7 @@ struct RecipeView: View {
                     Text("Ground level")
                         .font(.headline)
                     Spacer()
-                    Text(recipe.groundSize ?? "No ground size provided")
+                    Text(recipe.groundSize)
                         .font(.subheadline)
                 }
 
@@ -49,18 +49,18 @@ struct RecipeView: View {
                     Text("Coffee")
                         .font(.title)
                     Spacer()
-                    Text("\(recipe.coffeeAmount, specifier: "%.1f") g")
+                    Text("\(recipe.coffeeAmount) g")
                         .font(.title)
                 }
 
-                if recipe.additionalInformation != nil {
+                if recipe.additionalInformation.isEmpty {
                     HStack {
                         Text("Additional information")
                             .font(.headline)
                         Spacer()
                     }
                     HStack {
-                        Text(recipe.additionalInformation ?? "")
+                        Text(recipe.additionalInformation)
                             .multilineTextAlignment(.leading)
                         Spacer()
                     }

@@ -22,6 +22,9 @@ struct NewRecipeView: View {
         NavigationView {
             VStack {
                 Form {
+                    Text("\(recipe.name.isEmpty ? "Add" : "Edit") recipe")
+                        .font(.title)
+                        .bold()
                     TextField("Recipe name", text: $recipe.name)
                     Picker("Brew method", selection: $recipe.brewMethod) {
                         ForEach(MethodName.allCases) { method in

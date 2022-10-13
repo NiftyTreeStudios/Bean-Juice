@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+//swiftlint:disable large_tuple
 
 // MARK: Coffee and water
 
@@ -158,7 +159,15 @@ func loadRecipesFromUserDefaults() -> [Recipe] {
                     return Recipe(from: recipeWithoutID)
                 } else {
                     print("Failed to load recipe.")
-                    return Recipe(name: "failed load", brewMethod: .custom, groundSize: "failed", coffeeAmount: 0.00, waterAmount: 000, brewTime: 000, additionalInformation: "Failed to load the recipe correctly.")
+                    return Recipe(
+                        name: "failed load",
+                        brewMethod: .custom,
+                        groundSize: "failed",
+                        coffeeAmount: 0.00,
+                        waterAmount: 000,
+                        brewTime: 000,
+                        additionalInformation: "Failed to load the recipe correctly."
+                    )
                 }
             }
         }

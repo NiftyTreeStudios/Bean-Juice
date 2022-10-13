@@ -6,6 +6,7 @@
 //
 
 import XCTest
+//swiftlint:disable type_name
 
 class Bean_JuiceUITests: XCTestCase {
 

@@ -57,7 +57,7 @@ struct RecipeView: View {
                         .font(.title)
                 }
 
-                if recipe.additionalInformation.isEmpty {
+                if !recipe.additionalInformation.isEmpty {
                     HStack {
                         Text("Additional information")
                             .font(.headline)

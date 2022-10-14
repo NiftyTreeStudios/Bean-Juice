@@ -9,10 +9,15 @@
 import SwiftUI
 import Combine
 
+enum FormField {
+    case name, groundSize, coffee, water, additionalInformation
+}
+
 struct NewRecipeView: View {
     @Binding var recipe: Recipe
     @Binding var recipes: [Recipe]
     @Binding var addingRecipe: Bool
+    @FocusState var focusedField: FormField?
 
     @State private var waterAmount: String = ""
     @State private var minuteSelection: Int = 0
@@ -20,44 +25,60 @@ struct NewRecipeView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
+                Text("\(recipe.name.isEmpty ? "Add" : "Edit") recipe")
+                    .font(.title)
+                    .bold()
+                    .padding(.vertical)
                 Form {
-                    Text("\(recipe.name.isEmpty ? "Add" : "Edit") recipe")
-                        .font(.title)
-                        .bold()
-                    TextField("Recipe name", text: $recipe.name)
-                    Picker("Brew method", selection: $recipe.brewMethod) {
-                        ForEach(MethodName.allCases) { method in
-                            Text(getMethodName(method: method))
-                        }
+                    Section("Recipe name") {
+                        TextField("Recipe name", text: $recipe.name)
+                            .focused($focusedField, equals: .name)
                     }
-                    TextField("Ground size", text: $recipe.groundSize)
-                    TextField("Coffee amount", text: $recipe.coffeeAmount)
-                        .keyboardType(.decimalPad)
-                    TextField("Water amount", text: $waterAmount)
-                        .keyboardType(.numberPad)
-                        .onReceive(Just(waterAmount)) { newValue in
-                            let filtered = newValue.filter { "0123456789".contains($0) }
-                            if filtered != newValue {
-                                self.waterAmount = filtered
+                    Section("Brew method") {
+                        Picker("Brew method", selection: $recipe.brewMethod) {
+                            ForEach(MethodName.allCases) { method in
+                                Text(getMethodName(method: method))
                             }
                         }
-                    Text("Select brew time")
-                    Picker("Minutes", selection:
-                            $minuteSelection) {
-                        ForEach(0..<11) {
-                            Text("\($0)")
+                    }
+                    Section("Ground size") {
+                        TextField("Ground size", text: $recipe.groundSize)
+                            .focused($focusedField, equals: .groundSize)
+                    }
+                    Section("Coffee") {
+                        TextField("Coffee amount", text: $recipe.coffeeAmount)
+                            .keyboardType(.decimalPad)
+                            .focused($focusedField, equals: .coffee)
+                    }
+                    Section("Water") {
+                        TextField("Water amount", text: $waterAmount)
+                            .keyboardType(.numberPad)
+                            .focused($focusedField, equals: .water)
+                            .onReceive(Just(waterAmount)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.waterAmount = filtered
+                                }
+                            }
+                    }
+                    Section("Brew time") {
+                        Picker("Minutes", selection:
+                                $minuteSelection) {
+                            ForEach(0..<11) {
+                                Text("\($0)")
+                            }
+                        }
+                        Picker("Seconds", selection: $secondSelection) {
+                            ForEach(0..<60) {
+                                Text("\($0)")
+                            }
                         }
                     }
-                    Picker("Seconds", selection: $secondSelection) {
-                        ForEach(0..<60) {
-                            Text("\($0)")
-                        }
-                    }
-                    ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+                    Section("Additional information") {
                         TextEditor(text: $recipe.additionalInformation)
+                            .focused($focusedField, equals: .additionalInformation)
                             .frame(minHeight: 200, maxHeight: 200, alignment: .topLeading)
-                            .padding(EdgeInsets(top: -7, leading: -4, bottom: -7, trailing: -4))
                     }
                 }
                 SaveButton(
@@ -66,12 +87,22 @@ struct NewRecipeView: View {
                     brewTime: convertToSeconds(minutes: minuteSelection, seconds: secondSelection),
                     recipes: $recipes,
                     addingRecipe: $addingRecipe
-                ).disabled(
+                )
+                .disabled(
                     recipe.name.isEmpty
                     || recipe.groundSize.isEmpty
                     || recipe.coffeeAmount.isEmpty
                     || waterAmount.isEmpty
                 )
+                .padding()
+            }
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        focusedField = nil
+                    }
+                }
             }
         }
         .navigationBarTitle("Add new recipe")
@@ -110,6 +141,6 @@ struct SaveButton: View {
             addingRecipe = false
         } label: {
             Text("Save recipe")
-        }
+        }.buttonStyle(.bordered)
     }
 }

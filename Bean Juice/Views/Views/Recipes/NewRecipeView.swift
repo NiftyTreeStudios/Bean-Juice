@@ -87,12 +87,14 @@ struct NewRecipeView: View {
                     brewTime: convertToSeconds(minutes: minuteSelection, seconds: secondSelection),
                     recipes: $recipes,
                     addingRecipe: $addingRecipe
-                ).disabled(
+                )
+                .disabled(
                     recipe.name.isEmpty
                     || recipe.groundSize.isEmpty
                     || recipe.coffeeAmount.isEmpty
                     || waterAmount.isEmpty
                 )
+                .padding()
             }
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {

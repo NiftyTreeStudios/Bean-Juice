@@ -26,36 +26,17 @@ struct RecipeSelectionView: View {
 
     var body: some View {
         NavigationView {
-            if recipes.isEmpty {
-                NoRecipesPlaceholder(addButtonClicked: $addButtonClicked)
-            } else {
-                List {
-                    ForEach(recipes, id: \.name) { recipe in
-                        RecipeCell(recipe: recipe)
-                            .swipeActions(edge: .leading) {
-                                Button {
-                                    print("Recipe given! \(recipe)")
-                                    recipeBeingEdited = recipe
-                                    addingRecipe = true
-                                } label: {
-                                    Label("Edit", systemImage: "pencil")
-                                }
-                                .tint(.mint)
-                            }
-                            .swipeActions {
-                                Button(role: .destructive) {
-                                    if let index = recipes.firstIndex(of: recipe) {
-                                        recipes.remove(at: index)
-                                    }
-                                } label: {
-                                    Label("Delete", systemImage: "trash")
-                                }
-
-                            }
-                    }
+            VStack {
+                if recipes.isEmpty {
+                    NoRecipesPlaceholder()
+                } else {
+                    RecipeList(
+                        recipes: $recipes,
+                        recipeBeingEdited: $recipeBeingEdited,
+                        addingRecipe: $addingRecipe
+                    )
                 }
-                .listStyle(PlainListStyle())
-                .navigationTitle("Recipes")
+            }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
@@ -74,39 +55,62 @@ struct RecipeSelectionView: View {
                         })
                     }
                 }
-                .onChange(of: recipes) { newRecipes in
-                    saveRecipesToUserDefaults(newRecipes)
-                }
-            }
         }
+
         .sheet(isPresented: $addingRecipe, content: {
             NewRecipeView(recipe: $recipeBeingEdited, recipes: $recipes, addingRecipe: $addingRecipe)
         })
         .onAppear {
             recipes = loadRecipesFromUserDefaults()
         }
+        .onChange(of: recipes) { newRecipes in
+            saveRecipesToUserDefaults(newRecipes)
+        }
     }
 }
 
 struct NoRecipesPlaceholder: View {
-
-    @Binding var addButtonClicked: Bool
-
     var body: some View {
         Text("There are no recipes! \n Add one from the top right corner")
             .foregroundColor(.gray)
             .multilineTextAlignment(.center)
             .navigationBarTitle("Recipes")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        print("Button tapped")
-                        addButtonClicked.toggle()
-                    }, label: {
-                        Image(systemName: "plus")
-                    })
-                }
+    }
+}
+
+struct RecipeList: View {
+    @Binding var recipes: [Recipe]
+    @Binding var recipeBeingEdited: Recipe
+    @Binding var addingRecipe: Bool
+
+    var body: some View {
+        List {
+            ForEach(recipes, id: \.name) { recipe in
+                RecipeCell(recipe: recipe)
+                    .swipeActions(edge: .leading) {
+                        Button {
+                            print("Recipe given! \(recipe)")
+                            recipeBeingEdited = recipe
+                            addingRecipe = true
+                        } label: {
+                            Label("Edit", systemImage: "pencil")
+                        }
+                        .tint(.mint)
+                    }
+                    .swipeActions {
+                        Button(role: .destructive) {
+                            if let index = recipes.firstIndex(of: recipe) {
+                                recipes.remove(at: index)
+                            }
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
+
+                    }
             }
+        }
+        .listStyle(PlainListStyle())
+        .navigationTitle("Recipes")
     }
 }
 

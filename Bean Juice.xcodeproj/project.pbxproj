@@ -13,7 +13,7 @@
 		3424D8B128E5C051009F2AE4 /* LeftoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424D8B028E5C051009F2AE4 /* LeftoverView.swift */; };
 		345A0D952896CA48004702DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345A0D942896CA48004702DD /* Assets.xcassets */; };
 		345A0D982896CA48004702DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345A0D972896CA48004702DD /* Preview Assets.xcassets */; };
-		345A0DA22896CA48004702DD /* Bean_JuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DA12896CA48004702DD /* Bean_JuiceTests.swift */; };
+		345A0DA22896CA48004702DD /* BeanJuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DA12896CA48004702DD /* BeanJuiceTests.swift */; };
 		345A0DBB2896CA6F004702DD /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DBA2896CA6F004702DD /* Main.swift */; };
 		345A0DBD2896CA84004702DD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DBC2896CA84004702DD /* LocationManager.swift */; };
 		345A0DBF2896CA93004702DD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DBE2896CA93004702DD /* Utilities.swift */; };
@@ -86,7 +86,7 @@
 		345A0D942896CA48004702DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		345A0D972896CA48004702DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		345A0D9D2896CA48004702DD /* Bean JuiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bean JuiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		345A0DA12896CA48004702DD /* Bean_JuiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_JuiceTests.swift; sourceTree = "<group>"; };
+		345A0DA12896CA48004702DD /* BeanJuiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanJuiceTests.swift; sourceTree = "<group>"; };
 		345A0DBA2896CA6F004702DD /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		345A0DBC2896CA84004702DD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		345A0DBE2896CA93004702DD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				345A0D8F2896CA47004702DD /* Bean Juice */,
-				345A0DA02896CA48004702DD /* Bean JuiceTests */,
+				345A0DA02896CA48004702DD /* BeanJuiceTests */,
 				345A0D8E2896CA47004702DD /* Products */,
 				342202622896D3B500A1DEED /* Frameworks */,
 			);
@@ -208,12 +208,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		345A0DA02896CA48004702DD /* Bean JuiceTests */ = {
+		345A0DA02896CA48004702DD /* BeanJuiceTests */ = {
 			isa = PBXGroup;
 			children = (
-				345A0DA12896CA48004702DD /* Bean_JuiceTests.swift */,
+				345A0DA12896CA48004702DD /* BeanJuiceTests.swift */,
 			);
-			path = "Bean JuiceTests";
+			path = BeanJuiceTests;
 			sourceTree = "<group>";
 		};
 		345A0E232896CC5D004702DD /* Method Information */ = {
@@ -556,7 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				345A0DA22896CA48004702DD /* Bean_JuiceTests.swift in Sources */,
+				345A0DA22896CA48004702DD /* BeanJuiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

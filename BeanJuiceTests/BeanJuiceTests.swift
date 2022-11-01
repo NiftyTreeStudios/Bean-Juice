@@ -9,8 +9,7 @@
 import XCTest
 @testable import Bean_Juice
 
-// swiftlint:disable:next type_name
-class Bean_JuiceTests: XCTestCase {
+class BeanJuiceTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

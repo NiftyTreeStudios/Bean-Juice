@@ -23,8 +23,8 @@ jobs:
       with:
         projectBaseDir: .
         args: >
-          -Dsonar.organization=NiftyTreeStudios
-          -Dsonar.projectKey=NiftyTreeStudios_Bean-Juice
+          -Dsonar.organization=niftytreestudios
+          -Dsonar.projectKey=beanjuice
           -Dsonar.swift.coverage.reportPaths=coverage.xml
           -Dsonar.test.exclusions=tests/**
           -Dsonar.tests=tests/

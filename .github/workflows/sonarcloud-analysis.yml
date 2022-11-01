@@ -29,6 +29,6 @@ jobs:
           -Dsonar.organization=niftytreestudios
           -Dsonar.projectKey=beanjuice
           -Dsonar.swift.coverage.reportPaths=coverage.xml
-          -Dsonar.test.exclusions=Bean JuiceTests/**
-          -Dsonar.tests=Bean JuiceTests/
+          -Dsonar.test.exclusions=BeanJuiceTests/**
+          -Dsonar.tests=BeanJuiceTests/
           -Dsonar.verbose=true

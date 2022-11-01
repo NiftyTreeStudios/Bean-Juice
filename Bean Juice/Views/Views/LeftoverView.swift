@@ -10,6 +10,7 @@ import SwiftUI
 struct LeftoverView: View {
     @State private var coffeeAmount: String = ""
     @State private var coffeeRatio: Double = 17
+    @FocusState var focusedField: String?
 
     var body: some View {
         ScrollView {
@@ -24,6 +25,7 @@ struct LeftoverView: View {
                     .font(.title3)
                     .padding(5)
                     .textFieldStyle(.roundedBorder)
+                    .focused($focusedField, equals: "coffee")
             }
             HStack {
                 Text("Water")
@@ -36,5 +38,13 @@ struct LeftoverView: View {
         .padding(.horizontal, 30)
         .padding(.bottom, 5)
         .navigationTitle("Leftovers")
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") {
+                    focusedField = nil
+                }
+            }
+        }
     }
 }

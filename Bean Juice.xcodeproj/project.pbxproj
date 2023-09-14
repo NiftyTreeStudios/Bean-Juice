@@ -64,6 +64,7 @@
 		345A0E202896CC3F004702DD /* Chemex.md in Resources */ = {isa = PBXBuildFile; fileRef = 345A0E192896CC3F004702DD /* Chemex.md */; };
 		345A0E212896CC3F004702DD /* Drip Machine.md in Resources */ = {isa = PBXBuildFile; fileRef = 345A0E1A2896CC3F004702DD /* Drip Machine.md */; };
 		345A0E222896CC3F004702DD /* AeroPress.md in Resources */ = {isa = PBXBuildFile; fileRef = 345A0E1B2896CC3F004702DD /* AeroPress.md */; };
+		346FFD212AB1E4D10074C7AD /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FFD202AB1E4D10074C7AD /* ColorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		345A0E192896CC3F004702DD /* Chemex.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chemex.md; sourceTree = "<group>"; };
 		345A0E1A2896CC3F004702DD /* Drip Machine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Drip Machine.md"; sourceTree = "<group>"; };
 		345A0E1B2896CC3F004702DD /* AeroPress.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AeroPress.md; sourceTree = "<group>"; };
+		346FFD202AB1E4D10074C7AD /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				345A0DA12896CA48004702DD /* BeanJuiceTests.swift */,
+				346FFD202AB1E4D10074C7AD /* ColorTests.swift */,
 			);
 			path = BeanJuiceTests;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				345A0DA22896CA48004702DD /* BeanJuiceTests.swift in Sources */,
+				346FFD212AB1E4D10074C7AD /* ColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

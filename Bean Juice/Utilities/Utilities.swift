@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 
+// swiftlint:disable large_tuple
 // MARK: Coffee and water
 
 /// Calculates coffee amount using calculateWaterAmount and ratio
@@ -100,6 +101,7 @@ func formattedTime(time: (Int, Int, Int)) -> String {
         return "\(minutesString):\(secondsString)"
     }
 }
+// swiftlint:enable large_tuple
 
 // swiftlint:enable large_tuple
 

@@ -44,7 +44,11 @@ final class MapViewModel: NSObject, ObservableObject {
         case .denied:
             alertItem = AlertContext.locationDenied
         case .authorizedAlways, .authorizedWhenInUse:
-            region = MKCoordinateRegion(center: deviceLocationManager.location!.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+            region = MKCoordinateRegion(
+                center: deviceLocationManager.location!.coordinate,
+                latitudinalMeters: 2000,
+                longitudinalMeters: 2000
+            )
         @unknown default:
             break
         }

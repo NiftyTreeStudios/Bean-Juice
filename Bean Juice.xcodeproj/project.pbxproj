@@ -381,11 +381,11 @@
 				345A0D892896CA47004702DD /* Sources */,
 				345A0D8A2896CA47004702DD /* Frameworks */,
 				345A0D8B2896CA47004702DD /* Resources */,
-				34DFA4E328F8022000CB2D31 /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				346FFD242AB2EA840074C7AD /* PBXTargetDependency */,
 			);
 			name = "Bean Juice";
 			packageProductDependencies = (
@@ -443,6 +443,7 @@
 			mainGroup = 345A0D842896CA47004702DD;
 			packageReferences = (
 				345A0E122896CB46004702DD /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */,
+				346FFD222AB2EA700074C7AD /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 345A0D8E2896CA47004702DD /* Products */;
 			projectDirPath = "";
@@ -479,28 +480,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		34DFA4E328F8022000CB2D31 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This workflow is shared between all targets.\nexport PATH=\"$PATH:$HOME/.mint/bin\"\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed. Follow the instructions located in docs/styleGuide.md.\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		345A0D892896CA47004702DD /* Sources */ = {
@@ -571,6 +550,10 @@
 			isa = PBXTargetDependency;
 			target = 345A0D8C2896CA47004702DD /* Bean Juice */;
 			targetProxy = 345A0D9E2896CA48004702DD /* PBXContainerItemProxy */;
+		};
+		346FFD242AB2EA840074C7AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 346FFD232AB2EA840074C7AD /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -848,6 +831,14 @@
 				minimumVersion = 0.3.3;
 			};
 		};
+		346FFD222AB2EA700074C7AD /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -855,6 +846,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 345A0E122896CB46004702DD /* XCRemoteSwiftPackageReference "Nifty-Markdown-Formatter" */;
 			productName = "Nifty Markdown Formatter";
+		};
+		346FFD232AB2EA840074C7AD /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 346FFD222AB2EA700074C7AD /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

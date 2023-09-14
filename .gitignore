@@ -30,8 +30,8 @@ DerivedData/
 ## Xcode Patch
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
+!*swiftpm/Package.resolved
 /*.gcno
 
 ### Xcode Patch ###

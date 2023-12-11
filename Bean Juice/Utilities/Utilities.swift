@@ -8,7 +8,6 @@
 
 import Foundation
 import SwiftUI
-// swiftlint:disable large_tuple
 
 // MARK: Coffee and water
 
@@ -66,6 +65,8 @@ func convertToSeconds(hours: Int = 0, minutes: Int = 0, seconds: Int = 0) -> Int
     return hoursAsSeconds + minutesAsSeconds + seconds
 }
 
+// swiftlint:disable large_tuple
+
 /// Returns a tuple of hours, minutes, seconds from seconds.
 /// - Parameters:
 ///     - time: Int representing seconds
@@ -99,6 +100,8 @@ func formattedTime(time: (Int, Int, Int)) -> String {
         return "\(minutesString):\(secondsString)"
     }
 }
+
+// swiftlint:enable large_tuple
 
 // MARK: Recipes
 

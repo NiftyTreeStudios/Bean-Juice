@@ -26,20 +26,20 @@ struct WaterAmountSlider: View {
             ? 1
             : Double(method.maxWaterAmount / settings.selectedCupMlSize)
         if method.name == .frenchPress {
-            Text("Size")
-                .font(.headline)
+            Text("\(sizes[Int(selectedSize)]) ml")
+                .font(.subheadline)
                 .padding(.bottom, -5)
             Slider(
                 value: $selectedSize,
                 in: 0...Double(sizes.count - 1), step: 1
             ).accentColor(settings.getAccentColor())
-            Text("\(sizes[Int(selectedSize)]) ml")
-                .font(.subheadline)
+            Text("Size")
+                .font(.headline)
                 .padding(.bottom, -5)
                 .accessibility(identifier: "SizeValue")
         } else {
-            Text(settings.mlSelected ? "Water" : "Cups")
-                .font(.headline)
+            Text(settings.mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
+                .font(.subheadline)
                 .padding(.bottom, -5)
             if settings.mlSelected {
                 Slider(
@@ -51,8 +51,8 @@ struct WaterAmountSlider: View {
                 Slider(value: $cups, in: 0...maxCups, step: 1).accentColor(settings.getAccentColor())
             }
         }
-        Text(settings.mlSelected ? "\(Int(waterAmount)) ml" : "\(Int(cups)) cups")
-            .font(.subheadline)
+        Text(settings.mlSelected ? "Water" : "Cups")
+            .font(.headline)
             .padding(.bottom, 10)
     }
 }

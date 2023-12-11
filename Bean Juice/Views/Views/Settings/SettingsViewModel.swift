@@ -59,7 +59,7 @@ final class SettingsViewModel: ObservableObject {
     @AppStorage("accentColor") var accentColor: Color = .blue
 
     func getAccentColor() -> Color {
-        return accentColor
+        return .blue // accentColor
     }
 
     // MARK: ML selection

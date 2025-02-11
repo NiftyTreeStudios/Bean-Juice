@@ -31,8 +31,6 @@
 		345A0DD72896CAB4004702DD /* WaterAmountSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD62896CAB4004702DD /* WaterAmountSlider.swift */; };
 		345A0DDA2896CABC004702DD /* CafeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD82896CABC004702DD /* CafeDetailsView.swift */; };
 		345A0DDB2896CABC004702DD /* InformationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD92896CABC004702DD /* InformationScreen.swift */; };
-		345A0DDE2896CAC2004702DD /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DDC2896CAC2004702DD /* MapViewModel.swift */; };
-		345A0DDF2896CAC2004702DD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DDD2896CAC2004702DD /* MapView.swift */; };
 		345A0DE22896CAC9004702DD /* MethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DE02896CAC9004702DD /* MethodViewModel.swift */; };
 		345A0DE32896CAC9004702DD /* MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DE12896CAC9004702DD /* MethodView.swift */; };
 		345A0DE62896CACF004702DD /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DE42896CACF004702DD /* MethodSelectionView.swift */; };
@@ -105,8 +103,6 @@
 		345A0DD62896CAB4004702DD /* WaterAmountSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAmountSlider.swift; sourceTree = "<group>"; };
 		345A0DD82896CABC004702DD /* CafeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsView.swift; sourceTree = "<group>"; };
 		345A0DD92896CABC004702DD /* InformationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreen.swift; sourceTree = "<group>"; };
-		345A0DDC2896CAC2004702DD /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		345A0DDD2896CAC2004702DD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		345A0DE02896CAC9004702DD /* MethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodViewModel.swift; sourceTree = "<group>"; };
 		345A0DE12896CAC9004702DD /* MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodView.swift; sourceTree = "<group>"; };
 		345A0DE42896CACF004702DD /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
@@ -301,7 +297,6 @@
 				345A0DD82896CABC004702DD /* CafeDetailsView.swift */,
 				345A0E2B2896CD63004702DD /* Components */,
 				345A0DD92896CABC004702DD /* InformationScreen.swift */,
-				345A0E322896CE57004702DD /* Map */,
 				345A0E302896CE03004702DD /* Method */,
 				345A0E312896CE41004702DD /* MethodSelection */,
 				345A0E2F2896CDEF004702DD /* Recipes */,
@@ -360,15 +355,6 @@
 				345A0DE52896CACF004702DD /* MethodSelectionViewModel.swift */,
 			);
 			path = MethodSelection;
-			sourceTree = "<group>";
-		};
-		345A0E322896CE57004702DD /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				345A0DDD2896CAC2004702DD /* MapView.swift */,
-				345A0DDC2896CAC2004702DD /* MapViewModel.swift */,
-			);
-			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,10 +506,8 @@
 				345A0DF82896CB05004702DD /* CloudKitHelper.swift in Sources */,
 				345A0DE92896CAD3004702DD /* NewRecipeView.swift in Sources */,
 				345A0DD42896CAAE004702DD /* EmailCafeRecommendationsComponent.swift in Sources */,
-				345A0DDE2896CAC2004702DD /* MapViewModel.swift in Sources */,
 				345A0DED2896CADD004702DD /* RecipeView.swift in Sources */,
 				345A0DEB2896CAD9004702DD /* RecipeSelectionView.swift in Sources */,
-				345A0DDF2896CAC2004702DD /* MapView.swift in Sources */,
 				345A0DD52896CAAE004702DD /* SocialMedia.swift in Sources */,
 				342202682897C5FD00A1DEED /* ColorExtension.swift in Sources */,
 				345A0DCB2896CAA3004702DD /* CafePin.swift in Sources */,
@@ -706,6 +690,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -744,6 +729,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

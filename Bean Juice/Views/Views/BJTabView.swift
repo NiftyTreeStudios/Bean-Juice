@@ -3,7 +3,7 @@
 //  Bean Juice
 //
 //  Created by Iiro Alhonen on 10.3.2020.
-//  Copyright © 2020 Nifty Tree Studios. All rights reserved.
+//  Copyright © 2025 Nifty Tree Studios. All rights reserved.
 //
 
 import SwiftUI
@@ -34,15 +34,6 @@ struct BJTabView: View {
                     }
                 }
                 .tag("Recipes")
-
-            MapView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "map")
-                        Text("Map")
-                    }
-                }
-                .tag("Map")
 
             SettingsView()
                 .tabItem {

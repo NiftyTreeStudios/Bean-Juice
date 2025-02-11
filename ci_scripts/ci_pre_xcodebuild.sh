@@ -3,4 +3,4 @@
 #  Created by Iiro Alhonen on 11.2.2025.
 #  
 
-xcodebuild -skipPackagePluginValidation
+xcodebuild -project $CI_PROJECT_FILE_PATH -scheme $CI_XCODE_SCHEME -skipPackagePluginValidation

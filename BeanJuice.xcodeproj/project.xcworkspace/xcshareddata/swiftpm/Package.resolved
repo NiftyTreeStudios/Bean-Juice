@@ -1,0 +1,15 @@
+{
+  "originHash" : "ff5eaffebdf428793867076823f963650b25cfb65f2b262f2a0530f9202d0435",
+  "pins" : [
+    {
+      "identity" : "nifty-markdown-formatter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NiftyTreeStudios/Nifty-Markdown-Formatter",
+      "state" : {
+        "revision" : "8ff20d28ab07c4923d9882321bf3de829fc86edc",
+        "version" : "0.3.5"
+      }
+    }
+  ],
+  "version" : 3
+}

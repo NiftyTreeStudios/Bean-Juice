@@ -26,7 +26,6 @@
 		345A0DCD2896CAA3004702DD /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DC72896CAA3004702DD /* CustomToggle.swift */; };
 		345A0DD22896CAAE004702DD /* CupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DCE2896CAAE004702DD /* CupSelection.swift */; };
 		345A0DD32896CAAE004702DD /* HighlightColorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DCF2896CAAE004702DD /* HighlightColorSelection.swift */; };
-		345A0DD42896CAAE004702DD /* EmailCafeRecommendationsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD02896CAAE004702DD /* EmailCafeRecommendationsComponent.swift */; };
 		345A0DD52896CAAE004702DD /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD12896CAAE004702DD /* SocialMedia.swift */; };
 		345A0DD72896CAB4004702DD /* WaterAmountSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD62896CAB4004702DD /* WaterAmountSlider.swift */; };
 		345A0DDA2896CABC004702DD /* CafeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD82896CABC004702DD /* CafeDetailsView.swift */; };
@@ -98,7 +97,6 @@
 		345A0DC72896CAA3004702DD /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		345A0DCE2896CAAE004702DD /* CupSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupSelection.swift; sourceTree = "<group>"; };
 		345A0DCF2896CAAE004702DD /* HighlightColorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorSelection.swift; sourceTree = "<group>"; };
-		345A0DD02896CAAE004702DD /* EmailCafeRecommendationsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCafeRecommendationsComponent.swift; sourceTree = "<group>"; };
 		345A0DD12896CAAE004702DD /* SocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
 		345A0DD62896CAB4004702DD /* WaterAmountSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAmountSlider.swift; sourceTree = "<group>"; };
 		345A0DD82896CABC004702DD /* CafeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsView.swift; sourceTree = "<group>"; };
@@ -322,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				345A0DCE2896CAAE004702DD /* CupSelection.swift */,
-				345A0DD02896CAAE004702DD /* EmailCafeRecommendationsComponent.swift */,
 				345A0DCF2896CAAE004702DD /* HighlightColorSelection.swift */,
 				345A0DD12896CAAE004702DD /* SocialMedia.swift */,
 			);
@@ -505,7 +502,6 @@
 				345A0DF72896CB05004702DD /* StoreReviewHelper.swift in Sources */,
 				345A0DF82896CB05004702DD /* CloudKitHelper.swift in Sources */,
 				345A0DE92896CAD3004702DD /* NewRecipeView.swift in Sources */,
-				345A0DD42896CAAE004702DD /* EmailCafeRecommendationsComponent.swift in Sources */,
 				345A0DED2896CADD004702DD /* RecipeView.swift in Sources */,
 				345A0DEB2896CAD9004702DD /* RecipeSelectionView.swift in Sources */,
 				345A0DD52896CAAE004702DD /* SocialMedia.swift in Sources */,

@@ -32,7 +32,7 @@ struct WaterAmountSlider: View {
             Slider(
                 value: $selectedSize,
                 in: 0...Double(sizes.count - 1), step: 1
-            ).accentColor(settings.getAccentColor())
+            ).accentColor(Color.accentColor)
             Text("Size")
                 .font(.headline)
                 .padding(.bottom, -5)
@@ -46,9 +46,9 @@ struct WaterAmountSlider: View {
                     value: $waterAmount,
                     in: 0...Double(method.maxWaterAmount),
                     step: method.mlPickerStep
-                ).accentColor(settings.getAccentColor())
+                ).accentColor(Color.accentColor)
             } else {
-                Slider(value: $cups, in: 0...maxCups, step: 1).accentColor(settings.getAccentColor())
+                Slider(value: $cups, in: 0...maxCups, step: 1).accentColor(Color.accentColor)
             }
         }
         Text(settings.mlSelected ? "Water" : "Cups")

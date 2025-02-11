@@ -8,11 +8,6 @@
 import SwiftUI
 
 extension Color {
-    static var background = Color("background")
-    static var coffee = Color("coffee")
-}
-
-extension Color {
     typealias SystemColor = UIColor
 
     // swiftlint:disable:next large_tuple
@@ -62,7 +57,7 @@ extension Color: Codable {
     }
 }
 
-extension Color: RawRepresentable {
+extension Color: @retroactive RawRepresentable {
     public init?(rawValue: String) {
         let newString = rawValue.replacingOccurrences(of: ",", with: "")
         let components = newString.components(separatedBy: .whitespaces)

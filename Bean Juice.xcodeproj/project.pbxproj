@@ -25,7 +25,6 @@
 		345A0DCC2896CAA3004702DD /* BJButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DC62896CAA3004702DD /* BJButton.swift */; };
 		345A0DCD2896CAA3004702DD /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DC72896CAA3004702DD /* CustomToggle.swift */; };
 		345A0DD22896CAAE004702DD /* CupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DCE2896CAAE004702DD /* CupSelection.swift */; };
-		345A0DD32896CAAE004702DD /* HighlightColorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DCF2896CAAE004702DD /* HighlightColorSelection.swift */; };
 		345A0DD52896CAAE004702DD /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD12896CAAE004702DD /* SocialMedia.swift */; };
 		345A0DD72896CAB4004702DD /* WaterAmountSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD62896CAB4004702DD /* WaterAmountSlider.swift */; };
 		345A0DDA2896CABC004702DD /* CafeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DD82896CABC004702DD /* CafeDetailsView.swift */; };
@@ -96,7 +95,6 @@
 		345A0DC62896CAA3004702DD /* BJButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJButton.swift; sourceTree = "<group>"; };
 		345A0DC72896CAA3004702DD /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
 		345A0DCE2896CAAE004702DD /* CupSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupSelection.swift; sourceTree = "<group>"; };
-		345A0DCF2896CAAE004702DD /* HighlightColorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightColorSelection.swift; sourceTree = "<group>"; };
 		345A0DD12896CAAE004702DD /* SocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
 		345A0DD62896CAB4004702DD /* WaterAmountSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAmountSlider.swift; sourceTree = "<group>"; };
 		345A0DD82896CABC004702DD /* CafeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailsView.swift; sourceTree = "<group>"; };
@@ -320,7 +318,6 @@
 			isa = PBXGroup;
 			children = (
 				345A0DCE2896CAAE004702DD /* CupSelection.swift */,
-				345A0DCF2896CAAE004702DD /* HighlightColorSelection.swift */,
 				345A0DD12896CAAE004702DD /* SocialMedia.swift */,
 			);
 			path = Components;
@@ -404,7 +401,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					345A0D8C2896CA47004702DD = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -491,7 +488,6 @@
 				345A0E032896CB1C004702DD /* Constants.swift in Sources */,
 				345A0DFE2896CB16004702DD /* CKAssetExtension.swift in Sources */,
 				345A0DFF2896CB16004702DD /* DoubleExtension.swift in Sources */,
-				345A0DD32896CAAE004702DD /* HighlightColorSelection.swift in Sources */,
 				345A0DE62896CACF004702DD /* MethodSelectionView.swift in Sources */,
 				345A0DF02896CAE4004702DD /* SettingsViewModel.swift in Sources */,
 				345A0DF12896CAE4004702DD /* SettingsView.swift in Sources */,
@@ -542,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -603,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -735,7 +733,6 @@
 		345A0DB52896CA48004702DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -755,7 +752,6 @@
 		345A0DB62896CA48004702DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

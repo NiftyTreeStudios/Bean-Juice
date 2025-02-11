@@ -18,7 +18,7 @@ struct CoffeeRatioSlider: View {
             .font(.subheadline)
             .padding(.bottom, -5)
         Slider(value: $ratio, in: 8...20, step: 1)
-            .accentColor(settings.getAccentColor())
+            .accentColor(Color.accentColor)
         Text("Ratio")
             .font(.headline)
             .padding(.bottom, 10)

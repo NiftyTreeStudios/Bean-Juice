@@ -55,13 +55,6 @@ final class SettingsViewModel: ObservableObject {
         }
     }
 
-    // MARK: Custom Color
-    @AppStorage("accentColor") var accentColor: Color = .blue
-
-    func getAccentColor() -> Color {
-        return .blue // accentColor
-    }
-
     // MARK: ML selection
     @AppStorage("mlSelection") var mlSelected = false {
         didSet {

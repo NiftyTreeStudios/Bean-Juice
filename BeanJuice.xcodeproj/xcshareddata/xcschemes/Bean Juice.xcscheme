@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "345A0D8C2896CA47004702DD"
-               BuildableName = "Bean Juice.app"
-               BlueprintName = "Bean Juice"
-               ReferencedContainer = "container:Bean Juice.xcodeproj">
+               BuildableName = "BeanJuice.app"
+               BlueprintName = "BeanJuice"
+               ReferencedContainer = "container:BeanJuice.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "345A0D9C2896CA48004702DD"
-               BuildableName = "Bean JuiceTests.xctest"
-               BlueprintName = "Bean JuiceTests"
-               ReferencedContainer = "container:Bean Juice.xcodeproj">
+               BuildableName = "BeanJuiceTests.xctest"
+               BlueprintName = "BeanJuiceTests"
+               ReferencedContainer = "container:BeanJuice.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "345A0D8C2896CA47004702DD"
-            BuildableName = "Bean Juice.app"
-            BlueprintName = "Bean Juice"
-            ReferencedContainer = "container:Bean Juice.xcodeproj">
+            BuildableName = "BeanJuice.app"
+            BlueprintName = "BeanJuice"
+            ReferencedContainer = "container:BeanJuice.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -73,9 +73,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "345A0D8C2896CA47004702DD"
-            BuildableName = "Bean Juice.app"
-            BlueprintName = "Bean Juice"
-            ReferencedContainer = "container:Bean Juice.xcodeproj">
+            BuildableName = "BeanJuice.app"
+            BlueprintName = "BeanJuice"
+            ReferencedContainer = "container:BeanJuice.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

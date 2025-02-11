@@ -49,10 +49,12 @@ struct CupSelection: View {
                 }
             }
         }
-        .onChange(of: settings.customCupSize, perform: { value in
-            settings.cupSizes[4].sizeMl = Int(value)
-            settings.cupSize = Double(value)
-        })
+        .onChange(of: settings.cupSize) { oldValue, newValue in
+            if oldValue != newValue {
+                settings.cupSizes[4].sizeMl = Int(newValue)
+                settings.cupSize = Double(newValue)
+            }
+        }
     }
 }
 

@@ -63,8 +63,10 @@ struct RecipeSelectionView: View {
         .onAppear {
             recipes = loadRecipesFromUserDefaults()
         }
-        .onChange(of: recipes) { newRecipes in
-            saveRecipesToUserDefaults(newRecipes)
+        .onChange(of: recipes) { oldValue, newValue in
+            if oldValue != newValue {
+                saveRecipesToUserDefaults(newValue)
+            }
         }
     }
 }

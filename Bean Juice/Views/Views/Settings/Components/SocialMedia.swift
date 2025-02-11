@@ -16,18 +16,12 @@ struct SocialMedia: View {
     var body: some View {
         var urlString = "https://duckduckgo.com"
 
-        Section(header: Text("Follow us on social media"), footer: Text("@BeanJuiceApp"), content: {
+        Section(header: Text("Follow us on Instagram"), footer: Text("@BeanJuiceApp"), content: {
             Button {
                 urlString = "https://www.instagram.com/BeanJuiceApp"
                 self.showSafari = true
             } label: {
                 Text("Instagram")
-            }
-            Button {
-                urlString = "https://www.twitter.com/BeanJuiceApp"
-                self.showSafari = true
-            } label: {
-                Text("Twitter")
             }
             .sheet(isPresented: $showSafari) {
                 SafariView(url: URL(string: urlString)!)

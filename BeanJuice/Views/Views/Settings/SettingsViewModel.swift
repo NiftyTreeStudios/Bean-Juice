@@ -56,7 +56,7 @@ final class SettingsViewModel: ObservableObject {
     }
 
     // MARK: ML selection
-    @AppStorage("mlSelection") var mlSelected = false {
+    @AppStorage("mlSelection") var mlSelected = true {
         didSet {
             objectWillChange.send()
         }

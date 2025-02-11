@@ -94,7 +94,7 @@ struct MethodView: View {
                 "Enter water amount",
                 text: $textFieldString
             )
-            .keyboardType(.decimalPad)
+            .keyboardType(.numberPad)
             Button("OK", action: updateWaterAmount)
         }
         .onAppear {

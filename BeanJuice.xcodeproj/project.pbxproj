@@ -10,7 +10,6 @@
 		342202642896D3B500A1DEED /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342202632896D3B500A1DEED /* CloudKit.framework */; };
 		342202662897C49600A1DEED /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342202652897C49600A1DEED /* SplashScreen.swift */; };
 		342202682897C5FD00A1DEED /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342202672897C5FD00A1DEED /* ColorExtension.swift */; };
-		3424D8B128E5C051009F2AE4 /* LeftoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424D8B028E5C051009F2AE4 /* LeftoverView.swift */; };
 		345A0D952896CA48004702DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345A0D942896CA48004702DD /* Assets.xcassets */; };
 		345A0D982896CA48004702DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345A0D972896CA48004702DD /* Preview Assets.xcassets */; };
 		345A0DA22896CA48004702DD /* BeanJuiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A0DA12896CA48004702DD /* BeanJuiceTests.swift */; };
@@ -78,7 +77,6 @@
 		342202632896D3B500A1DEED /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		342202652897C49600A1DEED /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		342202672897C5FD00A1DEED /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		3424D8B028E5C051009F2AE4 /* LeftoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftoverView.swift; sourceTree = "<group>"; };
 		345A0D8D2896CA47004702DD /* BeanJuice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeanJuice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		345A0D942896CA48004702DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		345A0D972896CA48004702DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -300,7 +298,6 @@
 				345A0E2F2896CDEF004702DD /* Recipes */,
 				345A0E2D2896CDA4004702DD /* Settings */,
 				342202652897C49600A1DEED /* SplashScreen.swift */,
-				3424D8B028E5C051009F2AE4 /* LeftoverView.swift */,
 			);
 			name = Views;
 			path = Views/Views;
@@ -493,7 +490,6 @@
 				345A0DF12896CAE4004702DD /* SettingsView.swift in Sources */,
 				345A0DE72896CACF004702DD /* MethodSelectionViewModel.swift in Sources */,
 				342202662897C49600A1DEED /* SplashScreen.swift in Sources */,
-				3424D8B128E5C051009F2AE4 /* LeftoverView.swift in Sources */,
 				345A0DF62896CB05004702DD /* EmailHelper.swift in Sources */,
 				345A0DF72896CB05004702DD /* StoreReviewHelper.swift in Sources */,
 				345A0DF82896CB05004702DD /* CloudKitHelper.swift in Sources */,

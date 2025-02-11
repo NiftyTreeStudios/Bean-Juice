@@ -129,6 +129,7 @@
 		345A0E1B2896CC3F004702DD /* AeroPress.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AeroPress.md; sourceTree = "<group>"; };
 		346FFD202AB1E4D10074C7AD /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
 		780933DB2D5B60370033C7C3 /* BeanJuiceTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BeanJuiceTestPlan.xctestplan; sourceTree = "<group>"; };
+		785CA7012D5B7DEF00E38927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +182,7 @@
 		345A0D8F2896CA47004702DD /* BeanJuice */ = {
 			isa = PBXGroup;
 			children = (
+				785CA7012D5B7DEF00E38927 /* Info.plist */,
 				342202612896D31000A1DEED /* BeanJuice.entitlements */,
 				345A0D942896CA48004702DD /* Assets.xcassets */,
 				345A0DBA2896CA6F004702DD /* Main.swift */,
@@ -656,6 +658,7 @@
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeanJuice/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Bean Juice";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Bean Juice uses your location to show the nearest cafes on a map.";
@@ -695,6 +698,7 @@
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeanJuice/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Bean Juice";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Bean Juice uses your location to show the nearest cafes on a map.";

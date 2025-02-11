@@ -14,6 +14,9 @@ final class MethodViewModel: ObservableObject {
     @Published var cups: Double = 1
     @Published var waterAmount: Double = 200
 
+    @Published var coffeeAlertShown: Bool = false
+    @Published var waterAlertShown: Bool = false
+
     func setUp(for method: Method) {
         ratio = Double(method.startRatio)
         if method.name == .aeropress && cups > 4 {

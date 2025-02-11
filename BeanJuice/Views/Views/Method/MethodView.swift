@@ -16,6 +16,8 @@ struct MethodView: View {
     @EnvironmentObject var settings: SettingsViewModel
     @StateObject private var viewModel = MethodViewModel()
 
+    @State private var textFieldString: String = ""
+
     var body: some View {
         ScrollView {
             VStack {
@@ -42,6 +44,10 @@ struct MethodView: View {
                              ? "\(viewModel.waterAmount, specifier: "%.0f") g"
                              : "\(calculateWaterAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, maxWater: method.maxWaterAmount)) g") // swiftlint:disable:this line_length
                             .font(.title)
+                            .onTapGesture {
+                                print("Water amount tapped 💧")
+                                viewModel.waterAlertShown = true
+                            }
                     }
 
                     HStack {
@@ -51,6 +57,11 @@ struct MethodView: View {
                              ? "\(customCoffeeAmount(water: viewModel.waterAmount, ratio: viewModel.ratio), specifier: "%.1f") g" // swiftlint:disable:this line_length
                              : "\(calculateCoffeeAmount(cupSize: Double(settings.selectedCupMlSize), cupAmount: viewModel.cups, ratio: viewModel.ratio, maxWater: method.maxWaterAmount), specifier: "%.1f") g") // swiftlint:disable:this line_length
                             .font(.title)
+                            .onTapGesture {
+                                print("Coffee amount tapped ☕️")
+                                // viewModel.coffeeAlertShown = true
+                                // TODO: implement custom coffee amount usage
+                            }
                     }
                 }
                 .navigationTitle(getMethodName(method: method.name))
@@ -64,10 +75,43 @@ struct MethodView: View {
             .padding(.horizontal, 30)
             .padding(.bottom, 5)
         }
+        .alert(
+            "Enter coffee amount",
+            isPresented: $viewModel.coffeeAlertShown
+        ) {
+            TextField(
+                "Enter coffee amount",
+                text: $textFieldString
+            )
+            .keyboardType(.decimalPad)
+            Button("OK", action: updateCoffeeAmount)
+        }
+        .alert(
+            "Enter water amount",
+            isPresented: $viewModel.waterAlertShown
+        ) {
+            TextField(
+                "Enter water amount",
+                text: $textFieldString
+            )
+            .keyboardType(.decimalPad)
+            Button("OK", action: updateWaterAmount)
+        }
         .onAppear {
             viewModel.setUp(for: method)
             StoreReviewHelper.checkAndAskForReview()
             StoreReviewHelper.incrementAppOpenedCount()
         }
+    }
+
+    func updateCoffeeAmount() {
+        print("Updated coffee amount ☕️")
+
+    }
+
+    func updateWaterAmount() {
+        print("Updated water amount 💧")
+        viewModel.waterAmount = Double(textFieldString) ?? viewModel.waterAmount
+        textFieldString = ""
     }
 }

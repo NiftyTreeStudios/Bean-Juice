@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "59D7762E-A0FF-4B11-B70D-582D65BF65C3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:BeanJuice.xcodeproj",
+        "identifier" : "345A0D9C2896CA48004702DD",
+        "name" : "BeanJuiceTests"
+      }
+    }
+  ],
+  "version" : 1
+}

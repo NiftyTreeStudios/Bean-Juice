@@ -130,6 +130,7 @@
 		345A0E1A2896CC3F004702DD /* Drip Machine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Drip Machine.md"; sourceTree = "<group>"; };
 		345A0E1B2896CC3F004702DD /* AeroPress.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AeroPress.md; sourceTree = "<group>"; };
 		346FFD202AB1E4D10074C7AD /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
+		780933DB2D5B60370033C7C3 /* BeanJuiceTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BeanJuiceTestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +206,7 @@
 		345A0DA02896CA48004702DD /* BeanJuiceTests */ = {
 			isa = PBXGroup;
 			children = (
+				780933DB2D5B60370033C7C3 /* BeanJuiceTestPlan.xctestplan */,
 				345A0DA12896CA48004702DD /* BeanJuiceTests.swift */,
 				346FFD202AB1E4D10074C7AD /* ColorTests.swift */,
 			);

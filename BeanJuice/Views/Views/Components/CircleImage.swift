@@ -10,8 +10,6 @@ import Foundation
 import SwiftUI
 
 struct CircleImage: View {
-
-    @Namespace var namespace
     @State var imageTapped = false
     @State var seconds = 0
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -22,15 +20,15 @@ struct CircleImage: View {
 
     var body: some View {
         ZStack {
+            Image(decorative: methodName + "-Big")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 250, height: 250, alignment: .center)
+                .clipShape(Circle())
+                .shadow(radius: imageTapped ? 0 : 5)
+                .blur(radius: imageTapped ? 5 : 0)
+                .glassEffect(.regular.tint(.background), in: .circle, isEnabled: imageTapped)
             if imageTapped {
-                Image(decorative: methodName + "-Big")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 250, height: 250, alignment: .center)
-                    .clipShape(Circle())
-                    .shadow(radius: 5)
-                    .blur(radius: 5)
-                    .matchedGeometryEffect(id: "CircleImage", in: namespace)
                 VStack {
                     Spacer()
                     HStack {
@@ -64,21 +62,13 @@ struct CircleImage: View {
                     }
                     Spacer()
                 }
-            } else {
-                Image(decorative: methodName + "-Big")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 250, height: 250, alignment: .center)
-                    .clipShape(Circle())
-                    .shadow(radius: 5)
-                    .matchedGeometryEffect(id: "CircleImage", in: namespace)
             }
         }
         .padding(.top, 30)
         .padding(.bottom, 10)
         .onTapGesture(perform: {
             seconds = 0
-            withAnimation(.easeInOut(duration: 1)) {imageTapped.toggle()}
+            withAnimation(.easeInOut(duration: 1)) { imageTapped.toggle() }
         })
         .padding(.top, -20)
     }

@@ -33,6 +33,6 @@ func markdownString(method: String) -> String {
     guard let filepath = Bundle.main.url(forResource: method, withExtension: "md") else {
         return "Filepath not found"
     }
-    let info = (try? String(contentsOf: filepath)) ?? "Nothing found"
+    let info = (try? String(contentsOf: filepath, encoding: .utf8)) ?? "Nothing found"
     return info
 }

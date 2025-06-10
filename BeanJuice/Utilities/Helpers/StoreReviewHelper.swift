@@ -20,7 +20,7 @@ struct StoreReviewHelper {
         UserDefaults.standard.set(appOpenCount, forKey: UserDefaultsKeys.APPOPENEDCOUNT)
     }
 
-    static func checkAndAskForReview() {
+    @MainActor static func checkAndAskForReview() {
         // Call this whenever appropriate.
         // This will not be shown everytime. Apple has some internal logic on how to show this.
         guard let appOpenCount = UserDefaults.standard.value(forKey: UserDefaultsKeys.APPOPENEDCOUNT) as? Int else {
@@ -38,13 +38,9 @@ struct StoreReviewHelper {
         }
     }
 
-    func requestReview() {
-        if #available(iOS 14.0, *) {
-            if let scene = UIApplication.shared.currentScene {
-                SKStoreReviewController.requestReview(in: scene)
-            }
-        } else {
-            SKStoreReviewController.requestReview()
+    @MainActor func requestReview() {
+        if let scene = UIApplication.shared.currentScene {
+            AppStore.requestReview(in: scene)
         }
     }
 }

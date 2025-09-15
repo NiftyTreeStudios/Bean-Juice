@@ -77,6 +77,7 @@ struct NoRecipesPlaceholder: View {
             .foregroundColor(.gray)
             .multilineTextAlignment(.center)
             .navigationBarTitle("Recipes")
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -89,6 +90,7 @@ struct RecipeList: View {
         List {
             ForEach(recipes, id: \.name) { recipe in
                 RecipeCell(recipe: recipe)
+                    .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                     .swipeActions(edge: .leading) {
                         Button {
                             print("Recipe given! \(recipe)")
@@ -111,8 +113,8 @@ struct RecipeList: View {
                     }
             }
         }
-        .listStyle(PlainListStyle())
         .navigationTitle("Recipes")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

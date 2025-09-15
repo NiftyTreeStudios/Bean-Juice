@@ -16,7 +16,7 @@ struct ItemRowView: View {
             destination: MethodView(method: method)
         ) {
             HStack {
-                Image(getMethodName(method: method.name) + "-Big")
+                Image(decorative: getMethodName(method: method.name) + "-Big")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 60, height: 60, alignment: .center)

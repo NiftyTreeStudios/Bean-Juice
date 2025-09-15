@@ -20,6 +20,7 @@ struct MethodSelectionView: View {
             }
             .listStyle(PlainListStyle())
             .navigationTitle("Methods")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

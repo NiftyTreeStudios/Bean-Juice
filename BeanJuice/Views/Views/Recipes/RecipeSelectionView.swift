@@ -77,6 +77,7 @@ struct NoRecipesPlaceholder: View {
             .foregroundColor(.gray)
             .multilineTextAlignment(.center)
             .navigationBarTitle("Recipes")
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -113,6 +114,7 @@ struct RecipeList: View {
         }
         .listStyle(PlainListStyle())
         .navigationTitle("Recipes")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -65,6 +65,7 @@ struct MethodView: View {
                     }
                 }
                 .navigationTitle(getMethodName(method: method.name))
+                .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(
                     trailing: NavigationLink(
                         destination: InformationScreen(methodName: method.name)) {

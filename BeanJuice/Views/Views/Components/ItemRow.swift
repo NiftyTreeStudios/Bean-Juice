@@ -12,19 +12,18 @@ struct ItemRowView: View {
     let method: Method
 
     var body: some View {
-
         NavigationLink(
             destination: MethodView(method: method)
         ) {
-                HStack {
-                    Image(getMethodName(method: method.name) + "-Big")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 60, height: 60, alignment: .center)
-                        .clipShape(Circle())
-                    Text(getMethodName(method: method.name))
-                        .font(.title2)
-                }
+            HStack {
+                Image(getMethodName(method: method.name) + "-Big")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 60, height: 60, alignment: .center)
+                    .clipShape(Circle())
+                Text(getMethodName(method: method.name))
+                    .font(.title2)
+            }
         }
     }
 }

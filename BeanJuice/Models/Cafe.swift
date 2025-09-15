@@ -67,7 +67,13 @@ extension Cafe {
 extension Cafe {
     /// Opens the maps app in navigation mode to the selected cafe.
     func getDirectionsToTheCafe() {
-        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinates.coordinate))
+        let mapItem = MKMapItem(
+            location: coordinates,
+            address: MKAddress(
+                fullAddress: streetAddress + ", " + postalCode + " " + city + ", " + state + ", " + country,
+                shortAddress: streetAddress
+            )
+        )
         mapItem.name = name
         mapItem.openInMaps(launchOptions: [
             MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking

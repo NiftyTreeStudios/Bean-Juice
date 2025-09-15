@@ -27,7 +27,6 @@ struct CircleImage: View {
                 .clipShape(Circle())
                 .shadow(radius: imageTapped ? 0 : 5)
                 .blur(radius: imageTapped ? 5 : 0)
-                .glassEffect(.regular.tint(.background), in: .circle, isEnabled: imageTapped)
             if imageTapped {
                 VStack {
                     Spacer()
